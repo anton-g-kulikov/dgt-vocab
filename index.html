@@ -51,12 +51,19 @@
       </div>
 
       <div class="controls-buttons-row">
-        <button onclick="refreshCurrentMode()" id="refreshModeBtn">
-          🔄 Refresh Mode
-        </button>
-        <button onclick="showAllCards()" id="showAllBtn">
-          📖 Show All Cards
-        </button>
+        <div class="toggle-container">
+          <span class="toggle-label left" onclick="toggleShowAllCards()"
+            >🎯 Unknown Only</span
+          >
+          <button
+            class="toggle-switch"
+            id="showAllToggle"
+            onclick="toggleShowAllCards()"
+          ></button>
+          <span class="toggle-label right" onclick="toggleShowAllCards()"
+            >📖 All Cards</span
+          >
+        </div>
         <button onclick="resetProgress()">🔄 Reset Progress</button>
       </div>
 
@@ -106,6 +113,12 @@
     </div>
 
     <script src="vocabulary.js"></script>
+    <script src="core.js"></script>
+    <script src="flashcard-mode.js"></script>
+    <script src="quiz-mode.js"></script>
+    <script src="category-manager.js"></script>
+    <script src="stats-manager.js"></script>
+    <script src="ui-helpers.js"></script>
     <script src="script.js"></script>
     <script>
       // This script will run after both vocabulary.js and script.js have loaded

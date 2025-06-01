@@ -17,7 +17,7 @@ body {
 /* Header and container styles */
 .header {
   max-width: 800px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   padding: 20px;
   text-align: center;
   background-color: #f8f9fa;
@@ -406,8 +406,13 @@ button.secondary-btn:hover {
 /* Fix display issues with quiz mode */
 #quizMode {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e9ecef;
 }
 
 #quizMode.hidden {
@@ -416,19 +421,13 @@ button.secondary-btn:hover {
 
 .quiz-mode {
   text-align: center;
-  margin-top: 20px;
+  margin-top: 0px;
 }
 
 .quiz-question {
   font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 30px;
-  color: #333;
-  text-align: center;
-  padding: 15px;
-  border-radius: 10px;
-  background-color: #f8f9fa;
-  border-bottom: 2px solid #e9ecef;
 }
 
 .quiz-options {
@@ -1015,6 +1014,94 @@ button.secondary-btn:hover {
   border-radius: 5px;
 }
 
+/* Replace the #showAllBtn styles with toggle switch styles */
+.toggle-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 5px;
+}
+
+.toggle-switch {
+  position: relative;
+  width: 60px;
+  height: 30px;
+  background-color: #6f42c1;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+  outline: none;
+}
+
+.toggle-switch.all-cards {
+  background-color: #e67e22;
+}
+
+.toggle-switch::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.all-cards::before {
+  transform: translateX(30px);
+}
+
+.toggle-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  user-select: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.toggle-label.left {
+  color: #6f42c1;
+}
+
+.toggle-label.right {
+  color: #e67e22;
+}
+
+.toggle-switch.all-cards + .toggle-label.left {
+  color: #999;
+}
+
+.toggle-switch:not(.all-cards) + .toggle-label.right {
+  color: #999;
+}
+
+/* Reset progress button - remove border and make subtle */
+.controls-buttons-row button {
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 15px;
+  background-color: #f8f8f8;
+  color: #333;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.controls-buttons-row button:hover {
+  background-color: #eaeaea;
+}
+
+.controls-buttons-row button:active {
+  background-color: #ddd;
+  transform: translateY(1px);
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .vocab-manager-container {
@@ -1130,26 +1217,4 @@ button.secondary-btn:hover {
     width: 100%;
     max-width: 200px;
   }
-}
-
-#refreshModeBtn {
-  background-color: #17a2b8;
-  color: white;
-  border: 1px solid #17a2b8;
-}
-
-#refreshModeBtn:hover {
-  background-color: #138496;
-  border-color: #117a8b;
-}
-
-#showAllBtn {
-  background-color: #6f42c1;
-  color: white;
-  border: 1px solid #6f42c1;
-}
-
-#showAllBtn:hover {
-  background-color: #5a32a3;
-  border-color: #4e2a8e;
 }
