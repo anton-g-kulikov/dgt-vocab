@@ -1530,7 +1530,7 @@ window.vocabularyData = [
     word: "informar",
     translation: "to inform",
     category: "verb",
-    example: "Informa sobre los accidentes a las autoridades.",
+    example: "Informa sobre los accidentes a las authorities.",
   },
   {
     word: "señalizar",
@@ -2230,7 +2230,8 @@ window.vocabularyData = [
     word: "acondicionarse",
     translation: "to condition oneself/to adapt",
     category: "verb",
-    example: "El conductor debe acondicionarse a las circunstancias del tráfico.",
+    example:
+      "El conductor debe acondicionarse a las circunstancias del tráfico.",
   },
   {
     word: "detenerse",
@@ -2331,5 +2332,57 @@ window.vocabularyData = [
     translation: "practically",
     category: "adverb",
     example: "Con niebla densa, la visibilidad es prácticamente nula.",
+  },
+  {
+    word: "caso",
+    translation: "case",
+    category: "noun",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+  },
+  {
+    word: "distancia",
+    translation: "distance",
+    category: "noun",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+  },
+  {
+    word: "deben",
+    translation: "they must",
+    category: "verb",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+  },
+  {
+    word: "colocarse",
+    translation: "to place",
+    category: "verb",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+  },
+  {
+    word: "metros",
+    translation: "meters",
+    category: "noun",
+    example: "metros como mínimo y visibles",
+  },
+  {
+    word: "como",
+    translation: "like",
+    category: "noun",
+    example: "metros como mínimo y visibles",
+  },
+  {
+    word: "visibles",
+    translation: "visible",
+    category: "noun",
+    example: "metros como mínimo y visibles",
+  },
+  {
+    word: "implicado",
+    translation: "",
+    category: "adjective",
+    example: "En un accidente de tráfico en el que esté implicado",
   },
 ];
