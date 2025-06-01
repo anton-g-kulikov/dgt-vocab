@@ -1,0 +1,679 @@
+/* Spanish DGT Vocabulary Flashcards - Styles */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 30px;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin: 0 0 10px 0;
+  color: #2c3e50;
+  font-size: 2.2em;
+}
+
+.subtitle {
+  color: #7f8c8d;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+select,
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+select {
+  background: white;
+  border: 2px solid #e74c3c;
+  color: #2c3e50;
+}
+
+button {
+  background: #e74c3c;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+button:hover {
+  background: #c0392b;
+  transform: translateY(-2px);
+}
+
+/* Common button styles */
+button,
+.btn {
+  padding: 8px 15px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  margin: 3px;
+}
+
+button:hover,
+.btn:hover {
+  background-color: #eaeaea;
+  border-color: #bbb;
+}
+
+button:active,
+.btn:active {
+  background-color: #ddd;
+  transform: translateY(1px);
+}
+
+/* Primary buttons with more emphasis */
+.primary-btn,
+button.primary-btn {
+  background-color: #4285f4;
+  color: white;
+  border-color: #3275e4;
+}
+
+.primary-btn:hover,
+button.primary-btn:hover {
+  background-color: #3275e4;
+  border-color: #2265d4;
+}
+
+.primary-btn:active,
+button.primary-btn:active {
+  background-color: #2265d4;
+}
+
+/* Secondary buttons */
+.secondary-btn,
+button.secondary-btn {
+  background-color: white;
+  border-color: #ddd;
+}
+
+.secondary-btn:hover,
+button.secondary-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Add styling for the Drill Unknowns button */
+.controls button {
+  margin: 0 5px;
+  padding: 8px 12px;
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.controls button:hover {
+  background-color: #e0e0e0;
+}
+
+.mode-selector {
+  display: flex;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.mode-btn {
+  flex: 1;
+  padding: 10px;
+  background: transparent;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mode-btn.active {
+  background: #e74c3c;
+  color: white;
+}
+
+.mode-toggle-group {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.mode-toggle-group .mode-btn {
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f8f8f8;
+  color: #333;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.mode-toggle-group .mode-btn.active {
+  background-color: #4285f4;
+  color: white;
+  border-color: #3275e4;
+}
+
+.mode-toggle-group .mode-btn:hover {
+  background-color: #eaeaea;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.flashcard-container {
+  perspective: 1000px;
+  margin-bottom: 20px;
+}
+
+.flashcard {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.flashcard.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.card-front {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+  color: #2c3e50;
+}
+
+.card-back {
+  background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.spanish-word {
+  font-size: 2.5em;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #e74c3c;
+}
+
+.category-badge {
+  background: #3498db;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-size: 0.9em;
+  margin-bottom: 15px;
+}
+
+.translation {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.example {
+  font-style: italic;
+  font-size: 1.1em;
+  opacity: 0.9;
+  max-width: 80%;
+}
+
+.card-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.action-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  text-align: center;
+}
+
+.know-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.know-btn:hover {
+  background: #229954;
+}
+
+.dont-know-btn {
+  background: #e67e22;
+  color: white;
+}
+
+.dont-know-btn:hover {
+  background: #d35400;
+}
+
+.quiz-mode {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.quiz-question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  background-color: #f5f5f5;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s;
+}
+
+.quiz-option:hover {
+  background-color: #eaeaea;
+}
+
+.quiz-option.correct {
+  background-color: #c8e6c9;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.quiz-option.wrong {
+  background-color: #ffcdd2;
+  border-color: #f44336;
+  color: #c62828;
+}
+
+#nextQuizBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.progress-fill {
+  height: 100%;
+  background: #27ae60;
+  transition: width 0.3s ease;
+}
+
+.add-word-container {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto 20px auto;
+}
+
+.add-word-container h2 {
+  color: #2c3e50;
+  margin-bottom: 25px;
+  text-align: center;
+  font-size: 1.8em;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-weight: bold;
+  font-size: 1.1em;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid #e74c3c;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #c0392b;
+  box-shadow: 0 0 0 3px rgba(231, 76, 60, 0.1);
+}
+
+.form-group input.error {
+  border-color: #c62828;
+  background-color: #ffebee;
+}
+
+.form-actions {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.form-actions .action-btn {
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-width: 120px;
+}
+
+.add-btn {
+  background: #27ae60;
+  color: white;
+}
+
+.add-btn:hover {
+  background: #229954;
+  transform: translateY(-2px);
+}
+
+.cancel-btn {
+  background: #95a5a6;
+  color: white;
+}
+
+.cancel-btn:hover {
+  background: #7f8c8d;
+  transform: translateY(-2px);
+}
+
+/* Make success messages visible temporarily */
+.success-message {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border-left: 4px solid #2e7d32;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  border-left: 4px solid #c62828;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border-radius: 4px;
+  font-weight: 500;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+}
+
+/* Text parser styles */
+.add-word-controls {
+  display: flex;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ddd;
+}
+
+.add-word-controls button {
+  flex: 1;
+  padding: 10px;
+  max-width: 200px;
+  background: none;
+  border: none;
+  opacity: 0.7;
+  border-bottom: 3px solid transparent;
+}
+
+.add-word-controls button.active {
+  opacity: 1;
+  border-bottom: 3px solid #4285f4;
+  font-weight: bold;
+}
+
+#textToAnalyze {
+  width: 100%;
+  height: 100px;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+#extractedWords {
+  margin: 15px 0;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid #eee;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.word-item {
+  display: flex;
+  padding: 8px;
+  border-bottom: 1px solid #eee;
+  align-items: center;
+}
+
+.word-item:last-child {
+  border-bottom: none;
+}
+
+.word-item label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.word-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.word-item .spanish-word {
+  font-weight: bold;
+  flex: 1;
+}
+
+.word-item .category {
+  background: #e0e0e0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  margin: 0 10px;
+}
+
+.note {
+  color: #666;
+  font-style: italic;
+  font-size: 14px;
+}
+
+.vocab-manage-link,
+.back-to-main-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.vocab-manage-link:hover,
+.back-to-main-link:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  .spanish-word {
+    font-size: 2em;
+  }
+
+  .translation {
+    font-size: 1.5em;
+  }
+
+  .controls {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .form-actions {
+    flex-direction: column;
+  }
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  button,
+  .btn {
+    padding: 10px;
+    font-size: 16px; /* Larger font for better touch targets */
+  }
+
+  .controls {
+    flex-direction: column;
+  }
+
+  .mode-buttons {
+    flex-wrap: wrap;
+  }
+
+  .flashcard-controls button {
+    min-width: 120px;
+    margin: 5px;
+    padding: 12px;
+  }
+}

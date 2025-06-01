@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spanish DGT Vocabulary Flashcards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>🚗 Spanish DGT Vocabulary</h1>
+      <div class="subtitle">
+        Interactive Flashcards for Spanish Driving Exam
+      </div>
+
+      <div class="mode-selector">
+        <button class="mode-btn active" onclick="setMode('flashcard')">
+          Flashcards
+        </button>
+        <button class="mode-btn" onclick="setMode('quiz')">Quiz Mode</button>
+      </div>
+
+      <div class="controls">
+        <select id="categoryFilter">
+          <option value="all">All Categories</option>
+          <option value="noun">Nouns</option>
+          <option value="verb">Verbs</option>
+          <option value="adjective">Adjectives</option>
+          <option value="adverb">Adverbs</option>
+        </select>
+        <button onclick="shuffleCards()">🔀 Shuffle</button>
+        <button onclick="drillUnknowns()">📚 Drill Unknowns</button>
+        <button onclick="resetProgress()">🔄 Reset Progress</button>
+        <a href="vocabulary-manager.html" class="vocab-manage-link">
+          📚 Manage Vocabulary
+        </a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-number">
+            <span id="currentCard">0</span> of <span id="totalCards">0</span>
+          </div>
+          <div>Cards</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="knownCards">0</div>
+          <div>Known</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="unknownCards">0</div>
+          <div>Unknown</div>
+        </div>
+      </div>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+    </div>
+
+    <!-- Flashcard Mode -->
+    <div id="flashcardMode">
+      <div class="flashcard-container">
+        <div class="flashcard" id="flashcard" onclick="flipCard()">
+          <div class="card-face card-front">
+            <div class="spanish-word" id="spanishWord">Click to start</div>
+            <div class="category-badge" id="category">Category</div>
+            <div style="margin-top: 20px; opacity: 0.7">
+              Click to see translation
+            </div>
+          </div>
+          <div class="card-face card-back">
+            <div class="translation" id="translation">Translation</div>
+            <div class="example" id="example">Example sentence</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card-actions">
+        <button class="action-btn dont-know-btn" onclick="markCard(false)">
+          ❌ Don't Know
+        </button>
+        <button class="action-btn know-btn" onclick="markCard(true)">
+          ✅ I Know This
+        </button>
+        <button class="action-btn add-word-btn" onclick="setMode('add')">
+          📝 Add New Word to Vocabulary
+        </button>
+      </div>
+    </div>
+
+    <!-- Quiz Mode -->
+    <div id="quizMode" class="hidden">
+      <div class="quiz-mode">
+        <div class="quiz-question" id="quizQuestion">
+          What does "vehículo" mean?
+        </div>
+        <div class="quiz-options" id="quizOptions"></div>
+        <button
+          class="action-btn"
+          onclick="nextQuizQuestion()"
+          id="nextQuizBtn"
+          style="display: none"
+        >
+          Next Question
+        </button>
+      </div>
+    </div>
+
+    <!-- Add Word Mode -->
+    <div id="addWordMode" class="hidden">
+      <div class="add-word-container">
+        <h2>📝 Add a New Word</h2>
+        <div id="messageContainer"></div>
+
+        <!-- Add this inside the addWordMode section, before the addWordForm -->
+        <div class="add-word-controls">
+          <button id="showRegularFormBtn" class="active">
+            Add Single Word
+          </button>
+          <button id="showTextParserBtn">Parse Text</button>
+        </div>
+
+        <div id="regularAddForm">
+          <form id="addWordForm">
+            <div class="form-group">
+              <label for="newSpanishWord">Spanish Word: *</label>
+              <input
+                type="text"
+                id="newSpanishWord"
+                placeholder="e.g., aparcamiento"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="newTranslation">English Translation: *</label>
+              <input
+                type="text"
+                id="newTranslation"
+                placeholder="e.g., parking"
+                required
+              />
+            </div>
+            <div class="form-group">
+              <label for="newCategory">Category:</label>
+              <select id="newCategory">
+                <option value="">Select category</option>
+                <!-- Categories will be populated dynamically -->
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="newExample">Example Sentence:</label>
+              <input
+                type="text"
+                id="newExample"
+                placeholder="e.g., El aparcamiento está lleno."
+              />
+            </div>
+            <div class="form-actions">
+              <button type="submit" class="action-btn add-btn">
+                ➕ Add Word
+              </button>
+              <button
+                type="button"
+                class="action-btn cancel-btn"
+                onclick="cancelAddWord()"
+              >
+                ❌ Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+
+        <div id="textParserForm" class="hidden">
+          <h3>Text Parser</h3>
+          <p>
+            Paste a Spanish text below to find new words for your vocabulary:
+          </p>
+          <textarea
+            id="textToAnalyze"
+            placeholder="e.g., Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha."
+          ></textarea>
+          <button id="analyzeTextBtn" class="primary-btn">Analyze Text</button>
+
+          <div id="parsingResults" class="hidden">
+            <h4>Words Found</h4>
+            <p class="note">Select words to add to your vocabulary:</p>
+            <div id="extractedWords"></div>
+            <button id="addSelectedWordsBtn" class="primary-btn">
+              Add Selected Words
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="vocabulary.js"></script>
+    <script src="script.js"></script>
+    <script src="vocabulary-manager.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Initialize vocabulary manager after app is loaded
+        setTimeout(() => {
+          new VocabularyManager(vocabApp);
+        }, 500);
+      });
+    </script>
+  </body>
+</html>

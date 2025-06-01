@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Vocabulary</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>📚 Manage Vocabulary</h1>
+      <div class="subtitle">Edit and update your vocabulary list</div>
+      <a href="index.html" class="back-to-main-link">⬅ Back to Main Page</a>
+    </div>
+
+    <div class="vocab-manager-container">
+      <!-- Parsing Results Section -->
+      <section class="parsing-results-section">
+        <h2>Parsing Results</h2>
+        <p>
+          Manage words that are missing translations, examples, or categories:
+        </p>
+        <div class="vocab-table-container">
+          <table class="vocab-table">
+            <thead>
+              <tr>
+                <th>Spanish Word</th>
+                <th>Translation</th>
+                <th>Category</th>
+                <th>Example</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="parsingResultsTableBody"></tbody>
+          </table>
+        </div>
+        <div class="modal-actions">
+          <button id="saveParsingResultsChanges" class="primary-btn">
+            Save Changes
+          </button>
+        </div>
+      </section>
+
+      <!-- Current Vocabulary Section -->
+      <section class="current-vocabulary-section">
+        <h2>Current Vocabulary</h2>
+        <p>Edit your existing vocabulary list:</p>
+        <div class="vocab-table-container">
+          <table class="vocab-table">
+            <thead>
+              <tr>
+                <th>Spanish Word</th>
+                <th>Translation</th>
+                <th>Category</th>
+                <th>Example</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="vocabTableBody"></tbody>
+          </table>
+        </div>
+        <div class="modal-actions">
+          <button id="saveVocabChanges" class="primary-btn">
+            Save Changes
+          </button>
+        </div>
+      </section>
+    </div>
+
+    <script src="vocabulary.js"></script>
+    <script src="vocabulary-manager.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const vocabApp = new VocabularyApp(); // Assuming VocabularyApp is defined in vocabulary.js
+        new VocabularyManager(vocabApp);
+
+        // Populate current vocabulary dynamically
+        const vocabTableBody = document.getElementById("vocabTableBody");
+        vocabApp.allCards.forEach((card) => {
+          const row = document.createElement("tr");
+          row.innerHTML = `
+            <td>${card.word}</td>
+            <td>${card.translation}</td>
+            <td>${card.category}</td>
+            <td>${card.example}</td>
+            <td><button class="delete-btn" data-id="${card.id}">Delete</button></td>
+          `;
+          vocabTableBody.appendChild(row);
+        });
+
+        // Add delete functionality
+        document.querySelectorAll(".delete-btn").forEach((btn) => {
+          btn.addEventListener("click", (e) => {
+            const id = parseInt(e.target.dataset.id);
+            vocabApp.allCards = vocabApp.allCards.filter(
+              (card) => card.id !== id
+            );
+            e.target.closest("tr").remove();
+            localStorage.setItem(
+              "dgt-vocab-cards",
+              JSON.stringify(vocabApp.allCards)
+            );
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

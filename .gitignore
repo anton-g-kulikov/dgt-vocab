@@ -1,0 +1,22 @@
+# Node.js dependencies
+node_modules/
+
+# Logs
+*.log
+
+# OS generated files
+.DS_Store
+
+# IDE specific files
+.vscode/
+.idea/
+
+# Build artifacts
+dist/
+
+# Temporary files
+*.tmp
+*.swp
+
+# Source files
+sources
