@@ -5,6 +5,9 @@ class QuizMode {
     this.vocabApp = vocabApp;
     this.quizScore = 0;
     this.quizTotal = 0;
+    // Ensure sets exist
+    this.vocabApp.knownCardsSet = this.vocabApp.knownCardsSet || new Set();
+    this.vocabApp.unknownCardsSet = this.vocabApp.unknownCardsSet || new Set();
   }
 
   startQuiz() {
@@ -156,7 +159,15 @@ class QuizMode {
     const selectedCard = this.vocabApp.allCards.find(
       (card) => card.id === selectedId
     );
-    if (!selectedCard) return;
+    const correctCard = this.vocabApp.allCards.find(
+      (card) => card.id === correctId
+    );
+    if (!selectedCard || !correctCard) return;
+
+    // Ensure sets exist before using them
+    if (!this.vocabApp.knownCardsSet) this.vocabApp.knownCardsSet = new Set();
+    if (!this.vocabApp.unknownCardsSet)
+      this.vocabApp.unknownCardsSet = new Set();
 
     const backFace = element.querySelector(".quiz-card-back");
     if (backFace) {
@@ -168,7 +179,16 @@ class QuizMode {
           <div class="quiz-card-translation">${selectedCard.translation}</div>
         `;
 
-        this.vocabApp.knownCardsSet.add(correctId);
+        // Even if correct answer is selected, if there were wrong attempts
+        // add the correct word to unknown list
+        const anyWrongAttempts = document.querySelector(
+          ".quiz-card.flipped.wrong"
+        );
+        if (anyWrongAttempts) {
+          this.vocabApp.unknownCardsSet.add(correctId);
+        } else {
+          this.vocabApp.knownCardsSet.add(correctId);
+        }
         this.vocabApp.saveProgress();
 
         this.vocabApp.currentCards = this.vocabApp.currentCards.filter(
@@ -183,9 +203,10 @@ class QuizMode {
         );
 
         document.querySelectorAll(".quiz-card").forEach((card) => {
-          card.style.pointerEvents = "none";
-          if (card !== element) {
-            card.classList.add("disabled");
+          // Only disable and flip the correct card
+          if (card === element) {
+            card.classList.add("flipped");
+            card.style.pointerEvents = "none";
           }
         });
 
@@ -236,13 +257,17 @@ class QuizMode {
           }
         }, 2000);
       } else {
-        this.vocabApp.unknownCardsSet.add(selectedId); // Add incorrect choice to unknown list
         backFace.classList.add("wrong");
+        element.classList.add("wrong");
         backFace.innerHTML = `
-          <div class="quiz-result wrong">✗ Try Again</div>
+          <div class="quiz-result wrong">✗ Wrong</div>
           <div class="quiz-card-word">${selectedCard.word}</div>
           <div class="quiz-card-translation">${selectedCard.translation}</div>
         `;
+
+        this.vocabApp.unknownCardsSet.add(correctId);
+        this.vocabApp.unknownCardsSet.add(selectedId);
+        this.vocabApp.saveProgress();
 
         element.classList.add("flipped");
         element.style.pointerEvents = "none";
