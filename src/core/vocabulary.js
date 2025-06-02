@@ -1,7 +1,8 @@
 // Spanish DGT Driving Vocabulary Data
 // This file contains all the vocabulary terms for the DGT flashcard application
 
-window.vocabularyData = [{
+window.vocabularyData = [
+  {
     word: "accidente",
     translation: "accident",
     perevod: "авария",
@@ -11,15 +12,15 @@ window.vocabularyData = [{
   {
     word: "acondicionarse",
     translation: "to condition oneself/to adapt",
-    perevod: "поддерживать себя или адаптировать",
+    perevod: "адаптироваться или приспосабливаться",
     category: "verb",
     example:
       "El conductor debe acondicionarse a las circunstancias del tráfico.",
   },
   {
     word: "acreditar",
-    translation: "to accredit/prove",
-    perevod: "аккредитовать или доказать",
+    translation: "to accredit",
+    perevod: "аккредитовать",
     category: "verb",
     example: "Acredita tu identidad con el DNI.",
   },
@@ -96,7 +97,7 @@ window.vocabularyData = [{
   {
     word: "anterior",
     translation: "previous/front",
-    perevod: "предыдущий или фронт",
+    perevod: "предыдущий/передний",
     category: "adjective",
     example: "El vehículo anterior frena",
   },
@@ -104,7 +105,7 @@ window.vocabularyData = [{
     word: "apagado",
     translation: "off/turned off",
     perevod: "выключить или выключить",
-    category: "adjective",
+    category: "verb",
     example: "Motor apagado en semáforos largos",
   },
   {
@@ -118,7 +119,7 @@ window.vocabularyData = [{
     word: "apartadero",
     translation: "lay-by/pullout",
     perevod: "проложить или вытянуть",
-    category: "noun",
+    category: "verb",
     example: "Utilizó el apartadero para detenerse.",
   },
   {
@@ -2226,7 +2227,7 @@ window.vocabularyData = [{
   {
     word: "reglamentario",
     translation: "regulatory",
-    perevod: "регулирующий",
+    perevod: "регаламентный",
     category: "adjective",
     example: "Equipo reglamentario obligatorio en el vehículo.",
   },
@@ -2331,14 +2332,14 @@ window.vocabularyData = [{
   {
     word: "rutinario",
     translation: "routine",
-    perevod: "рутина",
+    perevod: "рутинный",
     category: "adjective",
     example: "Un control rutinario de alcoholemia.",
   },
   {
     word: "salir",
     translation: "to exit/leave",
-    perevod: "выйти или уйти",
+    perevod: "выйти или покинуть",
     category: "verb",
     example: "Sale del carril con cuidado",
   },
@@ -2422,7 +2423,7 @@ window.vocabularyData = [{
   {
     word: "señal luminosa",
     translation: "light signal",
-    perevod: "легкий сигнал",
+    perevod: "световой сигнал",
     category: "noun",
     example: "La señal luminosa es prioritaria.",
   },
@@ -2436,14 +2437,14 @@ window.vocabularyData = [{
   {
     word: "señalización",
     translation: "signage",
-    perevod: "вывески",
+    perevod: "сигнализация",
     category: "noun",
     example: "La señalización vertical indica la velocidad máxima.",
   },
   {
     word: "señalización circunstancial",
     translation: "circumstantial signaling",
-    perevod: "косвенная передача сигналов",
+    perevod: "ситуационная сигнализация",
     category: "noun",
     example: "La señalización circunstancial es temporal.",
   },
@@ -2457,7 +2458,7 @@ window.vocabularyData = [{
   {
     word: "senda ciclable",
     translation: "cycle path",
-    perevod: "Цикл Путь",
+    perevod: "велосипедная дорожка",
     category: "noun",
     example: "La senda ciclable es solo para bicicletas.",
   },
@@ -2783,7 +2784,8 @@ window.vocabularyData = [{
     translation: "loading and unloading zone",
     perevod: "зона погрузки и разгрузки",
     category: "noun",
-    example: "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
+    example:
+      "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
   },
   {
     word: "zona escolar",
@@ -2875,4 +2877,5 @@ window.vocabularyData = [{
     perevod: "зона биологической опасности",
     category: "noun",
     example: "En la zona de peligro biológico, sigue las indicaciones.",
-  };
+  },
+];
