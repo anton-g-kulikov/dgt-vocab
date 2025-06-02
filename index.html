@@ -4,6 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spanish DGT Vocabulary Flashcards</title>
+
+    <!-- PWA Meta Tags -->
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#c17743" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="DGT Vocab" />
+    <meta
+      name="description"
+      content="Interactive vocabulary flashcards for Spanish driving exam preparation"
+    />
+
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" href="icons/ios/152.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="icons/ios/152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="icons/ios/167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="icons/ios/180.png" />
+    <link rel="apple-touch-icon" sizes="192x192" href="icons/ios/192.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="icons/ios/32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="icons/ios/16.png" />
+
     <link rel="stylesheet" href="src/ui/styles.css" />
     <link rel="stylesheet" href="src/ui/language-switcher.css" />
     <!-- Google tag (gtag.js) -->
@@ -27,6 +50,47 @@
       // Initialize page type detection
       window.isVocabManagerPage = false;
     </script>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+      // Only register service worker if served over HTTP/HTTPS
+      if (
+        "serviceWorker" in navigator &&
+        (location.protocol === "http:" || location.protocol === "https:")
+      ) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/sw.js")
+            .then(function (registration) {
+              console.log(
+                "ServiceWorker registration successful with scope: ",
+                registration.scope
+              );
+
+              // Check for updates
+              registration.addEventListener("updatefound", function () {
+                const newWorker = registration.installing;
+                newWorker.addEventListener("statechange", function () {
+                  if (
+                    newWorker.state === "installed" &&
+                    navigator.serviceWorker.controller
+                  ) {
+                    // New update available, you could show a notification here
+                    console.log("New content is available; please refresh.");
+                  }
+                });
+              });
+            })
+            .catch(function (err) {
+              console.log("ServiceWorker registration failed: ", err);
+            });
+        });
+      } else if (location.protocol === "file:") {
+        console.info(
+          "PWA features disabled: Please serve this app over HTTP/HTTPS for full PWA functionality. Run 'python3 -m http.server 8082' and visit http://localhost:8082"
+        );
+      }
+    </script>
   </head>
   <body>
     <div class="app-container">
@@ -42,6 +106,28 @@
           DGT <a href="vocabulary-manager.html">Vocabulary</a>
         </h1>
         <div class="subtitle">Interactive Cards for Spanish Driving Exam</div>
+
+        <!-- PWA Install Button -->
+        <div
+          id="pwa-install-container"
+          class="pwa-install-container"
+          style="display: none"
+        >
+          <button id="pwa-install-button" class="pwa-install-btn">
+            <svg
+              class="icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+              <polyline points="7,10 12,15 17,10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Install App
+          </button>
+        </div>
 
         <!-- Language switcher commented out in favor of clickable title
         <div class="language-switcher">
@@ -161,6 +247,7 @@
     <script src="src/core/vocabulary.js"></script>
     <script src="src/ui/icons.js"></script>
     <script src="src/utils/analytics.js"></script>
+    <script src="src/utils/pwa-installer.js"></script>
     <script src="src/core/core.js"></script>
     <script src="src/features/flashcards/flashcard-mode.js"></script>
     <script src="src/features/flashcards/quiz-mode.js"></script>

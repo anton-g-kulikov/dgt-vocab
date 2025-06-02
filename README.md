@@ -1,18 +1,30 @@
-# Spanish DGT Vocabulary Flashcards
+# Spanish DGT Vocabulary Flashcards PWA
 
 [![USE IT NOW](https://img.shields.io/badge/Try%20It-dgtvocab.app-blue?style=for-the-badge)](https://dgtvocab.app)
+[![PWA Ready](https://img.shields.io/badge/PWA-Ready-green?style=for-the-badge)](https://dgtvocab.app)
+[![Install App](https://img.shields.io/badge/📱-Install%20App-orange?style=for-the-badge)](https://dgtvocab.app)
 [![Buy me a coffee](https://img.shields.io/badge/Buy%20me%20a%20coffee-☕-yellow?style=for-the-badge)](https://buymeacoffee.com/antonkulikov)
 
-Study Spanish vocabulary for the DGT (Dirección General de Tráfico) driving exam with interactive flashcards, quizzes, and collaborative vocabulary management.
+**Progressive Web App** for studying Spanish vocabulary for the DGT (Dirección General de Tráfico) driving exam. Install as a native app on your mobile device with offline support, or use directly in your browser with interactive flashcards, quizzes, and collaborative vocabulary management.
 
 ## Quick Links
 
-- 🚀 [Start Learning](https://dgtvocab.app)
+- 🚀 [Launch PWA](https://dgtvocab.app) - Use in browser or install as app
+- 📱 [Install App](https://dgtvocab.app) - Add to home screen for native experience
 - 📚 [Vocabulary Manager](https://dgtvocab.app/vocabulary-manager.html)
 - 💡 [Contribute](https://github.com/anton-g-kulikov/dgt-vocab)
 - ☕ [Support the Project](https://buymeacoffee.com/antonkulikov)
 
 ## Features
+
+### 📱 Progressive Web App (PWA)
+
+- **🏠 Install as Native App** - Add to home screen on iOS and Android
+- **⚡ Offline Support** - Study without internet connection
+- **🚀 Fast Loading** - Instant startup with cached resources
+- **🎯 App Shortcuts** - Quick access to flashcards, quiz, and vocabulary manager
+- **📲 Cross-Platform** - Works on mobile, tablet, and desktop
+- **🔄 Auto-Updates** - Always get the latest features
 
 ### Study Tools
 
@@ -20,7 +32,7 @@ Study Spanish vocabulary for the DGT (Dirección General de Tráfico) driving ex
 - 📋 **Quiz Mode** - Test your knowledge with multiple choice questions
 - 🏷️ **Categories** - Filter by nouns, verbs, adjectives, and adverbs
 - 📊 **Progress Tracking** - Monitor your learning progress
-- 📱 **Mobile-Friendly** - Study anywhere on any device
+- 📱 **Mobile-Optimized** - Perfect experience on any device size
 
 ### Vocabulary Management
 
@@ -31,9 +43,27 @@ Study Spanish vocabulary for the DGT (Dirección General de Tráfico) driving ex
 
 ## Getting Started
 
+### Option 1: Install as Native App (Recommended)
+
+1. Visit [dgtvocab.app](https://dgtvocab.app) on your mobile device
+2. **Android (Chrome)**: Tap "Add to Home Screen" in browser menu
+3. **iOS (Safari)**: Tap Share button → "Add to Home Screen"
+4. **Desktop**: Click the install button in the address bar
+5. Launch the app from your home screen like any native app!
+
+### Option 2: Use in Browser
+
 1. Visit [dgtvocab.app](https://dgtvocab.app)
 2. Choose Flashcard or Quiz mode
-3. Start learning!
+3. Start learning immediately!
+
+### PWA Installation Benefits
+
+- **📲 Native App Experience** - Looks and feels like a native app
+- **⚡ Faster Performance** - No browser UI, dedicated app window
+- **🔌 Offline Access** - Study even without internet
+- **📱 Home Screen Icon** - Quick access from your device
+- **🔄 Background Updates** - Automatic updates when online
 
 ## Project Structure
 
@@ -129,9 +159,12 @@ This script will:
 
 ## Technologies Used
 
+- **Progressive Web App (PWA)**: Service workers, web app manifest, offline caching
 - **HTML5**: Semantic structure and accessibility
 - **CSS3**: Modern styling with flexbox, grid, and animations
 - **Vanilla JavaScript**: No frameworks - pure ES6+ JavaScript
+- **Service Workers**: Offline functionality and background sync
+- **Web App Manifest**: Native app installation and theming
 - **Local Storage API**: Client-side data persistence
 - **CSS Animations**: Smooth card flips and transitions
 - **GitHub REST API**: Automated pull request creation and repository management
@@ -149,10 +182,21 @@ The vocabulary is sourced from official Spanish traffic regulations:
 
 ## Browser Support
 
+### PWA Installation Support
+
+- **Chrome 67+** (Android, Desktop)
+- **Safari 11.3+** (iOS, macOS)
+- **Edge 79+** (Windows, Android)
+- **Samsung Internet 8.2+** (Android)
+
+### General Browser Support
+
 - Chrome 60+
 - Firefox 55+
 - Safari 12+
 - Edge 79+
+
+**Note**: PWA installation is not supported in Firefox, but the app works perfectly in-browser.
 
 ## License
 
