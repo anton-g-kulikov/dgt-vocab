@@ -1074,6 +1074,11 @@ button:hover,
   .footer-divider {
     display: none;
   }
+
+  .action-btn {
+    min-height: 88px; /* Double the height */
+    font-size: larger;
+  }
 }
 
 /* === Text Parser Form === */
