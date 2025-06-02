@@ -6,15 +6,7 @@ class QuizMode {
     this.quizScore = 0;
     this.quizTotal = 0;
     // Ensure sets exist
-    this.vocabApp.knownCardsSet = this.vo        backFace.innerHTML = `
-          <div class="quiz-card-translation">
-            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M20 6L9 17l-5-5"/>
-            </svg>
-            <span>${translationText}</span>
-          </div>
-          <div class="quiz-card-word">${selectedCard.word}</div>
-        `;ownCardsSet || new Set();
+    this.vocabApp.knownCardsSet = this.vocabApp.knownCardsSet || new Set();
     this.vocabApp.unknownCardsSet = this.vocabApp.unknownCardsSet || new Set();
   }
 
@@ -226,7 +218,7 @@ class QuizMode {
             <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M20 6L9 17l-5-5"/>
             </svg>
-            ${translationText}
+            <span>${translationText}</span>
           </div>
           <div class="quiz-card-word mobile-hidden">${selectedCard.word}</div>
         `;
