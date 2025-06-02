@@ -869,7 +869,7 @@ button:hover,
 
 .quiz-card-container {
   perspective: 1000px;
-  height: 100px;
+  height: 110px;
   cursor: pointer;
 }
 
