@@ -134,5 +134,70 @@
         }
       });
     </script>
+
+    <footer class="site-footer">
+      <div class="footer-content">
+        <span id="footer-last-update">Last update: ...</span>
+        <span class="footer-divider">&nbsp;|&nbsp;</span>
+        <span id="footer-word-count">Vocabulary: ... words</span>
+        <span class="footer-divider">&nbsp;|&nbsp;</span>
+        <a
+          href="https://github.com/anton-g-kulikov/dgt-vocab"
+          target="_blank"
+          rel="noopener"
+          >Contribute on GitHub</a
+        >
+        <span class="footer-divider">&nbsp;|&nbsp;</span>
+        <a
+          href="https://buymeacoffee.com/antonkulikov"
+          target="_blank"
+          rel="noopener"
+          >Find this useful? Buy me a coffee</a
+        >
+      </div>
+    </footer>
+    <script>
+      // Populate footer info
+      document.addEventListener("DOMContentLoaded", function () {
+        // Last update: use the build date or fallback to today
+        var lastUpdate = "2024-06-02"; // <-- Update this manually
+        document.getElementById("footer-last-update").textContent =
+          "Last update: " + lastUpdate;
+
+        // Word count: reuse the totalCards value that's already being calculated
+        function updateWordCount() {
+          // Try to get the total count from the existing totalCards element
+          const totalCardsElement = document.getElementById("totalCards");
+          if (totalCardsElement && totalCardsElement.textContent) {
+            const wordCount = totalCardsElement.textContent;
+            document.getElementById("footer-word-count").textContent =
+              "Vocabulary: " + wordCount + " words";
+            return true;
+          }
+          return false;
+        }
+
+        // Try immediately
+        if (!updateWordCount()) {
+          // If not loaded yet, wait a bit and try again
+          const checkInterval = setInterval(function () {
+            if (updateWordCount() || window.vocabApp) {
+              clearInterval(checkInterval);
+
+              // If vocabApp exists but totalCards not filled in yet
+              if (window.vocabApp && window.vocabApp.allCards) {
+                document.getElementById("footer-word-count").textContent =
+                  "Vocabulary: " + window.vocabApp.allCards.length + " words";
+              }
+            }
+          }, 100);
+
+          // Stop checking after 5 seconds
+          setTimeout(function () {
+            clearInterval(checkInterval);
+          }, 5000);
+        }
+      });
+    </script>
   </body>
 </html>
