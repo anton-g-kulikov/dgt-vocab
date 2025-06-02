@@ -1104,8 +1104,55 @@ button.secondary-btn:hover {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
+  body {
+    max-width: 95%;
+    padding: 10px;
+  }
+
+  .header {
+    padding: 15px;
+  }
+
   .vocab-manager-container {
     padding: 10px;
+  }
+
+  .flashcard-container {
+    max-width: 95%;
+  }
+
+  .flashcard {
+    height: 300px;
+  }
+
+  .spanish-word {
+    font-size: 2em;
+  }
+
+  .translation {
+    font-size: 1.5em;
+  }
+
+  .controls-buttons-row {
+    max-width: 95%;
+  }
+
+  .category-buttons {
+    max-width: 95%;
+  }
+
+  #quizMode {
+    max-width: 95%;
+  }
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+    padding: 0 5px;
+    max-width: 95%;
+  }
+
+  .quiz-card-container {
+    height: 160px;
   }
 
   #addWordForm {
@@ -1140,6 +1187,24 @@ button.secondary-btn:hover {
   .vocab-table th,
   .vocab-table td {
     padding: 8px 6px;
+  }
+
+  .vocab-table-container {
+    max-width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .expand-vocabulary-section,
+  .current-vocabulary-section {
+    padding: 15px;
+    margin-bottom: 20px;
   }
 
   .controls-row {
@@ -1184,6 +1249,72 @@ button.secondary-btn:hover {
 }
 
 @media (max-width: 480px) {
+  body {
+    max-width: 95%;
+    padding: 8px;
+  }
+
+  .header {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
+  .flashcard-container {
+    max-width: 95%;
+  }
+
+  .flashcard {
+    height: 280px;
+  }
+
+  .spanish-word {
+    font-size: 1.8em;
+  }
+
+  .translation {
+    font-size: 1.3em;
+  }
+
+  .controls-buttons-row {
+    max-width: 95%;
+  }
+
+  .category-buttons {
+    max-width: 95%;
+  }
+
+  #quizMode {
+    max-width: 95%;
+  }
+
+  .quiz-options {
+    grid-template-columns: 1fr;
+    padding: 0 5px;
+    max-width: 95%;
+  }
+
+  .quiz-card-container {
+    height: 140px;
+  }
+
+  .vocab-table-container {
+    max-width: 95%;
+    margin: 0 auto;
+    overflow-x: auto;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    font-size: 16px; /* Prevents zoom on iOS */
+  }
+
+  .expand-vocabulary-section,
+  .current-vocabulary-section {
+    padding: 12px;
+    margin-bottom: 15px;
+  }
+
   .add-word-controls {
     flex-direction: column;
   }
@@ -1216,5 +1347,55 @@ button.secondary-btn:hover {
   .category-btn {
     width: 100%;
     max-width: 200px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 320px) {
+  body {
+    max-width: 98%;
+    padding: 5px;
+  }
+
+  .header {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .flashcard {
+    height: 250px;
+  }
+
+  .spanish-word {
+    font-size: 1.6em;
+  }
+
+  .translation {
+    font-size: 1.2em;
+  }
+
+  .card-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .action-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .quiz-card-container {
+    height: 120px;
+  }
+
+  .expand-vocabulary-section,
+  .current-vocabulary-section {
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .category-btn {
+    padding: 4px 8px;
+    font-size: 12px;
   }
 }
