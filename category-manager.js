@@ -26,7 +26,8 @@ class CategoryManager {
     categoriesWithWords.forEach((category) => {
       const button = document.createElement("button");
       button.className = "category-btn";
-      button.textContent = category.charAt(0).toUpperCase() + category.slice(1);
+      button.textContent =
+        category.charAt(0).toUpperCase() + category.slice(1) + "s"; // Pluralize category titles
       button.dataset.category = category;
       button.onclick = () => this.selectCategory(category, button);
       categoryButtonsContainer.appendChild(button);
