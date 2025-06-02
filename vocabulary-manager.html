@@ -11,267 +11,276 @@
     </script>
   </head>
   <body>
-    <div class="header">
-      <h1>📚 Vocabulary</h1>
-      <div class="subtitle">Edit and update your vocabulary list</div>
-      <a href="index.html" class="back-to-main-link">⬅ Back to Main Page</a>
-    </div>
+    <div class="app-container">
+      <div class="header">
+        <h1>Vocabulary</h1>
+        <div class="subtitle">Edit and update your vocabulary list</div>
+        <a href="index.html" class="back-to-main-link">← Back to Main Page</a>
+      </div>
 
-    <div class="vocab-manager-container">
-      <!-- Expand Vocabulary Section -->
-      <section class="expand-vocabulary-section">
-        <h2>📚 Expand Vocabulary</h2>
+      <div class="vocab-manager-container">
+        <!-- Expand Vocabulary Section -->
+        <section class="expand-vocabulary-section">
+          <h2>Expand Vocabulary</h2>
 
-        <div class="add-word-controls">
-          <button id="showTextParserBtn" class="active">Parse Text</button>
-          <button id="showRegularFormBtn">Add Single Word</button>
-        </div>
+          <div class="add-word-controls">
+            <button id="showTextParserBtn" class="active">Parse Text</button>
+            <button id="showRegularFormBtn">Add Single Word</button>
+          </div>
 
-        <div id="regularAddForm" class="hidden">
-          <form id="addWordForm">
-            <div class="form-group">
-              <label for="newSpanishWord">Spanish Word: *</label>
+          <div id="regularAddForm" class="hidden">
+            <form id="addWordForm">
+              <div class="form-group">
+                <label for="newSpanishWord">Spanish Word: *</label>
+                <input
+                  type="text"
+                  id="newSpanishWord"
+                  placeholder="e.g., aparcamiento"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="newTranslation">English Translation: *</label>
+                <input
+                  type="text"
+                  id="newTranslation"
+                  placeholder="e.g., parking"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="newCategory">Category:</label>
+                <select id="newCategory">
+                  <option value="">Select category</option>
+                  <!-- Categories will be populated dynamically -->
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="newExample">Example Sentence:</label>
+                <input
+                  type="text"
+                  id="newExample"
+                  placeholder="e.g., El aparcamiento está lleno."
+                />
+              </div>
+              <div class="form-actions">
+                <button type="submit" class="action-btn add-btn">
+                  ➕ Add Word
+                </button>
+                <button
+                  type="button"
+                  class="action-btn cancel-btn"
+                  id="cancelAddBtn"
+                >
+                  ❌ Cancel
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div id="textParserForm">
+            <h3>Text Parser</h3>
+            <p>
+              Paste a Spanish text below to find new words for your vocabulary:
+            </p>
+            <textarea
+              id="textToAnalyze"
+              placeholder="e.g., Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha."
+            ></textarea>
+            <button id="analyzeTextBtn" class="primary-btn">
+              Analyze Text
+            </button>
+          </div>
+
+          <!-- Message Container moved here for better visibility -->
+          <div id="messageContainer"></div>
+
+          <!-- Vocabulary Updates Subsection -->
+          <div class="vocabulary-updates-subsection">
+            <h3>📝 Vocabulary Updates</h3>
+            <p>
+              New words to be added to your vocabulary. Review translations and
+              details before saving:
+            </p>
+            <div
+              class="vocab-table-container"
+              style="max-height: none; overflow: visible"
+            >
+              <table class="vocab-table">
+                <thead>
+                  <tr>
+                    <th>Spanish Word</th>
+                    <th>Translation</th>
+                    <th>Category</th>
+                    <th>Example</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="vocabularyUpdatesTableBody"></tbody>
+              </table>
+            </div>
+            <div class="modal-actions">
+              <button id="saveVocabularyUpdates" class="primary-btn">
+                Export as CSV
+              </button>
+              <button id="createMergeRequest" class="primary-btn">
+                🚀 Create Pull Request
+              </button>
+              <button id="clearVocabularyUpdates" class="secondary-btn">
+                Clear Updates
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Current Vocabulary Section -->
+        <section class="current-vocabulary-section">
+          <h2>Current Vocabulary</h2>
+
+          <!-- Add Filter Controls -->
+          <div class="filter-controls">
+            <div class="filter-group">
+              <label for="wordFilter">Filter Word:</label>
               <input
                 type="text"
-                id="newSpanishWord"
-                placeholder="e.g., aparcamiento"
-                required
+                id="wordFilter"
+                placeholder="Filter by Spanish word"
               />
             </div>
-            <div class="form-group">
-              <label for="newTranslation">English Translation: *</label>
+            <div class="filter-group">
+              <label for="translationFilter">Filter Translation:</label>
               <input
                 type="text"
-                id="newTranslation"
-                placeholder="e.g., parking"
-                required
+                id="translationFilter"
+                placeholder="Filter by translation"
               />
             </div>
-            <div class="form-group">
-              <label for="newCategory">Category:</label>
-              <select id="newCategory">
-                <option value="">Select category</option>
+            <div class="filter-group">
+              <label for="categoryVocabFilter">Filter Category:</label>
+              <select id="categoryVocabFilter">
+                <option value="">All Categories</option>
                 <!-- Categories will be populated dynamically -->
               </select>
             </div>
-            <div class="form-group">
-              <label for="newExample">Example Sentence:</label>
-              <input
-                type="text"
-                id="newExample"
-                placeholder="e.g., El aparcamiento está lleno."
-              />
-            </div>
-            <div class="form-actions">
-              <button type="submit" class="action-btn add-btn">
-                ➕ Add Word
-              </button>
-              <button
-                type="button"
-                class="action-btn cancel-btn"
-                id="cancelAddBtn"
-              >
-                ❌ Cancel
+            <div class="filter-actions">
+              <button id="clearFilters" class="secondary-btn">
+                Clear Filters
               </button>
             </div>
-          </form>
-        </div>
+          </div>
 
-        <div id="textParserForm">
-          <h3>Text Parser</h3>
-          <p>
-            Paste a Spanish text below to find new words for your vocabulary:
-          </p>
-          <textarea
-            id="textToAnalyze"
-            placeholder="e.g., Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha."
-          ></textarea>
-          <button id="analyzeTextBtn" class="primary-btn">Analyze Text</button>
-        </div>
-
-        <!-- Message Container moved here for better visibility -->
-        <div id="messageContainer"></div>
-
-        <!-- Vocabulary Updates Subsection -->
-        <div class="vocabulary-updates-subsection">
-          <h3>📝 Vocabulary Updates</h3>
-          <p>
-            New words to be added to your vocabulary. Review translations and
-            details before saving:
-          </p>
-          <div
-            class="vocab-table-container"
-            style="max-height: none; overflow: visible"
-          >
+          <div class="vocab-table-container">
             <table class="vocab-table">
               <thead>
                 <tr>
                   <th>Spanish Word</th>
                   <th>Translation</th>
                   <th>Category</th>
-                  <th>Example</th>
-                  <th>Actions</th>
+                  <th style="width: 40%">Example</th>
+                  <!-- Removed the Actions column -->
                 </tr>
               </thead>
-              <tbody id="vocabularyUpdatesTableBody"></tbody>
+              <tbody id="vocabTableBody"></tbody>
             </table>
           </div>
-          <div class="modal-actions">
-            <button id="saveVocabularyUpdates" class="primary-btn">
-              Export as CSV
-            </button>
-            <button id="createMergeRequest" class="primary-btn">
-              🚀 Create Pull Request
-            </button>
-            <button id="clearVocabularyUpdates" class="secondary-btn">
-              Clear Updates
-            </button>
-          </div>
-        </div>
-      </section>
+          <!-- Removed the modal-actions div with Save Changes button -->
+        </section>
+      </div>
 
-      <!-- Current Vocabulary Section -->
-      <section class="current-vocabulary-section">
-        <h2>Current Vocabulary</h2>
+      <script src="vocabulary.js"></script>
+      <script src="icons.js"></script>
+      <script src="script.js"></script>
+      <script src="github-integration.js"></script>
+      <script src="vocabulary-manager.js"></script>
+      <script>
+        // Custom initialization for vocabulary manager page
+        document.addEventListener("DOMContentLoaded", function () {
+          // Create a simplified version of DGTVocabulary for the manager page
+          class VocabManagerApp {
+            constructor() {
+              this.allCards = [];
+              this.knownCardsSet = new Set();
+              this.vocabularyUpdates = [];
+              this.loadFlashcards();
+              this.loadProgress();
+              this.loadVocabularyUpdates();
+            }
 
-        <!-- Add Filter Controls -->
-        <div class="filter-controls">
-          <div class="filter-group">
-            <label for="wordFilter">Filter Word:</label>
-            <input
-              type="text"
-              id="wordFilter"
-              placeholder="Filter by Spanish word"
-            />
-          </div>
-          <div class="filter-group">
-            <label for="translationFilter">Filter Translation:</label>
-            <input
-              type="text"
-              id="translationFilter"
-              placeholder="Filter by translation"
-            />
-          </div>
-          <div class="filter-group">
-            <label for="categoryVocabFilter">Filter Category:</label>
-            <select id="categoryVocabFilter">
-              <option value="">All Categories</option>
-              <!-- Categories will be populated dynamically -->
-            </select>
-          </div>
-          <div class="filter-actions">
-            <button id="clearFilters" class="secondary-btn">
-              Clear Filters
-            </button>
-          </div>
-        </div>
+            loadFlashcards() {
+              try {
+                if (typeof window.vocabularyData !== "undefined") {
+                  this.allCards = window.vocabularyData.map((card, index) => ({
+                    id: index,
+                    word: card.word || "",
+                    translation: card.translation || "",
+                    category: card.category || "",
+                    example: card.example || "",
+                  }));
+                } else {
+                  console.error(
+                    "Vocabulary data not found. Make sure vocabulary.js is loaded."
+                  );
+                  return;
+                }
+              } catch (error) {
+                console.error("Error loading flashcards:", error);
+              }
+            }
 
-        <div class="vocab-table-container">
-          <table class="vocab-table">
-            <thead>
-              <tr>
-                <th>Spanish Word</th>
-                <th>Translation</th>
-                <th>Category</th>
-                <th style="width: 40%">Example</th>
-                <!-- Removed the Actions column -->
-              </tr>
-            </thead>
-            <tbody id="vocabTableBody"></tbody>
-          </table>
-        </div>
-        <!-- Removed the modal-actions div with Save Changes button -->
-      </section>
-    </div>
+            loadProgress() {
+              const saved = localStorage.getItem("dgt-vocab-progress");
+              if (saved) {
+                this.knownCardsSet = new Set(JSON.parse(saved));
+              }
+            }
 
-    <script src="vocabulary.js"></script>
-    <script src="script.js"></script>
-    <script src="github-integration.js"></script>
-    <script src="vocabulary-manager.js"></script>
-    <script>
-      // Custom initialization for vocabulary manager page
-      document.addEventListener("DOMContentLoaded", function () {
-        // Create a simplified version of DGTVocabulary for the manager page
-        class VocabManagerApp {
-          constructor() {
-            this.allCards = [];
-            this.knownCardsSet = new Set();
-            this.vocabularyUpdates = [];
-            this.loadFlashcards();
-            this.loadProgress();
-            this.loadVocabularyUpdates();
-          }
+            loadVocabularyUpdates() {
+              const saved = localStorage.getItem(
+                "dgt-vocab-vocabulary-updates"
+              );
+              if (saved) {
+                this.vocabularyUpdates = JSON.parse(saved);
+              }
+            }
 
-          loadFlashcards() {
-            try {
-              if (typeof window.vocabularyData !== "undefined") {
-                this.allCards = window.vocabularyData.map((card, index) => ({
-                  id: index,
-                  word: card.word || "",
-                  translation: card.translation || "",
-                  category: card.category || "",
-                  example: card.example || "",
-                }));
+            showMessage(text, type) {
+              const messageContainer =
+                document.getElementById("messageContainer");
+              if (messageContainer) {
+                messageContainer.innerHTML = `<div class="${type}-message">${text}</div>`;
+                messageContainer.scrollIntoView({
+                  behavior: "smooth",
+                  block: "nearest",
+                });
               } else {
-                console.error(
-                  "Vocabulary data not found. Make sure vocabulary.js is loaded."
-                );
-                return;
+                alert(text);
               }
-            } catch (error) {
-              console.error("Error loading flashcards:", error);
             }
-          }
 
-          loadProgress() {
-            const saved = localStorage.getItem("dgt-vocab-progress");
-            if (saved) {
-              this.knownCardsSet = new Set(JSON.parse(saved));
-            }
-          }
-
-          loadVocabularyUpdates() {
-            const saved = localStorage.getItem("dgt-vocab-vocabulary-updates");
-            if (saved) {
-              this.vocabularyUpdates = JSON.parse(saved);
-            }
-          }
-
-          showMessage(text, type) {
-            const messageContainer =
-              document.getElementById("messageContainer");
-            if (messageContainer) {
-              messageContainer.innerHTML = `<div class="${type}-message">${text}</div>`;
-              messageContainer.scrollIntoView({
-                behavior: "smooth",
-                block: "nearest",
+            getUniqueCategories() {
+              const categories = new Set();
+              this.allCards.forEach((card) => {
+                if (card.category) {
+                  categories.add(card.category.toLowerCase());
+                }
               });
-            } else {
-              alert(text);
+
+              ["noun", "verb", "adjective", "adverb", "other"].forEach(
+                (cat) => {
+                  categories.add(cat);
+                }
+              );
+
+              return Array.from(categories).sort();
             }
           }
 
-          getUniqueCategories() {
-            const categories = new Set();
-            this.allCards.forEach((card) => {
-              if (card.category) {
-                categories.add(card.category.toLowerCase());
-              }
-            });
-
-            ["noun", "verb", "adjective", "adverb", "other"].forEach((cat) => {
-              categories.add(cat);
-            });
-
-            return Array.from(categories).sort();
-          }
-        }
-
-        // Use our custom app instead of DGTVocabulary
-        const vocabApp = new VocabManagerApp();
-        // Now that the VocabularyManager class is loaded, we can create an instance
-        new VocabularyManager(vocabApp);
-      });
-    </script>
+          // Use our custom app instead of DGTVocabulary
+          const vocabApp = new VocabManagerApp();
+          // Now that the VocabularyManager class is loaded, we can create an instance
+          new VocabularyManager(vocabApp);
+        });
+      </script>
+    </div>
   </body>
 </html>

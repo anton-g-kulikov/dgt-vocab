@@ -1356,3 +1356,42 @@ document.addEventListener("DOMContentLoaded", function () {
   // The initialization will be handled by the script in vocabulary-manager.html
   console.log("Vocabulary Manager script loaded");
 });
+
+// Tab switching for word entry forms
+document.addEventListener("DOMContentLoaded", function () {
+  const regularFormBtn = document.getElementById("showRegularFormBtn");
+  const textParserBtn = document.getElementById("showTextParserBtn");
+  const regularAddForm = document.getElementById("regularAddForm");
+  const textParserForm = document.getElementById("textParserForm");
+
+  // Function to show the regular add form
+  function showRegularForm() {
+    regularAddForm.classList.add("active");
+    regularAddForm.classList.remove("hidden");
+    textParserForm.classList.add("hidden");
+    regularFormBtn.classList.add("active");
+    textParserBtn.classList.remove("active");
+  }
+
+  // Function to show the text parser form
+  function showTextParserForm() {
+    regularAddForm.classList.remove("active");
+    regularAddForm.classList.add("hidden");
+    textParserForm.classList.remove("hidden");
+    regularFormBtn.classList.remove("active");
+    textParserBtn.classList.add("active");
+  }
+
+  // Event listeners for the tab buttons
+  if (regularFormBtn && textParserBtn) {
+    regularFormBtn.addEventListener("click", showRegularForm);
+    textParserBtn.addEventListener("click", showTextParserForm);
+  }
+
+  // Initialize based on the default setting
+  if (textParserBtn?.classList.contains("active")) {
+    showTextParserForm();
+  } else if (regularFormBtn?.classList.contains("active")) {
+    showRegularForm();
+  }
+});

@@ -97,7 +97,10 @@ class QuizMode {
 
     // Update question text
     const quizQuestion = document.getElementById("quizQuestion");
-    quizQuestion.textContent = `What does "${correctCard.word}" mean?`;
+    const spanishWord = correctCard.word;
+
+    // Highlight the Spanish word with a span
+    quizQuestion.innerHTML = `What does "<span class="spanish-highlight">${spanishWord}</span>" mean?`;
 
     // Get options container
     const optionsContainer = document.getElementById("quizOptions");

@@ -11,108 +11,111 @@
     </script>
   </head>
   <body>
-    <div class="header">
-      <h1>🚗 Spanish DGT <a href="vocabulary-manager.html">Vocabulary</a></h1>
-      <div class="subtitle">
-        Interactive Flashcards for Spanish Driving Exam
-      </div>
-
-      <div class="mode-selector">
-        <button class="mode-btn active" onclick="setMode('flashcard', event)">
-          Flashcards
-        </button>
-        <button class="mode-btn" onclick="setMode('quiz', event)">
-          Quiz Mode
-        </button>
-      </div>
-
-      <div class="controls">
-        <div class="category-buttons" id="categoryButtons">
-          <!-- Category buttons will be populated dynamically -->
+    <div class="app-container">
+      <div class="header">
+        <h1>Spanish DGT <a href="vocabulary-manager.html">Vocabulary</a></h1>
+        <div class="subtitle">
+          Interactive Flashcards for Spanish Driving Exam
         </div>
-      </div>
 
-      <div class="stats">
-        <div class="stat">
-          <div class="stat-number">
-            <span id="currentCard">0</span> of <span id="totalCards">0</span>
-          </div>
-          <div>Cards</div>
-          <div class="stat-category" id="categoryInfo"></div>
+        <div class="mode-selector">
+          <button class="mode-btn active" onclick="setMode('flashcard', event)">
+            Flashcards
+          </button>
+          <button class="mode-btn" onclick="setMode('quiz', event)">
+            Quiz Mode
+          </button>
         </div>
-        <div class="stat">
-          <div class="stat-number" id="knownCards">0</div>
-          <div>Known</div>
-        </div>
-        <div class="stat">
-          <div class="stat-number" id="unknownCards">0</div>
-          <div>Unknown</div>
-        </div>
-      </div>
 
-      <div class="controls-buttons-row">
-        <div class="toggle-container">
-          <span class="toggle-label left" onclick="toggleShowAllCards()"
-            >🎯 Unknown Only</span
-          >
-          <button
-            class="toggle-switch"
-            id="showAllToggle"
-            onclick="toggleShowAllCards()"
-          ></button>
-          <span class="toggle-label right" onclick="toggleShowAllCards()"
-            >📖 All Cards</span
-          >
-        </div>
-        <button onclick="resetProgress()">🔄 Reset Progress</button>
-      </div>
-
-      <div class="progress-bar">
-        <div class="progress-fill" id="progressFill"></div>
-      </div>
-    </div>
-
-    <!-- Flashcard Mode -->
-    <div id="flashcardMode">
-      <div class="flashcard-container">
-        <div class="flashcard" id="flashcard" onclick="flipCard()">
-          <div class="card-face card-front">
-            <div class="spanish-word" id="spanishWord">Click to start</div>
-            <div class="category-badge" id="category">Category</div>
-          </div>
-          <div class="card-face card-back">
-            <div class="translation" id="translation">Translation</div>
-            <div class="example" id="example">Example sentence</div>
+        <div class="controls">
+          <div class="category-buttons" id="categoryButtons">
+            <!-- Category buttons will be populated dynamically -->
           </div>
         </div>
-      </div>
 
-      <div class="card-actions">
-        <button class="action-btn dont-know-btn" onclick="markCard(false)">
-          ❌ Don't Know
-        </button>
-        <button class="action-btn know-btn" onclick="markCard(true)">
-          ✅ I Know This
-        </button>
-      </div>
-    </div>
-
-    <!-- Quiz Mode -->
-    <div id="quizMode">
-      <div class="quiz-mode">
-        <div class="quiz-question" id="quizQuestion">
-          What does "vehículo" mean?
+        <div class="stats">
+          <div class="stat">
+            <div class="stat-number">
+              <span id="currentCard">0</span> of <span id="totalCards">0</span>
+            </div>
+            <div>Cards</div>
+            <div class="stat-category" id="categoryInfo"></div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" id="knownCards">0</div>
+            <div>Known</div>
+          </div>
+          <div class="stat">
+            <div class="stat-number" id="unknownCards">0</div>
+            <div>Unknown</div>
+          </div>
         </div>
-        <div class="quiz-options" id="quizOptions">
-          <!-- Options will be populated dynamically -->
-          <div class="quiz-option-placeholder">
-            Flip cards to find the correct translation...
+
+        <div class="controls-buttons-row">
+          <div class="toggle-container">
+            <span class="toggle-label left" onclick="toggleShowAllCards()"
+              >Unknown Only</span
+            >
+            <button
+              class="toggle-switch"
+              id="showAllToggle"
+              onclick="toggleShowAllCards()"
+            ></button>
+            <span class="toggle-label right" onclick="toggleShowAllCards()"
+              >All Cards</span
+            >
+          </div>
+          <button onclick="resetProgress()">Reset Progress</button>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+        </div>
+      </div>
+
+      <!-- Flashcard Mode -->
+      <div id="flashcardMode">
+        <div class="flashcard-container">
+          <div class="flashcard" id="flashcard" onclick="flipCard()">
+            <div class="card-face card-front">
+              <div class="spanish-word" id="spanishWord">Click to start</div>
+              <div class="category-badge" id="category">Category</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="translation" id="translation">Translation</div>
+              <div class="example" id="example">Example sentence</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-actions">
+          <button class="action-btn dont-know-btn" onclick="markCard(false)">
+            Don't Know
+          </button>
+          <button class="action-btn know-btn" onclick="markCard(true)">
+            I Know This
+          </button>
+        </div>
+      </div>
+
+      <!-- Quiz Mode -->
+      <div id="quizMode" class="hidden">
+        <div class="quiz-mode">
+          <div class="quiz-question" id="quizQuestion">
+            What does "vehículo" mean?
+          </div>
+          <div class="quiz-options" id="quizOptions">
+            <!-- Options will be populated dynamically -->
+            <div class="quiz-option-placeholder">
+              Click a mode button above to start...
+            </div>
           </div>
         </div>
       </div>
     </div>
 
     <script src="vocabulary.js"></script>
+    <script src="icons.js"></script>
     <script src="core.js"></script>
     <script src="flashcard-mode.js"></script>
     <script src="quiz-mode.js"></script>
