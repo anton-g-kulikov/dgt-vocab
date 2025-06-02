@@ -30,10 +30,7 @@ class VocabularyManager {
 
     this.populateVocabularyUpdatesTable();
 
-    document
-      .getElementById("saveVocabularyUpdates")
-      .addEventListener("click", () => this.exportVocabularyUpdatesToCSV());
-
+    // Add event listener to create merge request button
     document
       .getElementById("createMergeRequest")
       .addEventListener("click", () => this.createMergeRequest());
