@@ -316,9 +316,16 @@ This automated update maintains the vocabulary structure and adds new words to t
       createBtn.textContent = "✅ Pull Request Created";
       createBtn.style.background = "#28a745";
 
+      // Clear vocabulary updates after successful PR creation
+      this.vocabManager.vocabApp.vocabularyUpdates = [];
+      localStorage.setItem("dgt-vocab-vocabulary-updates", JSON.stringify([]));
+
+      // Refresh the vocabulary updates table in the main UI
+      this.vocabManager.populateVocabularyUpdatesTable();
+
       // Show success message in main UI
       this.vocabManager.showMessage(
-        `GitHub pull request created successfully! <a href="${pullRequest.html_url}" target="_blank" style="color: #0366d6;">View PR #${pullRequest.number}</a>`,
+        `GitHub pull request created successfully! <a href="${pullRequest.html_url}" target="_blank" style="color: #0366d6;">View PR #${pullRequest.number}</a> Vocabulary updates have been cleared.`,
         "success"
       );
     } catch (error) {

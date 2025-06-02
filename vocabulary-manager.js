@@ -897,9 +897,16 @@ class VocabularyManager {
     this.downloadFile(csvBlob, "vocabulary_export.csv");
     this.downloadFile(jsBlob, "vocabulary_export.js");
 
+    // Clear vocabulary updates after successful export
+    this.vocabApp.vocabularyUpdates = [];
+    localStorage.setItem("dgt-vocab-vocabulary-updates", JSON.stringify([]));
+
+    // Refresh the table to show empty state
+    this.populateVocabularyUpdatesTable();
+
     // Notify user
     this.showMessage(
-      "Vocabulary updates exported as CSV and JS files!",
+      "Vocabulary updates exported as CSV and JS files! Vocabulary updates have been cleared.",
       "success"
     );
   }
