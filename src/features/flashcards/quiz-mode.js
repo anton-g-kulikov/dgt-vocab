@@ -204,9 +204,8 @@ class QuizMode {
             : selectedCard.perevod || selectedCard.translation;
 
         backFace.innerHTML = `
-          <div class="quiz-result correct">✓ Correct!</div>
-          <div class="quiz-card-word">${selectedCard.word}</div>
           <div class="quiz-card-translation">${translationText}</div>
+          <div class="quiz-card-word mobile-hidden"><span class="result-icon">✓</span> ${selectedCard.word}</div>
         `;
 
         // Even if correct answer is selected, if there were wrong attempts
@@ -240,8 +239,9 @@ class QuizMode {
           }
         });
 
-        const quizQuestion = document.getElementById("quizQuestion");
-        quizQuestion.textContent = `Correct!`;
+        // Keep the original question displayed even after a correct answer
+        // const quizQuestion = document.getElementById("quizQuestion");
+        // quizQuestion.textContent = `Correct!`;
 
         setTimeout(() => {
           // If only one unknown card remains, switch to flashcard mode
@@ -255,6 +255,7 @@ class QuizMode {
               this.nextQuizQuestion();
             } else {
               // One card remains - switch to flashcard mode
+              const quizQuestion = document.getElementById("quizQuestion");
               quizQuestion.textContent = `🎉 Almost done! Switching to flashcard mode for the last card${categoryText}`;
 
               const optionsContainer = document.getElementById("quizOptions");
@@ -296,9 +297,8 @@ class QuizMode {
             : selectedCard.perevod || selectedCard.translation;
 
         backFace.innerHTML = `
-          <div class="quiz-result wrong">✗ Wrong</div>
-          <div class="quiz-card-word">${selectedCard.word}</div>
           <div class="quiz-card-translation">${translationText}</div>
+          <div class="quiz-card-word"><span class="result-icon">✗</span> ${selectedCard.word}</div>
         `;
 
         this.vocabApp.unknownCardsSet.add(correctId);

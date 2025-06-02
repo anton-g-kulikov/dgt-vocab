@@ -869,7 +869,7 @@ button:hover,
 
 .quiz-card-container {
   perspective: 1000px;
-  height: 110px;
+  height: 110px; /* Default height for mobile */
   cursor: pointer;
 }
 
@@ -953,53 +953,47 @@ button:hover,
 }
 
 .quiz-card-word {
-  font-weight: 600;
-  margin-bottom: var(--spacing-2);
+  font-weight: 500;
+  margin-top: var(--spacing-2);
   font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-2);
 }
 
-.quiz-card-translation {
-  font-size: 0.875rem;
-  margin-bottom: var(--spacing-2);
+.quiz-card-word .result-icon {
+  font-size: 0.9em;
   opacity: 0.9;
 }
 
-.quiz-option-text {
-  text-align: center;
-  padding: var(--spacing-2);
-  width: 100%;
-  line-height: 1.4;
+.quiz-card-translation {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 0;
 }
 
-#nextQuizBtn {
-  display: none !important;
-}
-
-/* === Mode-specific display rules === */
-#flashcardMode {
-  display: block;
-}
-
-#flashcardMode.hidden {
-  display: none;
-}
-
-#quizMode.hidden {
-  display: none;
-}
-
-/* === Responsive Quiz Styles === */
-@media (min-width: 480px) {
-  .quiz-options {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .quiz-question {
-    font-size: 1.75rem;
-  }
-
+/* Mobile adjustments */
+@media (max-width: 479px) {
   .quiz-card-container {
-    height: 180px;
+    height: 100px;
+  }
+
+  .quiz-card-face {
+    padding: var(--spacing-3);
+  }
+
+  .quiz-card-translation {
+    font-size: 1.1rem;
+  }
+
+  .quiz-card-word {
+    font-size: 0.95rem;
+  }
+
+  /* Only hide the Spanish word on correct answers */
+  .quiz-card-word.mobile-hidden {
+    display: none;
   }
 }
 
