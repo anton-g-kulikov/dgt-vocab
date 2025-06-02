@@ -8,12 +8,12 @@ class QuizMode {
   }
 
   startQuiz() {
-    if (this.vocabApp.currentCards.length < 4) {
+    if (this.vocabApp.currentCards.length < 2) {
       const category = this.vocabApp.selectedCategory || "all";
       const isFiltered = category !== "all";
       const message = isFiltered
-        ? `Need at least 4 cards for quiz mode. Current category has only ${this.vocabApp.currentCards.length} cards.`
-        : "Need at least 4 cards for quiz mode";
+        ? `Need at least 2 cards for quiz mode. Current category has only ${this.vocabApp.currentCards.length} cards.`
+        : "Need at least 2 cards for quiz mode";
       alert(message);
       return;
     }
@@ -24,7 +24,7 @@ class QuizMode {
   }
 
   nextQuizQuestion() {
-    if (this.vocabApp.currentCards.length < 4) return;
+    if (this.vocabApp.currentCards.length < 2) return;
 
     // Get unknown cards only for quiz questions
     const unknownCards = this.vocabApp.currentCards.filter(
@@ -51,16 +51,39 @@ class QuizMode {
       return;
     }
 
+    // If only one unknown card remains, finish the quiz
+    if (unknownCards.length === 1) {
+      const category = this.vocabApp.selectedCategory || "all";
+      const categoryText = category === "all" ? "" : ` in ${category} category`;
+
+      const quizQuestion = document.getElementById("quizQuestion");
+      quizQuestion.textContent = `🎉 Almost there! Only one card left${categoryText}!`;
+
+      const optionsContainer = document.getElementById("quizOptions");
+      if (optionsContainer) {
+        optionsContainer.innerHTML = `
+          <div style="text-align: center; padding: 40px; font-size: 1.2rem; color: #28a745;">
+            <p>🏆 Quiz Complete!</p>
+            <p>Switch to flashcard mode to review the last card.</p>
+          </div>
+        `;
+      }
+      return;
+    }
+
     // Get a random unknown card as the correct answer
     const correctCard =
       unknownCards[Math.floor(Math.random() * unknownCards.length)];
     const options = [correctCard];
 
-    // Add 3 random wrong options from ALL cards
-    while (options.length < 4) {
+    // Determine how many options to show based on available cards in current category
+    const maxOptions = Math.min(4, this.vocabApp.currentCards.length);
+
+    // Add wrong options from current category cards only
+    while (options.length < maxOptions) {
       const randomCard =
-        this.vocabApp.allCards[
-          Math.floor(Math.random() * this.vocabApp.allCards.length)
+        this.vocabApp.currentCards[
+          Math.floor(Math.random() * this.vocabApp.currentCards.length)
         ];
       if (
         !options.find((card) => card.translation === randomCard.translation) &&
@@ -151,6 +174,11 @@ class QuizMode {
 
         this.vocabApp.updateStats();
 
+        // Check if only one unknown card remains after this correct answer
+        const remainingUnknownCards = this.vocabApp.currentCards.filter(
+          (card) => !this.vocabApp.knownCardsSet.has(card.id)
+        );
+
         document.querySelectorAll(".quiz-card").forEach((card) => {
           card.style.pointerEvents = "none";
           if (card !== element) {
@@ -162,7 +190,47 @@ class QuizMode {
         quizQuestion.textContent = `Correct!`;
 
         setTimeout(() => {
-          this.nextQuizQuestion();
+          // If only one unknown card remains, switch to flashcard mode
+          if (remainingUnknownCards.length <= 1) {
+            const category = this.vocabApp.selectedCategory || "all";
+            const categoryText =
+              category === "all" ? "" : ` in ${category} category`;
+
+            if (remainingUnknownCards.length === 0) {
+              // All cards are known - show completion
+              this.nextQuizQuestion();
+            } else {
+              // One card remains - switch to flashcard mode
+              quizQuestion.textContent = `🎉 Almost done! Switching to flashcard mode for the last card${categoryText}`;
+
+              const optionsContainer = document.getElementById("quizOptions");
+              if (optionsContainer) {
+                optionsContainer.innerHTML = `
+                  <div style="text-align: center; padding: 40px; font-size: 1.2rem; color: #28a745;">
+                    <p>🏆 Great job! One card remaining.</p>
+                    <p>Switching to flashcard mode...</p>
+                  </div>
+                `;
+              }
+
+              // Switch to flashcard mode after a short delay
+              setTimeout(() => {
+                if (window.UIHelpers) {
+                  window.UIHelpers.setMode("flashcard");
+                  // Update mode buttons
+                  document
+                    .querySelectorAll(".mode-btn")
+                    .forEach((btn) => btn.classList.remove("active"));
+                  document
+                    .querySelector(".mode-btn[onclick*='flashcard']")
+                    ?.classList.add("active");
+                }
+              }, 2000);
+            }
+          } else {
+            // Continue with next quiz question
+            this.nextQuizQuestion();
+          }
         }, 2000);
       } else {
         backFace.classList.add("wrong");
