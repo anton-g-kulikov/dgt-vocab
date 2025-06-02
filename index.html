@@ -18,7 +18,10 @@
       }
       gtag("js", new Date());
 
-      gtag("config", "G-1WCTKQ8S7D");
+      // Enable GA debug mode
+      gtag("config", "G-1WCTKQ8S7D", {
+        debug_mode: true,
+      });
     </script>
     <script>
       // Initialize page type detection
@@ -38,9 +41,7 @@
           >
           DGT <a href="vocabulary-manager.html">Vocabulary</a>
         </h1>
-        <div class="subtitle">
-          Interactive Cards for Spanish Driving Exam
-        </div>
+        <div class="subtitle">Interactive Cards for Spanish Driving Exam</div>
 
         <!-- Language switcher commented out in favor of clickable title
         <div class="language-switcher">
@@ -159,6 +160,7 @@
 
     <script src="src/core/vocabulary.js"></script>
     <script src="src/ui/icons.js"></script>
+    <script src="src/utils/analytics.js"></script>
     <script src="src/core/core.js"></script>
     <script src="src/features/flashcards/flashcard-mode.js"></script>
     <script src="src/features/flashcards/quiz-mode.js"></script>
@@ -175,6 +177,10 @@
         // Just log that we're on the index page
         if (window.vocabApp) {
           console.log("vocabApp is available on index page");
+          // Track session start
+          if (window.Analytics) {
+            window.Analytics.trackSessionStart();
+          }
         }
       });
     </script>

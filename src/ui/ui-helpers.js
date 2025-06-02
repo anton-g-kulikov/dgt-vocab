@@ -77,6 +77,11 @@ function markCard(known) {
 function setMode(mode, event) {
   UIHelpers.setMode(mode);
 
+  // Track mode switch
+  if (window.Analytics) {
+    window.Analytics.trackModeSwitch(mode);
+  }
+
   if (event && event.target) {
     const modeButtons = document.querySelectorAll(".mode-btn");
     if (modeButtons && modeButtons.length) {

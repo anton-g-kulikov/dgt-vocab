@@ -221,6 +221,12 @@ class DGTVocabulary {
     if (confirm("Are you sure you want to reset all progress?")) {
       this.knownCardsSet.clear();
       localStorage.removeItem("dgt-vocab-progress");
+
+      // Track progress reset
+      if (window.Analytics) {
+        window.Analytics.trackProgress("Reset Progress", 0);
+      }
+
       this.updateStats();
     }
   }
@@ -264,6 +270,11 @@ class DGTVocabulary {
   switchLanguage(lang) {
     this.currentLanguage = lang;
     localStorage.setItem("dgt-vocab-language", lang);
+
+    // Track language switch
+    if (window.Analytics) {
+      window.Analytics.trackLanguageSwitch(lang);
+    }
 
     // If we're in flashcard mode and the card is flipped, update the translation text
     if (this.currentMode === "flashcard" && this.flashcardMode.isFlipped) {

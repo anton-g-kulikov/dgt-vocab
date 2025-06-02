@@ -58,6 +58,11 @@ class CategoryManager {
     // Add active class to clicked button
     clickedButton.classList.add("active");
 
+    // Track category selection
+    if (window.Analytics) {
+      window.Analytics.trackCategorySelect(category);
+    }
+
     // Store the selected category
     this.vocabApp.selectedCategory = category;
 

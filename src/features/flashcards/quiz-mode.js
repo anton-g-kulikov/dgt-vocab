@@ -180,6 +180,16 @@ class QuizMode {
 
     const isCorrect = selectedId === correctId;
 
+    // Track quiz answer with counts
+    if (window.Analytics) {
+      const knownCount = this.vocabApp.knownCardsSet.size;
+      const remainingCards = this.vocabApp.currentCards.length;
+      window.Analytics.trackQuizInteraction(
+        isCorrect ? "Correct Answer" : "Wrong Answer",
+        knownCount
+      );
+    }
+
     const selectedCard = this.vocabApp.allCards.find(
       (card) => card.id === selectedId
     );

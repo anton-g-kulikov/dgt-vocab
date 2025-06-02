@@ -78,6 +78,22 @@ class FlashcardMode {
     // Always track interaction when explicitly marking a card
     this.vocabApp.trackCardInteraction(card.id);
 
+    // Track analytics
+    if (window.Analytics) {
+      const knownCount = this.vocabApp.knownCardsSet.size;
+      const totalInCategory =
+        this.vocabApp.selectedCategory === "all"
+          ? this.vocabApp.allCards.length
+          : this.vocabApp.allCards.filter(
+              (c) => c.category === this.vocabApp.selectedCategory
+            ).length;
+      window.Analytics.trackCardInteraction(
+        known ? "Known" : "Unknown",
+        this.vocabApp.selectedCategory,
+        knownCount
+      );
+    }
+
     if (known) {
       this.vocabApp.knownCardsSet.add(card.id);
       this.vocabApp.saveProgress();
