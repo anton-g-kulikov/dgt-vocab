@@ -21,8 +21,20 @@ function switchLanguage(lang, event) {
   }
 }
 
-// Function to toggle between languages when clicking on the title element
+/**
+ * Toggle between English and Russian languages
+ * This function is specifically designed to be mobile-friendly
+ * and prevent text selection issues on touch devices
+ *
+ * @param {Event} event - The click/touch event
+ */
 function toggleLanguage(event) {
+  // Prevent default behavior (like selection)
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+
   if (window.vocabApp) {
     // Toggle to the other language
     const newLang = window.vocabApp.currentLanguage === "en" ? "ru" : "en";

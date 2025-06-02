@@ -34,11 +34,31 @@
   border-radius: var(--radius-sm);
   border-bottom: 1px dotted var(--color-accent);
   text-decoration: none;
+  position: relative; /* Added for pseudo-element positioning */
+  display: inline-block; /* Ensure proper rendering */
+
+  /* Prevent text selection on mobile */
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE/Edge */
+  user-select: none; /* Standard */
+  touch-action: manipulation; /* Prevent delay on touch devices */
 }
 
 #current-language:hover {
   background-color: rgba(220, 143, 100, 0.1);
   border-bottom: 1px solid var(--color-accent);
+}
+
+/* Extend the touch target area for mobile */
+#current-language::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  bottom: -10px;
+  left: -10px;
+  z-index: -1;
 }
 
 /* Animation when toggling language */
