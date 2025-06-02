@@ -1538,15 +1538,15 @@ window.vocabularyData = [
   },
   {
     word: "mediana",
-    translation: "central reservation",
-    perevod: "Центральное резервирование",
+    translation: "central part of the road",
+    perevod: "центральная часть дороги",
     category: "noun",
     example: "No pares en la mediana.",
   },
   {
     word: "mercancías peligrosas",
     translation: "dangerous goods",
-    perevod: "Опасные товары",
+    perevod: "опасные товары",
     category: "noun",
     example: "Transporte especial de mercancías peligrosas.",
   },
