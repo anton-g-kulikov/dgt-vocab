@@ -18,9 +18,9 @@
     </div>
 
     <div class="vocab-manager-container">
-      <!-- Add Word Section -->
-      <section class="add-word-section">
-        <h2>📝 Add a New Word</h2>
+      <!-- Expand Vocabulary Section -->
+      <section class="expand-vocabulary-section">
+        <h2>📚 Expand Vocabulary</h2>
         <div id="messageContainer"></div>
 
         <div class="add-word-controls">
@@ -89,38 +89,42 @@
           ></textarea>
           <button id="analyzeTextBtn" class="primary-btn">Analyze Text</button>
         </div>
-      </section>
 
-      <!-- Parsing Results Section -->
-      <section class="parsing-results-section">
-        <h2>Parsing Results</h2>
-        <p>
-          Words extracted from text that need translations and other details:
-        </p>
-        <div
-          class="vocab-table-container"
-          style="max-height: none; overflow: visible"
-        >
-          <table class="vocab-table">
-            <thead>
-              <tr>
-                <th>Spanish Word</th>
-                <th>Translation</th>
-                <th>Category</th>
-                <th>Example</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody id="parsingResultsTableBody"></tbody>
-          </table>
-        </div>
-        <div class="modal-actions">
-          <button id="saveParsingResultsChanges" class="primary-btn">
-            Export as CSV
-          </button>
-          <button id="clearParsingResults" class="secondary-btn">
-            Clear Results
-          </button>
+        <!-- Vocabulary Updates Subsection -->
+        <div class="vocabulary-updates-subsection">
+          <h3>📝 Vocabulary Updates</h3>
+          <p>
+            New words to be added to your vocabulary. Review translations and
+            details before saving:
+          </p>
+          <div
+            class="vocab-table-container"
+            style="max-height: none; overflow: visible"
+          >
+            <table class="vocab-table">
+              <thead>
+                <tr>
+                  <th>Spanish Word</th>
+                  <th>Translation</th>
+                  <th>Category</th>
+                  <th>Example</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="vocabularyUpdatesTableBody"></tbody>
+            </table>
+          </div>
+          <div class="modal-actions">
+            <button id="saveVocabularyUpdates" class="primary-btn">
+              Export as CSV
+            </button>
+            <button id="createMergeRequest" class="primary-btn">
+              🔄 Create Merge Request
+            </button>
+            <button id="clearVocabularyUpdates" class="secondary-btn">
+              Clear Updates
+            </button>
+          </div>
         </div>
       </section>
 
@@ -180,6 +184,7 @@
 
     <script src="vocabulary.js"></script>
     <script src="script.js"></script>
+    <script src="github-integration.js"></script>
     <script src="vocabulary-manager.js"></script>
     <script>
       // Custom initialization for vocabulary manager page
@@ -189,10 +194,10 @@
           constructor() {
             this.allCards = [];
             this.knownCardsSet = new Set();
-            this.parsingResults = [];
+            this.vocabularyUpdates = [];
             this.loadFlashcards();
             this.loadProgress();
-            this.loadParsingResults();
+            this.loadVocabularyUpdates();
           }
 
           loadFlashcards() {
@@ -223,10 +228,10 @@
             }
           }
 
-          loadParsingResults() {
-            const saved = localStorage.getItem("dgt-vocab-parsing-results");
+          loadVocabularyUpdates() {
+            const saved = localStorage.getItem("dgt-vocab-vocabulary-updates");
             if (saved) {
-              this.parsingResults = JSON.parse(saved);
+              this.vocabularyUpdates = JSON.parse(saved);
             }
           }
 

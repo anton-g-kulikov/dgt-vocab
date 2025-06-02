@@ -3,15 +3,16 @@
 class VocabularyManager {
   constructor(vocabApp) {
     this.vocabApp = vocabApp;
+    this.githubIntegration = new GitHubIntegration(this);
     this.init();
   }
 
   init() {
     this.populateVocabTable(); // Focus on this functionality first
 
-    // Only set up parsing results if they exist
-    if (document.getElementById("parsingResultsTableBody")) {
-      this.setupParsingResultsHandling();
+    // Only set up vocabulary updates if they exist
+    if (document.getElementById("vocabularyUpdatesTableBody")) {
+      this.setupVocabularyUpdatesHandling();
     }
 
     // Set up the add word form controls
@@ -24,34 +25,38 @@ class VocabularyManager {
     this.setupVocabFiltering();
   }
 
-  setupParsingResultsHandling() {
-    // Initialize parsing results if the vocabApp has this property
-    if (!this.vocabApp.parsingResults) {
-      this.vocabApp.parsingResults = [];
+  setupVocabularyUpdatesHandling() {
+    // Initialize vocabulary updates if the vocabApp has this property
+    if (!this.vocabApp.vocabularyUpdates) {
+      this.vocabApp.vocabularyUpdates = [];
     }
 
-    this.populateParsingResultsTable();
+    this.populateVocabularyUpdatesTable();
 
     document
-      .getElementById("saveParsingResultsChanges")
-      .addEventListener("click", () => this.exportParsingResultsToCSV());
+      .getElementById("saveVocabularyUpdates")
+      .addEventListener("click", () => this.exportVocabularyUpdatesToCSV());
+
+    document
+      .getElementById("createMergeRequest")
+      .addEventListener("click", () => this.createMergeRequest());
   }
 
-  populateParsingResultsTable() {
-    const tableBody = document.getElementById("parsingResultsTableBody");
+  populateVocabularyUpdatesTable() {
+    const tableBody = document.getElementById("vocabularyUpdatesTableBody");
     if (!tableBody) return;
 
     tableBody.innerHTML = "";
 
-    const parsingResults = this.vocabApp.parsingResults || [];
+    const vocabularyUpdates = this.vocabApp.vocabularyUpdates || [];
 
-    if (parsingResults.length === 0) {
+    if (vocabularyUpdates.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="5" class="empty-table-message">No parsing results yet. Use the Text Parser to extract words.</td></tr>';
+        '<tr><td colspan="5" class="empty-table-message">No vocabulary updates yet. Use the Text Parser or Add Single Word to add words for review.</td></tr>';
       return;
     }
 
-    parsingResults.forEach((word) => {
+    vocabularyUpdates.forEach((word) => {
       const row = document.createElement("tr");
       row.dataset.id = word.id;
 
@@ -77,9 +82,8 @@ class VocabularyManager {
     document.querySelectorAll(".delete-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = parseInt(e.target.dataset.id);
-        this.vocabApp.parsingResults = this.vocabApp.parsingResults.filter(
-          (word) => word.id !== id
-        );
+        this.vocabApp.vocabularyUpdates =
+          this.vocabApp.vocabularyUpdates.filter((word) => word.id !== id);
         e.target.closest("tr").remove();
       });
     });
@@ -274,9 +278,9 @@ class VocabularyManager {
       .join("");
   }
 
-  saveParsingResultsChanges() {
+  saveVocabularyUpdatesChanges() {
     const rows = document.querySelectorAll(
-      "#parsingResultsTableBody tr[data-id]"
+      "#vocabularyUpdatesTableBody tr[data-id]"
     );
 
     rows.forEach((row) => {
@@ -285,23 +289,23 @@ class VocabularyManager {
       const category = row.querySelector(".category-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
-      const wordIndex = this.vocabApp.parsingResults.findIndex(
+      const wordIndex = this.vocabApp.vocabularyUpdates.findIndex(
         (word) => word.id === id
       );
       if (wordIndex !== -1) {
-        this.vocabApp.parsingResults[wordIndex].translation = translation;
-        this.vocabApp.parsingResults[wordIndex].category = category;
-        this.vocabApp.parsingResults[wordIndex].example = example;
+        this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
+        this.vocabApp.vocabularyUpdates[wordIndex].category = category;
+        this.vocabApp.vocabularyUpdates[wordIndex].example = example;
       }
     });
 
     localStorage.setItem(
-      "dgt-vocab-parsing-results",
-      JSON.stringify(this.vocabApp.parsingResults)
+      "dgt-vocab-vocabulary-updates",
+      JSON.stringify(this.vocabApp.vocabularyUpdates)
     );
 
-    // Add parsed words into the main vocabulary
-    this.vocabApp.parsingResults.forEach((word) => {
+    // Add vocabulary updates into the main vocabulary
+    this.vocabApp.vocabularyUpdates.forEach((word) => {
       this.vocabApp.allCards.push({ ...word });
     });
     // Save updated vocabulary
@@ -310,19 +314,24 @@ class VocabularyManager {
       JSON.stringify(this.vocabApp.allCards)
     );
 
-    // Clear parsing results
-    this.vocabApp.parsingResults = [];
-    localStorage.setItem("dgt-vocab-parsing-results", JSON.stringify([]));
+    // Clear vocabulary updates
+    this.vocabApp.vocabularyUpdates = [];
+    localStorage.setItem("dgt-vocab-vocabulary-updates", JSON.stringify([]));
 
     // Refresh UI tables
-    this.populateParsingResultsTable();
+    this.populateVocabularyUpdatesTable();
     this.populateVocabTable();
 
-    // Hide parsing results section
-    document.getElementById("parsingResults").classList.add("hidden");
+    // Hide vocabulary updates subsection
+    const vocabularyUpdatesSubsection = document.querySelector(
+      ".vocabulary-updates-subsection"
+    );
+    if (vocabularyUpdatesSubsection) {
+      vocabularyUpdatesSubsection.classList.add("hidden");
+    }
 
     // Notify user
-    alert("Parsing results saved and added to vocabulary successfully!");
+    alert("Vocabulary updates saved and added to vocabulary successfully!");
   }
 
   setupAddWordForm() {
@@ -519,23 +528,44 @@ class VocabularyManager {
       example: newExample,
     };
 
-    // Add to allCards
-    this.vocabApp.allCards.push(newCard);
+    // Initialize vocabulary updates if needed
+    if (!this.vocabApp.vocabularyUpdates) {
+      this.vocabApp.vocabularyUpdates = [];
+    }
+
+    // Add to vocabulary updates for review instead of directly to main vocabulary
+    this.vocabApp.vocabularyUpdates.push(newCard);
 
     // Save to localStorage
     localStorage.setItem(
-      "dgt-vocab-cards",
-      JSON.stringify(this.vocabApp.allCards)
+      "dgt-vocab-vocabulary-updates",
+      JSON.stringify(this.vocabApp.vocabularyUpdates)
     );
 
     // Clear input fields
     document.getElementById("addWordForm").reset();
 
     // Show success message
-    this.showMessage(`"${newWord}" has been added successfully!`, "success");
+    this.showMessage(
+      `"${newWord}" has been added to vocabulary updates for review!`,
+      "success"
+    );
 
-    // Refresh the vocabulary table
-    this.populateVocabTable();
+    // Refresh the vocabulary updates table
+    this.populateVocabularyUpdatesTable();
+
+    // Make vocabulary updates section visible if it was hidden
+    const vocabularyUpdatesSection = document.querySelector(
+      ".vocabulary-updates-subsection"
+    );
+    if (vocabularyUpdatesSection) {
+      vocabularyUpdatesSection.classList.remove("hidden");
+      // Scroll to the vocabulary updates section
+      vocabularyUpdatesSection.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }
   }
 
   setupTextParser() {
@@ -547,10 +577,10 @@ class VocabularyManager {
     });
 
     // Add event listener for the clear button
-    const clearBtn = document.getElementById("clearParsingResults");
+    const clearBtn = document.getElementById("clearVocabularyUpdates");
     if (clearBtn) {
       clearBtn.addEventListener("click", () => {
-        this.clearParsingResults();
+        this.clearVocabularyUpdates();
       });
     }
   }
@@ -576,8 +606,8 @@ class VocabularyManager {
       return;
     }
 
-    // Add the words directly to parsing results
-    this.addWordsToParsingResults(newWords, text);
+    // Add the words directly to vocabulary updates
+    this.addWordsToVocabularyUpdates(newWords, text);
   }
 
   extractWords(text) {
@@ -670,21 +700,21 @@ class VocabularyManager {
         (card) => card.word.toLowerCase().trim() === normalizedWord
       );
 
-      // Check if word already exists in parsing results (for words added in current session)
-      const existsInParsingResults =
-        this.vocabApp.parsingResults &&
-        this.vocabApp.parsingResults.some(
+      // Check if word already exists in vocabulary updates (for words added in current session)
+      const existsInVocabularyUpdates =
+        this.vocabApp.vocabularyUpdates &&
+        this.vocabApp.vocabularyUpdates.some(
           (item) => item.word.toLowerCase().trim() === normalizedWord
         );
 
-      return !existsInVocab && !existsInParsingResults;
+      return !existsInVocab && !existsInVocabularyUpdates;
     });
   }
 
-  addWordsToParsingResults(words, originalText) {
-    // Initialize parsing results array if needed
-    if (!this.vocabApp.parsingResults) {
-      this.vocabApp.parsingResults = [];
+  addWordsToVocabularyUpdates(words, originalText) {
+    // Initialize vocabulary updates array if needed
+    if (!this.vocabApp.vocabularyUpdates) {
+      this.vocabApp.vocabularyUpdates = [];
     }
 
     let addedCount = 0;
@@ -697,7 +727,7 @@ class VocabularyManager {
         this.vocabApp.allCards.some(
           (card) => card.word.toLowerCase().trim() === normalizedWord
         ) ||
-        this.vocabApp.parsingResults.some(
+        this.vocabApp.vocabularyUpdates.some(
           (item) => item.word.toLowerCase().trim() === normalizedWord
         );
 
@@ -705,7 +735,7 @@ class VocabularyManager {
         return; // Skip this word
       }
 
-      // Create a word entry for the parsing results
+      // Create a word entry for the vocabulary updates
       const newWord = {
         id: Date.now() + addedCount,
         word: wordObj.word,
@@ -714,52 +744,51 @@ class VocabularyManager {
         example: originalText, // Use the original text as example
       };
 
-      // Add to parsing results
-      this.vocabApp.parsingResults.push(newWord);
+      // Add to vocabulary updates
+      this.vocabApp.vocabularyUpdates.push(newWord);
       addedCount++;
     });
 
     if (addedCount > 0) {
       // Save to localStorage
       localStorage.setItem(
-        "dgt-vocab-parsing-results",
-        JSON.stringify(this.vocabApp.parsingResults)
+        "dgt-vocab-vocabulary-updates",
+        JSON.stringify(this.vocabApp.vocabularyUpdates)
       );
 
       // Show success message
       this.showMessage(
-        `Added ${addedCount} words to parsing results. Please provide translations below.`,
+        `Added ${addedCount} words to vocabulary updates. Please provide translations below.`,
         "success"
       );
 
       // Reset the text input
       document.getElementById("textToAnalyze").value = "";
 
-      // Show the added words in the parsing results table
-      this.populateParsingResultsTable();
+      // Show the added words in the vocabulary updates table
+      this.populateVocabularyUpdatesTable();
 
-      // Make parsing results visible if they were hidden
-      const parsingResultsSection = document.querySelector(
-        ".parsing-results-section"
+      // Make vocabulary updates visible if they were hidden
+      const vocabularyUpdatesSection = document.querySelector(
+        ".vocabulary-updates-subsection"
       );
-      if (parsingResultsSection) {
-        parsingResultsSection.classList.remove("hidden");
+      if (vocabularyUpdatesSection) {
+        vocabularyUpdatesSection.classList.remove("hidden");
+        // Scroll to the vocabulary updates section
+        vocabularyUpdatesSection.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
       }
-
-      // Scroll to the parsing results section
-      parsingResultsSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
     }
   }
 
-  clearParsingResults() {
-    if (confirm("Are you sure you want to clear all parsing results?")) {
-      this.vocabApp.parsingResults = [];
-      localStorage.setItem("dgt-vocab-parsing-results", JSON.stringify([]));
-      this.populateParsingResultsTable();
-      this.showMessage("Parsing results have been cleared", "success");
+  clearVocabularyUpdates() {
+    if (confirm("Are you sure you want to clear all vocabulary updates?")) {
+      this.vocabApp.vocabularyUpdates = [];
+      localStorage.setItem("dgt-vocab-vocabulary-updates", JSON.stringify([]));
+      this.populateVocabularyUpdatesTable();
+      this.showMessage("Vocabulary updates have been cleared", "success");
     }
   }
 
@@ -819,14 +848,14 @@ class VocabularyManager {
     });
   }
 
-  exportParsingResultsToCSV() {
+  exportVocabularyUpdatesToCSV() {
     // Before generating CSV, make one final check for duplicates
     const uniqueResults = [];
     const existingWords = new Set(
       this.vocabApp.allCards.map((card) => card.word.toLowerCase().trim())
     );
 
-    this.vocabApp.parsingResults.forEach((word) => {
+    this.vocabApp.vocabularyUpdates.forEach((word) => {
       const normalizedWord = word.word.toLowerCase().trim();
       if (!existingWords.has(normalizedWord)) {
         uniqueResults.push(word);
@@ -870,7 +899,7 @@ class VocabularyManager {
 
     // Notify user
     this.showMessage(
-      "Parsing results exported as CSV and JS files!",
+      "Vocabulary updates exported as CSV and JS files!",
       "success"
     );
   }
@@ -895,15 +924,13 @@ class VocabularyManager {
 
   // Helper function to trigger download
   downloadFile(blob, fileName) {
-    // Create a URL for the blob
     const url = window.URL.createObjectURL(blob);
-
-    // Create a temporary link element
     const downloadLink = document.createElement("a");
     downloadLink.href = url;
     downloadLink.download = fileName;
+    downloadLink.style.display = "none";
 
-    // Append to the document
+    // Add link to DOM
     document.body.appendChild(downloadLink);
 
     // Trigger click event to start download
@@ -912,6 +939,405 @@ class VocabularyManager {
     // Clean up
     document.body.removeChild(downloadLink);
     window.URL.revokeObjectURL(url);
+  }
+
+  // Create merge request functionality
+  async createMergeRequest() {
+    try {
+      // Validate vocabulary updates first
+      if (
+        !this.vocabApp.vocabularyUpdates ||
+        this.vocabApp.vocabularyUpdates.length === 0
+      ) {
+        this.showMessage(
+          "No vocabulary updates to create a merge request for.",
+          "error"
+        );
+        return;
+      }
+
+      this.showMessage("Creating merge request... Please wait.", "info");
+
+      // Get the updated vocabulary updates from the UI FIRST
+      this.updateVocabularyUpdatesFromUI();
+
+      // Now validate that all words have translations (after getting them from UI)
+      const incompleteWords = this.vocabApp.vocabularyUpdates.filter(
+        (word) => !word.translation || word.translation.trim() === ""
+      );
+
+      if (incompleteWords.length > 0) {
+        this.showMessage(
+          `Please provide translations for all words before creating a merge request. ${incompleteWords.length} words are missing translations.`,
+          "error"
+        );
+        return;
+      }
+
+      // Generate the updated vocabulary.js content
+      const updatedVocabularyContent =
+        await this.generateUpdatedVocabularyFile();
+
+      // Create branch name with timestamp
+      const timestamp = new Date()
+        .toISOString()
+        .split("T")[0]
+        .replace(/-/g, "");
+      const branchName = `vocab-update-${timestamp}-${Date.now()}`;
+
+      // Always try GitHub integration first (will prompt for auth if needed)
+      this.githubIntegration.showMergeRequestDialog(
+        updatedVocabularyContent,
+        branchName
+      );
+    } catch (error) {
+      console.error("Error creating merge request:", error);
+      this.showMessage(
+        "Error creating merge request: " + error.message,
+        "error"
+      );
+    }
+  }
+
+  // Update vocabulary updates from the current UI state
+  updateVocabularyUpdatesFromUI() {
+    const rows = document.querySelectorAll(
+      "#vocabularyUpdatesTableBody tr[data-id]"
+    );
+
+    rows.forEach((row) => {
+      const id = parseInt(row.dataset.id);
+      const translation = row.querySelector(".translation-input").value.trim();
+      const category = row.querySelector(".category-select").value;
+      const example = row.querySelector(".example-input").value.trim();
+
+      const wordIndex = this.vocabApp.vocabularyUpdates.findIndex(
+        (word) => word.id === id
+      );
+      if (wordIndex !== -1) {
+        this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
+        this.vocabApp.vocabularyUpdates[wordIndex].category = category;
+        this.vocabApp.vocabularyUpdates[wordIndex].example = example;
+      }
+    });
+  }
+
+  // Generate updated vocabulary.js file content
+  async generateUpdatedVocabularyFile() {
+    try {
+      // Use the vocabulary data that's already loaded instead of fetching the file
+      // This avoids the "Failed to fetch" error with local file:// URLs
+
+      // Generate the header (standard vocabulary.js file structure)
+      const header = `// Spanish DGT Driving Vocabulary Data
+// This file contains all the vocabulary terms for the DGT flashcard application
+
+`;
+      const footer = ``;
+
+      // Combine existing vocabulary with new words
+      const allWords = [...this.vocabApp.allCards];
+
+      // Filter out duplicates and add new words
+      const existingWordSet = new Set(
+        allWords.map((word) => word.word.toLowerCase().trim())
+      );
+
+      this.vocabApp.vocabularyUpdates.forEach((newWord) => {
+        const normalizedWord = newWord.word.toLowerCase().trim();
+        if (!existingWordSet.has(normalizedWord)) {
+          allWords.push({
+            word: newWord.word,
+            translation: newWord.translation,
+            category: newWord.category,
+            example: newWord.example,
+          });
+        }
+      });
+
+      // Sort words alphabetically
+      allWords.sort((a, b) => a.word.localeCompare(b.word));
+
+      // Generate the new vocabulary array content
+      let vocabularyContent = "window.vocabularyData = [\n";
+
+      allWords.forEach((word, index) => {
+        vocabularyContent += "  {\n";
+        vocabularyContent += `    word: "${this.escapeJavaScriptString(
+          word.word
+        )}",\n`;
+        vocabularyContent += `    translation: "${this.escapeJavaScriptString(
+          word.translation
+        )}",\n`;
+        vocabularyContent += `    category: "${this.escapeJavaScriptString(
+          word.category
+        )}",\n`;
+        vocabularyContent += `    example: "${this.escapeJavaScriptString(
+          word.example
+        )}",\n`;
+        vocabularyContent += "  }";
+
+        if (index < allWords.length - 1) {
+          vocabularyContent += ",";
+        }
+        vocabularyContent += "\n";
+      });
+
+      vocabularyContent += "];";
+
+      return header + vocabularyContent + footer;
+    } catch (error) {
+      throw new Error(
+        `Failed to generate updated vocabulary file: ${error.message}`
+      );
+    }
+  }
+
+  // Escape strings for JavaScript
+  escapeJavaScriptString(str) {
+    if (!str) return "";
+    return str
+      .replace(/\\/g, "\\\\")
+      .replace(/"/g, '\\"')
+      .replace(/\n/g, "\\n")
+      .replace(/\r/g, "\\r")
+      .replace(/\t/g, "\\t");
+  }
+
+  // Show merge request dialog
+  showMergeRequestDialog(updatedContent, branchName) {
+    // Create modal overlay
+    const modalOverlay = document.createElement("div");
+    modalOverlay.className = "merge-request-modal-overlay";
+    modalOverlay.style.cssText = `
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    `;
+
+    // Create modal content
+    const modal = document.createElement("div");
+    modal.className = "merge-request-modal";
+    modal.style.cssText = `
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 90%;
+      max-height: 90%;
+      overflow-y: auto;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    `;
+
+    const newWordsCount = this.vocabApp.vocabularyUpdates.length;
+    const totalWordsCount = this.vocabApp.allCards.length + newWordsCount;
+
+    modal.innerHTML = `
+      <h2>🔄 Create Merge Request</h2>
+      <p>Ready to create a merge request with <strong>${newWordsCount} new words</strong>!</p>
+      <p>Total vocabulary size will be: <strong>${totalWordsCount} words</strong></p>
+      
+      <div style="margin: 1.5rem 0;">
+        <h3>📋 Summary of Changes:</h3>
+        <ul style="max-height: 200px; overflow-y: auto; border: 1px solid #ddd; padding: 1rem; border-radius: 4px;">
+          ${this.vocabApp.vocabularyUpdates
+            .map(
+              (word) =>
+                `<li><strong>${word.word}</strong> → ${word.translation} <em>(${word.category})</em></li>`
+            )
+            .join("")}
+        </ul>
+      </div>
+
+      <div style="margin: 1.5rem 0;">
+        <label for="branchNameInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Branch Name:</label>
+        <input type="text" id="branchNameInput" value="${branchName}" 
+               style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+      </div>
+
+      <div style="margin: 1.5rem 0;">
+        <label for="commitMessageInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Commit Message:</label>
+        <textarea id="commitMessageInput" rows="3" 
+                  style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
+                  placeholder="Add ${newWordsCount} new vocabulary words">Add ${newWordsCount} new vocabulary words
+
+Added vocabulary from vocabulary updates:
+${this.vocabApp.vocabularyUpdates
+  .slice(0, 5)
+  .map((word) => `- ${word.word} (${word.translation})`)
+  .join("\n")}${
+      newWordsCount > 5 ? `\n... and ${newWordsCount - 5} more words` : ""
+    }</textarea>
+      </div>
+
+      <div style="margin: 1.5rem 0;">
+        <h3>📝 Instructions:</h3>
+        <ol>
+          <li>Click "Download Updated Files" to get the new vocabulary.js file</li>
+          <li>Create a new branch: <code>git checkout -b ${branchName}</code></li>
+          <li>Replace your vocabulary.js file with the downloaded version</li>
+          <li>Commit the changes: <code>git add vocabulary.js && git commit -m "Your commit message"</code></li>
+          <li>Push the branch: <code>git push origin ${branchName}</code></li>
+          <li>Create a pull request on your Git platform (GitHub, GitLab, etc.)</li>
+        </ol>
+      </div>
+
+      <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
+        <button id="downloadFilesBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
+          📥 Download Updated Files
+        </button>
+        <button id="copyGitCommandsBtn" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
+          📋 Copy Git Commands
+        </button>
+        <button id="closeMergeRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
+          ❌ Close
+        </button>
+      </div>
+    `;
+
+    modalOverlay.appendChild(modal);
+    document.body.appendChild(modalOverlay);
+
+    // Add event listeners
+    document
+      .getElementById("downloadFilesBtn")
+      .addEventListener("click", () => {
+        const branchName = document.getElementById("branchNameInput").value;
+        this.downloadMergeRequestFiles(updatedContent, branchName);
+      });
+
+    document
+      .getElementById("copyGitCommandsBtn")
+      .addEventListener("click", () => {
+        const branchName = document.getElementById("branchNameInput").value;
+        const commitMessage =
+          document.getElementById("commitMessageInput").value;
+        this.copyGitCommands(branchName, commitMessage);
+      });
+
+    document
+      .getElementById("closeMergeRequestModal")
+      .addEventListener("click", () => {
+        document.body.removeChild(modalOverlay);
+      });
+
+    // Close modal when clicking overlay
+    modalOverlay.addEventListener("click", (e) => {
+      if (e.target === modalOverlay) {
+        document.body.removeChild(modalOverlay);
+      }
+    });
+  }
+
+  // Download the updated files for the merge request
+  downloadMergeRequestFiles(updatedContent, branchName) {
+    // Download updated vocabulary.js
+    const vocabBlob = new Blob([updatedContent], {
+      type: "text/javascript;charset=utf-8;",
+    });
+    this.downloadFile(vocabBlob, "vocabulary.js");
+
+    // Also generate a summary file
+    const summaryContent = this.generateMergeRequestSummary(branchName);
+    const summaryBlob = new Blob([summaryContent], {
+      type: "text/plain;charset=utf-8;",
+    });
+    this.downloadFile(summaryBlob, "merge-request-summary.txt");
+
+    this.showMessage(
+      "Files downloaded! Follow the instructions to create your merge request.",
+      "success"
+    );
+  }
+
+  // Generate merge request summary
+  generateMergeRequestSummary(branchName) {
+    const newWordsCount = this.vocabApp.vocabularyUpdates.length;
+    const totalWordsCount = this.vocabApp.allCards.length + newWordsCount;
+
+    let summary = `🔄 VOCABULARY UPDATE MERGE REQUEST\n`;
+    summary += `=====================================\n\n`;
+    summary += `Branch: ${branchName}\n`;
+    summary += `Date: ${new Date().toLocaleString()}\n`;
+    summary += `New words added: ${newWordsCount}\n`;
+    summary += `Total vocabulary size: ${totalWordsCount}\n\n`;
+
+    summary += `📋 NEW WORDS ADDED:\n`;
+    summary += `-------------------\n`;
+    this.vocabApp.vocabularyUpdates.forEach((word, index) => {
+      summary += `${index + 1}. ${word.word} → ${word.translation} (${
+        word.category
+      })\n`;
+      if (word.example) {
+        summary += `   Example: ${word.example}\n`;
+      }
+      summary += `\n`;
+    });
+
+    summary += `\n🔧 GIT COMMANDS TO EXECUTE:\n`;
+    summary += `---------------------------\n`;
+    summary += `git checkout -b ${branchName}\n`;
+    summary += `# Replace vocabulary.js with the downloaded file\n`;
+    summary += `git add vocabulary.js\n`;
+    summary += `git commit -m "Add ${newWordsCount} new vocabulary words"\n`;
+    summary += `git push origin ${branchName}\n`;
+    summary += `# Then create a pull request on your Git platform\n`;
+
+    return summary;
+  }
+
+  // Copy git commands to clipboard
+  async copyGitCommands(branchName, commitMessage) {
+    const commands = `git checkout -b ${branchName}
+# Replace vocabulary.js with the downloaded file
+git add vocabulary.js
+git commit -m "${commitMessage.replace(/"/g, '\\"')}"
+git push origin ${branchName}
+# Then create a pull request on your Git platform`;
+
+    try {
+      await navigator.clipboard.writeText(commands);
+      this.showMessage("Git commands copied to clipboard!", "success");
+    } catch (err) {
+      console.error("Failed to copy to clipboard:", err);
+      // Fallback: show the commands in a text area for manual copying
+      this.showGitCommandsDialog(commands);
+    }
+  }
+
+  // Show git commands dialog as fallback
+  showGitCommandsDialog(commands) {
+    const dialog = document.createElement("div");
+    dialog.style.cssText = `
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      z-index: 1001;
+      max-width: 80%;
+    `;
+
+    dialog.innerHTML = `
+      <h3>📋 Git Commands</h3>
+      <p>Copy these commands to execute in your terminal:</p>
+      <textarea readonly style="width: 100%; height: 200px; font-family: monospace; padding: 1rem; border: 1px solid #ddd; border-radius: 4px;">${commands}</textarea>
+      <div style="text-align: right; margin-top: 1rem;">
+        <button onclick="this.parentElement.parentElement.remove()" style="background: #6c757d; color: white; border: none; padding: 0.5rem 1rem; border-radius: 4px; cursor: pointer;">Close</button>
+      </div>
+    `;
+
+    document.body.appendChild(dialog);
+    dialog.querySelector("textarea").select();
   }
 }
 
