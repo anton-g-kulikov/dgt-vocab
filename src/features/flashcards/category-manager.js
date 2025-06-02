@@ -97,6 +97,10 @@ class CategoryManager {
       );
     }
 
+    // Sort by last interaction time regardless of which mode we're in
+    // This ensures oldest interactions are shown first
+    this.vocabApp.sortCardsByLastInteraction();
+
     // Update the toggle button to reflect current state
     if (this.vocabApp.flashcardMode) {
       this.vocabApp.flashcardMode.updateToggleButton();
@@ -121,7 +125,10 @@ class CategoryManager {
           this.vocabApp.flashcardMode.showingAllCards = true;
           this.vocabApp.flashcardMode.updateToggleButton();
         }
-        this.vocabApp.shuffleArray(this.vocabApp.currentCards);
+
+        // Sort by interaction time instead of shuffling
+        this.vocabApp.sortCardsByLastInteraction();
+
         this.vocabApp.currentIndex = 0;
         this.vocabApp.updateStats();
         this.vocabApp.showCurrentCard();
@@ -131,8 +138,9 @@ class CategoryManager {
       return;
     }
 
-    // Always shuffle cards when changing categories
-    this.vocabApp.shuffleArray(this.vocabApp.currentCards);
+    // Sort by interaction time instead of shuffling
+    this.vocabApp.sortCardsByLastInteraction();
+
     this.vocabApp.currentIndex = 0;
     this.vocabApp.updateStats();
     this.vocabApp.showCurrentCard();

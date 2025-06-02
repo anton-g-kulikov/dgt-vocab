@@ -18,6 +18,9 @@ class FlashcardMode {
 
     const card = this.vocabApp.currentCards[this.vocabApp.currentIndex];
 
+    // Track the interaction with this card
+    this.vocabApp.trackCardInteraction(card.id);
+
     // Always ensure the card is showing the front (Spanish) side
     const flashcard = document.getElementById("flashcard");
     if (flashcard && flashcard.classList.contains("flipped")) {
@@ -62,6 +65,9 @@ class FlashcardMode {
 
   markCard(known) {
     const card = this.vocabApp.currentCards[this.vocabApp.currentIndex];
+
+    // Always track interaction when explicitly marking a card
+    this.vocabApp.trackCardInteraction(card.id);
 
     if (known) {
       this.vocabApp.knownCardsSet.add(card.id);
@@ -144,8 +150,31 @@ class FlashcardMode {
     }, 100);
   }
 
+  refreshDisplay() {
+    // Sort by interaction time rather than shuffling
+    this.vocabApp.sortCardsByLastInteraction();
+    this.vocabApp.currentIndex = 0;
+
+    // Ensure card is reset to front side before showing new content
+    const flashcard = document.getElementById("flashcard");
+    if (flashcard && flashcard.classList.contains("flipped")) {
+      flashcard.classList.remove("flipped");
+      this.isFlipped = false;
+    }
+
+    this.vocabApp.updateStats();
+    this.showCurrentCard();
+
+    // Update category info display
+    if (this.vocabApp.categoryManager) {
+      this.vocabApp.categoryManager.updateCategoryInfo();
+    }
+  }
+
+  // Replace shuffleCards method with a method that sorts by interaction time
   shuffleCards() {
-    this.vocabApp.shuffleArray(this.vocabApp.currentCards);
+    // Instead of shuffling, sort by interaction time
+    this.vocabApp.sortCardsByLastInteraction();
     this.vocabApp.currentIndex = 0;
     this.showCurrentCard();
   }
@@ -293,27 +322,6 @@ class FlashcardMode {
       } else {
         showAllToggle.classList.remove("all-cards");
       }
-    }
-  }
-
-  refreshDisplay() {
-    // Always shuffle when changing modes
-    this.vocabApp.shuffleArray(this.vocabApp.currentCards);
-    this.vocabApp.currentIndex = 0;
-
-    // Ensure card is reset to front side before showing new content
-    const flashcard = document.getElementById("flashcard");
-    if (flashcard && flashcard.classList.contains("flipped")) {
-      flashcard.classList.remove("flipped");
-      this.isFlipped = false;
-    }
-
-    this.vocabApp.updateStats();
-    this.showCurrentCard();
-
-    // Update category info display
-    if (this.vocabApp.categoryManager) {
-      this.vocabApp.categoryManager.updateCategoryInfo();
     }
   }
 }

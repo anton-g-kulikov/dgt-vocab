@@ -21,6 +21,9 @@ class QuizMode {
       return;
     }
 
+    // Sort cards by last interaction time
+    this.vocabApp.sortCardsByLastInteraction();
+
     this.quizScore = 0;
     this.quizTotal = 0;
     this.nextQuizQuestion();
@@ -74,9 +77,12 @@ class QuizMode {
       return;
     }
 
-    // Get a random unknown card as the correct answer
-    const correctCard =
-      unknownCards[Math.floor(Math.random() * unknownCards.length)];
+    // Get the oldest interacted unknown card as the correct answer
+    const correctCard = unknownCards[0]; // Since we've sorted by interaction time
+
+    // Track this interaction
+    this.vocabApp.trackCardInteraction(correctCard.id);
+
     const options = [correctCard];
 
     // Determine how many options to show based on available cards in current category
@@ -154,6 +160,11 @@ class QuizMode {
   selectQuizOption(element) {
     const selectedId = parseInt(element.dataset.optionId);
     const correctId = parseInt(element.dataset.correctId);
+
+    // Track interaction with both selected and correct cards
+    this.vocabApp.trackCardInteraction(selectedId);
+    this.vocabApp.trackCardInteraction(correctId);
+
     const isCorrect = selectedId === correctId;
 
     const selectedCard = this.vocabApp.allCards.find(
