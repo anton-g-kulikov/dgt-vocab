@@ -98,16 +98,10 @@ class GitHubIntegration {
     const totalWordsCount =
       this.vocabManager.vocabApp.allCards.length + newWordsCount;
 
-    // Get GitHub settings from localStorage or defaults
-    const githubOwner =
-      localStorage.getItem("github_owner") || this.defaultOwner;
-    const githubRepo = localStorage.getItem("github_repo") || this.defaultRepo;
-
     modal.innerHTML = `
       <h2>🚀 Create GitHub Pull Request</h2>
-      <p>Automatically create a pull request with <strong>${newWordsCount} new words</strong>!</p>
+      <p>Ready to add <strong>${newWordsCount} new words</strong> to the vocabulary!</p>
       <p>Total vocabulary size will be: <strong>${totalWordsCount} words</strong></p>
-      <p style="color: #666; font-size: 0.9em; margin: 1rem 0;">Repository: <strong>${githubOwner}/${githubRepo}</strong></p>
       
       <div style="margin: 1.5rem 0;">
         <h3>📋 Summary of Changes:</h3>
@@ -121,36 +115,10 @@ class GitHubIntegration {
         </ul>
       </div>
 
-      <!-- Hidden repository fields with default values -->
-      <input type="hidden" id="githubOwnerInput" value="${githubOwner}">
-      <input type="hidden" id="githubRepoInput" value="${githubRepo}">
-
-      <div style="margin: 1.5rem 0;">
-        <label for="githubBranchNameInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Branch Name:</label>
-        <input type="text" id="githubBranchNameInput" value="${branchName}" 
-               style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
-      </div>
-
       <div style="margin: 1.5rem 0;">
         <label for="githubPRTitleInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Pull Request Title:</label>
         <input type="text" id="githubPRTitleInput" value="Add ${newWordsCount} new vocabulary words" 
                style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
-      </div>
-
-      <div style="margin: 1.5rem 0;">
-        <label for="githubPRDescriptionInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Pull Request Description:</label>
-        <textarea id="githubPRDescriptionInput" rows="4" 
-                  style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;"
-                  placeholder="Describe the changes...">Added ${newWordsCount} new vocabulary words from vocabulary updates:
-
-${this.vocabManager.vocabApp.vocabularyUpdates
-  .slice(0, 5)
-  .map((word) => `- **${word.word}** (${word.translation}) - ${word.category}`)
-  .join("\n")}${
-      newWordsCount > 5 ? `\n- ... and ${newWordsCount - 5} more words` : ""
-    }
-
-This automated update maintains the vocabulary structure and adds new words to the appropriate categories.</textarea>
       </div>
 
       <div id="githubStatusMessage" style="margin: 1rem 0; padding: 1rem; border-radius: 4px; display: none;"></div>
@@ -158,9 +126,6 @@ This automated update maintains the vocabulary structure and adds new words to t
       <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
         <button id="createGitHubPRBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
           🚀 Create Pull Request
-        </button>
-        <button id="manualWorkflowBtn" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
-          📁 Manual Workflow
         </button>
         <button id="closeGitHubMergeRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
           ❌ Close
@@ -176,13 +141,6 @@ This automated update maintains the vocabulary structure and adds new words to t
       .getElementById("createGitHubPRBtn")
       .addEventListener("click", () => {
         this.createPullRequest(updatedContent, modalOverlay);
-      });
-
-    document
-      .getElementById("manualWorkflowBtn")
-      .addEventListener("click", () => {
-        document.body.removeChild(modalOverlay);
-        this.vocabManager.showMergeRequestDialog(updatedContent, branchName);
       });
 
     document
@@ -435,43 +393,35 @@ This automated update maintains the vocabulary structure and adds new words to t
     `;
 
     modal.innerHTML = `
-      <h2>🚀 Choose Your Workflow</h2>
-      <p>You have <strong>two options</strong> for creating merge requests with your vocabulary updates:</p>
+      <h2>🚀 GitHub Authentication Required</h2>
       
       <div style="margin: 1.5rem 0; padding: 1.5rem; background: #e7f3ff; border-radius: 8px; border-left: 4px solid #0366d6;">
-        <h3 style="margin-top: 0; color: #0366d6;">🤖 Option 1: Automated GitHub Integration</h3>
-        <p style="margin-bottom: 1rem;">Authenticate with GitHub to automatically create pull requests. This requires a Personal Access Token.</p>
+        <h3 style="margin-top: 0; color: #0366d6;">🔑 Authenticate with GitHub</h3>
+        <p style="margin-bottom: 1rem;">To contribute vocabulary updates, you'll need a GitHub Personal Access Token.</p>
         
         <details style="margin-top: 1rem;">
-          <summary style="cursor: pointer; font-weight: bold; color: #0366d6;">🔑 How to get a GitHub Personal Access Token:</summary>
+          <summary style="cursor: pointer; font-weight: bold; color: #0366d6;">How to get a GitHub Personal Access Token:</summary>
           <div style="margin-top: 1rem; padding-left: 1rem;">
             <ol style="margin: 0.5rem 0; padding-left: 1.5rem;">
-              <li>Go to <a href="https://github.com/settings/tokens" target="_blank" style="color: #0366d6; text-decoration: underline;">GitHub Settings → Personal Access Tokens → Tokens (classic)</a></li>
-              <li>Click <strong>"Generate new token (classic)"</strong></li>
-              <li>Give it a descriptive name like <code style="background: #f1f3f4; padding: 2px 4px; border-radius: 3px;">DGT Vocab Manager</code></li>
-              <li>Set an expiration date (recommended: 90 days or 1 year)</li>
-              <li>Select the following scopes:
-                <ul style="margin: 0.5rem 0;">
-                  <li>✅ <code style="background: #f1f3f4; padding: 2px 4px; border-radius: 3px;">repo</code> (for private repositories)</li>
-                  <li>✅ <code style="background: #f1f3f4; padding: 2px 4px; border-radius: 3px;">public_repo</code> (for public repositories)</li>
+              <li>Go to <a href="https://github.com/settings/tokens" target="_blank">GitHub Settings → Personal Access Tokens → Tokens (classic)</a></li>
+              <li>Click "Generate new token (classic)"</li>
+              <li>Name: "DGT Vocab Manager"</li>
+              <li>Expiration: 90 days recommended</li>
+              <li>Select scopes:
+                <ul>
+                  <li>✅ "repo" or "public_repo"</li>
                 </ul>
               </li>
-              <li>Click <strong>"Generate token"</strong></li>
-              <li>⚠️ <strong>Important:</strong> Copy the token immediately - you won't see it again!</li>
+              <li>Generate and copy your token</li>
             </ol>
           </div>
         </details>
       </div>
 
-      <div style="margin: 1.5rem 0; padding: 1.5rem; background: #fff3cd; border-radius: 8px; border-left: 4px solid #ffc107;">
-        <h3 style="margin-top: 0; color: #856404;">📁 Option 2: Manual Workflow</h3>
-        <p style="margin-bottom: 0;">Generate downloadable files and manual instructions. <strong>No GitHub authentication required!</strong></p>
-      </div>
-
       <div style="margin: 1.5rem 0;">
-        <h4 style="margin-bottom: 0.5rem;">🔐 GitHub Token (for automated workflow only):</h4>
+        <h4 style="margin-bottom: 0.5rem;">🔐 Enter GitHub Token:</h4>
         <input type="password" id="githubTokenInput" placeholder="ghp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx" 
-               style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 6px; font-family: 'Courier New', monospace; font-size: 14px;">
+               style="width: 100%; padding: 0.75rem; border: 2px solid #ddd; border-radius: 6px;">
         <small style="color: #666; margin-top: 0.5rem; display: block;">Your token will be stored securely in your browser's local storage.</small>
       </div>
 
@@ -480,9 +430,6 @@ This automated update maintains the vocabulary structure and adds new words to t
       <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
         <button id="authenticateBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">
           🔐 Authenticate & Continue
-        </button>
-        <button id="useManualWorkflowBtn" class="secondary-btn" style="background: #ffc107; color: #212529; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer; font-weight: bold;">
-          📁 Use Manual Workflow Instead
         </button>
         <button id="cancelAuthBtn" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
           ❌ Cancel
@@ -665,13 +612,6 @@ This automated update maintains the vocabulary structure and adds new words to t
           authenticateBtn.disabled = false;
           authenticateBtn.textContent = "🔐 Authenticate & Continue";
         }
-      });
-
-    document
-      .getElementById("useManualWorkflowBtn")
-      .addEventListener("click", () => {
-        document.body.removeChild(modalOverlay);
-        this.vocabManager.showMergeRequestDialog(updatedContent, branchName);
       });
 
     document.getElementById("cancelAuthBtn").addEventListener("click", () => {
