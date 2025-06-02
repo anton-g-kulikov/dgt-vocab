@@ -15,9 +15,6 @@ class VocabularyManager {
       this.setupVocabularyUpdatesHandling();
     }
 
-    // Set up the add word form controls
-    this.setupAddWordForm();
-
     // Set up text parser
     this.setupTextParser();
 
@@ -52,7 +49,7 @@ class VocabularyManager {
 
     if (vocabularyUpdates.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="5" class="empty-table-message">No vocabulary updates yet. Use the Text Parser or Add Single Word to add words for review.</td></tr>';
+        '<tr><td colspan="5" class="empty-table-message">No vocabulary updates yet. Use the Text Parser to add words for review.</td></tr>';
       return;
     }
 
@@ -226,9 +223,7 @@ class VocabularyManager {
           <td>${card.word}</td>
           <td>${card.translation || ""}</td>
           <td>${card.category || ""}</td>
-          <td><textarea class="example-input" readonly>${
-            card.example || ""
-          }</textarea></td>
+          <td class="example">${card.example || ""}</td>
         `;
 
         tableBody.appendChild(row);
@@ -332,240 +327,6 @@ class VocabularyManager {
 
     // Notify user
     alert("Vocabulary updates saved and added to vocabulary successfully!");
-  }
-
-  setupAddWordForm() {
-    const addWordForm = document.getElementById("addWordForm");
-    if (!addWordForm) return;
-
-    // Make sure no error classes are applied initially
-    this.clearFieldErrors();
-
-    // Populate category dropdown
-    this.populateCategoryDropdown();
-
-    // Handle form submission
-    addWordForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      this.addNewWord();
-    });
-
-    // Handle cancel button
-    document.getElementById("cancelAddBtn").addEventListener("click", () => {
-      addWordForm.reset();
-      this.clearMessages();
-      this.clearFieldErrors();
-    });
-
-    // Add focus out event on Spanish word to check for duplicates
-    const spanishWordInput = document.getElementById("newSpanishWord");
-    if (spanishWordInput) {
-      spanishWordInput.addEventListener("blur", () => {
-        const word = spanishWordInput.value.trim();
-        if (word) {
-          this.checkIfWordExists(word);
-        }
-      });
-    }
-
-    // Setup tab switching between single word and text parser
-    this.setupFormTabSwitching();
-  }
-
-  setupFormTabSwitching() {
-    document
-      .getElementById("showRegularFormBtn")
-      .addEventListener("click", () => {
-        document.getElementById("showRegularFormBtn").classList.add("active");
-        document.getElementById("showTextParserBtn").classList.remove("active");
-        document.getElementById("regularAddForm").classList.remove("hidden");
-        document.getElementById("textParserForm").classList.add("hidden");
-      });
-
-    document
-      .getElementById("showTextParserBtn")
-      .addEventListener("click", () => {
-        document.getElementById("showTextParserBtn").classList.add("active");
-        document
-          .getElementById("showRegularFormBtn")
-          .classList.remove("active");
-        document.getElementById("textParserForm").classList.remove("hidden");
-        document.getElementById("regularAddForm").classList.add("hidden");
-      });
-
-    // Make sure the Parse Text tab is shown by default
-    document.getElementById("showTextParserBtn").click();
-  }
-
-  populateCategoryDropdown() {
-    const categorySelect = document.getElementById("newCategory");
-    if (!categorySelect) return;
-
-    categorySelect.innerHTML = ""; // Clear existing options
-
-    // Add default option
-    const defaultOption = document.createElement("option");
-    defaultOption.value = "";
-    defaultOption.textContent = "Select category";
-    categorySelect.appendChild(defaultOption);
-
-    // Add categories from vocabulary
-    this.vocabApp.getUniqueCategories().forEach((category) => {
-      const option = document.createElement("option");
-      option.value = category;
-      option.textContent = category.charAt(0).toUpperCase() + category.slice(1); // Capitalize first letter
-      categorySelect.appendChild(option);
-    });
-
-    // Add "Add new category" option
-    const newCategoryOption = document.createElement("option");
-    newCategoryOption.value = "new";
-    newCategoryOption.textContent = "-- Add new category --";
-    categorySelect.appendChild(newCategoryOption);
-
-    // Add event listener to handle "Add new category" selection
-    categorySelect.addEventListener("change", () => {
-      if (categorySelect.value === "new") {
-        const newCategory = prompt("Enter new category name:");
-        if (newCategory && newCategory.trim()) {
-          const trimmedCategory = newCategory.trim().toLowerCase();
-
-          // Check if this category already exists in the dropdown
-          let exists = false;
-          for (let i = 0; i < categorySelect.options.length; i++) {
-            if (categorySelect.options[i].value === trimmedCategory) {
-              categorySelect.value = trimmedCategory;
-              exists = true;
-              break;
-            }
-          }
-
-          // If it doesn't exist, add it
-          if (!exists) {
-            const option = document.createElement("option");
-            option.value = trimmedCategory;
-            option.textContent =
-              trimmedCategory.charAt(0).toUpperCase() +
-              trimmedCategory.slice(1);
-            categorySelect.insertBefore(option, newCategoryOption);
-            categorySelect.value = trimmedCategory;
-          }
-        } else {
-          categorySelect.value = ""; // Reset to default if empty input
-        }
-      }
-    });
-  }
-
-  checkIfWordExists(word) {
-    // Clear any previous error for this field
-    const field = document.getElementById("newSpanishWord");
-    field.classList.remove("error");
-
-    // Clear previous messages
-    this.clearMessages();
-
-    // Check if word exists in vocabulary
-    const normalizedWord = word.toLowerCase().trim();
-    const existingCard = this.vocabApp.allCards.find(
-      (card) => card.word.toLowerCase().trim() === normalizedWord
-    );
-
-    if (existingCard) {
-      // Show error message
-      field.classList.add("error");
-      this.showMessage(
-        `"${word}" already exists in your vocabulary as "${existingCard.word}" with translation "${existingCard.translation}" in category "${existingCard.category}".`,
-        "error"
-      );
-      return true;
-    }
-
-    return false;
-  }
-
-  addNewWord() {
-    const newWord = document.getElementById("newSpanishWord").value.trim();
-    const newTranslation = document
-      .getElementById("newTranslation")
-      .value.trim();
-    const newCategory = document.getElementById("newCategory").value || "other";
-    const newExample = document.getElementById("newExample").value.trim();
-
-    // Clear previous messages and error styles
-    this.clearMessages();
-    this.clearFieldErrors();
-
-    // Validation
-    let hasErrors = false;
-
-    if (!newWord) {
-      this.showFieldError("newSpanishWord", "Spanish word is required");
-      hasErrors = true;
-    }
-
-    if (!newTranslation) {
-      this.showFieldError("newTranslation", "Translation is required");
-      hasErrors = true;
-    }
-
-    // Check for duplicate word
-    if (newWord && this.checkIfWordExists(newWord)) {
-      hasErrors = true;
-    }
-
-    if (hasErrors) {
-      this.showMessage("Please fix the errors above.", "error");
-      return;
-    }
-
-    // Create new card object
-    const newCard = {
-      id: Date.now(), // Use timestamp as ID
-      word: newWord,
-      translation: newTranslation,
-      category: newCategory.toLowerCase(),
-      example: newExample,
-    };
-
-    // Initialize vocabulary updates if needed
-    if (!this.vocabApp.vocabularyUpdates) {
-      this.vocabApp.vocabularyUpdates = [];
-    }
-
-    // Add to vocabulary updates for review instead of directly to main vocabulary
-    this.vocabApp.vocabularyUpdates.push(newCard);
-
-    // Save to localStorage
-    localStorage.setItem(
-      "dgt-vocab-vocabulary-updates",
-      JSON.stringify(this.vocabApp.vocabularyUpdates)
-    );
-
-    // Clear input fields
-    document.getElementById("addWordForm").reset();
-
-    // Show success message
-    this.showMessage(
-      `"${newWord}" has been added to vocabulary updates for review!`,
-      "success"
-    );
-
-    // Refresh the vocabulary updates table
-    this.populateVocabularyUpdatesTable();
-
-    // Make vocabulary updates section visible if it was hidden
-    const vocabularyUpdatesSection = document.querySelector(
-      ".vocabulary-updates-subsection"
-    );
-    if (vocabularyUpdatesSection) {
-      vocabularyUpdatesSection.classList.remove("hidden");
-      // Scroll to the vocabulary updates section
-      vocabularyUpdatesSection.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    }
   }
 
   setupTextParser() {
@@ -807,45 +568,6 @@ class VocabularyManager {
     if (messageContainer) {
       messageContainer.innerHTML = "";
     }
-  }
-
-  showFieldError(fieldId, message) {
-    const field = document.getElementById(fieldId);
-    if (field) {
-      field.classList.add("error");
-      field.placeholder = message;
-    }
-  }
-
-  clearFieldErrors() {
-    document.querySelectorAll("input.error").forEach((field) => {
-      field.classList.remove("error");
-      // Restore original placeholders
-      const placeholders = {
-        newSpanishWord: "e.g., aparcamiento",
-        newTranslation: "e.g., parking",
-        newExample: "e.g., El aparcamiento está lleno.",
-      };
-
-      if (
-        field.placeholder.includes("required") ||
-        field.placeholder.includes("exists")
-      ) {
-        field.placeholder = placeholders[field.id] || "";
-      }
-    });
-
-    // Also explicitly clear error class from specific form input fields
-    const formFields = [
-      "newSpanishWord",
-      "newTranslation",
-      "newCategory",
-      "newExample",
-    ];
-    formFields.forEach((id) => {
-      const field = document.getElementById(id);
-      if (field) field.classList.remove("error");
-    });
   }
 
   exportVocabularyUpdatesToCSV() {
@@ -1355,43 +1077,4 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // The initialization will be handled by the script in vocabulary-manager.html
   console.log("Vocabulary Manager script loaded");
-});
-
-// Tab switching for word entry forms
-document.addEventListener("DOMContentLoaded", function () {
-  const regularFormBtn = document.getElementById("showRegularFormBtn");
-  const textParserBtn = document.getElementById("showTextParserBtn");
-  const regularAddForm = document.getElementById("regularAddForm");
-  const textParserForm = document.getElementById("textParserForm");
-
-  // Function to show the regular add form
-  function showRegularForm() {
-    regularAddForm.classList.add("active");
-    regularAddForm.classList.remove("hidden");
-    textParserForm.classList.add("hidden");
-    regularFormBtn.classList.add("active");
-    textParserBtn.classList.remove("active");
-  }
-
-  // Function to show the text parser form
-  function showTextParserForm() {
-    regularAddForm.classList.remove("active");
-    regularAddForm.classList.add("hidden");
-    textParserForm.classList.remove("hidden");
-    regularFormBtn.classList.remove("active");
-    textParserBtn.classList.add("active");
-  }
-
-  // Event listeners for the tab buttons
-  if (regularFormBtn && textParserBtn) {
-    regularFormBtn.addEventListener("click", showRegularForm);
-    textParserBtn.addEventListener("click", showTextParserForm);
-  }
-
-  // Initialize based on the default setting
-  if (textParserBtn?.classList.contains("active")) {
-    showTextParserForm();
-  } else if (regularFormBtn?.classList.contains("active")) {
-    showRegularForm();
-  }
 });
