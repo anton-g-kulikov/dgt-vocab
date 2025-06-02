@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vocabulary</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="src/ui/styles.css" />
     <!-- Add this script to detect page type before loading any other scripts -->
     <script>
       window.isVocabManagerPage = true;
@@ -129,11 +129,11 @@
         </section>
       </div>
 
-      <script src="vocabulary.js"></script>
-      <script src="icons.js"></script>
-      <script src="script.js"></script>
-      <script src="github-integration.js"></script>
-      <script src="vocabulary-manager.js"></script>
+      <script src="src/core/vocabulary.js"></script>
+      <script src="src/ui/icons.js"></script>
+      <script src="src/utils/script.js"></script>
+      <script src="src/features/vocabulary-manager/github-integration.js"></script>
+      <script src="src/features/vocabulary-manager/vocabulary-manager.js"></script>
       <script>
         // Custom initialization for vocabulary manager page
         document.addEventListener("DOMContentLoaded", function () {
