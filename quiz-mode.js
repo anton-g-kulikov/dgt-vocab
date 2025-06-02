@@ -236,6 +236,7 @@ class QuizMode {
           }
         }, 2000);
       } else {
+        this.vocabApp.unknownCardsSet.add(selectedId); // Add incorrect choice to unknown list
         backFace.classList.add("wrong");
         backFace.innerHTML = `
           <div class="quiz-result wrong">✗ Try Again</div>
