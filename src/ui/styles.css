@@ -855,6 +855,10 @@ button:hover,
   grid-template-columns: 1fr;
   gap: var(--spacing-4);
   margin-bottom: var(--spacing-6);
+  width: 100%;
+  /* Ensure proper alignment for varying number of options */
+  align-items: stretch;
+  justify-items: stretch;
 }
 
 .quiz-option-placeholder {
@@ -871,6 +875,10 @@ button:hover,
   perspective: 1000px;
   height: 110px; /* Default height for mobile */
   cursor: pointer;
+  width: 100%;
+  /* Ensure minimum dimensions and proper display */
+  min-height: 100px;
+  display: block;
 }
 
 .quiz-card {
@@ -904,6 +912,10 @@ button:hover,
   padding: var(--spacing-4);
   border: 1px solid var(--color-border);
   text-align: center;
+  /* Ensure text content is never empty or invisible */
+  min-height: 100px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .quiz-card-front {
@@ -993,14 +1005,38 @@ button:hover,
   stroke: white;
 }
 
+/* Quiz option text styling */
+.quiz-option-text {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4;
+  padding: var(--spacing-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
+  /* Ensure text is never invisible */
+  min-height: 2rem;
+  color: inherit;
+}
+
 /* Mobile adjustments */
 @media (max-width: 479px) {
   .quiz-card-container {
     height: 100px;
+    /* Ensure proper spacing and visibility */
+    margin-bottom: var(--spacing-2);
   }
 
   .quiz-card-face {
     padding: var(--spacing-3);
+    /* Ensure minimum readable size */
+    min-height: 90px;
   }
 
   .quiz-card-translation {
@@ -1015,6 +1051,21 @@ button:hover,
 
   .quiz-card-word {
     font-size: 0.95rem;
+  }
+
+  /* Ensure quiz option text is visible and readable */
+  .quiz-option-text {
+    font-size: 0.9rem;
+    line-height: 1.3;
+    padding: var(--spacing-1);
+    min-height: 2.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
   }
 
   /* Show the correct answer icons even on mobile */

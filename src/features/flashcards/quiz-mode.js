@@ -86,29 +86,89 @@ class QuizMode {
     const options = [correctCard];
 
     // Determine how many options to show based on available cards in current category
+    // Maximum of 4 options, but can be fewer if not enough cards are available
     const maxOptions = Math.min(4, this.vocabApp.currentCards.length);
 
-    // Add wrong options from current category cards only
-    while (options.length < maxOptions) {
-      const randomCard =
-        this.vocabApp.currentCards[
-          Math.floor(Math.random() * this.vocabApp.currentCards.length)
-        ];
-      // Compare translations based on current language preference
-      const translationField =
-        this.vocabApp.currentLanguage === "en" ? "translation" : "perevod";
+    // Get available wrong options excluding the correct card
+    const availableWrongOptions = this.vocabApp.currentCards.filter(
+      (card) => card.id !== correctCard.id
+    );
 
-      if (
-        !options.find(
-          (card) => card[translationField] === randomCard[translationField]
-        ) &&
-        randomCard.id !== correctCard.id
+    // Shuffle available wrong options to get random selection
+    this.vocabApp.shuffleArray(availableWrongOptions);
+
+    // Add wrong options from current category cards only
+    const translationField =
+      this.vocabApp.currentLanguage === "en" ? "translation" : "perevod";
+    let attempts = 0;
+    const maxAttempts = availableWrongOptions.length * 2; // Prevent infinite loops
+
+    for (
+      let i = 0;
+      i < availableWrongOptions.length &&
+      options.length < maxOptions &&
+      attempts < maxAttempts;
+      i++
+    ) {
+      attempts++;
+      const candidateCard = availableWrongOptions[i];
+
+      // Check if this card has a unique translation compared to already selected options
+      const hasUniqueTranslation = !options.find(
+        (card) => card[translationField] === candidateCard[translationField]
+      );
+
+      if (hasUniqueTranslation) {
+        options.push(candidateCard);
+      }
+    }
+
+    // If we still don't have enough unique options and there are more cards available,
+    // try to find any cards with different IDs (even if translations might be similar)
+    if (
+      options.length < maxOptions &&
+      availableWrongOptions.length >= maxOptions - 1
+    ) {
+      for (
+        let i = 0;
+        i < availableWrongOptions.length && options.length < maxOptions;
+        i++
       ) {
-        options.push(randomCard);
+        const candidateCard = availableWrongOptions[i];
+
+        // Just check for unique ID (avoid duplicate cards)
+        const hasUniqueId = !options.find(
+          (card) => card.id === candidateCard.id
+        );
+
+        if (hasUniqueId) {
+          options.push(candidateCard);
+        }
       }
     }
 
     this.vocabApp.shuffleArray(options);
+
+    // Final validation: ensure we have at least 2 options for a valid quiz
+    if (options.length < 2) {
+      const quizQuestion = document.getElementById("quizQuestion");
+      const optionsContainer = document.getElementById("quizOptions");
+
+      if (quizQuestion) {
+        quizQuestion.textContent =
+          "Not enough unique cards available for quiz mode";
+      }
+
+      if (optionsContainer) {
+        optionsContainer.innerHTML = `
+          <div style="text-align: center; padding: 40px; font-size: 1.1rem; color: #dc3545;">
+            <p>⚠️ Insufficient unique cards for quiz</p>
+            <p>Switch to flashcard mode or add more vocabulary.</p>
+          </div>
+        `;
+      }
+      return;
+    }
 
     // Update question text
     const quizQuestion = document.getElementById("quizQuestion");
@@ -145,7 +205,13 @@ class QuizMode {
           ? option.translation
           : option.perevod || option.translation;
 
-      frontFace.innerHTML = `<div class="quiz-option-text">${translationText}</div>`;
+      // Ensure we have valid text to display (fallback protection)
+      const displayText =
+        translationText && translationText.trim()
+          ? translationText.trim()
+          : option.word || "Unknown";
+
+      frontFace.innerHTML = `<div class="quiz-option-text">${displayText}</div>`;
 
       const backFace = document.createElement("div");
       backFace.className = "quiz-card-face quiz-card-back";
