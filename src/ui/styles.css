@@ -735,7 +735,7 @@ button:hover,
   }
 
   .quiz-card-container {
-    height: 200px;
+    height: 140px; /* Reduced from 200px */
   }
 
   .card-actions {
@@ -869,7 +869,7 @@ button:hover,
 
 .quiz-card-container {
   perspective: 1000px;
-  height: 100px;
+  height: 80px; /* Reduced from 100px */
   cursor: pointer;
 }
 
@@ -999,7 +999,7 @@ button:hover,
   }
 
   .quiz-card-container {
-    height: 180px;
+    height: 120px; /* Reduced from 180px */
   }
 }
 
@@ -1018,7 +1018,7 @@ button:hover,
   }
 
   .quiz-card-container {
-    height: 200px;
+    height: 140px; /* Reduced from 200px */
   }
 }
 
