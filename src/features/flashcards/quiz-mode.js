@@ -6,7 +6,15 @@ class QuizMode {
     this.quizScore = 0;
     this.quizTotal = 0;
     // Ensure sets exist
-    this.vocabApp.knownCardsSet = this.vocabApp.knownCardsSet || new Set();
+    this.vocabApp.knownCardsSet = this.vo        backFace.innerHTML = `
+          <div class="quiz-card-translation">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            <span>${translationText}</span>
+          </div>
+          <div class="quiz-card-word">${selectedCard.word}</div>
+        `;ownCardsSet || new Set();
     this.vocabApp.unknownCardsSet = this.vocabApp.unknownCardsSet || new Set();
   }
 
@@ -214,8 +222,13 @@ class QuizMode {
             : selectedCard.perevod || selectedCard.translation;
 
         backFace.innerHTML = `
-          <div class="quiz-card-translation">${translationText}</div>
-          <div class="quiz-card-word mobile-hidden"><span class="result-icon">✓</span> ${selectedCard.word}</div>
+          <div class="quiz-card-translation">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 6L9 17l-5-5"/>
+            </svg>
+            ${translationText}
+          </div>
+          <div class="quiz-card-word mobile-hidden">${selectedCard.word}</div>
         `;
 
         // Even if correct answer is selected, if there were wrong attempts
@@ -307,8 +320,13 @@ class QuizMode {
             : selectedCard.perevod || selectedCard.translation;
 
         backFace.innerHTML = `
-          <div class="quiz-card-translation">${translationText}</div>
-          <div class="quiz-card-word"><span class="result-icon">✗</span> ${selectedCard.word}</div>
+          <div class="quiz-card-translation">
+            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+            <span>${translationText}</span>
+          </div>
+          <div class="quiz-card-word">${selectedCard.word}</div>
         `;
 
         this.vocabApp.unknownCardsSet.add(correctId);
