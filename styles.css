@@ -146,7 +146,7 @@ h2 {
 
 .mode-btn.active {
   background: var(--color-card-4);
-  color: var(--color-primary);
+  color: var(--color-bg);
   box-shadow: var(--shadow-sm);
   font-weight: 600;
 }
@@ -253,7 +253,7 @@ button:hover,
 .category-btn.active,
 .category-btn:hover {
   background: var(--color-card-4);
-  color: var(--color-primary);
+  color: var(--color-bg);
   border-color: var(--color-accent);
 }
 
