@@ -1,8 +1,10 @@
 # Spanish DGT Vocabulary Flashcards
 
+[![USE IT ONLINE](https://img.shields.io/badge/Live-Demo-success?style=for-the-badge&logo=github)](https://anton-g-kulikov.github.io/dgt-vocab/)
+
 ## Overview
 
-An interactive web application designed to help users study Spanish vocabulary for the Spanish DGT (Dirección General de Tráfico) driving exam. The application features flashcards, quiz modes, vocabulary management, and text parsing capabilities.
+An interactive web application designed to help users study Spanish vocabulary for the Spanish DGT (Dirección General de Tráfico) driving exam. The application features flashcards, quiz modes, vocabulary management, text parsing capabilities, and automated GitHub integration for collaborative vocabulary expansion.
 
 ## Features
 
@@ -23,6 +25,10 @@ An interactive web application designed to help users study Spanish vocabulary f
 - **Export Functionality**: Export parsing results to CSV format
 - **Duplicate Detection**: Prevent adding words that already exist
 - **Category Management**: Dynamic category creation and selection
+- **GitHub Integration**: Automated pull request creation for vocabulary updates
+- **Two Workflow Options**:
+  - **Automated**: Direct GitHub API integration with Personal Access Token
+  - **Manual**: Download files with git command instructions
 
 ### Core Features
 
@@ -30,6 +36,8 @@ An interactive web application designed to help users study Spanish vocabulary f
 - **394 Pre-loaded Words**: Comprehensive Spanish DGT vocabulary from traffic regulations
 - **Smart Text Analysis**: Automatic word categorization based on Spanish grammar patterns
 - **Responsive UI**: Clean, modern interface that works on all devices
+- **GitHub Integration**: Automated vocabulary contribution workflow with pull requests
+- **Collaborative Development**: Easy vocabulary expansion through GitHub workflow
 
 ## Project Structure
 
@@ -47,6 +55,10 @@ An interactive web application designed to help users study Spanish vocabulary f
 ├── stats-manager.js           # Progress tracking and statistics
 ├── ui-helpers.js              # UI utility functions
 ├── vocabulary-manager.js      # Vocabulary management features
+├── github-integration.js      # GitHub API integration for pull requests
+└── sources/                   # Source materials
+    ├── REGLAMENTO GENERAL DE CIRCULACIÓN.epub
+    └── REGLAMENTO GENERAL DE CIRCULACIÓN.pdf
 ```
 
 ## Installation
@@ -95,12 +107,38 @@ An interactive web application designed to help users study Spanish vocabulary f
 4. **Edit words**: View and filter existing vocabulary
 5. **Export data**: Download vocabulary as CSV or JavaScript and update the source file with new additions
 
+### Contributing Vocabulary (GitHub Integration)
+
+#### Automated Workflow (Recommended)
+
+1. **Parse or add new words** in the vocabulary manager
+2. **Click "🚀 Create Pull Request"**
+3. **Authenticate with GitHub** using a Personal Access Token:
+   - Go to [GitHub Settings → Personal Access Tokens → Tokens (classic)](https://github.com/settings/tokens)
+   - Generate new token with `repo` or `public_repo` scope
+   - Paste token in the authentication dialog
+4. **Automatic PR creation**: The system will:
+   - Create a new branch with timestamp
+   - Update vocabulary.js with new words
+   - Create a pull request with detailed description
+   - Clear your local vocabulary updates
+
+#### Manual Workflow
+
+1. **Parse or add new words** in the vocabulary manager
+2. **Click "🚀 Create Pull Request"** → **"📁 Use Manual Workflow Instead"**
+3. **Download files**: Get updated vocabulary.js and instruction files
+4. **Follow git commands**: Copy provided commands to create branch and PR manually
+
 ### Advanced Features
 
 - **Progress Reset**: Clear all learning progress to start fresh
 - **Category Creation**: Add new grammatical categories
 - **Duplicate Prevention**: System prevents adding existing words
 - **Text Analysis**: Smart categorization of Spanish words by grammatical patterns
+- **GitHub API Integration**: Automated pull request creation for vocabulary contributions
+- **Secure Authentication**: GitHub Personal Access Token stored locally in browser
+- **Collaborative Development**: Easy vocabulary expansion through GitHub workflow
 
 ## Technologies Used
 
@@ -109,6 +147,8 @@ An interactive web application designed to help users study Spanish vocabulary f
 - **Vanilla JavaScript**: No frameworks - pure ES6+ JavaScript
 - **Local Storage API**: Client-side data persistence
 - **CSS Animations**: Smooth card flips and transitions
+- **GitHub REST API**: Automated pull request creation and repository management
+- **Web Clipboard API**: Copy git commands to clipboard for manual workflow
 
 ## Vocabulary Sources
 
@@ -135,4 +175,27 @@ Anton Kulikov
 
 ## Contributing
 
-Contributions welcome! Please feel free to submit issues or pull requests to improve the vocabulary database or add new features.
+Contributions welcome! You can contribute in several ways:
+
+### Adding Vocabulary
+
+- Use the **vocabulary manager** with GitHub integration for seamless contributions
+- **Automated workflow**: Authenticate with GitHub for automatic PR creation
+- **Manual workflow**: Download files and follow provided git instructions
+
+### Development Contributions
+
+- Submit issues for bugs or feature requests
+- Create pull requests for code improvements
+- Help improve documentation
+
+### Getting Started with Development
+
+1. Fork the repository
+2. Clone your fork: `git clone https://github.com/yourusername/dgt-vocab.git`
+3. Create a feature branch: `git checkout -b feature-name`
+4. Make your changes and test locally
+5. Commit and push: `git commit -m "Description" && git push origin feature-name`
+6. Create a pull request
+
+Please feel free to submit issues or pull requests to improve the vocabulary database or add new features.
