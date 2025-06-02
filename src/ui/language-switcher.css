@@ -1,0 +1,77 @@
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-3);
+  margin-top: var(--spacing-2);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 0.9rem;
+  padding: 5px 8px;
+  color: var(--color-text-light);
+  transition: color 0.3s ease;
+  min-width: 30px;
+  text-transform: lowercase;
+}
+
+.lang-btn.active {
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* Styling for the current language in the title */
+#current-language {
+  color: var(--color-accent);
+  font-weight: 600;
+  transition: color 0.3s ease, background-color 0.2s ease;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: var(--radius-sm);
+  border-bottom: 1px dotted var(--color-accent);
+  text-decoration: none;
+}
+
+#current-language:hover {
+  background-color: rgba(220, 143, 100, 0.1);
+  border-bottom: 1px solid var(--color-accent);
+}
+
+/* Animation when toggling language */
+.language-toggle-flash {
+  animation: flash-animation 0.3s;
+}
+
+@keyframes flash-animation {
+  0% {
+    background-color: rgba(220, 143, 100, 0);
+  }
+  50% {
+    background-color: rgba(220, 143, 100, 0.3);
+  }
+  100% {
+    background-color: rgba(220, 143, 100, 0);
+  }
+}
+
+.lang-separator {
+  color: var(--color-border);
+  margin: 0 2px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 480px) {
+  .language-switcher {
+    margin: var(--spacing-2) 0 var(--spacing-3);
+  }
+
+  .lang-btn {
+    padding: 6px 12px;
+    font-size: 1rem;
+    min-width: 40px;
+  }
+}

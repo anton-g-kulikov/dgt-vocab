@@ -47,7 +47,10 @@ class FlashcardMode {
       categoryElement.style.background = "";
     }
 
-    if (translationElement) translationElement.textContent = card.translation;
+    if (translationElement) {
+      this.updateTranslation(card);
+    }
+
     if (exampleElement)
       exampleElement.textContent = card.example || "No example available";
 
@@ -60,6 +63,12 @@ class FlashcardMode {
     if (flashcard) {
       flashcard.classList.toggle("flipped");
       this.isFlipped = !this.isFlipped;
+
+      // If the card is being flipped to show the back, make sure translation is updated
+      if (this.isFlipped) {
+        const card = this.vocabApp.currentCards[this.vocabApp.currentIndex];
+        this.updateTranslation(card);
+      }
     }
   }
 
@@ -321,6 +330,19 @@ class FlashcardMode {
         showAllToggle.classList.add("all-cards");
       } else {
         showAllToggle.classList.remove("all-cards");
+      }
+    }
+  }
+
+  // Method to update translation based on language preference
+  updateTranslation(card) {
+    const translationElement = document.getElementById("translation");
+    if (translationElement) {
+      if (this.vocabApp.currentLanguage === "en") {
+        translationElement.textContent = card.translation || "";
+      } else {
+        // Get the Russian translation
+        translationElement.textContent = card.perevod || card.translation || "";
       }
     }
   }

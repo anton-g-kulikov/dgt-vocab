@@ -9,6 +9,7 @@ class DGTVocabulary {
     this.cardInteractionHistory = {}; // Add this to track interaction timestamps
     this.currentMode = "flashcard";
     this.selectedCategory = "all";
+    this.currentLanguage = "en"; // Default language is English
 
     this.init();
   }
@@ -16,6 +17,15 @@ class DGTVocabulary {
   // Initialization
   init() {
     this.loadFlashcards();
+
+    // Load language preference
+    const savedLang = localStorage.getItem("dgt-vocab-language");
+    if (savedLang) {
+      this.currentLanguage = savedLang;
+    }
+
+    // Update UI to reflect current language
+    this.updateLanguageUI();
 
     // Only set up event listeners if we're on the main page
     if (!window.isVocabManagerPage) {
@@ -36,6 +46,7 @@ class DGTVocabulary {
           id: index,
           word: card.word || "",
           translation: card.translation || "",
+          perevod: card.perevod || "",
           category: card.category || "",
           example: card.example || "",
         }));
@@ -246,6 +257,48 @@ class DGTVocabulary {
 
     if (window.UIHelpers) {
       window.UIHelpers.setMode(mode);
+    }
+  }
+
+  // Switch language between English and Russian
+  switchLanguage(lang) {
+    this.currentLanguage = lang;
+    localStorage.setItem("dgt-vocab-language", lang);
+
+    // If we're in flashcard mode and the card is flipped, update the translation text
+    if (this.currentMode === "flashcard" && this.flashcardMode.isFlipped) {
+      const card = this.currentCards[this.currentIndex];
+      this.flashcardMode.updateTranslation(card);
+    }
+    // If we're in quiz mode, restart the quiz to update translations
+    else if (this.currentMode === "quiz") {
+      this.quizMode.startQuiz();
+    }
+
+    // Update UI to reflect current language
+    this.updateLanguageUI();
+  }
+
+  // Update UI elements to reflect current language
+  updateLanguageUI() {
+    const enBtn = document.querySelector('.lang-btn[data-lang="en"]');
+    const ruBtn = document.querySelector('.lang-btn[data-lang="ru"]');
+
+    if (enBtn && ruBtn) {
+      if (this.currentLanguage === "en") {
+        enBtn.classList.add("active");
+        ruBtn.classList.remove("active");
+      } else {
+        enBtn.classList.remove("active");
+        ruBtn.classList.add("active");
+      }
+    }
+
+    // Update title language display
+    const currentLanguageElement = document.getElementById("current-language");
+    if (currentLanguageElement) {
+      currentLanguageElement.textContent =
+        this.currentLanguage === "en" ? "English" : "Russian";
     }
   }
 }

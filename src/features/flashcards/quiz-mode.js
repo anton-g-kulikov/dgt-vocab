@@ -94,8 +94,14 @@ class QuizMode {
         this.vocabApp.currentCards[
           Math.floor(Math.random() * this.vocabApp.currentCards.length)
         ];
+      // Compare translations based on current language preference
+      const translationField =
+        this.vocabApp.currentLanguage === "en" ? "translation" : "perevod";
+
       if (
-        !options.find((card) => card.translation === randomCard.translation) &&
+        !options.find(
+          (card) => card[translationField] === randomCard[translationField]
+        ) &&
         randomCard.id !== correctCard.id
       ) {
         options.push(randomCard);
@@ -132,7 +138,14 @@ class QuizMode {
 
       const frontFace = document.createElement("div");
       frontFace.className = "quiz-card-face quiz-card-front";
-      frontFace.innerHTML = `<div class="quiz-option-text">${option.translation}</div>`;
+
+      // Use translation based on current language preference
+      const translationText =
+        this.vocabApp.currentLanguage === "en"
+          ? option.translation
+          : option.perevod || option.translation;
+
+      frontFace.innerHTML = `<div class="quiz-option-text">${translationText}</div>`;
 
       const backFace = document.createElement("div");
       backFace.className = "quiz-card-face quiz-card-back";
@@ -184,10 +197,16 @@ class QuizMode {
     if (backFace) {
       if (isCorrect) {
         backFace.classList.add("correct");
+        // Use translation based on current language preference
+        const translationText =
+          this.vocabApp.currentLanguage === "en"
+            ? selectedCard.translation
+            : selectedCard.perevod || selectedCard.translation;
+
         backFace.innerHTML = `
           <div class="quiz-result correct">✓ Correct!</div>
           <div class="quiz-card-word">${selectedCard.word}</div>
-          <div class="quiz-card-translation">${selectedCard.translation}</div>
+          <div class="quiz-card-translation">${translationText}</div>
         `;
 
         // Even if correct answer is selected, if there were wrong attempts
@@ -270,10 +289,16 @@ class QuizMode {
       } else {
         backFace.classList.add("wrong");
         element.classList.add("wrong");
+        // Use translation based on current language preference
+        const translationText =
+          this.vocabApp.currentLanguage === "en"
+            ? selectedCard.translation
+            : selectedCard.perevod || selectedCard.translation;
+
         backFace.innerHTML = `
           <div class="quiz-result wrong">✗ Wrong</div>
           <div class="quiz-card-word">${selectedCard.word}</div>
-          <div class="quiz-card-translation">${selectedCard.translation}</div>
+          <div class="quiz-card-translation">${translationText}</div>
         `;
 
         this.vocabApp.unknownCardsSet.add(correctId);

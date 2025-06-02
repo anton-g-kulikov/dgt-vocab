@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Spanish DGT Vocabulary Flashcards</title>
     <link rel="stylesheet" href="src/ui/styles.css" />
+    <link rel="stylesheet" href="src/ui/language-switcher.css" />
     <!-- Google tag (gtag.js) -->
     <script
       async
@@ -27,10 +28,38 @@
   <body>
     <div class="app-container">
       <div class="header">
-        <h1>Spanish DGT <a href="vocabulary-manager.html">Vocabulary</a></h1>
+        <h1>
+          Spanish to
+          <span
+            id="current-language"
+            class="spanish-highlight"
+            onclick="toggleLanguage(event)"
+            >English</span
+          >
+          DGT <a href="vocabulary-manager.html">Vocabulary</a>
+        </h1>
         <div class="subtitle">
-          Interactive Flashcards for Spanish Driving Exam
+          Interactive Cards for Spanish Driving Exam
         </div>
+
+        <!-- Language switcher commented out in favor of clickable title
+        <div class="language-switcher">
+          <button
+            class="lang-btn active"
+            data-lang="en"
+            onclick="switchLanguage('en', event)"
+          >
+            en
+          </button>
+          <span class="lang-separator">|</span>
+          <button
+            class="lang-btn"
+            data-lang="ru"
+            onclick="switchLanguage('ru', event)"
+          >
+            ru
+          </button>
+        </div> -->
 
         <div class="mode-selector">
           <button class="mode-btn active" onclick="setMode('flashcard', event)">
@@ -104,10 +133,10 @@
 
         <div class="card-actions">
           <button class="action-btn dont-know-btn" onclick="markCard(false)">
-            Don't Know
+            I Don't Know...
           </button>
           <button class="action-btn know-btn" onclick="markCard(true)">
-            I Know This
+            I Know This!
           </button>
         </div>
       </div>
@@ -136,6 +165,7 @@
     <script src="src/features/flashcards/category-manager.js"></script>
     <script src="src/features/stats/stats-manager.js"></script>
     <script src="src/ui/ui-helpers.js"></script>
+    <script src="src/ui/language-switcher.js"></script>
     <script src="src/utils/script.js"></script>
     <script>
       // This script will run after both vocabulary.js and script.js have loaded
