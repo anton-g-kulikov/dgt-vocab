@@ -16,16 +16,18 @@ Study Spanish vocabulary for the DGT (Dirección General de Tráfico) driving ex
 
 ### Study Tools
 
-- 📝 **Flashcard Mode** - Interactive cards with Spanish-English translations
+- 📝 **Flashcard Mode** - Interactive cards with Spanish-English-Russian translations
 - 📋 **Quiz Mode** - Test your knowledge with multiple choice questions
 - 🏷️ **Categories** - Filter by nouns, verbs, adjectives, and adverbs
 - 📊 **Progress Tracking** - Monitor your learning progress
 - 📱 **Mobile-Friendly** - Study anywhere on any device
 
 ### Vocabulary Management
+
 - 📄 **Text Parser** - Extract words from Spanish texts
 - 🔄 **GitHub Integration** - Automated vocabulary contributions
 - 🔍 **Smart Analysis** - Automatic word categorization
+- 🌐 **Multi-language Support** - Spanish-English-Russian translations
 
 ## Getting Started
 
@@ -40,7 +42,7 @@ src/
 ├── core/              # Core app logic and vocabulary
 ├── features/          # Flashcards, quiz, and stats
 ├── ui/               # Styles and UI components
-└── utils/            # Helper functions
+└── utils/            # Helper functions and translation scripts
 ```
 
 ## Installation
@@ -104,6 +106,27 @@ src/
    - Create a pull request with detailed description
    - Clear your local vocabulary updates
 
+### Translation Management
+
+#### Updating Missing Translations
+
+For developers or contributors who want to update or add missing translations:
+
+1. Navigate to the `src/utils` directory
+2. Run the translation script to add/update Russian translations:
+   ```bash
+   cd src/utils
+   python3 deep_translator_script.py
+   ```
+
+This script will:
+
+- Identify vocabulary entries with missing Russian translations
+- Use the `deep_translator` library with Google Translate backend to automatically translate English definitions to Russian
+- Update the vocabulary.js file with the new translations
+- Create a backup of the original file before making changes
+- Process entries in small batches to avoid API rate limits
+
 ## Technologies Used
 
 - **HTML5**: Semantic structure and accessibility
@@ -113,6 +136,8 @@ src/
 - **CSS Animations**: Smooth card flips and transitions
 - **GitHub REST API**: Automated pull request creation and repository management
 - **Web Clipboard API**: Copy git commands to clipboard for manual workflow
+- **Python**: Translation scripts for multi-language support
+- **Deep Translator**: Python library for automated translations
 
 ## Vocabulary Sources
 
@@ -120,7 +145,7 @@ The vocabulary is sourced from official Spanish traffic regulations:
 
 - **Real Decreto 1428/2003**: Official Spanish traffic regulation
 - **Reglamento General de Circulación**: General traffic circulation rules
-- **394 curated terms**: Nouns, verbs, adjectives, and adverbs essential for the DGT exam
+- **400+ curated terms**: Nouns, verbs, adjectives, and adverbs essential for the DGT exam, with translations in English and Russian
 
 ## Browser Support
 
