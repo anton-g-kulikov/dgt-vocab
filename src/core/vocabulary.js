@@ -3031,4 +3031,101 @@ window.vocabularyData = [
     example:
       "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
+  {
+    word: "turismo",
+    translation: "tourism",
+    perevod: "легковая машина",
+    category: "noun",
+    topics: ["topic01"],
+    example: "Un turismo que arrastra un remolque ligero",
+  },
+  {
+    word: "arrastra",
+    translation: "drag",
+    perevod: "тащить",
+    category: "verb",
+    topics: ["topic02"],
+    example: "Un turismo que arrastra un remolque ligero",
+  },
+  {
+    word: "calle",
+    translation: "calle (street)",
+    perevod: "улица",
+    category: "noun",
+    topics: ["topic04"],
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+  },
+  {
+    word: "limitación",
+    translation: "limitation",
+    perevod: "ограничение",
+    category: "noun",
+    topics: ["topic04"],
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+  },
+  {
+    word: "automóviles",
+    translation: "automobiles",
+    perevod: "легковые автомобили",
+    category: "noun",
+    topics: ["topic01"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "considera",
+    translation: "to consider",
+    perevod: "рассмотреть",
+    category: "verb",
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "anormalmente",
+    translation: "abnormally",
+    perevod: "ненормально",
+    category: "adverb",
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "reducida",
+    translation: "reduced",
+    perevod: "уменьшенный",
+    category: "adjective",
+    topics: ["topic04"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "causa",
+    translation: "causes",
+    perevod: "причина",
+    category: "noun",
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "justificada",
+    translation: "justified",
+    perevod: "оправдание",
+    category: "adjective",
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "turismos",
+    translation: "saloons",
+    perevod: "пассажирские автомобили",
+    category: "noun",
+    topics: ["topic01"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
 ];
