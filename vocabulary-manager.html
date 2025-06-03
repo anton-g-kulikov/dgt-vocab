@@ -147,10 +147,11 @@
               </table>
             </div>
 
-            <!-- Translation Status Container moved here for better positioning -->
+            <!-- Translation Status Container - Hidden until translation is started -->
             <div
               id="translationStatusContainer"
               class="translation-status hidden"
+              style="display: none"
             >
               <div class="translation-info">
                 <h4>🔄 Translation Progress</h4>
@@ -161,6 +162,22 @@
                   <span id="currentTranslation">Preparing...</span>
                   <span id="translationCount">0/0</span>
                 </div>
+              </div>
+            </div>
+
+            <!-- Translation Completion Container - Will be shown when translation is complete -->
+            <div
+              id="translationCompletionContainer"
+              class="translation-status hidden"
+              style="display: none"
+            >
+              <div class="translation-info">
+                <h4>✅ Translation Complete</h4>
+                <div
+                  id="translationCompletionMessage"
+                  class="completion-message"
+                ></div>
+                <div id="translationSummary" class="translation-stats"></div>
               </div>
             </div>
 
@@ -276,6 +293,13 @@
               return;
             }
 
+            if (typeof window.TranslationManager === "undefined") {
+              console.error(
+                "TranslationManager not found! Check if translation-manager.js is loaded correctly."
+              );
+              return;
+            }
+
             // Create a simplified version of DGTVocabulary for the manager page
             class VocabManagerApp {
               constructor() {
@@ -365,7 +389,7 @@
             // Now that the VocabularyManager class is loaded, we can create an instance
             window.vocabularyManager = new VocabularyManager(vocabApp);
             console.log("VocabularyManager initialized successfully");
-          }, 200); // Increased delay to ensure all dependencies are loaded
+          }, 300); // Increased delay to ensure all dependencies are loaded
         });
       </script>
     </div>

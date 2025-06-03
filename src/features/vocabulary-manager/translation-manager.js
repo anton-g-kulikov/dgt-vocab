@@ -11,6 +11,15 @@ class TranslationManager {
     this.vocabularyUpdatesManager = vocabularyUpdatesManager;
     this.showMessage = showMessage;
     this.setupEventListeners();
+
+    // Make sure the translation status container is really hidden on initialization
+    const statusContainer = document.getElementById(
+      "translationStatusContainer"
+    );
+    if (statusContainer) {
+      statusContainer.classList.add("hidden");
+      statusContainer.style.display = "none";
+    }
   }
 
   setupEventListeners() {
@@ -23,6 +32,15 @@ class TranslationManager {
 
   // Translation methods
   async translateAllWords() {
+    // Hide completion container if visible
+    const completionContainer = document.getElementById(
+      "translationCompletionContainer"
+    );
+    if (completionContainer) {
+      completionContainer.classList.add("hidden");
+      completionContainer.style.display = "none";
+    }
+
     const wordsToTranslate = this.vocabApp.vocabularyUpdates.filter(
       (word) =>
         !word.translation ||
@@ -32,7 +50,23 @@ class TranslationManager {
     );
 
     if (wordsToTranslate.length === 0) {
-      this.showMessage("All words already have translations!", "info");
+      // Show message in the translation status container instead of using the general message area
+      const statusContainer = document.getElementById(
+        "translationStatusContainer"
+      );
+      if (statusContainer) {
+        statusContainer.innerHTML = `<div class="translation-info"><div class="info-message">All words already have translations!</div></div>`;
+        statusContainer.classList.remove("hidden");
+        statusContainer.style.display = "block";
+
+        // Hide after a delay
+        setTimeout(() => {
+          statusContainer.classList.add("hidden");
+          statusContainer.style.display = "none";
+        }, 5000);
+      } else {
+        this.showMessage("All words already have translations!", "info");
+      }
       return;
     }
 
@@ -58,12 +92,36 @@ class TranslationManager {
     let completedTranslations = 0;
     const totalWords = wordsToTranslate.length;
 
+    // Hide translation completion container if it's visible
+    const completionContainer = document.getElementById(
+      "translationCompletionContainer"
+    );
+    if (completionContainer) {
+      completionContainer.classList.add("hidden");
+      completionContainer.style.display = "none";
+    }
+
     // Show translation status container
     const statusContainer = document.getElementById(
       "translationStatusContainer"
     );
     if (statusContainer) {
+      // Reset the container to show progress view
+      statusContainer.innerHTML = `
+        <div class="translation-info">
+          <h4>🔄 Translation Progress</h4>
+          <div class="progress-bar">
+            <div id="translationProgress" class="progress-fill"></div>
+          </div>
+          <div id="translationStats" class="translation-stats">
+            <span id="currentTranslation">Preparing...</span>
+            <span id="translationCount">0/0</span>
+          </div>
+        </div>
+      `;
+      // Make absolutely sure the container is visible
       statusContainer.classList.remove("hidden");
+      statusContainer.style.display = "block";
     }
 
     // Update progress message
@@ -187,14 +245,7 @@ class TranslationManager {
       }
     }
 
-    // Hide translation status container
-    if (statusContainer) {
-      setTimeout(() => {
-        statusContainer.classList.add("hidden");
-      }, 3000);
-    }
-
-    // Final completion message
+    // Update translation status container to show success message
     const successCount = this.vocabApp.vocabularyUpdates.filter(
       (word) =>
         word.translation &&
@@ -203,6 +254,44 @@ class TranslationManager {
         !word.perevod.includes("❌")
     ).length;
 
+    // Hide the progress container
+    if (statusContainer) {
+      statusContainer.classList.add("hidden");
+      statusContainer.style.display = "none";
+    }
+
+    // Show the completion message in the dedicated container
+    completionContainer = document.getElementById(
+      "translationCompletionContainer"
+    );
+    if (completionContainer) {
+      const successMessage =
+        successCount === totalWords
+          ? `✅ Translation completed successfully! All ${totalWords} words translated.`
+          : `⚠️ Translation completed: ${successCount}/${totalWords} successful. Please manually add missing translations.`;
+
+      const messageType = successCount === totalWords ? "success" : "info";
+
+      // Update the completion message container
+      const messageElement = document.getElementById(
+        "translationCompletionMessage"
+      );
+      if (messageElement) {
+        messageElement.innerHTML = `<div class="${messageType}-message">${successMessage}</div>`;
+      }
+
+      // Update the summary
+      const summaryElement = document.getElementById("translationSummary");
+      if (summaryElement) {
+        summaryElement.textContent = `${successCount}/${totalWords} words translated successfully`;
+      }
+
+      // Show the completion container
+      completionContainer.classList.remove("hidden");
+      completionContainer.style.display = "block";
+    }
+
+    // Also show message in the main message container
     if (successCount === totalWords) {
       this.showMessage(
         `✅ Translation completed successfully! All ${totalWords} words translated.`,
@@ -220,6 +309,12 @@ class TranslationManager {
     const progressBar = document.getElementById("translationProgress");
     const currentTranslation = document.getElementById("currentTranslation");
     const translationCount = document.getElementById("translationCount");
+    const statusContainer = document.getElementById(
+      "translationStatusContainer"
+    );
+
+    // We don't manually remove the hidden class here anymore
+    // The container's visibility is managed only in translateWordsInBackground
 
     if (progressBar) {
       const percentage = total > 0 ? (completed / total) * 100 : 0;
@@ -262,7 +357,23 @@ class TranslationManager {
       }
     }, 1000); // Give translation service time to initialize
   }
+
+  // Helper method to ensure translation container is properly hidden
+  hideTranslationContainer() {
+    const statusContainer = document.getElementById(
+      "translationStatusContainer"
+    );
+    if (statusContainer) {
+      statusContainer.classList.add("hidden");
+      statusContainer.style.display = "none";
+    }
+  }
+
+  // Export for use in other modules
 }
 
 // Export for use in other modules
 window.TranslationManager = TranslationManager;
+
+// Signal that TranslationManager is ready to use
+document.dispatchEvent(new CustomEvent("translationManagerReady"));

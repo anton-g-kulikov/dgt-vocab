@@ -11,6 +11,22 @@ class VocabularyManager {
     // Initialize translation service
     this.translationService = new TranslationService();
 
+    // Check if TranslationManager is already available
+    if (window.TranslationManager) {
+      this.finishInitialization();
+    } else {
+      // Wait for TranslationManager to be ready before continuing
+      document.addEventListener(
+        "translationManagerReady",
+        () => {
+          this.finishInitialization();
+        },
+        { once: true }
+      );
+    }
+  }
+
+  finishInitialization() {
     // Initialize component managers
     this.initializeComponents();
 
@@ -39,7 +55,8 @@ class VocabularyManager {
       this.vocabApp,
       this.showMessage.bind(this)
     );
-    this.translationManager = new TranslationManager(
+    // Use window.TranslationManager to ensure we're accessing the globally exported class
+    this.translationManager = new window.TranslationManager(
       this.vocabApp,
       this.translationService,
       this.vocabularyUpdatesManager,

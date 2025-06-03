@@ -2995,5 +2995,40 @@ window.vocabularyData = [
     category: "noun",
     example: "casco",
   },
-  
+  {
+    word: "convencional",
+    translation: "conventional",
+    perevod: "обычная",
+    category: "adjective",
+    topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
+  {
+    word: "pavimentado",
+    translation: "paved",
+    perevod: "с твердым покрытием",
+    category: "adjective",
+    topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
+  {
+    word: "máxima",
+    translation: "maximum",
+    perevod: "максимальная",
+    category: "noun",
+    topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
+  {
+    word: "camión?",
+    translation: "truck",
+    perevod: "грузовик",
+    category: "noun",
+    topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
 ];

@@ -29,6 +29,7 @@ class TranslationService {
     this.apiKeys = this.loadApiKeys();
     this.requestCounts = {};
     this.cache = this.loadCache();
+    this.normalizeExistingCache(); // Convert existing cache entries to lowercase
     this.initializeProviders();
     console.log(
       "TranslationService initialized with enhanced provider support"
@@ -115,9 +116,8 @@ class TranslationService {
         "es",
         targetLang
       );
-      return result && result.toLowerCase() !== text.toLowerCase()
-        ? result
-        : null;
+      // The result should already be lowercase from the provider methods
+      return result && result !== text.toLowerCase() ? result : null;
     } catch (error) {
       return null;
     }
@@ -154,7 +154,9 @@ class TranslationService {
   // Check if translation is cached
   getCachedTranslation(text, sourceLang, targetLang) {
     const key = this.getCacheKey(text, sourceLang, targetLang);
-    return this.cache[key] || null;
+    const cachedTranslation = this.cache[key] || null;
+    // Ensure cached translations are also returned in lowercase
+    return cachedTranslation ? cachedTranslation.toLowerCase() : null;
   }
 
   // Cache translation result
@@ -225,7 +227,8 @@ class TranslationService {
       result.data.translations &&
       result.data.translations.length > 0
     ) {
-      return result.data.translations[0].translatedText || null;
+      const translatedText = result.data.translations[0].translatedText || null;
+      return translatedText ? translatedText.toLowerCase() : null;
     }
 
     throw new Error("Google Translate: Invalid response format");
@@ -247,7 +250,8 @@ class TranslationService {
     const result = await response.json();
 
     if (result.responseStatus === 200 && result.responseData) {
-      return result.responseData.translatedText || null;
+      const translatedText = result.responseData.translatedText || null;
+      return translatedText ? translatedText.toLowerCase() : null;
     }
 
     throw new Error(
@@ -314,14 +318,17 @@ class TranslationService {
         );
 
         if (translation && translation.trim()) {
+          // Convert translation to lowercase to ensure consistent formatting
+          const lowercasedTranslation = translation.toLowerCase();
+
           // Cache successful translation
           this.cacheTranslation(
             normalizedText,
             sourceLang,
             targetLang,
-            translation
+            lowercasedTranslation
           );
-          return translation;
+          return lowercasedTranslation;
         }
       } catch (error) {
         console.warn(
@@ -452,6 +459,23 @@ class TranslationService {
     } catch (error) {
       console.error("Error importing cache:", error);
       return false;
+    }
+  }
+
+  // Normalize existing cache to ensure all translations are lowercase
+  normalizeExistingCache() {
+    let modified = false;
+    Object.keys(this.cache).forEach((key) => {
+      const value = this.cache[key];
+      if (value && typeof value === "string" && value !== value.toLowerCase()) {
+        this.cache[key] = value.toLowerCase();
+        modified = true;
+      }
+    });
+
+    if (modified) {
+      this.saveCache();
+      console.log("Normalized existing translation cache to lowercase");
     }
   }
 }
