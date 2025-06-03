@@ -1,23 +1,7 @@
 const CACHE_NAME = "dgt-vocab-v1.1.0";
 const urlsToCache = [
   "/",
-  "/index.html",
-  "/vocabulary-manager.html",
-  "/src/ui/styles.css",
-  "/src/ui/language-switcher.css",
-  "/src/core/vocabulary.js",
   "/src/ui/icons.js",
-  "/src/utils/analytics.js",
-  "/src/core/core.js",
-  "/src/features/flashcards/flashcard-mode.js",
-  "/src/features/flashcards/quiz-mode.js",
-  "/src/features/flashcards/category-manager.js",
-  "/src/features/stats/stats-manager.js",
-  "/src/ui/ui-helpers.js",
-  "/src/ui/language-switcher.js",
-  "/src/utils/script.js",
-  "/src/features/vocabulary-manager/vocabulary-manager.js",
-  "/src/features/vocabulary-manager/github-integration.js",
   "/manifest.json",
 ];
 
