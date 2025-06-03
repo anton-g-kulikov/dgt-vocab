@@ -3,6 +3,12 @@
 
 class GitHubIntegration {
   constructor(vocabularyManager) {
+    if (!vocabularyManager) {
+      throw new Error(
+        "GitHubIntegration requires a vocabulary manager instance"
+      );
+    }
+
     this.vocabManager = vocabularyManager;
 
     // Default repository settings - change these to your repository
@@ -14,12 +20,30 @@ class GitHubIntegration {
       owner: this.defaultOwner,
       repo: this.defaultRepo,
     };
+
+    // Log initialization for debugging
+    console.log(
+      "GitHubIntegration initialized with settings:",
+      this.defaultSettings
+    );
   }
 
   // Check if user is authenticated with GitHub
   async isAuthenticated() {
     const token = localStorage.getItem("github_token");
     if (!token) return false;
+
+    // Check if GitHubIntegration is properly initialized
+    if (
+      !this.defaultSettings ||
+      !this.defaultSettings.owner ||
+      !this.defaultSettings.repo
+    ) {
+      console.error(
+        "GitHubIntegration not properly initialized - defaultSettings missing"
+      );
+      return false;
+    }
 
     try {
       // Basic token validation
@@ -642,6 +666,16 @@ Total vocabulary size after merge: ${
 
   // Check token permissions for the repository
   async checkTokenPermissions(owner, repo, token) {
+    // Validate input parameters
+    if (!owner || !repo || !token) {
+      return {
+        canAccess: false,
+        error: `Missing required parameters: owner=${owner}, repo=${repo}, token=${
+          token ? "present" : "missing"
+        }`,
+      };
+    }
+
     try {
       // First, check if we can access the repository
       const repoResponse = await fetch(
