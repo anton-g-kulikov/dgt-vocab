@@ -616,7 +616,6 @@ class VocabularyManager {
       messageContainer.innerHTML = "";
     }
   }
-
   exportVocabularyUpdatesToCSV() {
     // Before generating CSV, make one final check for duplicates
     const uniqueResults = [];
@@ -645,28 +644,11 @@ class VocabularyManager {
       csvContent += `${formattedWord},${formattedTranslation},${formattedPerevod},${formattedCategory},${formattedExample}\n`;
     });
 
-    // Generate JavaScript format for vocabulary.js
-    let jsContent = "// Format ready to paste into vocabulary.js\n\n";
-
-    uniqueResults.forEach((word) => {
-      jsContent += `  {\n`;
-      jsContent += `    word: "${word.word}",\n`;
-      jsContent += `    translation: "${word.translation}",\n`;
-      jsContent += `    perevod: "${word.perevod || ""}",\n`;
-      jsContent += `    category: "${word.category}",\n`;
-      jsContent += `    example: "${word.example.replace(/"/g, '\\"')}",\n`;
-      jsContent += `  },\n`;
-    });
-
     // Create a Blob with the CSV content
     const csvBlob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
 
-    // Create a separate Blob for JavaScript format
-    const jsBlob = new Blob([jsContent], { type: "text/plain;charset=utf-8;" });
-
-    // Create download links
+    // Create download link for CSV only
     this.downloadFile(csvBlob, "vocabulary_export.csv");
-    this.downloadFile(jsBlob, "vocabulary_export.js");
 
     // Clear vocabulary updates after successful export
     this.vocabApp.vocabularyUpdates = [];
@@ -677,7 +659,7 @@ class VocabularyManager {
 
     // Notify user
     this.showMessage(
-      "Vocabulary updates exported as CSV and JS files! Vocabulary updates have been cleared.",
+      "Vocabulary updates exported as CSV! Vocabulary updates have been cleared.",
       "success"
     );
   }
