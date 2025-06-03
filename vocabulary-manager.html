@@ -176,7 +176,7 @@
                 🚀 Create Pull Request
               </button>
               <button id="exportVocabularyToCSV" class="primary-btn">
-                📥 Export to CSV
+                📥 Export to JS
               </button>
               <button id="clearVocabularyUpdates" class="secondary-btn">
                 Clear Updates
@@ -244,6 +244,17 @@
       <script src="src/utils/script.js"></script>
       <script src="src/features/vocabulary-manager/translation-service.js"></script>
       <script src="src/features/vocabulary-manager/github-integration.js"></script>
+
+      <!-- Load component managers before main vocabulary manager -->
+      <script src="src/features/vocabulary-manager/text-parser.js"></script>
+      <script src="src/features/vocabulary-manager/vocabulary-updates-manager.js"></script>
+      <script src="src/features/vocabulary-manager/current-vocabulary-manager.js"></script>
+      <script src="src/features/vocabulary-manager/export-manager.js"></script>
+      <script src="src/features/vocabulary-manager/translation-manager.js"></script>
+      <script src="src/features/vocabulary-manager/api-key-manager.js"></script>
+      <script src="src/features/vocabulary-manager/merge-request-manager.js"></script>
+
+      <!-- Main vocabulary manager (orchestrator) -->
       <script src="src/features/vocabulary-manager/vocabulary-manager.js"></script>
       <script>
         // Custom initialization for vocabulary manager page

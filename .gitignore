@@ -20,3 +20,9 @@ dist/
 
 # Source files
 sources
+
+# secrets
+.creds
+
+# evnironment files
+venv/

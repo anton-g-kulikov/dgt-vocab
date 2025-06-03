@@ -266,7 +266,7 @@ window.vocabularyData = [
   {
     word: "balizar",
     translation: "to mark with markers",
-    perevod: "Отметьте с помощью маркеров",
+    perevod: "отметьте с помощью маркеров",
     category: "verb",
     example: "Balizan la zona de obras con conos.",
   },
@@ -2933,5 +2933,60 @@ window.vocabularyData = [
     category: "noun",
     example:
       "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+  },
+  {
+    word: "personas",
+    translation: "people",
+    perevod: "люди",
+    category: "noun",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "provistas",
+    translation: "provided",
+    perevod: "при условии",
+    category: "noun",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "certificado",
+    translation: "certification",
+    perevod: "сертификат",
+    category: "adjective",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "médico",
+    translation: "médico (doctor)",
+    perevod: "врачом",
+    category: "adjective",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "exentas",
+    translation: "exempt",
+    perevod: "освобожден",
+    category: "noun",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "utilizar",
+    translation: "to use",
+    perevod: "использовать",
+    category: "verb",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "casco",
+    translation: "auto helmet",
+    perevod: "автошлем",
+    category: "noun",
+    example: "casco",
   },
 ];

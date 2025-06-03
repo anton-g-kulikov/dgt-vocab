@@ -8,6 +8,12 @@ class GitHubIntegration {
     // Default repository settings - change these to your repository
     this.defaultOwner = "anton-g-kulikov"; // Replace with your GitHub username
     this.defaultRepo = "dgt-vocab"; // Replace with your repository name
+
+    // Store default settings for easy access
+    this.defaultSettings = {
+      owner: this.defaultOwner,
+      repo: this.defaultRepo,
+    };
   }
 
   // Check if user is authenticated with GitHub
@@ -57,7 +63,7 @@ class GitHubIntegration {
     }
   }
 
-  // Show GitHub-integrated merge request dialog
+  // Show GitHub-integrated merge request dialog (simplified)
   async showMergeRequestDialog(updatedContent, branchName) {
     // Check authentication first
     const isAuth = await this.isAuthenticated();
@@ -88,7 +94,7 @@ class GitHubIntegration {
       background: white;
       border-radius: 8px;
       padding: 2rem;
-      max-width: 90%;
+      max-width: 600px;
       max-height: 90%;
       overflow-y: auto;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -103,9 +109,9 @@ class GitHubIntegration {
       <p>Ready to add <strong>${newWordsCount} new words</strong> to the vocabulary!</p>
       <p>Total vocabulary size will be: <strong>${totalWordsCount} words</strong></p>
       
-      <div style="margin: 1.5rem 0;">
-        <h3>📋 Summary of Changes:</h3>
-        <ul style="max-height: 150px; overflow-y: auto; border: 1px solid #ddd; padding: 1rem; border-radius: 4px;">
+      <div style="margin: 1.5rem 0; padding: 1.5rem; background: #f8f9fa; border-radius: 8px;">
+        <h4 style="margin-top: 0; color: #0366d6;">📋 Summary of Changes:</h4>
+        <ul style="max-height: 150px; overflow-y: auto; border: 1px solid #ddd; padding: 1rem; border-radius: 4px; background: white; margin: 1rem 0;">
           ${this.vocabManager.vocabApp.vocabularyUpdates
             .map(
               (word) =>
@@ -115,20 +121,23 @@ class GitHubIntegration {
         </ul>
       </div>
 
-      <div style="margin: 1.5rem 0;">
-        <label for="githubPRTitleInput" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Pull Request Title:</label>
-        <input type="text" id="githubPRTitleInput" value="Add ${newWordsCount} new vocabulary words" 
-               style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px;">
+      <div style="margin: 1.5rem 0; padding: 1.5rem; background: #e7f3ff; border-radius: 8px; border-left: 4px solid #0366d6;">
+        <h4 style="margin-top: 0; color: #0366d6;">🎯 Repository Information:</h4>
+        <p style="margin: 0.5rem 0;"><strong>Repository:</strong> ${
+          this.defaultSettings.owner
+        }/${this.defaultSettings.repo}</p>
+        <p style="margin: 0.5rem 0;"><strong>Branch:</strong> ${branchName}</p>
+        <p style="margin: 0.5rem 0;"><strong>PR Title:</strong> Add ${newWordsCount} new vocabulary words</p>
       </div>
 
       <div id="githubStatusMessage" style="margin: 1rem 0; padding: 1rem; border-radius: 4px; display: none;"></div>
 
-      <div style="display: flex; gap: 1rem; justify-content: flex-end; margin-top: 2rem;">
-        <button id="createGitHubPRBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
+      <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 2rem;">
+        <button id="createGitHubPRBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1rem;">
           🚀 Create Pull Request
         </button>
-        <button id="closeGitHubMergeRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 0.75rem 1.5rem; border-radius: 4px; cursor: pointer;">
-          ❌ Close
+        <button id="closeGitHubMergeRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer;">
+          ❌ Cancel
         </button>
       </div>
     `;
@@ -140,7 +149,7 @@ class GitHubIntegration {
     document
       .getElementById("createGitHubPRBtn")
       .addEventListener("click", () => {
-        this.createPullRequest(updatedContent, modalOverlay);
+        this.createPullRequest(updatedContent, modalOverlay, branchName);
       });
 
     document
@@ -157,38 +166,35 @@ class GitHubIntegration {
     });
   }
 
-  // Create GitHub pull request automatically
-  async createPullRequest(updatedContent, modalOverlay) {
+  // Create GitHub pull request automatically (simplified)
+  async createPullRequest(updatedContent, modalOverlay, branchName) {
     const statusDiv = document.getElementById("githubStatusMessage");
     const createBtn = document.getElementById("createGitHubPRBtn");
 
     try {
-      // Get form values
-      const owner = document.getElementById("githubOwnerInput").value.trim();
-      const repo = document.getElementById("githubRepoInput").value.trim();
-      const branchName = document
-        .getElementById("githubBranchNameInput")
-        .value.trim();
-      const prTitle = document
-        .getElementById("githubPRTitleInput")
-        .value.trim();
-      const prDescription = document
-        .getElementById("githubPRDescriptionInput")
-        .value.trim();
+      // Use default settings - no form inputs needed
+      const owner = this.defaultSettings.owner;
+      const repo = this.defaultSettings.repo;
+      const prTitle = `Add ${this.vocabManager.vocabApp.vocabularyUpdates.length} new vocabulary words`;
+      const prDescription = `This pull request adds ${
+        this.vocabManager.vocabApp.vocabularyUpdates.length
+      } new vocabulary words to the DGT vocabulary.
 
-      // Validate required fields
-      if (!owner || !repo || !branchName || !prTitle) {
-        this.showStatus(
-          "Please fill in all required fields.",
-          "error",
-          statusDiv
-        );
-        return;
-      }
+## 📋 Words Added:
+${this.vocabManager.vocabApp.vocabularyUpdates
+  .map(
+    (word, index) =>
+      `${index + 1}. **${word.word}** → ${word.translation} (${word.category})`
+  )
+  .join("\n")}
 
-      // Store GitHub settings for future use
-      localStorage.setItem("github_owner", owner);
-      localStorage.setItem("github_repo", repo);
+Total vocabulary size after merge: ${
+        this.vocabManager.vocabApp.allCards.length +
+        this.vocabManager.vocabApp.vocabularyUpdates.length
+      } words
+
+---
+*This PR was automatically created by the DGT Vocabulary Manager.*`;
 
       // Get GitHub token (should be available since we authenticated upfront)
       const token = localStorage.getItem("github_token");
@@ -279,13 +285,20 @@ class GitHubIntegration {
       localStorage.setItem("dgt-vocab-vocabulary-updates", JSON.stringify([]));
 
       // Refresh the vocabulary updates table in the main UI
-      this.vocabManager.populateVocabularyUpdatesTable();
+      this.vocabManager.vocabularyUpdatesManager.populateVocabularyUpdatesTable();
 
       // Show success message in main UI
       this.vocabManager.showMessage(
         `GitHub pull request created successfully! <a href="${pullRequest.html_url}" target="_blank" style="color: #0366d6;">View PR #${pullRequest.number}</a> Vocabulary updates have been cleared.`,
         "success"
       );
+
+      // Auto-close modal after 3 seconds
+      setTimeout(() => {
+        if (document.body.contains(modalOverlay)) {
+          document.body.removeChild(modalOverlay);
+        }
+      }, 3000);
     } catch (error) {
       console.error("Error creating GitHub pull request:", error);
 
@@ -329,9 +342,10 @@ class GitHubIntegration {
       // Add helpful tips
       errorMessage +=
         "<br><br><small style='color: #666;'><strong>Troubleshooting:</strong><br>";
-      errorMessage += "• Try using the manual workflow instead<br>";
       errorMessage += "• Check your GitHub token permissions<br>";
-      errorMessage += "• Verify you have access to the repository</small>";
+      errorMessage += "• Verify you have access to the repository<br>";
+      errorMessage +=
+        "• Make sure the repository exists and is accessible</small>";
 
       this.showStatus(errorMessage, "error", statusDiv);
       createBtn.disabled = false;
