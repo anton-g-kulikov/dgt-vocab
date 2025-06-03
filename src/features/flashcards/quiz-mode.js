@@ -11,15 +11,27 @@ class QuizMode {
   }
 
   startQuiz() {
-    if (this.vocabApp.currentCards.length < 2) {
-      const category = this.vocabApp.selectedCategory || "all";
+    const category = this.vocabApp.selectedCategory || "all";
+
+    // Get all unknown cards from the full set that match the current category
+    let allUnknownCards = this.vocabApp.allCards.filter(
+      (card) =>
+        !this.vocabApp.knownCardsSet.has(card.id) &&
+        (category === "all" || card.category === category)
+    );
+
+    // Check if we have enough unknown cards to start the quiz
+    if (allUnknownCards.length < 2) {
       const isFiltered = category !== "all";
       const message = isFiltered
-        ? `Need at least 2 cards for quiz mode. Current category has only ${this.vocabApp.currentCards.length} cards.`
-        : "Need at least 2 cards for quiz mode";
+        ? `Need at least 2 unknown cards for quiz mode. Current category has only ${allUnknownCards.length} unknown cards.`
+        : "Need at least 2 unknown cards for quiz mode";
       alert(message);
       return;
     }
+
+    // Load all unknown cards into current cards
+    this.vocabApp.currentCards = [...allUnknownCards];
 
     // Sort cards by last interaction time
     this.vocabApp.sortCardsByLastInteraction();
@@ -30,7 +42,27 @@ class QuizMode {
   }
 
   nextQuizQuestion() {
-    if (this.vocabApp.currentCards.length < 2) return;
+    if (this.vocabApp.currentCards.length < 2) {
+      // If we don't have enough cards in the current set but have cards marked as unknown,
+      // let's reload them from the full set to continue the quiz
+      const category = this.vocabApp.selectedCategory || "all";
+
+      // Get all unknown cards from the full set that match the current category
+      let allUnknownCards = this.vocabApp.allCards.filter(
+        (card) =>
+          !this.vocabApp.knownCardsSet.has(card.id) &&
+          (category === "all" || card.category === category)
+      );
+
+      // If we have enough unknown cards across all cards, refresh the current cards
+      if (allUnknownCards.length >= 2) {
+        this.vocabApp.currentCards = [...allUnknownCards];
+        // Sort by interaction time to prioritize oldest interactions
+        this.vocabApp.sortCardsByLastInteraction();
+      } else {
+        return; // Not enough cards even after refreshing
+      }
+    }
 
     // Get unknown cards only for quiz questions
     const unknownCards = this.vocabApp.currentCards.filter(
@@ -298,9 +330,12 @@ class QuizMode {
           this.vocabApp.unknownCardsSet.add(correctId);
         } else {
           this.vocabApp.knownCardsSet.add(correctId);
+          // Remove from unknown set if it was there
+          this.vocabApp.unknownCardsSet.delete(correctId);
         }
         this.vocabApp.saveProgress();
 
+        // Remove this card from the current cards to avoid seeing it again in this quiz session
         this.vocabApp.currentCards = this.vocabApp.currentCards.filter(
           (card) => card.id !== correctId
         );
