@@ -123,6 +123,23 @@
           <!-- Message Container moved here for better visibility -->
           <div id="messageContainer"></div>
 
+          <!-- Translation Status Container -->
+          <div
+            id="translationStatusContainer"
+            class="translation-status hidden"
+          >
+            <div class="translation-info">
+              <h4>🔄 Translation Progress</h4>
+              <div class="progress-bar">
+                <div id="translationProgress" class="progress-fill"></div>
+              </div>
+              <div id="translationStats" class="translation-stats">
+                <span id="currentTranslation">Preparing...</span>
+                <span id="translationCount">0/0</span>
+              </div>
+            </div>
+          </div>
+
           <!-- Vocabulary Updates Subsection -->
           <div class="vocabulary-updates-subsection">
             <h3>📝 Vocabulary Updates</h3>
@@ -149,6 +166,12 @@
               </table>
             </div>
             <div class="modal-actions">
+              <button id="translateWords" class="primary-btn">
+                🌐 Auto-Translate Words
+              </button>
+              <button id="configureApiKeys" class="secondary-btn">
+                ⚙️ Configure API Keys
+              </button>
               <button id="createMergeRequest" class="primary-btn">
                 🚀 Create Pull Request
               </button>
@@ -219,96 +242,111 @@
       <script src="src/ui/icons.js"></script>
       <script src="src/utils/pwa-installer.js"></script>
       <script src="src/utils/script.js"></script>
+      <script src="src/features/vocabulary-manager/translation-service.js"></script>
       <script src="src/features/vocabulary-manager/github-integration.js"></script>
       <script src="src/features/vocabulary-manager/vocabulary-manager.js"></script>
       <script>
         // Custom initialization for vocabulary manager page
         document.addEventListener("DOMContentLoaded", function () {
-          // Create a simplified version of DGTVocabulary for the manager page
-          class VocabManagerApp {
-            constructor() {
-              this.allCards = [];
-              this.knownCardsSet = new Set();
-              this.vocabularyUpdates = [];
-              this.loadFlashcards();
-              this.loadProgress();
-              this.loadVocabularyUpdates();
+          // Wait a bit to ensure all scripts are loaded
+          setTimeout(() => {
+            // Check if VocabularyManager is available
+            if (typeof VocabularyManager === "undefined") {
+              console.error(
+                "VocabularyManager class not found! Check if the script loaded correctly."
+              );
+              return;
             }
 
-            loadFlashcards() {
-              try {
-                if (typeof window.vocabularyData !== "undefined") {
-                  this.allCards = window.vocabularyData.map((card, index) => ({
-                    id: index,
-                    word: card.word || "",
-                    translation: card.translation || "",
-                    perevod: card.perevod || "",
-                    category: card.category || "",
-                    example: card.example || "",
-                  }));
+            // Create a simplified version of DGTVocabulary for the manager page
+            class VocabManagerApp {
+              constructor() {
+                this.allCards = [];
+                this.knownCardsSet = new Set();
+                this.vocabularyUpdates = [];
+                this.loadFlashcards();
+                this.loadProgress();
+                this.loadVocabularyUpdates();
+              }
+
+              loadFlashcards() {
+                try {
+                  if (typeof window.vocabularyData !== "undefined") {
+                    this.allCards = window.vocabularyData.map(
+                      (card, index) => ({
+                        id: index,
+                        word: card.word || "",
+                        translation: card.translation || "",
+                        perevod: card.perevod || "",
+                        category: card.category || "",
+                        example: card.example || "",
+                      })
+                    );
+                  } else {
+                    console.error(
+                      "Vocabulary data not found. Make sure vocabulary.js is loaded."
+                    );
+                    return;
+                  }
+                } catch (error) {
+                  console.error("Error loading flashcards:", error);
+                }
+              }
+
+              loadProgress() {
+                const saved = localStorage.getItem("dgt-vocab-progress");
+                if (saved) {
+                  this.knownCardsSet = new Set(JSON.parse(saved));
+                }
+              }
+
+              loadVocabularyUpdates() {
+                const saved = localStorage.getItem(
+                  "dgt-vocab-vocabulary-updates"
+                );
+                if (saved) {
+                  this.vocabularyUpdates = JSON.parse(saved);
+                }
+              }
+
+              showMessage(text, type) {
+                const messageContainer =
+                  document.getElementById("messageContainer");
+                if (messageContainer) {
+                  messageContainer.innerHTML = `<div class="${type}-message">${text}</div>`;
+                  messageContainer.scrollIntoView({
+                    behavior: "smooth",
+                    block: "nearest",
+                  });
                 } else {
-                  console.error(
-                    "Vocabulary data not found. Make sure vocabulary.js is loaded."
-                  );
-                  return;
+                  alert(text);
                 }
-              } catch (error) {
-                console.error("Error loading flashcards:", error);
               }
-            }
 
-            loadProgress() {
-              const saved = localStorage.getItem("dgt-vocab-progress");
-              if (saved) {
-                this.knownCardsSet = new Set(JSON.parse(saved));
-              }
-            }
-
-            loadVocabularyUpdates() {
-              const saved = localStorage.getItem(
-                "dgt-vocab-vocabulary-updates"
-              );
-              if (saved) {
-                this.vocabularyUpdates = JSON.parse(saved);
-              }
-            }
-
-            showMessage(text, type) {
-              const messageContainer =
-                document.getElementById("messageContainer");
-              if (messageContainer) {
-                messageContainer.innerHTML = `<div class="${type}-message">${text}</div>`;
-                messageContainer.scrollIntoView({
-                  behavior: "smooth",
-                  block: "nearest",
+              getUniqueCategories() {
+                const categories = new Set();
+                this.allCards.forEach((card) => {
+                  if (card.category) {
+                    categories.add(card.category.toLowerCase());
+                  }
                 });
-              } else {
-                alert(text);
+
+                ["noun", "verb", "adjective", "adverb", "other"].forEach(
+                  (cat) => {
+                    categories.add(cat);
+                  }
+                );
+
+                return Array.from(categories).sort();
               }
             }
 
-            getUniqueCategories() {
-              const categories = new Set();
-              this.allCards.forEach((card) => {
-                if (card.category) {
-                  categories.add(card.category.toLowerCase());
-                }
-              });
-
-              ["noun", "verb", "adjective", "adverb", "other"].forEach(
-                (cat) => {
-                  categories.add(cat);
-                }
-              );
-
-              return Array.from(categories).sort();
-            }
-          }
-
-          // Use our custom app instead of DGTVocabulary
-          const vocabApp = new VocabManagerApp();
-          // Now that the VocabularyManager class is loaded, we can create an instance
-          new VocabularyManager(vocabApp);
+            // Use our custom app instead of DGTVocabulary
+            const vocabApp = new VocabManagerApp();
+            // Now that the VocabularyManager class is loaded, we can create an instance
+            window.vocabularyManager = new VocabularyManager(vocabApp);
+            console.log("VocabularyManager initialized successfully");
+          }, 100); // Small delay to ensure scripts are loaded
         });
       </script>
     </div>
