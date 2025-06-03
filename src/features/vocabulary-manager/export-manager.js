@@ -68,6 +68,18 @@ class ExportManager {
       jsContent += `    category: "${this.escapeJavaScriptString(
         word.category || ""
       )}",\n`;
+      // Add topics field as an array - check both topics (array) and topic (string)
+      if (word.topics && Array.isArray(word.topics) && word.topics.length > 0) {
+        jsContent += `    topics: ${JSON.stringify(
+          word.topics.map((t) => this.escapeJavaScriptString(t))
+        )},\n`;
+      } else if (word.topic) {
+        jsContent += `    topics: ["${this.escapeJavaScriptString(
+          word.topic
+        )}"],\n`;
+      } else {
+        jsContent += `    topics: [],\n`;
+      }
       jsContent += `    example: "${this.escapeJavaScriptString(
         word.example || ""
       )}",\n`;

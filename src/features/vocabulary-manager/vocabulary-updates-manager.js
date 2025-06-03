@@ -12,6 +12,33 @@ class VocabularyUpdatesManager {
     document.addEventListener("vocabularyUpdatesChanged", () => {
       this.populateVocabularyUpdatesTable();
     });
+
+    // Listen for global topic selector changes
+    document.addEventListener("DOMContentLoaded", () => {
+      const globalTopicSelector = document.getElementById(
+        "globalTopicSelector"
+      );
+      if (globalTopicSelector) {
+        globalTopicSelector.addEventListener("change", (e) => {
+          this.assignGlobalTopicToAllWords(e.target.value);
+        });
+      }
+    });
+
+    // If DOM is already loaded, attach the listener immediately
+    if (document.readyState === "loading") {
+      // Document still loading, wait for DOMContentLoaded
+    } else {
+      // Document already loaded
+      const globalTopicSelector = document.getElementById(
+        "globalTopicSelector"
+      );
+      if (globalTopicSelector) {
+        globalTopicSelector.addEventListener("change", (e) => {
+          this.assignGlobalTopicToAllWords(e.target.value);
+        });
+      }
+    }
   }
 
   initializeVocabularyUpdates() {
@@ -29,6 +56,7 @@ class VocabularyUpdatesManager {
       this.vocabApp.vocabularyUpdates = [];
     }
 
+    this.populateGlobalTopicSelector();
     this.populateVocabularyUpdatesTable();
   }
 
@@ -42,13 +70,25 @@ class VocabularyUpdatesManager {
 
     if (vocabularyUpdates.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="6" class="empty-table-message">No vocabulary updates yet. Use the Text Parser to add words for review.</td></tr>';
+        '<tr><td colspan="7" class="empty-table-message">No vocabulary updates yet. Use the Text Parser to add words for review.</td></tr>';
       return;
     }
 
     vocabularyUpdates.forEach((word) => {
       const row = document.createElement("tr");
       row.dataset.id = word.id;
+
+      // Get the topic from either word.topic or word.topics[0]
+      const wordTopic =
+        word.topic ||
+        (Array.isArray(word.topics) && word.topics.length > 0
+          ? word.topics[0]
+          : "");
+
+      console.log(
+        `Word: ${word.word}, Topic: ${wordTopic}, Topics Array:`,
+        word.topics
+      );
 
       row.innerHTML = `
         <td>${word.word}</td>
@@ -61,6 +101,11 @@ class VocabularyUpdatesManager {
         <td>
           <select class="category-select">
             ${this.getCategoryOptions(word.category)}
+          </select>
+        </td>
+        <td>
+          <select class="topic-select">
+            ${this.getTopicOptions(wordTopic)}
           </select>
         </td>
         <td><input type="text" class="example-input" value="${
@@ -98,7 +143,7 @@ class VocabularyUpdatesManager {
     // Add event listeners for inputs and selects
     document
       .querySelectorAll(
-        ".translation-input, .perevod-input, .category-select, .example-input"
+        ".translation-input, .perevod-input, .category-select, .topic-select, .example-input"
       )
       .forEach((element) => {
         element.addEventListener("input", debounceSave);
@@ -122,6 +167,108 @@ class VocabularyUpdatesManager {
       .join("");
   }
 
+  // Assign the selected topic to all words in the vocabulary updates table
+  assignGlobalTopicToAllWords(topicValue) {
+    console.log("Assigning global topic:", topicValue);
+
+    // Don't do anything if there are no vocabulary updates
+    if (
+      !this.vocabApp.vocabularyUpdates ||
+      this.vocabApp.vocabularyUpdates.length === 0
+    ) {
+      console.log("No vocabulary updates to update");
+      return;
+    }
+
+    console.log(
+      "Before update:",
+      JSON.stringify(this.vocabApp.vocabularyUpdates[0])
+    );
+
+    // Update all words with the selected topic
+    this.vocabApp.vocabularyUpdates.forEach((word) => {
+      this.updateTopicDataStructure(word, topicValue);
+    });
+
+    console.log(
+      "After update:",
+      JSON.stringify(this.vocabApp.vocabularyUpdates[0])
+    );
+
+    // Save to localStorage
+    localStorage.setItem(
+      "dgt-vocab-vocabulary-updates",
+      JSON.stringify(this.vocabApp.vocabularyUpdates)
+    );
+
+    // Refresh the table to reflect the changes
+    this.populateVocabularyUpdatesTable();
+
+    // Show a success message
+    this.showMessage("Topic assigned to all words successfully!", "success");
+  }
+
+  // Get topic options similar to category options
+  getTopicOptions(selectedTopic) {
+    console.log("Getting topic options for:", selectedTopic);
+
+    // Get topic list
+    let topics = [];
+    if (window.TopicUtils && window.TopicUtils.getAllTopics) {
+      // getAllTopics returns objects with id and name, but we need simple id strings
+      const topicObjects = window.TopicUtils.getAllTopics();
+      topics = topicObjects.map((topic) => topic.id);
+      console.log("Got topics from TopicUtils:", topics);
+    } else {
+      // Fallback to default topics
+      topics = [
+        "topic01",
+        "topic02",
+        "topic03",
+        "topic04",
+        "topic05",
+        "topic06",
+        "topic07",
+        "topic08",
+        "topic09",
+        "topic10",
+        "topic11",
+        "topic12",
+        "topic13",
+      ];
+      console.log("Using fallback topic IDs:", topics);
+    }
+
+    // Always include "safety" (topic11) if needed
+    if (!topics.includes("topic11")) {
+      topics.push("topic11");
+    }
+
+    console.log("Available topics:", topics);
+
+    // Build the HTML for the topic options
+    return (
+      `<option value="" ${
+        !selectedTopic ? "selected" : ""
+      }>No Topic (Optional)</option>` +
+      topics
+        .map((topicId) => {
+          // Get the human-readable topic name
+          const topicName =
+            window.TopicUtils && window.TopicUtils.getTopicName
+              ? window.TopicUtils.getTopicName(topicId)
+              : topicId;
+
+          return `<option value="${topicId}" ${
+            topicId === selectedTopic ? "selected" : ""
+          }>
+        ${topicName}
+      </option>`;
+        })
+        .join("")
+    );
+  }
+
   // Update vocabulary updates from the current UI state
   updateVocabularyUpdatesFromUI() {
     const rows = document.querySelectorAll(
@@ -133,6 +280,7 @@ class VocabularyUpdatesManager {
       const translation = row.querySelector(".translation-input").value.trim();
       const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;
+      const topic = row.querySelector(".topic-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
       const wordIndex = this.vocabApp.vocabularyUpdates.findIndex(
@@ -142,6 +290,13 @@ class VocabularyUpdatesManager {
         this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
         this.vocabApp.vocabularyUpdates[wordIndex].perevod = perevod;
         this.vocabApp.vocabularyUpdates[wordIndex].category = category;
+
+        // Update topic using our helper method
+        this.updateTopicDataStructure(
+          this.vocabApp.vocabularyUpdates[wordIndex],
+          topic
+        );
+
         this.vocabApp.vocabularyUpdates[wordIndex].example = example;
       }
     });
@@ -200,6 +355,7 @@ class VocabularyUpdatesManager {
       const translation = row.querySelector(".translation-input").value.trim();
       const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;
+      const topic = row.querySelector(".topic-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
       const wordIndex = this.vocabApp.vocabularyUpdates.findIndex(
@@ -209,6 +365,13 @@ class VocabularyUpdatesManager {
         this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
         this.vocabApp.vocabularyUpdates[wordIndex].perevod = perevod;
         this.vocabApp.vocabularyUpdates[wordIndex].category = category;
+
+        // Update topic using our helper method
+        this.updateTopicDataStructure(
+          this.vocabApp.vocabularyUpdates[wordIndex],
+          topic
+        );
+
         this.vocabApp.vocabularyUpdates[wordIndex].example = example;
       }
     });
@@ -249,6 +412,75 @@ class VocabularyUpdatesManager {
 
     // Notify user
     alert("Vocabulary updates saved and added to vocabulary successfully!");
+  } // Populate the global topic selector with available topics
+  populateGlobalTopicSelector() {
+    console.log("Populating global topic selector");
+    const globalTopicSelector = document.getElementById("globalTopicSelector");
+    if (!globalTopicSelector) {
+      console.log("Global topic selector not found");
+      return;
+    }
+
+    // Clear existing options except the first one (No Topic)
+    while (globalTopicSelector.options.length > 1) {
+      globalTopicSelector.remove(1);
+    }
+
+    // Get topic list
+    let topics = [];
+    if (window.TopicUtils && window.TopicUtils.getAllTopics) {
+      // Get topic objects from TopicUtils
+      const topicObjects = window.TopicUtils.getAllTopics();
+      console.log("Got topic objects from TopicUtils:", topicObjects);
+
+      // Add topic options
+      topicObjects.forEach((topicObj) => {
+        const option = document.createElement("option");
+        option.value = topicObj.id; // Use the topic ID as value
+        option.textContent = topicObj.name; // Use the human-readable name for display
+        globalTopicSelector.appendChild(option);
+      });
+    } else {
+      // Fallback to default topics
+      const defaultTopics = [
+        { id: "topic01", name: "Definitions of road users" },
+        { id: "topic02", name: "Vehicles and basic mechanics" },
+        { id: "topic11", name: "Safety" },
+        { id: "topic12", name: "Emergencies" },
+      ];
+
+      // Add topic options
+      defaultTopics.forEach((topicObj) => {
+        const option = document.createElement("option");
+        option.value = topicObj.id;
+        option.textContent = topicObj.name;
+        globalTopicSelector.appendChild(option);
+      });
+
+      console.log("Using fallback topics");
+    }
+
+    console.log("Global topic selector populated");
+  }
+
+  // Helper method to ensure topic data is correctly stored in both formats
+  updateTopicDataStructure(wordData, topicValue) {
+    // Update the individual topic field (string)
+    wordData.topic = topicValue;
+
+    // Also update the topics array for compatibility with the vocabulary system
+    if (topicValue) {
+      wordData.topics = [topicValue]; // Set as array with the selected topic
+      console.log(
+        `Updated word with topic ${topicValue} and topics array:`,
+        wordData.topics
+      );
+    } else {
+      wordData.topics = []; // Empty array if no topic selected
+      console.log(`Cleared topics for word`);
+    }
+
+    return wordData;
   }
 }
 

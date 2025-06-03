@@ -73,30 +73,7 @@
   <body>
     <div class="app-container">
       <div class="header">
-        <h1>Vocabulary</h1>
-        <div class="subtitle">Edit and update your vocabulary list</div>
-
-        <!-- PWA Install Button -->
-        <div
-          id="pwa-install-container"
-          class="pwa-install-container"
-          style="display: none"
-        >
-          <button id="pwa-install-button" class="pwa-install-btn">
-            <svg
-              class="icon"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7,10 12,15 17,10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
-            Install App
-          </button>
-        </div>
+        <h1>Vocabulary Manager</h1>
 
         <a href="index.html" class="back-to-main-link">← Back to Main Page</a>
       </div>
@@ -115,6 +92,7 @@
               id="textToAnalyze"
               placeholder="e.g., Pisar de forma intermitente el freno para advertir con las luces de frenado que va a reducir la marcha."
             ></textarea>
+
             <button id="analyzeTextBtn" class="primary-btn">
               Analyze Text
             </button>
@@ -123,23 +101,6 @@
           <!-- Message Container moved here for better visibility -->
           <div id="messageContainer"></div>
 
-          <!-- Translation Status Container -->
-          <div
-            id="translationStatusContainer"
-            class="translation-status hidden"
-          >
-            <div class="translation-info">
-              <h4>🔄 Translation Progress</h4>
-              <div class="progress-bar">
-                <div id="translationProgress" class="progress-fill"></div>
-              </div>
-              <div id="translationStats" class="translation-stats">
-                <span id="currentTranslation">Preparing...</span>
-                <span id="translationCount">0/0</span>
-              </div>
-            </div>
-          </div>
-
           <!-- Vocabulary Updates Subsection -->
           <div class="vocabulary-updates-subsection">
             <h3>📝 Vocabulary Updates</h3>
@@ -147,6 +108,25 @@
               New words to be added to your vocabulary. Review translations and
               details before saving:
             </p>
+
+            <!-- Global Topic Selector moved here -->
+            <div class="global-topic-section topic-assignment-container">
+              <label for="globalTopicSelector" class="topic-assignment-label"
+                >Assign Topic to All Words:</label
+              >
+              <select
+                id="globalTopicSelector"
+                class="topic-selector form-select"
+              >
+                <option value="">No Topic (Optional)</option>
+                <!-- Topics will be populated dynamically -->
+              </select>
+              <p class="topic-help-text help-text-muted">
+                This topic will be assigned to all words currently in the
+                vocabulary updates table.
+              </p>
+            </div>
+
             <div
               class="vocab-table-container"
               style="max-height: none; overflow: visible"
@@ -158,6 +138,7 @@
                     <th>Translation (EN)</th>
                     <th>Перевод (RU)</th>
                     <th>Category</th>
+                    <th>Topic</th>
                     <th>Example</th>
                     <th>Actions</th>
                   </tr>
@@ -165,6 +146,24 @@
                 <tbody id="vocabularyUpdatesTableBody"></tbody>
               </table>
             </div>
+
+            <!-- Translation Status Container moved here for better positioning -->
+            <div
+              id="translationStatusContainer"
+              class="translation-status hidden"
+            >
+              <div class="translation-info">
+                <h4>🔄 Translation Progress</h4>
+                <div class="progress-bar">
+                  <div id="translationProgress" class="progress-fill"></div>
+                </div>
+                <div id="translationStats" class="translation-stats">
+                  <span id="currentTranslation">Preparing...</span>
+                  <span id="translationCount">0/0</span>
+                </div>
+              </div>
+            </div>
+
             <div class="modal-actions">
               <button id="translateWords" class="primary-btn">
                 🌐 Auto-Translate Words
@@ -239,6 +238,7 @@
       </div>
 
       <script src="src/core/vocabulary.js"></script>
+      <script src="src/core/topics.js"></script>
       <script src="src/ui/icons.js"></script>
       <script src="src/utils/pwa-installer.js"></script>
       <script src="src/utils/script.js"></script>
@@ -261,10 +261,17 @@
         document.addEventListener("DOMContentLoaded", function () {
           // Wait a bit to ensure all scripts are loaded
           setTimeout(() => {
-            // Check if VocabularyManager is available
+            // Check if required dependencies are available
             if (typeof VocabularyManager === "undefined") {
               console.error(
                 "VocabularyManager class not found! Check if the script loaded correctly."
+              );
+              return;
+            }
+
+            if (typeof window.TopicUtils === "undefined") {
+              console.error(
+                "TopicUtils not found! Check if topics.js is loaded correctly."
               );
               return;
             }
@@ -291,6 +298,7 @@
                         perevod: card.perevod || "",
                         category: card.category || "",
                         example: card.example || "",
+                        topics: card.topics || [], // Include topics array
                       })
                     );
                   } else {
@@ -357,7 +365,7 @@
             // Now that the VocabularyManager class is loaded, we can create an instance
             window.vocabularyManager = new VocabularyManager(vocabApp);
             console.log("VocabularyManager initialized successfully");
-          }, 100); // Small delay to ensure scripts are loaded
+          }, 200); // Increased delay to ensure all dependencies are loaded
         });
       </script>
     </div>

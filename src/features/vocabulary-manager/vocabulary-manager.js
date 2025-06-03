@@ -69,6 +69,54 @@ class VocabularyManager {
     document.addEventListener("providerStatusChanged", () => {
       this.updateProviderStatus();
     });
+
+    // Initialize topic selector
+    this.initializeTopicSelector();
+  }
+
+  initializeTopicSelector() {
+    const topicSelector = document.getElementById("globalTopicSelector");
+
+    // Wait for TopicUtils to be available if it's not loaded yet
+    if (!window.TopicUtils) {
+      console.warn("TopicUtils not available yet, retrying...");
+      setTimeout(() => this.initializeTopicSelector(), 100);
+      return;
+    }
+
+    if (topicSelector) {
+      // Clear existing options (keep the default "No Topic" option)
+      const defaultOption = topicSelector.querySelector('option[value=""]');
+      topicSelector.innerHTML = "";
+      if (defaultOption) {
+        topicSelector.appendChild(defaultOption);
+      } else {
+        const noTopicOption = document.createElement("option");
+        noTopicOption.value = "";
+        noTopicOption.textContent = "No Topic (Optional)";
+        topicSelector.appendChild(noTopicOption);
+      }
+
+      // Add all available topics
+      try {
+        const topics = window.TopicUtils.getAllTopics();
+        topics.forEach((topic) => {
+          const option = document.createElement("option");
+          option.value = topic.id;
+          option.textContent = topic.name;
+          topicSelector.appendChild(option);
+        });
+        console.log("Topic selector initialized with", topics.length, "topics");
+      } catch (error) {
+        console.error("Error populating topic selector:", error);
+      }
+    }
+  }
+
+  // Get the currently selected global topic
+  getSelectedGlobalTopic() {
+    const topicSelector = document.getElementById("globalTopicSelector");
+    return topicSelector ? topicSelector.value : "";
   }
 
   // Utility method to show messages

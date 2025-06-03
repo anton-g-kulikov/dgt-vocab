@@ -183,6 +183,13 @@ class TextParser {
         example: originalText, // Use the original text as example
       };
 
+      // Add global topic if selected
+      const globalTopic = this.getSelectedGlobalTopic();
+      if (globalTopic) {
+        newWord.topic = globalTopic; // Set single topic field
+        newWord.topics = [globalTopic]; // Set topics array for compatibility
+      }
+
       // Add to vocabulary updates
       this.vocabApp.vocabularyUpdates.push(newWord);
       addedCount++;
@@ -221,6 +228,12 @@ class TextParser {
         });
       }
     }
+  }
+
+  // Get the currently selected global topic from the UI
+  getSelectedGlobalTopic() {
+    const topicSelector = document.getElementById("globalTopicSelector");
+    return topicSelector ? topicSelector.value : "";
   }
 
   clearVocabularyUpdates() {

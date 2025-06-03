@@ -2995,4 +2995,5 @@ window.vocabularyData = [
     category: "noun",
     example: "casco",
   },
+  
 ];
