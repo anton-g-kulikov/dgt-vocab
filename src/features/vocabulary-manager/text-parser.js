@@ -52,7 +52,7 @@ class TextParser {
     // Clean the text: remove punctuation and convert to lowercase
     const cleanText = text
       .toLowerCase()
-      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡"']/g, " ")
+      .replace(/[.,\/#!$%\^&\*;:{}=\-_`~()¿¡"'?]/g, " ")
       .replace(/\s+/g, " ");
 
     // Split into words and filter out short words and common words
@@ -82,6 +82,28 @@ class TextParser {
       "va",
       "e",
       "u",
+      "esta",
+      "está",
+      "están",
+      "este",
+      "esta",
+      "estos",
+      "estas",
+      "su",
+      "sus",
+      "mi",
+      "tu",
+      "su",
+      "nuestro",
+      "nuestra",
+      "nuestros",
+      "nuestras",
+      "sin",
+      "con",
+      "como",
+      "más",
+      "todo",
+      "todos",
     ]);
 
     const words = cleanText
