@@ -366,8 +366,20 @@ class QuizMode {
             const categoryText =
               category === "all" ? "" : ` in ${category} category`;
 
-            if (remainingUnknownCards.length === 0) {
-              // All cards are known - show completion
+            // First check if there are truly no unknown cards left across all cards in this category
+            const category = this.vocabApp.selectedCategory || "all";
+            const actuallyRemainingUnknownCards = this.vocabApp.allCards.filter(
+              (card) =>
+                !this.vocabApp.knownCardsSet.has(card.id) &&
+                (category === "all" || card.category === category)
+            );
+
+            if (actuallyRemainingUnknownCards.length === 0) {
+              // All cards are truly known - show completion
+              this.nextQuizQuestion();
+            } else if (remainingUnknownCards.length === 0) {
+              // We've exhausted the current session's cards, but there are still unknown cards
+              // Reload the cards and continue the quiz
               this.nextQuizQuestion();
             } else {
               // One card remains - switch to flashcard mode
