@@ -242,27 +242,8 @@ class FlashcardMode {
 
     if (exampleElement) {
       exampleElement.innerHTML = `
-        <div style="text-align: center; font-style: normal;">
-          <button onclick="window.vocabApp.filterCards()" style="
-            background: #3498db; 
-            color: white; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            margin: 5px;
-            font-size: 14px;
-          ">Show All Cards Again</button>
-          <button onclick="window.vocabApp.resetProgress()" style="
-            background: #e67e22; 
-            color: white; 
-            border: none; 
-            padding: 10px 20px; 
-            border-radius: 5px; 
-            cursor: pointer; 
-            margin: 5px;
-            font-size: 14px;
-          ">Reset All Progress</button>
+        <div style="text-align: center; font-style: normal; color: #27ae60; padding: 20px;">
+          <p>Switch to another category or change display mode to continue learning.</p>
         </div>
       `;
     }
