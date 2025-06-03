@@ -3,8 +3,12 @@ class CurrentVocabularyManager {
   constructor(vocabApp, showMessage) {
     this.vocabApp = vocabApp;
     this.showMessage = showMessage;
-    this.setupEventListeners();
-    this.populateVocabTable();
+
+    // Wait a bit to ensure DOM is ready
+    setTimeout(() => {
+      this.setupEventListeners();
+      this.populateVocabTable();
+    }, 50);
   }
 
   setupEventListeners() {

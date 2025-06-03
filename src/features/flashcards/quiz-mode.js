@@ -11,27 +11,76 @@ class QuizMode {
   }
 
   startQuiz() {
-    const category = this.vocabApp.selectedCategory || "all";
+    console.log("Starting quiz mode...");
 
-    // Get all unknown cards from the full set that match the current category
-    let allUnknownCards = this.vocabApp.allCards.filter(
-      (card) =>
-        !this.vocabApp.knownCardsSet.has(card.id) &&
-        (category === "all" || card.category === category)
+    // Ensure we have properly filtered current cards
+    this.vocabApp.updateCurrentCards();
+
+    // Get unknown cards from the filtered set
+    const unknownCards = this.vocabApp.currentCards.filter(
+      (card) => !this.vocabApp.knownCardsSet.has(card.id)
     );
 
     // Check if we have enough unknown cards to start the quiz
-    if (allUnknownCards.length < 2) {
-      const isFiltered = category !== "all";
-      const message = isFiltered
-        ? `Need at least 2 unknown cards for quiz mode. Current category has only ${allUnknownCards.length} unknown cards.`
-        : "Need at least 2 unknown cards for quiz mode";
-      alert(message);
+    if (unknownCards.length < 2) {
+      const selectedTopic = this.vocabApp.selectedTopic || "all";
+      const selectedCategory = this.vocabApp.selectedCategory || "all";
+
+      let filterText = "current filter";
+      if (selectedTopic !== "all" && selectedCategory !== "all") {
+        const topicName = window.TopicUtils
+          ? window.TopicUtils.getTopicName(selectedTopic)
+          : selectedTopic;
+        filterText = `${selectedCategory} category + ${topicName} topic`;
+      } else if (selectedTopic !== "all") {
+        const topicName = window.TopicUtils
+          ? window.TopicUtils.getTopicName(selectedTopic)
+          : selectedTopic;
+        filterText = `${topicName} topic`;
+      } else if (selectedCategory !== "all") {
+        filterText = `${selectedCategory} category`;
+      }
+
+      // Show error in quiz interface with flashcard design
+      const quizQuestion = document.getElementById("quizQuestion");
+      const quizOptions = document.getElementById("quizOptions");
+      if (quizQuestion) {
+        quizQuestion.textContent = "";
+      }
+      if (quizOptions) {
+        quizOptions.innerHTML = `
+          <div class="flashcard-container" style="max-width: 500px; margin: 0 auto;">
+            <div class="flashcard">
+              <div class="card-face card-front" style="background: var(--color-warning); color: white;">
+                <div class="category-badge" style="background: rgba(255,255,255,0.2); color: white;">⚠️ Not enough cards for quiz</div>
+                <div class="spanish-word">Need at least 2 unknown cards for quiz mode.</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="translation">${filterText} has only ${unknownCards.length} unknown cards.</div>
+                <div class="example">Try changing the topic or category filter, or learn some cards in flashcard mode first.</div>
+              </div>
+            </div>
+          </div>
+        `;
+
+        // Make the error card flippable
+        const errorCard = quizOptions.querySelector(".flashcard");
+        if (errorCard) {
+          errorCard.onclick = () => {
+            errorCard.classList.toggle("flipped");
+          };
+
+          // Auto-flip after 2 seconds to show the suggestion
+          setTimeout(() => {
+            errorCard.classList.add("flipped");
+          }, 2000);
+        }
+      }
       return;
     }
 
-    // Load all unknown cards into current cards
-    this.vocabApp.currentCards = [...allUnknownCards];
+    // Use the filtered unknown cards
+    this.vocabApp.currentCards = [...unknownCards];
 
     // Sort cards by last interaction time
     this.vocabApp.sortCardsByLastInteraction();
@@ -42,70 +91,20 @@ class QuizMode {
   }
 
   nextQuizQuestion() {
-    if (this.vocabApp.currentCards.length < 2) {
-      // If we don't have enough cards in the current set but have cards marked as unknown,
-      // let's reload them from the full set to continue the quiz
-      const category = this.vocabApp.selectedCategory || "all";
-
-      // Get all unknown cards from the full set that match the current category
-      let allUnknownCards = this.vocabApp.allCards.filter(
-        (card) =>
-          !this.vocabApp.knownCardsSet.has(card.id) &&
-          (category === "all" || card.category === category)
-      );
-
-      // If we have enough unknown cards across all cards, refresh the current cards
-      if (allUnknownCards.length >= 2) {
-        this.vocabApp.currentCards = [...allUnknownCards];
-        // Sort by interaction time to prioritize oldest interactions
-        this.vocabApp.sortCardsByLastInteraction();
-      } else {
-        return; // Not enough cards even after refreshing
-      }
-    }
-
-    // Get unknown cards only for quiz questions
+    // Get unknown cards only for quiz questions from current filtered set
     const unknownCards = this.vocabApp.currentCards.filter(
       (card) => !this.vocabApp.knownCardsSet.has(card.id)
     );
 
     // If no unknown cards remain, show completion message
     if (unknownCards.length === 0) {
-      const category = this.vocabApp.selectedCategory || "all";
-      const categoryText = category === "all" ? "" : ` in ${category} category`;
-
-      const quizQuestion = document.getElementById("quizQuestion");
-      quizQuestion.textContent = `🎉 Congratulations! You know all cards${categoryText}!`;
-
-      const optionsContainer = document.getElementById("quizOptions");
-      if (optionsContainer) {
-        optionsContainer.innerHTML = `
-          <div style="text-align: center; padding: 40px; font-size: 1.2rem; color: #28a745;">
-            <p>🏆 Quiz Complete!</p>
-            <p>Switch to flashcard mode or change category to continue learning.</p>
-          </div>
-        `;
-      }
+      this.showQuizCompletionCard();
       return;
     }
 
-    // If only one unknown card remains, finish the quiz
+    // If only one unknown card remains, show transition message and switch to flashcard mode
     if (unknownCards.length === 1) {
-      const category = this.vocabApp.selectedCategory || "all";
-      const categoryText = category === "all" ? "" : ` in ${category} category`;
-
-      const quizQuestion = document.getElementById("quizQuestion");
-      quizQuestion.textContent = `🎉 Almost there! Only one card left${categoryText}!`;
-
-      const optionsContainer = document.getElementById("quizOptions");
-      if (optionsContainer) {
-        optionsContainer.innerHTML = `
-          <div style="text-align: center; padding: 40px; font-size: 1.2rem; color: #28a745;">
-            <p>🏆 Quiz Complete!</p>
-            <p>Switch to flashcard mode to review the last card.</p>
-          </div>
-        `;
-      }
+      this.showLastCardTransition(unknownCards[0]);
       return;
     }
 
@@ -187,27 +186,45 @@ class QuizMode {
       const optionsContainer = document.getElementById("quizOptions");
 
       if (quizQuestion) {
-        quizQuestion.textContent =
-          "Not enough unique cards available for quiz mode";
+        quizQuestion.textContent = "";
       }
 
       if (optionsContainer) {
         optionsContainer.innerHTML = `
-          <div style="text-align: center; padding: 40px; font-size: 1.1rem; color: #dc3545;">
-            <p>⚠️ Insufficient unique cards for quiz</p>
-            <p>Switch to flashcard mode or add more vocabulary.</p>
+          <div class="flashcard-container" style="max-width: 500px; margin: 0 auto;">
+            <div class="flashcard">
+              <div class="card-face card-front" style="background: var(--color-warning); color: white;">
+                <div class="category-badge" style="background: rgba(255,255,255,0.2); color: white;">⚠️ Insufficient unique cards for quiz</div>
+                <div class="spanish-word">Not enough unique cards available</div>
+              </div>
+              <div class="card-face card-back">
+                <div class="translation">Switch to flashcard mode or add more vocabulary.</div>
+                <div class="example">Try changing filters or learning more cards first.</div>
+              </div>
+            </div>
           </div>
         `;
+
+        // Make the error card flippable
+        const errorCard = optionsContainer.querySelector(".flashcard");
+        if (errorCard) {
+          errorCard.onclick = () => {
+            errorCard.classList.toggle("flipped");
+          };
+
+          setTimeout(() => {
+            errorCard.classList.add("flipped");
+          }, 2000);
+        }
       }
       return;
     }
 
-    // Update question text
+    // Set the quiz question text - this was missing!
     const quizQuestion = document.getElementById("quizQuestion");
-    const spanishWord = correctCard.word;
-
-    // Highlight the Spanish word with a span
-    quizQuestion.innerHTML = `What does "<span class="spanish-highlight">${spanishWord}</span>" mean?`;
+    if (quizQuestion) {
+      quizQuestion.textContent = `What does "${correctCard.word}" mean?`;
+    }
 
     // Get options container
     const optionsContainer = document.getElementById("quizOptions");
@@ -362,53 +379,12 @@ class QuizMode {
         setTimeout(() => {
           // If only one unknown card remains, switch to flashcard mode
           if (remainingUnknownCards.length <= 1) {
-            const category = this.vocabApp.selectedCategory || "all";
-            const categoryText =
-              category === "all" ? "" : ` in ${category} category`;
-
-            // First check if there are truly no unknown cards left across all cards in this category
-            const category = this.vocabApp.selectedCategory || "all";
-            const actuallyRemainingUnknownCards = this.vocabApp.allCards.filter(
-              (card) =>
-                !this.vocabApp.knownCardsSet.has(card.id) &&
-                (category === "all" || card.category === category)
-            );
-
-            if (actuallyRemainingUnknownCards.length === 0) {
-              // All cards are truly known - show completion
-              this.nextQuizQuestion();
-            } else if (remainingUnknownCards.length === 0) {
-              // We've exhausted the current session's cards, but there are still unknown cards
-              // Reload the cards and continue the quiz
-              this.nextQuizQuestion();
+            if (remainingUnknownCards.length === 1) {
+              // Show transition and switch to flashcard mode
+              this.showLastCardTransition(remainingUnknownCards[0]);
             } else {
-              // One card remains - switch to flashcard mode
-              const quizQuestion = document.getElementById("quizQuestion");
-              quizQuestion.textContent = `🎉 Almost done! Switching to flashcard mode for the last card${categoryText}`;
-
-              const optionsContainer = document.getElementById("quizOptions");
-              if (optionsContainer) {
-                optionsContainer.innerHTML = `
-                  <div style="text-align: center; padding: 40px; font-size: 1.2rem; color: #28a745;">
-                    <p>🏆 Great job! One card remaining.</p>
-                    <p>Switching to flashcard mode...</p>
-                  </div>
-                `;
-              }
-
-              // Switch to flashcard mode after a short delay
-              setTimeout(() => {
-                if (window.UIHelpers) {
-                  window.UIHelpers.setMode("flashcard");
-                  // Update mode buttons
-                  document
-                    .querySelectorAll(".mode-btn")
-                    .forEach((btn) => btn.classList.remove("active"));
-                  document
-                    .querySelector(".mode-btn[onclick*='flashcard']")
-                    ?.classList.add("active");
-                }
-              }, 2000);
+              // All cards are completed
+              this.showQuizCompletionCard();
             }
           } else {
             // Continue with next quiz question
@@ -444,6 +420,132 @@ class QuizMode {
     }
 
     element.classList.add("flipped");
+  }
+
+  showQuizCompletionCard() {
+    const selectedTopic = this.vocabApp.selectedTopic || "all";
+    const selectedCategory = this.vocabApp.selectedCategory || "all";
+
+    let filterText = "";
+    if (selectedTopic !== "all" && selectedCategory !== "all") {
+      const topicName = window.TopicUtils
+        ? window.TopicUtils.getTopicName(selectedTopic)
+        : selectedTopic;
+      filterText = ` in ${selectedCategory} category + ${topicName} topic`;
+    } else if (selectedTopic !== "all") {
+      const topicName = window.TopicUtils
+        ? window.TopicUtils.getTopicName(selectedTopic)
+        : selectedTopic;
+      filterText = ` for ${topicName} topic`;
+    } else if (selectedCategory !== "all") {
+      filterText = ` in ${selectedCategory} category`;
+    }
+
+    // Clear question text
+    const quizQuestion = document.getElementById("quizQuestion");
+    if (quizQuestion) {
+      quizQuestion.textContent = "";
+    }
+
+    // Create a beautiful flashcard-style completion message
+    const quizOptions = document.getElementById("quizOptions");
+    if (quizOptions) {
+      quizOptions.innerHTML = `
+        <div class="flashcard-container" style="max-width: 500px; margin: 0 auto;">
+          <div class="flashcard completion-card">
+            <div class="card-face card-front" style="background: var(--color-success); color: white;">
+              <div class="category-badge" style="background: rgba(255,255,255,0.2); color: white;">🎉 Quiz Complete!</div>
+              <div class="spanish-word">¡Felicidades!</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="translation">You know all cards${filterText}!</div>
+              <div class="example">Switch to flashcard mode or change filters to continue learning.</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Make the completion card flippable
+      const completionCard = quizOptions.querySelector(".flashcard");
+      if (completionCard) {
+        completionCard.onclick = () => {
+          completionCard.classList.toggle("flipped");
+        };
+
+        // Auto-flip after 2 seconds to show the message
+        setTimeout(() => {
+          completionCard.classList.add("flipped");
+        }, 2000);
+      }
+    }
+  }
+
+  showLastCardTransition(lastCard) {
+    // Clear question text
+    const quizQuestion = document.getElementById("quizQuestion");
+    if (quizQuestion) {
+      quizQuestion.textContent = "";
+    }
+
+    // Create a beautiful flashcard-style transition message
+    const quizOptions = document.getElementById("quizOptions");
+    if (quizOptions) {
+      quizOptions.innerHTML = `
+        <div class="flashcard-container" style="max-width: 500px; margin: 0 auto;">
+          <div class="flashcard transition-card">
+            <div class="card-face card-front" style="background: var(--color-accent); color: white;">
+              <div class="category-badge" style="background: rgba(255,255,255,0.2); color: white;">🎉 Almost done!</div>
+              <div class="spanish-word">One card remaining</div>
+            </div>
+            <div class="card-face card-back">
+              <div class="translation">Switching to flashcard mode...</div>
+              <div class="example">Perfect for reviewing the last word: "${lastCard.word}"</div>
+            </div>
+          </div>
+        </div>
+      `;
+
+      // Make the transition card flippable
+      const transitionCard = quizOptions.querySelector(".flashcard");
+      if (transitionCard) {
+        transitionCard.onclick = () => {
+          transitionCard.classList.toggle("flipped");
+        };
+
+        // Auto-flip after 1 second
+        setTimeout(() => {
+          transitionCard.classList.add("flipped");
+        }, 1000);
+      }
+    }
+
+    // Switch to flashcard mode after showing the message
+    setTimeout(() => {
+      // Set the current cards to just the last unknown card
+      this.vocabApp.currentCards = [lastCard];
+      this.vocabApp.currentIndex = 0;
+
+      // Switch to flashcard mode
+      if (window.setMode) {
+        window.setMode("flashcard");
+      }
+
+      // Update the mode buttons
+      document
+        .querySelectorAll(".mode-btn")
+        .forEach((btn) => btn.classList.remove("active"));
+      const flashcardBtn = document.querySelector(
+        ".mode-btn[onclick*='flashcard']"
+      );
+      if (flashcardBtn) {
+        flashcardBtn.classList.add("active");
+      }
+
+      // Show the actual flashcard
+      if (this.vocabApp.flashcardMode) {
+        this.vocabApp.flashcardMode.showCurrentCard();
+      }
+    }, 3000);
   }
 }
 

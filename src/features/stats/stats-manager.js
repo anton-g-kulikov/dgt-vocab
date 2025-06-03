@@ -81,6 +81,8 @@ class StatsManager {
 
     if (progressFillElement) {
       progressFillElement.style.width = progress + "%";
+      // Force a repaint to ensure the visual update happens
+      progressFillElement.offsetHeight;
     }
   }
 }

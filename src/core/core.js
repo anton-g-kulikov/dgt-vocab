@@ -7,8 +7,9 @@ class DGTVocabulary {
     this.currentIndex = 0;
     this.knownCardsSet = new Set();
     this.cardInteractionHistory = {}; // Add this to track interaction timestamps
-    this.currentMode = "flashcard";
+    this.currentMode = "quiz"; // Ensure quiz mode starts by default
     this.selectedCategory = "all";
+    this.selectedTopic = "all"; // Add topic filtering support
     this.currentLanguage = "en"; // Default language is English
 
     this.init();
@@ -49,13 +50,12 @@ class DGTVocabulary {
           perevod: card.perevod || "",
           category: card.category || "",
           example: card.example || "",
+          topics: card.topics || [], // Include topics array from vocabulary data
         }));
       } else {
         console.error(
           "Vocabulary data not found. Make sure vocabulary.js is loaded."
         );
-        document.getElementById("spanishWord").textContent =
-          "Vocabulary data not found";
         return;
       }
 
@@ -82,11 +82,7 @@ class DGTVocabulary {
       );
 
       // Sort cards by last interaction time (oldest first)
-      if (this.currentMode === "quiz") {
-        this.sortCardsByLastInteraction();
-      } else {
-        this.shuffleArray(this.currentCards);
-      }
+      this.sortCardsByLastInteraction();
 
       // Initialize the toggle button state
       if (this.flashcardMode) {
@@ -94,11 +90,18 @@ class DGTVocabulary {
       }
 
       this.updateStats();
-      this.showCurrentCard();
+
+      // Set the initial mode UI to quiz and start quiz immediately
+      if (window.UIHelpers) {
+        window.UIHelpers.setMode("quiz");
+      }
+
+      // Don't automatically start quiz - let user click the mode button
+      // if (this.quizMode) {
+      //   this.quizMode.startQuiz();
+      // }
     } catch (error) {
       console.error("Error loading flashcards:", error);
-      document.getElementById("spanishWord").textContent =
-        "Error loading cards";
     }
   }
 
@@ -217,17 +220,139 @@ class DGTVocabulary {
     return Array.from(categories).sort();
   }
 
-  resetProgress() {
-    if (confirm("Are you sure you want to reset all progress?")) {
-      this.knownCardsSet.clear();
-      localStorage.removeItem("dgt-vocab-progress");
-
-      // Track progress reset
-      if (window.Analytics) {
-        window.Analytics.trackProgress("Reset Progress", 0);
+  // Get unique topics from all cards
+  getUniqueTopics() {
+    const topics = new Set();
+    this.allCards.forEach((card) => {
+      if (card.topics && card.topics.length > 0) {
+        card.topics.forEach((topic) => topics.add(topic));
       }
+    });
+    return Array.from(topics).sort();
+  }
 
-      this.updateStats();
+  // Apply both category and topic filters
+  applyFilters() {
+    let filteredCards = this.allCards;
+
+    console.log(`Starting with ${filteredCards.length} cards`);
+    console.log(
+      `Selected topic: ${this.selectedTopic}, Selected category: ${this.selectedCategory}`
+    );
+
+    // Apply topic filter FIRST
+    if (this.selectedTopic !== "all") {
+      const beforeFilter = filteredCards.length;
+      filteredCards = filteredCards.filter(
+        (card) => card.topics && card.topics.includes(this.selectedTopic)
+      );
+      console.log(
+        `After topic filter (${this.selectedTopic}): ${filteredCards.length} cards (was ${beforeFilter})`
+      );
+
+      // Debug: Show which cards have the selected topic
+      if (filteredCards.length > 0) {
+        console.log(
+          `Cards with topic ${this.selectedTopic}:`,
+          filteredCards.map(
+            (card) =>
+              `${card.word} (topics: ${card.topics?.join(", ") || "none"})`
+          )
+        );
+      } else {
+        console.log(`No cards found with topic ${this.selectedTopic}`);
+        // Show first few cards and their topics for debugging
+        console.log(
+          "Sample cards and their topics:",
+          this.allCards
+            .slice(0, 10)
+            .map((card) => `${card.word}: ${card.topics?.join(", ") || "none"}`)
+        );
+      }
+    }
+
+    // Then apply category filter
+    if (this.selectedCategory !== "all") {
+      const beforeFilter = filteredCards.length;
+      filteredCards = filteredCards.filter(
+        (card) => card.category.toLowerCase() === this.selectedCategory
+      );
+      console.log(
+        `After category filter (${this.selectedCategory}): ${filteredCards.length} cards (was ${beforeFilter})`
+      );
+    }
+
+    return filteredCards;
+  }
+
+  // Add a new method to update current cards based on filters
+  updateCurrentCards() {
+    // Get all cards that match the current filters
+    const filteredCards = this.applyFilters();
+
+    console.log(`Filtered cards: ${filteredCards.length}`);
+
+    // Apply the toggle state (all cards vs unknown only)
+    if (this.flashcardMode && this.flashcardMode.showingAllCards) {
+      this.currentCards = filteredCards;
+    } else {
+      this.currentCards = filteredCards.filter(
+        (card) => !this.knownCardsSet.has(card.id)
+      );
+    }
+
+    console.log(
+      `Current cards after known filter: ${this.currentCards.length}`
+    );
+
+    // Sort by interaction time
+    this.sortCardsByLastInteraction();
+
+    // Reset index to 0
+    this.currentIndex = 0;
+  }
+
+  // Update filterCards method to use the new updateCurrentCards
+  filterCards() {
+    this.updateCurrentCards();
+    this.updateStats();
+    this.showCurrentCard();
+
+    // Update filter info display
+    if (this.categoryManager && this.categoryManager.updateFilterInfo) {
+      this.categoryManager.updateFilterInfo();
+    }
+  }
+
+  // Filter cards by topic
+  filterByTopic(topicId) {
+    this.selectedTopic = topicId;
+
+    // Refresh category manager to show only available categories for this topic
+    if (this.categoryManager) {
+      this.categoryManager.populateCategoryFilter(topicId);
+      // Reset category to "all" when changing topics to avoid empty results
+      this.selectedCategory = "all";
+      const allCategoryBtn = document.querySelector(
+        '.category-btn[data-category="all"]'
+      );
+      if (allCategoryBtn) {
+        document
+          .querySelectorAll(".category-btn")
+          .forEach((btn) => btn.classList.remove("active"));
+        allCategoryBtn.classList.add("active");
+      }
+    }
+
+    // Apply the filters and update current cards
+    this.updateCurrentCards();
+    this.updateStats();
+
+    // Restart current mode with filtered cards
+    if (this.currentMode === "quiz" && this.quizMode) {
+      this.quizMode.startQuiz();
+    } else if (this.currentMode === "flashcard" && this.flashcardMode) {
+      this.flashcardMode.showCurrentCard();
     }
   }
 
@@ -239,30 +364,33 @@ class DGTVocabulary {
   }
 
   showCurrentCard() {
-    if (this.flashcardMode) {
+    // Only call this for flashcard mode, quiz mode handles its own display
+    if (this.currentMode === "flashcard" && this.flashcardMode) {
       this.flashcardMode.showCurrentCard();
-    }
-  }
-
-  filterCards() {
-    if (this.categoryManager) {
-      this.categoryManager.filterCards();
-
-      // After filtering, sort by interaction time regardless of mode
-      // This ensures that both quiz and flashcard modes prioritize oldest cards
-      this.sortCardsByLastInteraction();
     }
   }
 
   setMode(mode) {
     this.currentMode = mode;
 
-    // Sort cards by interaction time when changing modes
-    // This ensures we always prioritize oldest cards in both modes
-    this.sortCardsByLastInteraction();
-
+    // Update UI first
     if (window.UIHelpers) {
       window.UIHelpers.setMode(mode);
+    }
+
+    // When switching modes, ensure we have properly filtered cards
+    this.updateCurrentCards();
+
+    if (mode === "flashcard") {
+      // Show current card for flashcard mode
+      if (this.flashcardMode) {
+        this.flashcardMode.showCurrentCard();
+      }
+    } else if (mode === "quiz") {
+      // Start quiz with filtered cards
+      if (this.quizMode) {
+        this.quizMode.startQuiz();
+      }
     }
   }
 

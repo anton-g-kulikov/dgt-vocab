@@ -5,20 +5,70 @@ let vocabApp;
 
 // Initialize the application when DOM is loaded
 document.addEventListener("DOMContentLoaded", function () {
-  // Only initialize the main functionality if we're on the main page
-  if (window.isVocabManagerPage) {
-    console.log("On vocabulary manager page, not initializing main app");
-    return;
-  }
+  console.log("DOM loaded, initializing app");
 
-  // Check if we're on a page that needs the DGTVocabulary functionality
-  const flashcardElement = document.getElementById("flashcard");
-  if (flashcardElement) {
-    window.vocabApp = new DGTVocabulary();
-    console.log("DGTVocabulary initialized with flashcard element found");
+  // Initialize vocabulary app
+  if (typeof window.DGTVocabulary !== "undefined") {
+    window.vocabApp = new window.DGTVocabulary();
+    console.log("DGTVocabulary app initialized");
+
+    // Don't force quiz mode start - let it be triggered by user interaction
+    // setTimeout(() => {
+    //   if (window.vocabApp && window.vocabApp.currentMode === "quiz") {
+    //     console.log("Starting quiz mode from script.js");
+    //     // Make sure quiz mode div is visible
+    //     const quizMode = document.getElementById("quizMode");
+    //     const flashcardMode = document.getElementById("flashcardMode");
+    //     if (quizMode) quizMode.style.display = "block";
+    //     if (flashcardMode) flashcardMode.classList.add("hidden");
+
+    //     // Start the quiz
+    //     if (window.vocabApp.quizMode) {
+    //       console.log("Calling quizMode.startQuiz()");
+    //       window.vocabApp.quizMode.startQuiz();
+    //     }
+    //   }
+    // }, 500); // Increased delay
   } else {
-    console.log(
-      "Flashcard element not found, skipping DGTVocabulary initialization"
-    );
+    console.error("DGTVocabulary class not found");
   }
 });
+
+// Global functions for UI interaction
+function markCard(isKnown) {
+  if (window.vocabApp && window.vocabApp.flashcardMode) {
+    window.vocabApp.flashcardMode.markCard(isKnown);
+  }
+}
+
+function flipCard() {
+  if (window.vocabApp && window.vocabApp.flashcardMode) {
+    window.vocabApp.flashcardMode.flipCard();
+  }
+}
+
+function nextCard() {
+  if (window.vocabApp && window.vocabApp.flashcardMode) {
+    window.vocabApp.flashcardMode.nextCard();
+  }
+}
+
+function previousCard() {
+  if (window.vocabApp && window.vocabApp.flashcardMode) {
+    window.vocabApp.flashcardMode.previousCard();
+  }
+}
+
+// Toggle between showing all cards vs unknown only
+function toggleShowAllCards() {
+  if (window.vocabApp && window.vocabApp.flashcardMode) {
+    window.vocabApp.flashcardMode.showingAllCards =
+      !window.vocabApp.flashcardMode.showingAllCards;
+    window.vocabApp.flashcardMode.updateToggleButton();
+
+    // Update current cards based on new toggle state
+    window.vocabApp.updateCurrentCards();
+    window.vocabApp.updateStats();
+    window.vocabApp.showCurrentCard();
+  }
+}

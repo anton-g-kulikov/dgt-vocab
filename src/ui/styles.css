@@ -1,5 +1,5 @@
 /* === Anthropic Design System === */
-@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap");
 
 :root {
   /* Anthropic color palette - refined */
@@ -98,7 +98,7 @@ h2 {
   margin-bottom: var(--spacing-5);
 }
 
-/* === Layout & Containers === */
+/* === Layout &amp; Containers === */
 .app-container {
   width: 100%;
   max-width: 100%;
@@ -1177,503 +1177,230 @@ button:hover,
   display: inline-block;
 }
 
-/* === Message Container === */
-#messageContainer {
-  margin: var(--spacing-4) 0;
-  min-height: 50px;
+/* === Topic Assignment Section === */
+.topic-assignment-container {
+  margin: var(--spacing-3) 0;
+  padding: var(--spacing-2) 0;
 }
 
-.success-message,
-.error-message,
-.info-message {
-  padding: var(--spacing-3);
-  border-radius: var(--radius-sm);
-  font-size: 0.875rem;
-  margin-bottom: var(--spacing-3);
-}
-
-.success-message {
-  background-color: rgba(40, 167, 69, 0.1);
-  border: 1px solid rgba(40, 167, 69, 0.2);
-  color: #28a745;
-}
-
-.error-message {
-  background-color: rgba(220, 53, 69, 0.1);
-  border: 1px solid rgba(220, 53, 69, 0.2);
-  color: #dc3545;
-}
-
-.info-message {
-  background-color: rgba(0, 123, 255, 0.1);
-  border: 1px solid rgba(0, 123, 255, 0.2);
-  color: #0d6efd;
-}
-
-/* === Vocabulary Updates Section === */
-.vocabulary-updates-subsection {
-  margin-top: var(--spacing-5);
-  padding-top: var(--spacing-4);
-  border-top: 1px solid var(--color-border);
-}
-
-.vocabulary-updates-subsection.hidden {
-  display: none;
-}
-
-/* === Table Styling === */
-.vocab-table input.translation-input,
-.vocab-table input.perevod-input,
-.vocab-table select.category-select {
-  width: 100%;
-  padding: var(--spacing-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-size: 0.875rem;
-}
-
-.vocab-table input.example-input {
-  width: 100%;
-  padding: var(--spacing-2);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-sm);
-  font-size: 0.875rem;
-}
-
-.vocab-table .delete-btn {
-  background: #dc3545;
-  color: white;
-  border: none;
-  border-radius: var(--radius-sm);
-  padding: var(--spacing-1) var(--spacing-2);
-  cursor: pointer;
-  font-size: 0.75rem;
-}
-
-.empty-table-message {
-  padding: var(--spacing-4);
-  text-align: center;
-  color: var(--color-muted);
-  font-style: italic;
-}
-
-/* === PWA Install Button === */
-.pwa-install-container {
-  margin: var(--spacing-4) 0 var(--spacing-2);
-  text-align: center;
-}
-
-.pwa-install-btn {
-  background: linear-gradient(
-    135deg,
-    var(--color-accent),
-    var(--color-accent-hover)
-  );
-  color: white;
-  border: none;
-  border-radius: var(--radius-md);
-  padding: var(--spacing-3) var(--spacing-5);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: var(--shadow-md);
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-2);
-  text-decoration: none;
-  position: relative;
-  overflow: hidden;
-}
-
-.pwa-install-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
-  background: linear-gradient(135deg, var(--color-accent-hover), #b8714a);
-}
-
-.pwa-install-btn:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
-}
-
-.pwa-install-btn .icon {
-  width: 18px;
-  height: 18px;
-  stroke-width: 2.5;
-}
-
-/* PWA install button hide/show animations */
-.pwa-install-container.hidden {
-  display: none !important;
-}
-
-.pwa-install-container.show {
-  animation: slideInDown 0.5s ease-out;
-}
-
-@keyframes slideInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Mobile responsiveness */
-@media (max-width: 480px) {
-  .pwa-install-btn {
-    padding: var(--spacing-3) var(--spacing-4);
-    font-size: 0.85rem;
-  }
-
-  .pwa-install-btn .icon {
-    width: 16px;
-    height: 16px;
-  }
-}
-
-/* === Translation Status Styles === */
-.translation-status {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  margin: var(--spacing-5) 0;
-  padding: var(--spacing-5);
-  box-shadow: var(--shadow-sm);
-}
-
-.translation-status.hidden {
-  display: none;
-}
-
-.translation-info h4 {
-  color: var(--color-primary);
-  font-size: 1rem;
-  margin-bottom: var(--spacing-3);
-  display: flex;
-  align-items: center;
-  gap: var(--spacing-2);
-}
-
-.progress-bar {
-  width: 100%;
-  height: 8px;
-  background: var(--color-border);
-  border-radius: var(--radius-sm);
-  overflow: hidden;
-  margin-bottom: var(--spacing-3);
-}
-
-.progress-fill {
-  height: 100%;
-  background: linear-gradient(
-    90deg,
-    var(--color-accent),
-    var(--color-accent-hover)
-  );
-  width: 0%;
-  transition: width 0.3s ease;
-  border-radius: var(--radius-sm);
-}
-
-.translation-stats {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: var(--spacing-4);
-  font-size: 0.9rem;
-  color: var(--color-text-light);
-}
-
-.translation-providers {
-  border-top: 1px solid var(--color-border);
-  padding-top: var(--spacing-4);
-}
-
-.translation-providers h5 {
-  color: var(--color-primary);
-  font-size: 0.85rem;
-  margin-bottom: var(--spacing-2);
-  font-weight: 600;
-}
-
-.provider-status {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--spacing-2);
-}
-
-.provider-item {
-  background: var(--color-card-1);
-  padding: var(--spacing-1) var(--spacing-3);
-  border-radius: var(--radius-sm);
-  font-size: 0.8rem;
-  color: var(--color-text-light);
-  border: 1px solid var(--color-border);
-}
-
-.provider-item.available {
-  background: var(--color-success);
-  color: white;
-  border-color: var(--color-success);
-}
-
-.provider-item.unavailable {
-  background: var(--color-error);
-  color: white;
-  border-color: var(--color-error);
-}
-
-/* Translation input feedback */
-.translation-input.translating,
-.perevod-input.translating {
-  background: linear-gradient(90deg, #fff 25%, #f0f8ff 50%, #fff 75%);
-  background-size: 200% 100%;
-  animation: translating 1.5s infinite;
-}
-
-@keyframes translating {
-  0% {
-    background-position: 200% 0;
-  }
-  100% {
-    background-position: -200% 0;
-  }
-}
-
-.translation-input.success,
-.perevod-input.success {
-  background: #e8f5e8;
-  border-color: var(--color-success);
-}
-
-.translation-input.error,
-.perevod-input.error {
-  background: #ffe8e8;
-  border-color: var(--color-error);
-}
-
-/* === End Translation Status Styles === */
-
-/* === API Key Configuration Modal === */
-.api-key-section {
-  margin: 20px 0;
-  padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  background: #fafafa;
-}
-
-.api-key-section h4 {
-  margin: 0 0 10px 0;
-  color: var(--color-primary);
-}
-
-.api-info {
-  font-size: 0.9em;
-  color: #666;
-  margin-bottom: 15px;
-  line-height: 1.4;
-}
-
-.api-info a {
-  color: var(--color-primary);
-  text-decoration: none;
-}
-
-.api-info a:hover {
-  text-decoration: underline;
-}
-
-.input-group {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-
-.input-group label {
-  font-weight: bold;
-  color: #333;
-}
-
-.input-group input {
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.input-group input:focus {
-  outline: none;
-  border-color: var(--color-primary);
-  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.2);
-}
-
-.test-key-btn {
-  align-self: flex-start;
-  background: var(--color-info);
-  color: white;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 12px;
-  margin-top: 5px;
-}
-
-.test-key-btn:hover {
-  background: #0056b3;
-}
-
-.test-key-btn:disabled {
-  background: #ccc;
-  cursor: not-allowed;
-}
-
-/* === Configuration Toggle Button === */
-.configuration-toggle-btn {
-  width: 100%;
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  padding: var(--spacing-4);
-  cursor: pointer;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  font-size: 0.9rem;
+.topic-assignment-label {
+  display: block;
   font-weight: 500;
   color: var(--color-text);
-  box-shadow: var(--shadow-sm);
-  text-align: left;
+  margin-bottom: var(--spacing-2);
+  font-size: 0.9rem;
 }
 
-.configuration-toggle-btn:hover {
-  background: var(--color-card-1);
+.form-select {
+  width: 100%;
+  padding: var(--spacing-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.875rem;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-bottom: var(--spacing-3);
+}
+
+.form-select:focus {
+  outline: none;
   border-color: var(--color-accent);
-  box-shadow: var(--shadow-md);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
 }
 
-.configuration-toggle-btn:active {
-  transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+.form-select:hover {
+  border-color: var(--color-accent);
 }
 
-.configuration-toggle-btn .config-status {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--spacing-1);
-  font-size: 0.8rem;
-  font-weight: 600;
-}
-
-.configuration-toggle-btn .config-status.configured {
-  color: var(--color-success);
-}
-
-.configuration-toggle-btn .config-status.not-configured {
-  color: var(--color-warning);
-}
-
-.configuration-toggle-btn .toggle-arrow {
-  font-size: 0.8rem;
+.help-text-muted {
+  font-size: 0.85rem;
   color: var(--color-text-light);
-  transition: transform 0.3s ease;
-  margin-left: var(--spacing-2);
+  line-height: 1.3;
+  margin: var(--spacing-1) 0 0;
 }
 
-.configuration-toggle-btn.expanded .toggle-arrow {
-  transform: rotate(180deg);
+/* Global topic section styling */
+.global-topic-section {
+  position: relative;
 }
 
-.configuration-toggle-btn .config-toggle-content {
+/* Mobile responsiveness for topic assignment */
+@media (max-width: 768px) {
+  .topic-assignment-container {
+    padding: var(--spacing-3);
+    margin: var(--spacing-3) 0;
+  }
+
+  .global-topic-section::before {
+    display: none;
+  }
+
+  .topic-assignment-label {
+    font-size: 0.9rem;
+  }
+
+  .form-select {
+    padding: var(--spacing-2);
+    font-size: 0.8rem;
+  }
+
+  .help-text-muted {
+    font-size: 0.75rem;
+  }
+}
+
+/* === Controls & Filter Row === */
+.controls {
+  margin: var(--spacing-4) 0;
+}
+
+.controls-row {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   gap: var(--spacing-3);
+  align-items: stretch;
+}
+
+.topic-selector-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.topic-selector-container .form-select {
+  margin-bottom: 0;
+}
+
+.category-filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-2);
   flex: 1;
 }
 
-.configuration-toggle-btn .config-toggle-content > span:first-child {
-  font-size: 1.1rem;
-}
-
-/* === Configuration Section === */
-.configuration-section {
-  margin-top: var(--spacing-3);
-  padding: var(--spacing-4);
-  background: var(--color-card-1);
-  border: 1px solid var(--color-border);
-  border-radius: var(--radius-md);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  transition: all 0.3s ease;
-  overflow: hidden;
-}
-
-.configuration-section.hidden {
-  display: none;
-}
-
-.configuration-section.expanded {
-  animation: expandSection 0.3s ease-out;
-}
-
-.configuration-section.collapsed {
-  animation: collapseSection 0.3s ease-out;
-}
-
-@keyframes expandSection {
-  from {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
+/* Desktop layout - put topic selector and categories in same row */
+@media (min-width: 768px) {
+  .controls-row {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: var(--spacing-4);
   }
-  to {
-    max-height: 300px;
-    opacity: 1;
-    padding-top: var(--spacing-4);
-    padding-bottom: var(--spacing-4);
+
+  .topic-selector-container {
+    flex-shrink: 0;
+    min-width: 180px;
+    max-width: 220px;
+  }
+
+  .category-filter-buttons {
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-top: var(--spacing-1); /* Align with select field */
   }
 }
 
-@keyframes collapseSection {
-  from {
-    max-height: 300px;
-    opacity: 1;
-    padding-top: var(--spacing-4);
-    padding-bottom: var(--spacing-4);
-  }
-  to {
-    max-height: 0;
-    opacity: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-}
-
-/* Mobile responsiveness for configuration toggle */
-@media (max-width: 768px) {
-  .configuration-toggle-btn {
-    padding: var(--spacing-3);
-    font-size: 0.85rem;
-  }
-
-  .configuration-toggle-btn .config-toggle-content {
+/* Mobile optimization */
+@media (max-width: 767px) {
+  .controls-row {
     gap: var(--spacing-2);
   }
 
-  .configuration-toggle-btn .config-status {
+  .topic-selector-container .form-select {
+    font-size: 0.8rem;
+  }
+}
+
+/* === Vocabulary Updates Table Input Fields === */
+.vocab-table .translation-input,
+.vocab-table .perevod-input,
+.vocab-table .example-input {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+  min-height: 32px;
+}
+
+.vocab-table .translation-input:focus,
+.vocab-table .perevod-input:focus,
+.vocab-table .example-input:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  background: var(--color-surface);
+}
+
+.vocab-table .translation-input:hover,
+.vocab-table .perevod-input:hover,
+.vocab-table .example-input:hover {
+  border-color: var(--color-accent);
+}
+
+.vocab-table .category-select {
+  width: 100%;
+  padding: var(--spacing-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-family: inherit;
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 32px;
+}
+
+.vocab-table .category-select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+}
+
+.vocab-table .category-select:hover {
+  border-color: var(--color-accent);
+}
+
+/* Delete button styling for consistency */
+.vocab-table .delete-btn {
+  padding: var(--spacing-1) var(--spacing-2);
+  background: var(--color-error);
+  color: white;
+  border: 1px solid var(--color-error);
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  min-height: 28px;
+}
+
+.vocab-table .delete-btn:hover {
+  background: #b85555;
+  border-color: #b85555;
+}
+
+/* Mobile responsiveness for table inputs */
+@media (max-width: 768px) {
+  .vocab-table .translation-input,
+  .vocab-table .perevod-input,
+  .vocab-table .example-input,
+  .vocab-table .category-select {
     font-size: 0.75rem;
+    padding: var(--spacing-1);
+    min-height: 28px;
   }
 
-  .configuration-section {
-    padding: var(--spacing-3);
+  .vocab-table .delete-btn {
+    font-size: 0.7rem;
+    padding: var(--spacing-1);
+    min-height: 24px;
   }
 }

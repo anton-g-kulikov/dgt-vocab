@@ -8,6 +8,7 @@ window.vocabularyData = [
     perevod: "авария",
     category: "noun",
     example: "Evita los accidentes conduciendo con prudencia",
+    topics: ["topic12"], // Emergencies
   },
   {
     word: "acondicionarse",
@@ -16,6 +17,7 @@ window.vocabularyData = [
     category: "verb",
     example:
       "El conductor debe acondicionarse a las circunstancias del tráfico.",
+    topics: ["topic11"], // Safety
   },
   {
     word: "acreditar",
@@ -23,6 +25,7 @@ window.vocabularyData = [
     perevod: "аккредитовать",
     category: "verb",
     example: "Acredita tu identidad con el DNI.",
+    topics: ["topic06"], // Documents
   },
   {
     word: "actualmente",
@@ -30,6 +33,7 @@ window.vocabularyData = [
     perevod: "в настоящее время",
     category: "adverb",
     example: "Actualmente, el límite de velocidad en esta vía es de 50 km/h.",
+    topics: ["topic04"], // Roads and speed
   },
   {
     word: "adaptar",
@@ -37,6 +41,7 @@ window.vocabularyData = [
     perevod: "адаптироваться",
     category: "verb",
     example: "Adapta la velocidad a las condiciones.",
+    topics: ["topic04", "topic11"], // Roads and speed, Safety
   },
   {
     word: "adecuado",
@@ -44,6 +49,7 @@ window.vocabularyData = [
     perevod: "адекватный или уместный",
     category: "adjective",
     example: "Mantén una velocidad adecuada",
+    topics: ["topic04"], // Roads and speed
   },
   {
     word: "adelantar",

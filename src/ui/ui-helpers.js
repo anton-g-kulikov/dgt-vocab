@@ -17,40 +17,30 @@ class UIHelpers {
   }
 
   static setMode(mode) {
-    if (!window.vocabApp) return;
+    // Update button states
+    document.querySelectorAll(".mode-btn").forEach((btn) => {
+      btn.classList.remove("active");
+    });
 
-    window.vocabApp.currentMode = mode;
-
-    try {
-      // Update mode buttons
-      const modeButtons = document.querySelectorAll(".mode-btn");
-      if (modeButtons && modeButtons.length) {
-        modeButtons.forEach((btn) => btn.classList.remove("active"));
-
-        const activeButton = document.querySelector(
-          `.mode-btn[onclick*="setMode('${mode}')"]`
-        );
-        if (activeButton) {
-          activeButton.classList.add("active");
-        }
+    // Find and activate the correct button
+    const buttons = document.querySelectorAll(".mode-btn");
+    buttons.forEach((btn) => {
+      const onclick = btn.getAttribute("onclick");
+      if (onclick && onclick.includes(`'${mode}'`)) {
+        btn.classList.add("active");
       }
+    });
 
-      // Show/hide appropriate sections
-      const flashcardMode = document.getElementById("flashcardMode");
-      const quizMode = document.getElementById("quizMode");
+    // Show/hide appropriate sections
+    const flashcardMode = document.getElementById("flashcardMode");
+    const quizMode = document.getElementById("quizMode");
 
-      if (mode === "flashcard") {
-        if (flashcardMode) flashcardMode.style.display = "block";
-        if (quizMode) quizMode.style.display = "none";
-      } else if (mode === "quiz") {
-        if (flashcardMode) flashcardMode.style.display = "none";
-        if (quizMode) quizMode.style.display = "block";
-        if (window.vocabApp.quizMode) {
-          window.vocabApp.quizMode.startQuiz();
-        }
-      }
-    } catch (error) {
-      console.error("Error in setMode:", error);
+    if (mode === "flashcard") {
+      if (flashcardMode) flashcardMode.classList.remove("hidden");
+      if (quizMode) quizMode.classList.add("hidden");
+    } else if (mode === "quiz") {
+      if (flashcardMode) flashcardMode.classList.add("hidden");
+      if (quizMode) quizMode.classList.remove("hidden");
     }
   }
 }
@@ -63,8 +53,12 @@ function flipCard() {
 }
 
 function resetProgress() {
-  if (window.vocabApp) {
-    window.vocabApp.resetProgress();
+  // Use the new ResetProgress utility instead of the old vocabApp method
+  if (window.ResetProgress) {
+    window.ResetProgress.resetAllProgress();
+  } else {
+    console.error("ResetProgress utility not available");
+    alert("Reset functionality is not available. Please reload the page.");
   }
 }
 

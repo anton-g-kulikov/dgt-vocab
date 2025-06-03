@@ -1,12 +1,60 @@
-// Category filtering and management functionality
+// Category and topic filtering and management functionality
 
 class CategoryManager {
   constructor(vocabApp) {
     this.vocabApp = vocabApp;
     this.populateCategoryFilter();
+    this.populateTopicFilter();
   }
 
-  populateCategoryFilter() {
+  initCategories(vocabulary) {
+    this.vocabulary = vocabulary;
+    this.refreshCategories();
+  }
+
+  refreshCategories(topic = "all") {
+    // Use the new function to get categories filtered by topic
+    this.categories = this.getAvailableCategoriesForTopic(
+      this.vocabulary,
+      topic
+    );
+
+    // Clear existing category buttons
+    this.categoryContainer.innerHTML = "";
+
+    // Create "All Categories" button
+    const allCategoryBtn = document.createElement("button");
+    allCategoryBtn.textContent = "All Categories";
+    allCategoryBtn.classList.add("category-btn");
+    allCategoryBtn.dataset.category = "all";
+    if (this.activeCategory === "all") {
+      allCategoryBtn.classList.add("active");
+    }
+    this.categoryContainer.appendChild(allCategoryBtn);
+
+    // Create buttons only for categories that exist in the selected topic
+    this.categories.forEach((category) => {
+      const btn = document.createElement("button");
+      btn.textContent = category;
+      btn.classList.add("category-btn");
+      btn.dataset.category = category;
+      if (this.activeCategory === category) {
+        btn.classList.add("active");
+      }
+      this.categoryContainer.appendChild(btn);
+    });
+
+    // If the currently active category is not available in this topic selection,
+    // reset to "all" categories
+    if (
+      this.activeCategory !== "all" &&
+      !this.categories.includes(this.activeCategory)
+    ) {
+      this.setActiveCategory("all");
+    }
+  }
+
+  populateCategoryFilter(selectedTopic = null) {
     const categoryButtonsContainer = document.getElementById("categoryButtons");
     if (!categoryButtonsContainer) return;
 
@@ -20,8 +68,8 @@ class CategoryManager {
     allButton.onclick = () => this.selectCategory("all", allButton);
     categoryButtonsContainer.appendChild(allButton);
 
-    // Get categories that actually have words in them
-    const categoriesWithWords = this.getCategoriesWithWords();
+    // Get categories that actually have words in them, filtered by selected topic
+    const categoriesWithWords = this.getCategoriesWithWords(selectedTopic);
 
     categoriesWithWords.forEach((category) => {
       const button = document.createElement("button");
@@ -32,21 +80,6 @@ class CategoryManager {
       button.onclick = () => this.selectCategory(category, button);
       categoryButtonsContainer.appendChild(button);
     });
-  }
-
-  getCategoriesWithWords() {
-    // Count words in each category
-    const categoryCounts = {};
-
-    this.vocabApp.allCards.forEach((card) => {
-      const category = (card.category || "other").toLowerCase();
-      categoryCounts[category] = (categoryCounts[category] || 0) + 1;
-    });
-
-    // Return only categories that have at least one word, sorted alphabetically
-    return Object.keys(categoryCounts)
-      .filter((category) => categoryCounts[category] > 0)
-      .sort();
   }
 
   selectCategory(category, clickedButton) {
@@ -70,114 +103,280 @@ class CategoryManager {
     this.filterCards();
   }
 
-  filterCards() {
-    const category = this.vocabApp.selectedCategory || "all";
-
-    // First apply category filter
-    let filteredCards =
-      category === "all"
-        ? [...this.vocabApp.allCards]
-        : this.vocabApp.allCards.filter((card) => card.category === category);
-
-    // Reset flashcard to front side when switching categories
-    const flashcard = document.getElementById("flashcard");
-    if (flashcard && flashcard.classList.contains("flipped")) {
-      flashcard.classList.remove("flipped");
-      if (this.vocabApp.flashcardMode) {
-        this.vocabApp.flashcardMode.isFlipped = false;
-      }
-    }
-
-    // Apply filtering based on current toggle state
-    if (
-      this.vocabApp.flashcardMode &&
-      this.vocabApp.flashcardMode.showingAllCards
-    ) {
-      // Show all cards in category
-      this.vocabApp.currentCards = filteredCards;
-    } else {
-      // Show only unknown cards (default mode)
-      this.vocabApp.currentCards = filteredCards.filter(
-        (card) => !this.vocabApp.knownCardsSet.has(card.id)
+  updateTopicsForCategory(category) {
+    // Get words for the selected category
+    let categoryWords = this.vocabApp.allCards;
+    if (category !== "all") {
+      categoryWords = this.vocabApp.allCards.filter(
+        (card) => card.category === category
       );
     }
 
-    // Sort by last interaction time regardless of which mode we're in
-    // This ensures oldest interactions are shown first
-    this.vocabApp.sortCardsByLastInteraction();
+    // Get topics available for this category
+    const availableTopics = this.getTopicsForWords(categoryWords);
 
-    // Update the toggle button to reflect current state
-    if (this.vocabApp.flashcardMode) {
-      this.vocabApp.flashcardMode.updateToggleButton();
+    // Update topic selector options
+    this.updateTopicSelector(availableTopics);
+  }
+
+  getTopicsForWords(words) {
+    const topicCounts = {};
+    words.forEach((card) => {
+      if (card.topics && card.topics.length > 0) {
+        card.topics.forEach((topicId) => {
+          topicCounts[topicId] = (topicCounts[topicId] || 0) + 1;
+        });
+      }
+    });
+
+    return Object.keys(topicCounts)
+      .filter((topicId) => topicCounts[topicId] > 0)
+      .sort();
+  }
+
+  populateTopicFilter() {
+    const topicSelector = document.getElementById("topicSelector");
+    if (!topicSelector) return;
+
+    // Clear existing options except the "All Topics" option
+    topicSelector.innerHTML = "";
+
+    // Add "All Topics" option
+    const defaultOption = document.createElement("option");
+    defaultOption.value = "all";
+    defaultOption.textContent = "All Topics";
+    topicSelector.appendChild(defaultOption);
+
+    // Get available topics that have words
+    if (window.TopicUtils) {
+      const availableTopics = this.getTopicsWithWords();
+
+      availableTopics.forEach((topicId) => {
+        const option = document.createElement("option");
+        option.value = topicId;
+        option.textContent = window.TopicUtils.getTopicName(topicId);
+        topicSelector.appendChild(option);
+      });
+
+      // Add event listener for topic selection
+      topicSelector.addEventListener("change", (e) => {
+        this.selectTopic(e.target.value);
+      });
     }
+  }
 
-    // If no unknown cards remain and we're in unknown-only mode, show success card
-    if (
-      this.vocabApp.currentCards.length === 0 &&
-      (!this.vocabApp.flashcardMode ||
-        !this.vocabApp.flashcardMode.showingAllCards)
-    ) {
-      const categoryText = category === "all" ? "" : ` in ${category} category`;
+  getTopicsWithWords() {
+    const topicCounts = {};
 
-      if (this.vocabApp.flashcardMode) {
-        this.vocabApp.flashcardMode.showSuccessCard(categoryText);
+    this.vocabApp.allCards.forEach((card) => {
+      if (card.topics && card.topics.length > 0) {
+        card.topics.forEach((topicId) => {
+          topicCounts[topicId] = (topicCounts[topicId] || 0) + 1;
+        });
+      }
+    });
+
+    return Object.keys(topicCounts)
+      .filter((topicId) => topicCounts[topicId] > 0)
+      .sort();
+  }
+
+  getCategoriesWithWords(selectedTopic = null) {
+    // Count words in each category, optionally filtered by topic
+    const categoryCounts = {};
+
+    this.vocabApp.allCards.forEach((card) => {
+      // If a topic is selected, only count words that have that topic
+      if (selectedTopic && selectedTopic !== "all") {
+        if (!card.topics || !card.topics.includes(selectedTopic)) {
+          return; // Skip this word if it doesn't have the selected topic
+        }
       }
 
-      // Reset to show all cards in the category after showing success
-      setTimeout(() => {
-        this.vocabApp.currentCards = filteredCards;
-        if (this.vocabApp.flashcardMode) {
-          this.vocabApp.flashcardMode.showingAllCards = true;
-          this.vocabApp.flashcardMode.updateToggleButton();
-        }
+      const category = (card.category || "other").toLowerCase();
+      categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+    });
 
-        // Sort by interaction time instead of shuffling
-        this.vocabApp.sortCardsByLastInteraction();
+    // Return only categories that have at least one word, sorted alphabetically
+    return Object.keys(categoryCounts)
+      .filter((category) => categoryCounts[category] > 0)
+      .sort();
+  }
 
-        this.vocabApp.currentIndex = 0;
-        this.vocabApp.updateStats();
-        this.vocabApp.showCurrentCard();
-        this.updateCategoryInfo();
-        this.refreshCurrentMode();
-      }, 5000);
-      return;
+  selectTopic(topicId) {
+    this.currentTopic = topicId;
+
+    // Update the main app's selected topic
+    this.vocabApp.selectedTopic = topicId;
+
+    // Only call analytics if it exists
+    if (
+      window.Analytics &&
+      typeof window.Analytics.trackTopicSelect === "function"
+    ) {
+      window.Analytics.trackTopicSelect(topicId);
     }
 
-    // Sort by interaction time instead of shuffling
-    this.vocabApp.sortCardsByLastInteraction();
+    // Update the topic selector to reflect the selection
+    const topicSelector = document.getElementById("topicSelector");
+    if (topicSelector) {
+      topicSelector.value = topicId;
+    }
 
-    this.vocabApp.currentIndex = 0;
+    // Update category buttons availability for the selected topic
+    this.updateCategoriesForTopic(topicId);
+
+    // Use the main app's filterByTopic method which handles everything
+    this.vocabApp.filterByTopic(topicId);
+
+    // Trigger event for topic selection
+    const event = new CustomEvent("topicSelected", {
+      detail: { topic: topicId },
+    });
+    document.dispatchEvent(event);
+
+    return topicId;
+  }
+
+  updateCategoriesForTopic(topicId) {
+    // Get words for the selected topic
+    let topicWords = this.vocabApp.allCards;
+    if (topicId !== "all") {
+      topicWords = this.vocabApp.allCards.filter(
+        (card) => card.topics && card.topics.includes(topicId)
+      );
+    }
+
+    // Get categories available for this topic
+    const availableCategories = this.getCategoriesForWords(topicWords);
+
+    // Update category buttons to reflect availability
+    this.updateCategoryButtons(availableCategories);
+  }
+
+  getCategoriesForWords(words) {
+    const categoryCounts = {};
+    words.forEach((card) => {
+      const category = (card.category || "other").toLowerCase();
+      categoryCounts[category] = (categoryCounts[category] || 0) + 1;
+    });
+
+    return Object.keys(categoryCounts)
+      .filter((category) => categoryCounts[category] > 0)
+      .sort();
+  }
+
+  updateCategoryButtons(availableCategories) {
+    const categoryButtons = document.querySelectorAll(".category-btn");
+
+    categoryButtons.forEach((button) => {
+      const category = button.dataset.category;
+
+      if (category === "all" || availableCategories.includes(category)) {
+        button.style.opacity = "1";
+        button.disabled = false;
+        button.style.pointerEvents = "auto";
+      } else {
+        button.style.opacity = "0.3";
+        button.disabled = true;
+        button.style.pointerEvents = "none";
+      }
+    });
+
+    // If current category is not available, reset to "all"
+    if (
+      this.vocabApp.selectedCategory !== "all" &&
+      !availableCategories.includes(this.vocabApp.selectedCategory)
+    ) {
+      const allCategoryButton = document.querySelector(
+        '.category-btn[data-category="all"]'
+      );
+      if (allCategoryButton) {
+        this.selectCategory("all", allCategoryButton);
+      }
+    }
+  }
+
+  filterCards() {
+    // Use the main app's updateCurrentCards method which properly applies all filters
+    this.vocabApp.updateCurrentCards();
+
+    // Update stats and display
     this.vocabApp.updateStats();
-    this.vocabApp.showCurrentCard();
 
-    // Update category info display
-    this.updateCategoryInfo();
+    // Update filter info display
+    this.updateFilterInfo();
 
-    // Refresh the current mode
+    // Refresh the current mode with filtered cards
     this.refreshCurrentMode();
   }
 
-  updateCategoryInfo() {
+  getFilterText(category, topic) {
+    let filterParts = [];
+
+    if (category !== "all") {
+      filterParts.push(`${category} category`);
+    }
+
+    if (topic !== "all" && window.TopicUtils) {
+      filterParts.push(`${window.TopicUtils.getTopicName(topic)} topic`);
+    }
+
+    if (filterParts.length === 0) {
+      return "";
+    }
+
+    return ` in ${filterParts.join(" and ")}`;
+  }
+
+  updateFilterInfo() {
     const categoryInfo = document.getElementById("categoryInfo");
 
     if (categoryInfo) {
       const selectedCategory = this.vocabApp.selectedCategory || "all";
-      if (selectedCategory === "all") {
-        categoryInfo.textContent = "All Categories";
+      const selectedTopic = this.vocabApp.selectedTopic || "all";
+
+      let infoText = "";
+
+      if (selectedCategory === "all" && selectedTopic === "all") {
+        infoText = "All Categories & Topics";
+      } else if (selectedCategory === "all") {
+        infoText = window.TopicUtils
+          ? window.TopicUtils.getTopicName(selectedTopic)
+          : "Topic Selected";
+      } else if (selectedTopic === "all") {
+        const categoryName =
+          selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
+        infoText = `${categoryName} Only`;
       } else {
         const categoryName =
           selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1);
-        categoryInfo.textContent = `${categoryName} Only`;
+        const topicName = window.TopicUtils
+          ? window.TopicUtils.getTopicName(selectedTopic)
+          : "Topic";
+        infoText = `${categoryName} + ${topicName}`;
       }
+
+      categoryInfo.textContent = infoText;
     }
   }
 
   refreshCurrentMode() {
-    if (this.vocabApp.currentMode === "quiz") {
-      if (this.vocabApp.quizMode) {
+    // Only restart modes if user is actively interacting, not during initialization
+    if (this.vocabApp.currentMode === "quiz" && this.vocabApp.quizMode) {
+      // Only start quiz if there's already a question showing (user was actively using it)
+      const quizQuestion = document.getElementById("quizQuestion");
+      if (
+        quizQuestion &&
+        quizQuestion.textContent &&
+        quizQuestion.textContent.includes("What does")
+      ) {
         this.vocabApp.quizMode.startQuiz();
       }
-    } else if (this.vocabApp.currentMode === "flashcard") {
+    } else if (
+      this.vocabApp.currentMode === "flashcard" &&
+      this.vocabApp.flashcardMode
+    ) {
       this.vocabApp.showCurrentCard();
     }
   }
