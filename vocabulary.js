@@ -80,11 +80,11 @@ window.vocabularyData = [
     example: "El agente de tráfico dirige la circulación",
   },
   {
-    word: "airbags",
-    translation: "Air bags",
-    perevod: "подушки безопасности",
+    word: "airbag",
+    translation: "air bag",
+    perevod: "подушка безопасности",
     category: "noun",
-    example: "Cinturones de seguridad, airbags, apoyacabezas y casco.",
+    example: "Los airbag y los reposacabezas",
   },
   {
     word: "alcoholemia",
@@ -155,13 +155,6 @@ window.vocabularyData = [
     perevod: "подать заявку",
     category: "verb",
     example: "Se aplica una multa por exceso de velocidad.",
-  },
-  {
-    word: "apoyacabezas",
-    translation: "Head restraint",
-    perevod: "подголовники",
-    category: "noun",
-    example: "Cinturones de seguridad, airbags, apoyacabezas y casco.",
   },
   {
     word: "aprendizaje de conducción",
@@ -456,13 +449,6 @@ window.vocabularyData = [
     perevod: "ремень безопасности",
     category: "noun",
     example: "Es obligatorio usar el cinturón de seguridad",
-  },
-  {
-    word: "cinturones",
-    translation: "belts",
-    perevod: "ремни безопасности",
-    category: "noun",
-    example: "Cinturones de seguridad, airbags, apoyacabezas y casco.",
   },
   {
     word: "circulación",
