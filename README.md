@@ -71,8 +71,52 @@
 src/
 ├── core/              # Core app logic and vocabulary
 ├── features/          # Flashcards, quiz, and stats
+│   ├── flashcards/    # Flashcard and quiz modes
+│   ├── stats/         # Progress tracking
+│   └── vocabulary-manager/  # Vocabulary management system
 ├── ui/               # Styles and UI components
 └── utils/            # Helper functions and translation scripts
+```
+
+### Vocabulary Manager Architecture
+
+The Vocabulary Manager has been refactored from a monolithic file into a modular, component-based architecture for better maintainability and code organization.
+
+#### Component Managers
+
+1. **Text Parser** (`text-parser.js`) - Handles text analysis and word extraction
+2. **Vocabulary Updates Manager** (`vocabulary-updates-manager.js`) - Manages vocabulary updates table
+3. **Current Vocabulary Manager** (`current-vocabulary-manager.js`) - Handles vocabulary filtering and display
+4. **Export Manager** (`export-manager.js`) - Manages CSV export functionality
+5. **Translation Manager** (`translation-manager.js`) - Handles translation operations with progress tracking
+6. **API Key Manager** (`api-key-manager.js`) - Manages API key configuration
+7. **Merge Request Manager** (`merge-request-manager.js`) - Handles merge request creation
+
+#### Supporting Services
+
+- **Translation Service** (`translation-service.js`) - Multi-provider translation capabilities
+- **GitHub Integration** (`github-integration.js`) - Automated pull request creation
+
+#### Inter-Component Communication
+
+Components communicate using a custom event system:
+
+- `vocabularyUpdatesChanged` - Vocabulary updates modified
+- `currentVocabularyChanged` - Current vocabulary updated
+- `providerStatusChanged` - Translation provider status changes
+
+```
+src/features/vocabulary-manager/
+├── vocabulary-manager.js          # Main orchestrator
+├── text-parser.js                 # Text analysis component
+├── vocabulary-updates-manager.js  # Updates table management
+├── current-vocabulary-manager.js  # Current vocabulary display
+├── export-manager.js              # CSV export functionality
+├── translation-manager.js         # Translation UI and operations
+├── api-key-manager.js             # API key configuration
+├── merge-request-manager.js       # Merge request handling
+├── translation-service.js         # Translation service
+└── github-integration.js          # GitHub API integration
 ```
 
 ## Installation
@@ -219,6 +263,33 @@ Anton Kulikov
 1. Fork and clone: `git clone https://github.com/yourusername/dgt-vocab.git`
 2. Create branch: `git checkout -b feature-name`
 3. Submit PR with your improvements
+
+### Extending Vocabulary Manager
+
+The modular architecture makes it easy to add new features:
+
+1. **Create a new component manager class**
+2. **Add it to the `initializeComponents()` method** in `vocabulary-manager.js`
+3. **Set up event listeners** for inter-component communication
+4. **Add necessary HTML script tags** in `vocabulary-manager.html`
+
+#### Possible Future Enhancements
+
+- **Word Analytics Component** - Track vocabulary learning progress
+- **Pronunciation Manager** - Add audio pronunciation features
+- **Study Mode Manager** - Interactive vocabulary study sessions
+- **Import Manager** - Import vocabulary from various sources
+- **Sync Manager** - Synchronize vocabulary across devices
+
+### Architecture Benefits
+
+The refactored vocabulary manager provides:
+
+- **Improved Maintainability** - Each component has a single responsibility
+- **Better Testability** - Components can be tested in isolation
+- **Enhanced Reusability** - Components can be reused in other contexts
+- **Reduced Coupling** - Components communicate through events
+- **Better Code Organization** - Logical grouping of related functionality
 
 ## Support the Project
 
