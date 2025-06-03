@@ -1223,6 +1223,7 @@ button:hover,
 
 /* === Table Styling === */
 .vocab-table input.translation-input,
+.vocab-table input.perevod-input,
 .vocab-table select.category-select {
   width: 100%;
   padding: var(--spacing-2);

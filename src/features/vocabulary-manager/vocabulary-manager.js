@@ -23,8 +23,17 @@ class VocabularyManager {
   }
 
   setupVocabularyUpdatesHandling() {
-    // Initialize vocabulary updates if the vocabApp has this property
-    if (!this.vocabApp.vocabularyUpdates) {
+    // Initialize vocabulary updates from localStorage or create empty array
+    try {
+      const savedUpdates = localStorage.getItem("dgt-vocab-vocabulary-updates");
+      this.vocabApp.vocabularyUpdates = savedUpdates
+        ? JSON.parse(savedUpdates)
+        : [];
+    } catch (error) {
+      console.error(
+        "Error loading vocabulary updates from localStorage:",
+        error
+      );
       this.vocabApp.vocabularyUpdates = [];
     }
 
@@ -34,6 +43,14 @@ class VocabularyManager {
     document
       .getElementById("createMergeRequest")
       .addEventListener("click", () => this.createMergeRequest());
+
+    // Add event listener for export to CSV button
+    const exportButton = document.getElementById("exportVocabularyToCSV");
+    if (exportButton) {
+      exportButton.addEventListener("click", () =>
+        this.exportVocabularyUpdatesToCSV()
+      );
+    }
   }
 
   populateVocabularyUpdatesTable() {
@@ -46,7 +63,7 @@ class VocabularyManager {
 
     if (vocabularyUpdates.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="5" class="empty-table-message">No vocabulary updates yet. Use the Text Parser to add words for review.</td></tr>';
+        '<tr><td colspan="6" class="empty-table-message">No vocabulary updates yet. Use the Text Parser to add words for review.</td></tr>';
       return;
     }
 
@@ -58,6 +75,9 @@ class VocabularyManager {
         <td>${word.word}</td>
         <td><input type="text" class="translation-input" value="${
           word.translation || ""
+        }"></td>
+        <td><input type="text" class="perevod-input" value="${
+          word.perevod || ""
         }"></td>
         <td>
           <select class="category-select">
@@ -73,14 +93,38 @@ class VocabularyManager {
       tableBody.appendChild(row);
     });
 
+    // Add event listeners for deleting words
     document.querySelectorAll(".delete-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
         const id = parseInt(e.target.dataset.id);
         this.vocabApp.vocabularyUpdates =
           this.vocabApp.vocabularyUpdates.filter((word) => word.id !== id);
         e.target.closest("tr").remove();
+
+        // Save to localStorage after deletion
+        localStorage.setItem(
+          "dgt-vocab-vocabulary-updates",
+          JSON.stringify(this.vocabApp.vocabularyUpdates)
+        );
       });
     });
+
+    // Add auto-save for inputs (with debounce)
+    let saveTimeout;
+    const debounceSave = () => {
+      clearTimeout(saveTimeout);
+      saveTimeout = setTimeout(() => this.updateVocabularyUpdatesFromUI(), 500);
+    };
+
+    // Add event listeners for inputs and selects
+    document
+      .querySelectorAll(
+        ".translation-input, .perevod-input, .category-select, .example-input"
+      )
+      .forEach((element) => {
+        element.addEventListener("input", debounceSave);
+        element.addEventListener("change", debounceSave);
+      });
   }
 
   setupVocabFiltering() {
@@ -278,6 +322,7 @@ class VocabularyManager {
     rows.forEach((row) => {
       const id = parseInt(row.dataset.id);
       const translation = row.querySelector(".translation-input").value.trim();
+      const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
@@ -286,6 +331,7 @@ class VocabularyManager {
       );
       if (wordIndex !== -1) {
         this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
+        this.vocabApp.vocabularyUpdates[wordIndex].perevod = perevod;
         this.vocabApp.vocabularyUpdates[wordIndex].category = category;
         this.vocabApp.vocabularyUpdates[wordIndex].example = example;
       }
@@ -344,6 +390,9 @@ class VocabularyManager {
   }
 
   analyzeText() {
+    // First, save any existing translations from the UI to ensure we don't lose them
+    this.updateVocabularyUpdatesFromUI();
+
     const text = document.getElementById("textToAnalyze").value.trim();
     if (!text) {
       this.showMessage("Please enter some text to analyze", "error");
@@ -497,7 +546,8 @@ class VocabularyManager {
       const newWord = {
         id: Date.now() + addedCount,
         word: wordObj.word,
-        translation: "", // User needs to fill this in
+        translation: "", // User needs to fill this in (English)
+        perevod: "", // User needs to fill this in (Russian)
         category: wordObj.category,
         example: originalText, // Use the original text as example
       };
@@ -582,16 +632,17 @@ class VocabularyManager {
     });
 
     // Use uniqueResults for CSV generation
-    let csvContent = "word,translation,category,example\n";
+    let csvContent = "word,translation,perevod,category,example\n";
 
     uniqueResults.forEach((word) => {
       // Format each field properly for CSV
       const formattedWord = this.formatCSVField(word.word);
       const formattedTranslation = this.formatCSVField(word.translation);
+      const formattedPerevod = this.formatCSVField(word.perevod || "");
       const formattedCategory = this.formatCSVField(word.category);
       const formattedExample = this.formatCSVField(word.example);
 
-      csvContent += `${formattedWord},${formattedTranslation},${formattedCategory},${formattedExample}\n`;
+      csvContent += `${formattedWord},${formattedTranslation},${formattedPerevod},${formattedCategory},${formattedExample}\n`;
     });
 
     // Generate JavaScript format for vocabulary.js
@@ -601,6 +652,7 @@ class VocabularyManager {
       jsContent += `  {\n`;
       jsContent += `    word: "${word.word}",\n`;
       jsContent += `    translation: "${word.translation}",\n`;
+      jsContent += `    perevod: "${word.perevod || ""}",\n`;
       jsContent += `    category: "${word.category}",\n`;
       jsContent += `    example: "${word.example.replace(/"/g, '\\"')}",\n`;
       jsContent += `  },\n`;
@@ -734,6 +786,7 @@ class VocabularyManager {
     rows.forEach((row) => {
       const id = parseInt(row.dataset.id);
       const translation = row.querySelector(".translation-input").value.trim();
+      const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
@@ -742,10 +795,17 @@ class VocabularyManager {
       );
       if (wordIndex !== -1) {
         this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
+        this.vocabApp.vocabularyUpdates[wordIndex].perevod = perevod;
         this.vocabApp.vocabularyUpdates[wordIndex].category = category;
         this.vocabApp.vocabularyUpdates[wordIndex].example = example;
       }
     });
+
+    // Save updated vocabulary updates to localStorage
+    localStorage.setItem(
+      "dgt-vocab-vocabulary-updates",
+      JSON.stringify(this.vocabApp.vocabularyUpdates)
+    );
   }
 
   // Generate updated vocabulary.js file content
@@ -775,6 +835,7 @@ class VocabularyManager {
           allWords.push({
             word: newWord.word,
             translation: newWord.translation,
+            perevod: newWord.perevod || "",
             category: newWord.category,
             example: newWord.example,
           });
@@ -794,6 +855,9 @@ class VocabularyManager {
         )}",\n`;
         vocabularyContent += `    translation: "${this.escapeJavaScriptString(
           word.translation
+        )}",\n`;
+        vocabularyContent += `    perevod: "${this.escapeJavaScriptString(
+          word.perevod || ""
         )}",\n`;
         vocabularyContent += `    category: "${this.escapeJavaScriptString(
           word.category
@@ -875,7 +939,9 @@ class VocabularyManager {
           ${this.vocabApp.vocabularyUpdates
             .map(
               (word) =>
-                `<li><strong>${word.word}</strong> → ${word.translation} <em>(${word.category})</em></li>`
+                `<li><strong>${word.word}</strong> → ${word.translation} | ${
+                  word.perevod || ""
+                } <em>(${word.category})</em></li>`
             )
             .join("")}
         </ul>
@@ -896,7 +962,12 @@ class VocabularyManager {
 Added vocabulary from vocabulary updates:
 ${this.vocabApp.vocabularyUpdates
   .slice(0, 5)
-  .map((word) => `- ${word.word} (${word.translation})`)
+  .map(
+    (word) =>
+      `- ${word.word} (${word.translation}${
+        word.perevod ? " | " + word.perevod : ""
+      })`
+  )
   .join("\n")}${
       newWordsCount > 5 ? `\n... and ${newWordsCount - 5} more words` : ""
     }</textarea>
@@ -997,9 +1068,9 @@ ${this.vocabApp.vocabularyUpdates
     summary += `📋 NEW WORDS ADDED:\n`;
     summary += `-------------------\n`;
     this.vocabApp.vocabularyUpdates.forEach((word, index) => {
-      summary += `${index + 1}. ${word.word} → ${word.translation} (${
-        word.category
-      })\n`;
+      summary += `${index + 1}. ${word.word} → ${word.translation}\n`;
+      summary += `   Russian: ${word.perevod || "(not provided)"}\n`;
+      summary += `   Category: ${word.category}\n`;
       if (word.example) {
         summary += `   Example: ${word.example}\n`;
       }
