@@ -177,11 +177,11 @@
               />
             </div>
             <div class="filter-group">
-              <label for="translationFilter">Filter Translation:</label>
+              <label for="translationFilter">Filter Translation (EN):</label>
               <input
                 type="text"
                 id="translationFilter"
-                placeholder="Filter by translation"
+                placeholder="Filter by English translation"
               />
             </div>
             <div class="filter-group">
@@ -203,7 +203,8 @@
               <thead>
                 <tr>
                   <th>Spanish Word</th>
-                  <th>Translation</th>
+                  <th>Translation (EN)</th>
+                  <th>Перевод (RU)</th>
                   <th>Category</th>
                   <th style="width: 40%">Example</th>
                 </tr>
@@ -241,6 +242,7 @@
                     id: index,
                     word: card.word || "",
                     translation: card.translation || "",
+                    perevod: card.perevod || "",
                     category: card.category || "",
                     example: card.example || "",
                   }));

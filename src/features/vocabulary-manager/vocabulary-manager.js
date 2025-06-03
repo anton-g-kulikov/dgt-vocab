@@ -253,7 +253,7 @@ class VocabularyManager {
     // Show a message when no cards match the filter
     if (filteredCards.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="4" class="empty-table-message">No words match your filters.</td></tr>';
+        '<tr><td colspan="5" class="empty-table-message">No words match your filters.</td></tr>';
     } else {
       // Update the table with the filtered cards
       filteredCards.forEach((card) => {
@@ -263,6 +263,7 @@ class VocabularyManager {
         row.innerHTML = `
           <td>${card.word}</td>
           <td>${card.translation || ""}</td>
+          <td>${card.perevod || ""}</td>
           <td>${card.category || ""}</td>
           <td class="example">${card.example || ""}</td>
         `;
