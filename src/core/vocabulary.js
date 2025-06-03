@@ -2878,4 +2878,60 @@ window.vocabularyData = [
     category: "noun",
     example: "En la zona de peligro biológico, sigue las indicaciones.",
   },
+  {
+    word: "pueden",
+    translation: "the can",
+    perevod: "они могут",
+    category: "noun",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+  },
+  {
+    word: "perder",
+    translation: "to lose",
+    perevod: "терять",
+    category: "verb",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+  },
+  {
+    word: "eficacia",
+    translation: "efficiency",
+    perevod: "эффективность",
+    category: "noun",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+  },
+  {
+    word: "abrochado",
+    translation: "buckled",
+    perevod: "застегнуть",
+    category: "adjective",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+  },
+  {
+    word: "suspensión",
+    translation: "suspencion",
+    perevod: "подвеска",
+    category: "noun",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+  },
+  {
+    word: "amortiguadores",
+    translation: "amortiza",
+    perevod: "амортизаторы",
+    category: "noun",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+  },
+  {
+    word: "reposacabezas",
+    translation: "headrests",
+    perevod: "подголовники",
+    category: "noun",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+  },
 ];
