@@ -59,6 +59,14 @@ window.vocabularyData = [
     example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
+    word: "acondicionada",
+    translation: "conditioned",
+    perevod: "обусловленный",
+    category: "adjective",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
+  },
+  {
     word: "acondicionarse",
     translation: "to condition oneself/to adapt",
     perevod: "адаптироваться или приспосабливаться",
@@ -1851,6 +1859,14 @@ window.vocabularyData = [
     example: "El juez determinará la sanción correspondiente.",
   },
   {
+    word: "detrás",
+    translation: "behind",
+    perevod: "позади",
+    category: "noun",
+    topics: ["topic07"],
+    example: "siempre, parar detrás del vehículo hasta que reanude la marcha.",
+  },
+  {
     word: "día",
     translation: "day",
     perevod: "день",
@@ -1873,6 +1889,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+  },
+  {
+    word: "dicho",
+    translation: "said",
+    perevod: "указанный",
+    category: "adverb",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
   },
   {
     word: "difícil",
@@ -2129,6 +2153,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic10"],
     example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+  },
+  {
+    word: "elemento",
+    translation: "element",
+    perevod: "элемент",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
   },
   {
     word: "elevado",
@@ -2795,6 +2827,14 @@ window.vocabularyData = [
     example: "Agarrar el volante fuerte y no girarlo",
   },
   {
+    word: "giro",
+    translation: "turn",
+    perevod: "повернуть",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
+  },
+  {
     word: "glorieta",
     translation: "roundabout",
     perevod: "кольцевая развязка",
@@ -2905,6 +2945,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Las primeras lluvias hacen más resbaladizas las carreteras",
+  },
+  {
+    word: "hacer",
+    translation: "do",
+    perevod: "делать",
+    category: "verb",
+    topics: ["topic07"],
+    example: "qué se debe hacer para evitar la rotura del parabrisas",
   },
   {
     word: "hacerlo",
@@ -3121,6 +3169,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic09"],
     example: "Aconsejan seguir las direcciones indicadas por las flechas.",
+  },
+  {
+    word: "indique",
+    translation: "indicate",
+    perevod: "указывать",
+    category: "verb",
+    topics: ["topic07"],
+    example: "aunque no haya señal que lo indique.",
   },
   {
     word: "indirecto",
@@ -3609,6 +3665,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "horas de la mañana",
+  },
+  {
+    word: "manera",
+    translation: "manner",
+    perevod: "манера",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Cuál es la mejor manera de volver a iniciar la marcha",
   },
   {
     word: "manifiestamente",
@@ -4291,6 +4355,14 @@ window.vocabularyData = [
     example: "Cuando tomamos alcohol con otras drogas",
   },
   {
+    word: "otro",
+    translation: "other",
+    perevod: "другой",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
+  },
+  {
     word: "palanca",
     translation: "lever",
     perevod: "рычаг",
@@ -4305,6 +4377,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "El panel de mensaje variable informa del tráfico.",
+  },
+  {
+    word: "parabrisas",
+    translation: "windshield",
+    perevod: "лобовое стекло",
+    category: "noun",
+    topics: ["topic07"],
+    example: "qué se debe hacer para evitar la rotura del parabrisas",
   },
   {
     word: "parada",
@@ -5067,6 +5147,14 @@ window.vocabularyData = [
     example: "No seas demasiado rápido",
   },
   {
+    word: "raqueta",
+    translation: "racket",
+    perevod: "ракетка",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
+  },
+  {
     word: "razones",
     translation: "reasons",
     perevod: "причины",
@@ -5105,6 +5193,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Reanuda la marcha cuando sea seguro.",
+  },
+  {
+    word: "reanude",
+    translation: "resume",
+    perevod: "возобновить",
+    category: "verb",
+    topics: ["topic07"],
+    example: "siempre, parar detrás del vehículo hasta que reanude la marcha.",
   },
   {
     word: "rebasar",
@@ -5427,6 +5523,14 @@ window.vocabularyData = [
     example: "El rotativo naranja señala vehículos especiales.",
   },
   {
+    word: "rotura",
+    translation: "crack",
+    perevod: "разбить",
+    category: "noun",
+    topics: ["topic07"],
+    example: "qué se debe hacer para evitar la rotura del parabrisas",
+  },
+  {
     word: "rueda",
     translation: "wheel",
     perevod: "колесо",
@@ -5713,6 +5817,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic09"],
     example: "El agente, con toques de silbato cortos y frecuentes, ordena.",
+  },
+  {
+    word: "similar",
+    translation: "similar",
+    perevod: "похожий",
+    category: "verb",
+    topics: ["topic07"],
+    example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
   },
   {
     word: "simultáneo",
