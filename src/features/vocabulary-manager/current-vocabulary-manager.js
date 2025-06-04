@@ -22,13 +22,14 @@ class CurrentVocabularyManager {
   }
 
   setupVocabFiltering() {
-    // Populate category filter dropdown for vocabulary
+    // Populate filter dropdowns for vocabulary
     this.populateCategoryVocabFilter();
+    this.populateTopicVocabFilter();
 
     // Add event listeners for filter inputs
     const wordFilter = document.getElementById("wordFilter");
-    const translationFilter = document.getElementById("translationFilter");
     const categoryFilter = document.getElementById("categoryVocabFilter");
+    const topicFilter = document.getElementById("topicVocabFilter");
     const clearFiltersBtn = document.getElementById("clearFilters");
 
     // Set up a debounce function for text inputs
@@ -43,21 +44,21 @@ class CurrentVocabularyManager {
       wordFilter.addEventListener("input", debounceFilter);
     }
 
-    if (translationFilter) {
-      translationFilter.addEventListener("input", debounceFilter);
-    }
-
-    // Apply filter immediately for category select (no need for debounce)
+    // Apply filter immediately for dropdowns (no need for debounce)
     if (categoryFilter) {
       categoryFilter.addEventListener("change", () => this.applyVocabFilters());
+    }
+
+    if (topicFilter) {
+      topicFilter.addEventListener("change", () => this.applyVocabFilters());
     }
 
     // Clear filters button
     if (clearFiltersBtn) {
       clearFiltersBtn.addEventListener("click", () => {
         if (wordFilter) wordFilter.value = "";
-        if (translationFilter) translationFilter.value = "";
         if (categoryFilter) categoryFilter.value = "";
+        if (topicFilter) topicFilter.value = "";
         this.applyVocabFilters();
       });
     }
@@ -68,19 +69,16 @@ class CurrentVocabularyManager {
       .getElementById("wordFilter")
       .value.trim()
       .toLowerCase();
-    const translationFilter = document
-      .getElementById("translationFilter")
-      .value.trim()
-      .toLowerCase();
     const categoryFilter = document
       .getElementById("categoryVocabFilter")
       .value.toLowerCase();
+    const topicFilter = document.getElementById("topicVocabFilter").value;
 
     // Create filter options object
     const filterOptions = {};
     if (wordFilter) filterOptions.word = wordFilter;
-    if (translationFilter) filterOptions.translation = translationFilter;
     if (categoryFilter) filterOptions.category = categoryFilter;
+    if (topicFilter) filterOptions.topic = topicFilter;
 
     // Apply filters to the table
     this.populateVocabTable(filterOptions);
@@ -113,6 +111,32 @@ class CurrentVocabularyManager {
     }
   }
 
+  populateTopicVocabFilter() {
+    const topicFilter = document.getElementById("topicVocabFilter");
+    if (!topicFilter) return;
+
+    topicFilter.innerHTML = ""; // Clear existing options
+
+    // Add default "All Topics" option
+    const allOption = document.createElement("option");
+    allOption.value = "";
+    allOption.textContent = "All Topics";
+    topicFilter.appendChild(allOption);
+
+    // Add all topics from TopicUtils
+    const topics = window.TopicUtils.getAllTopics();
+
+    // Ensure we have the topics
+    if (topics && topics.length > 0) {
+      topics.forEach((topic) => {
+        const option = document.createElement("option");
+        option.value = topic.id;
+        option.textContent = topic.name;
+        topicFilter.appendChild(option);
+      });
+    }
+  }
+
   populateVocabTable(filterOptions = {}) {
     const tableBody = document.getElementById("vocabTableBody");
     if (!tableBody) return;
@@ -129,13 +153,6 @@ class CurrentVocabularyManager {
       );
     }
 
-    if (filterOptions.translation) {
-      const translationFilter = filterOptions.translation.toLowerCase();
-      filteredCards = filteredCards.filter((card) =>
-        (card.translation || "").toLowerCase().includes(translationFilter)
-      );
-    }
-
     if (filterOptions.category) {
       filteredCards = filteredCards.filter(
         (card) =>
@@ -144,21 +161,39 @@ class CurrentVocabularyManager {
       );
     }
 
+    if (filterOptions.topic) {
+      // Use TopicUtils to filter by topic
+      filteredCards = window.TopicUtils.filterWordsByTopic(
+        filteredCards,
+        filterOptions.topic
+      );
+    }
+
     // Show a message when no cards match the filter
     if (filteredCards.length === 0) {
       tableBody.innerHTML =
-        '<tr><td colspan="5" class="empty-table-message">No words match your filters.</td></tr>';
+        '<tr><td colspan="6" class="empty-table-message">No words match your filters.</td></tr>';
     } else {
       // Update the table with the filtered cards
       filteredCards.forEach((card) => {
         const row = document.createElement("tr");
         row.dataset.id = card.id;
 
+        // Format topics for display
+        let topicDisplay = "";
+        if (card.topics && card.topics.length > 0) {
+          const topicNames = card.topics.map((topicId) =>
+            window.TopicUtils.getTopicName(topicId)
+          );
+          topicDisplay = topicNames.join(", ");
+        }
+
         row.innerHTML = `
           <td>${card.word}</td>
           <td>${card.translation || ""}</td>
           <td>${card.perevod || ""}</td>
           <td>${card.category || ""}</td>
+          <td>${topicDisplay}</td>
           <td class="example">${card.example || ""}</td>
         `;
 

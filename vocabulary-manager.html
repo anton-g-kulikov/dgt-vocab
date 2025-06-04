@@ -216,18 +216,17 @@
               />
             </div>
             <div class="filter-group">
-              <label for="translationFilter">Filter Translation (EN):</label>
-              <input
-                type="text"
-                id="translationFilter"
-                placeholder="Filter by English translation"
-              />
-            </div>
-            <div class="filter-group">
               <label for="categoryVocabFilter">Filter Category:</label>
               <select id="categoryVocabFilter">
                 <option value="">All Categories</option>
                 <!-- Categories will be populated dynamically -->
+              </select>
+            </div>
+            <div class="filter-group">
+              <label for="topicVocabFilter">Filter Topic:</label>
+              <select id="topicVocabFilter">
+                <option value="">All Topics</option>
+                <!-- Topics will be populated dynamically -->
               </select>
             </div>
             <div class="filter-actions">
@@ -245,7 +244,8 @@
                   <th>Translation (EN)</th>
                   <th>Перевод (RU)</th>
                   <th>Category</th>
-                  <th style="width: 40%">Example</th>
+                  <th>Topic</th>
+                  <th style="width: 35%">Example</th>
                 </tr>
               </thead>
               <tbody id="vocabTableBody"></tbody>
