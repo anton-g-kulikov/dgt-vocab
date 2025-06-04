@@ -1,32 +1,5 @@
-/**
- * DGT Vocabulary PWA Service Worker
- *
- * CACHE VERSION MANAGEMENT:
- * When you update the CACHE_NAME version (e.g., from "dgt-vocab-v1.1.1" to "dgt-vocab-v1.1.2"):
- *
- * 1. OLD CACHE CLEANUP: The activate event automatically deletes all old caches
- * 2. FRESH INSTALL: All files in urlsToCache are fetched fresh from network
- * 3. USER NOTIFICATION: Users get a prompt to refresh when update is detected
- * 4. IMMEDIATE TAKEOVER: New service worker takes control with skipWaiting()
- *
- * HOW TO UPDATE:
- * 1. Change CACHE_NAME version below (increment the version number)
- * 2. Deploy the updated sw.js file
- * 3. Users will automatically get update notifications within 60 seconds
- * 4. Upon accepting, they get fresh content including vocabulary updates
- * е
- * CACHE STRATEGY:
- * - Navigation requests (HTML): Network first, cache fallback
- * - Static assets (CSS/JS): Cache first with background updates
- * - All cached files are listed in urlsToCache for offline availability
- *
- * DEBUGGING:
- * - Use CacheManager.forceClearCache() in console to force refresh
- * - Use CacheManager.getCacheInfo() to inspect cache contents
- * - Check DevTools > Application > Service Workers for registration status
- */
-
-const CACHE_NAME = "dgt-vocab-v1.1.6";
+// Service Worker for DGT Vocabulary App
+const CACHE_NAME = "dgt-vocab-v1.2.0";
 const urlsToCache = [
   // Main pages
   "/",

@@ -81,7 +81,7 @@ class QuizMode {
     // Use the filtered unknown cards
     this.vocabApp.currentCards = [...unknownCards];
 
-    // Sort cards by last interaction time
+    // Sort cards by last interaction time to prioritize older cards
     this.vocabApp.sortCardsByLastInteraction();
 
     this.quizScore = 0;
@@ -107,8 +107,13 @@ class QuizMode {
       return;
     }
 
-    // Get the oldest interacted unknown card as the correct answer
-    const correctCard = unknownCards[0]; // Since we've sorted by interaction time
+    // Select correct card with weighted randomization
+    // Prioritize cards that haven't been interacted with recently (first 50% of sorted array)
+    // but add some randomness to avoid predictable patterns
+    const priorityPoolSize = Math.ceil(unknownCards.length * 0.5);
+    const priorityPool = unknownCards.slice(0, priorityPoolSize);
+    const correctCard =
+      priorityPool[Math.floor(Math.random() * priorityPool.length)];
 
     // Track this interaction
     this.vocabApp.trackCardInteraction(correctCard.id);
