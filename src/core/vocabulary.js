@@ -571,6 +571,14 @@ window.vocabularyData = [
     example: "mueve el brazo de arriba a abajo",
   },
   {
+    word: "arrojar",
+    translation: "throw",
+    perevod: "бросать",
+    category: "verb",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "artículo",
     translation: "article",
     perevod: "статья",
@@ -713,6 +721,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "La velocidad máxima en autopista es 120 km/h.",
+  },
+  {
+    word: "autor",
+    translation: "author",
+    perevod: "автор",
+    category: "noun",
+    topics: ["topic03"],
+    example: "El autor del hecho en que consista la infracción",
   },
   {
     word: "autoridad",
@@ -1315,6 +1331,14 @@ window.vocabularyData = [
     example: "Las señales horizontales o marcas viales de color blanco, ¿tienen el mismo significado que las señales verticales",
   },
   {
+    word: "cometidas",
+    translation: "committed",
+    perevod: "совершенные",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Quién es el responsable de las infracciones cometidas durante la conducción",
+  },
+  {
     word: "comida",
     translation: "meal",
     perevod: "еда",
@@ -1419,6 +1443,14 @@ window.vocabularyData = [
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
+    word: "comportarse",
+    translation: "behave",
+    perevod: "вести себя",
+    category: "noun",
+    topics: ["topic03"],
+    example: "comportarse de forma que no entorpezca indebidamente la circulación",
+  },
+  {
     word: "comprobar",
     translation: "to check/verify",
     perevod: "проверить",
@@ -1521,6 +1553,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "consista",
+    translation: "consist",
+    perevod: "состоять",
+    category: "noun",
+    topics: ["topic03"],
+    example: "El autor del hecho en que consista la infracción",
   },
   {
     word: "constituir",
@@ -1699,6 +1739,14 @@ window.vocabularyData = [
     example: "Cruza la calle por el paso de peatones",
   },
   {
+    word: "cualquier",
+    translation: "any",
+    perevod: "любой",
+    category: "verb",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "cuando",
     translation: "when",
     perevod: "когда",
@@ -1745,6 +1793,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "son los daños no cubiertos por el seguro obligatorio al causante de un accidente",
+  },
+  {
+    word: "dar",
+    translation: "give",
+    perevod: "давать",
+    category: "verb",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
   },
   {
     word: "datos",
@@ -2419,6 +2475,14 @@ window.vocabularyData = [
     example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
+    word: "entorpezca",
+    translation: "hinder",
+    perevod: "мешать",
+    category: "noun",
+    topics: ["topic03"],
+    example: "comportarse de forma que no entorpezca indebidamente la circulación",
+  },
+  {
     word: "entrada",
     translation: "entrance",
     perevod: "вход",
@@ -2899,6 +2963,14 @@ window.vocabularyData = [
     example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
+    word: "fotocopia",
+    translation: "photocopy",
+    perevod: "фотокопия",
+    category: "noun",
+    topics: ["topic03"],
+    example: "la fotocopia esté debidamente cotejada.",
+  },
+  {
     word: "frecuentado",
     translation: "frequented",
     perevod: "часто посещаемый",
@@ -3219,6 +3291,14 @@ window.vocabularyData = [
     example: "Tan pronto como el vehículo haya tomado la nueva trayectoria",
   },
   {
+    word: "hecho",
+    translation: "made",
+    perevod: "сделал",
+    category: "noun",
+    topics: ["topic03"],
+    example: "El autor del hecho en que consista la infracción",
+  },
+  {
     word: "herramientas",
     translation: "tools",
     perevod: "инструменты",
@@ -3323,6 +3403,14 @@ window.vocabularyData = [
     example: "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
   },
   {
+    word: "incendios",
+    translation: "fires",
+    perevod: "пожары",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "incómodo",
     translation: "uncomfortable",
     perevod: "неудобно",
@@ -3385,6 +3473,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Incrementa el campo visual",
+  },
+  {
+    word: "indebidamente",
+    translation: "improperly",
+    perevod: "неправильно",
+    category: "adverb",
+    topics: ["topic03"],
+    example: "comportarse de forma que no entorpezca indebidamente la circulación",
   },
   {
     word: "indica",
@@ -3475,6 +3571,14 @@ window.vocabularyData = [
     example: "Evita cometer infracciones",
   },
   {
+    word: "infracciones",
+    translation: "violations",
+    perevod: "нарушения",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Quién es el responsable de las infracciones cometidas durante la conducción",
+  },
+  {
     word: "infringir",
     translation: "to infringe/violate",
     perevod: "нарушать или нарушать",
@@ -3497,6 +3601,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Inicia la marcha con precaución",
+  },
+  {
+    word: "inmediaciones",
+    translation: "vicinity",
+    perevod: "окрестности",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Sí, tanto en la vía como en sus inmediaciones.",
   },
   {
     word: "inmediatamente",
@@ -4507,6 +4619,14 @@ window.vocabularyData = [
     example: "Que el carril está abierto, pero se deben obedecer las señales y normas de preferencia.",
   },
   {
+    word: "objeto",
+    translation: "object",
+    perevod: "объект",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "obliga",
     translation: "obliges",
     perevod: "обязывает",
@@ -5307,6 +5427,14 @@ window.vocabularyData = [
     example: "Procura mantener la calma al volante",
   },
   {
+    word: "producción",
+    translation: "production",
+    perevod: "производство",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "produce",
     translation: "produces",
     perevod: "производит",
@@ -5443,6 +5571,14 @@ window.vocabularyData = [
     example: "Respeta el transporte público",
   },
   {
+    word: "pueda",
+    translation: "can",
+    perevod: "может",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
     word: "puede",
     translation: "can",
     perevod: "может",
@@ -5481,6 +5617,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Instantes antes de que el conductor llegue a quedarse dormido.",
+  },
+  {
+    word: "quién",
+    translation: "who",
+    perevod: "кто",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Quién es el responsable de las infracciones cometidas durante la conducción",
   },
   {
     word: "racionalmente",
@@ -6553,6 +6697,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic10"],
     example: "Tan pronto como el vehículo haya tomado la nueva trayectoria",
+  },
+  {
+    word: "tanto",
+    translation: "so much",
+    perevod: "так много",
+    category: "noun",
+    topics: ["topic03"],
+    example: "Sí, tanto en la vía como en sus inmediaciones.",
   },
   {
     word: "tarde",
