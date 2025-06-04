@@ -1543,3 +1543,211 @@ button:hover,
     transform: rotate(360deg);
   }
 }
+
+/* === Mobile Vocabulary Manager Styles === */
+/* Hide Expand Vocabulary section on mobile devices */
+@media (max-width: 768px) {
+  .expand-vocabulary-section {
+    display: none;
+  }
+
+  /* Ensure Current Vocabulary section is visible and mobile-friendly */
+  .current-vocabulary-section {
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-3);
+  }
+
+  .current-vocabulary-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-3);
+  }
+
+  /* Mobile-friendly vocabulary table - Convert to card layout */
+  .vocab-table-container {
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide table headers on mobile */
+  .vocab-table thead {
+    display: none;
+  }
+
+  .vocab-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* Convert table rows to cards */
+  .vocab-table tbody tr {
+    display: block;
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-3);
+    box-shadow: var(--shadow-sm);
+  }
+
+  /* Convert table cells to stacked content */
+  .vocab-table tbody td {
+    display: block;
+    border: none;
+    padding: var(--spacing-1) 0;
+    font-size: 0.875rem;
+    border-bottom: none;
+  }
+
+  /* Add labels before each data cell */
+  .vocab-table tbody td:nth-child(1):before {
+    content: "Spanish: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vocab-table tbody td:nth-child(2):before {
+    content: "English: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vocab-table tbody td:nth-child(3):before {
+    content: "Русский: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vocab-table tbody td:nth-child(4):before {
+    content: "Category: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vocab-table tbody td:nth-child(5):before {
+    content: "Topic: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .vocab-table tbody td:nth-child(6):before {
+    content: "Example: ";
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* Style the first cell (Spanish word) prominently */
+  .vocab-table tbody td:nth-child(1) {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    margin-bottom: var(--spacing-2);
+    padding-bottom: var(--spacing-2);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  /* Style the example cell with smaller text and italic */
+  .vocab-table tbody td:nth-child(6) {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-top: var(--spacing-2);
+    padding-top: var(--spacing-2);
+    border-top: 1px solid var(--color-border);
+  }
+
+  /* Mobile filter controls styling */
+  .filter-controls {
+    margin-bottom: var(--spacing-3);
+    padding: var(--spacing-2);
+    background: var(--color-card-1);
+    border-radius: var(--radius-sm);
+  }
+
+  .filter-controls .filter-group {
+    margin-bottom: var(--spacing-2);
+  }
+
+  .filter-controls .filter-group:last-child {
+    margin-bottom: 0;
+  }
+
+  .filter-controls label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: var(--spacing-1);
+    display: block;
+  }
+
+  .filter-controls input,
+  .filter-controls select {
+    width: 100%;
+    padding: var(--spacing-2);
+    font-size: 0.8rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-sm);
+    background: var(--color-surface);
+  }
+
+  .filter-actions {
+    margin-top: var(--spacing-2);
+    text-align: center;
+  }
+
+  .filter-actions .secondary-btn {
+    padding: var(--spacing-2) var(--spacing-3);
+    font-size: 0.8rem;
+  }
+}
+
+/* Very small mobile devices */
+@media (max-width: 480px) {
+  .current-vocabulary-section {
+    padding: var(--spacing-2);
+  }
+
+  .current-vocabulary-section h2 {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-2);
+  }
+
+  /* Smaller card spacing for very small screens */
+  .vocab-table tbody tr {
+    padding: var(--spacing-2);
+    margin-bottom: var(--spacing-2);
+  }
+
+  .vocab-table tbody td {
+    font-size: 0.8rem;
+  }
+
+  .vocab-table tbody td:nth-child(1) {
+    font-size: 1rem;
+  }
+
+  .vocab-table tbody td:before {
+    font-size: 0.7rem;
+  }
+
+  .filter-controls {
+    padding: var(--spacing-2);
+  }
+}
