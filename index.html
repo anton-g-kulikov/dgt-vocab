@@ -67,18 +67,67 @@
                 registration.scope
               );
 
-              // Check for updates
+              // Check for updates immediately and periodically
+              function checkForUpdates() {
+                registration.update().catch((err) => {
+                  console.log("Service worker update check failed:", err);
+                });
+              }
+
+              // Check for updates every 60 seconds
+              setInterval(checkForUpdates, 60000);
+
+              // Handle updates
               registration.addEventListener("updatefound", function () {
                 const newWorker = registration.installing;
+                console.log("New service worker found, installing...");
+
                 newWorker.addEventListener("statechange", function () {
-                  if (
-                    newWorker.state === "installed" &&
-                    navigator.serviceWorker.controller
-                  ) {
-                    // New update available, you could show a notification here
-                    console.log("New content is available; please refresh.");
+                  if (newWorker.state === "installed") {
+                    if (navigator.serviceWorker.controller) {
+                      // New update available
+                      console.log(
+                        "New content is available; prompting for refresh."
+                      );
+
+                      // Show update notification
+                      if (
+                        confirm(
+                          "A new version is available! Would you like to refresh to get the latest features and vocabulary?"
+                        )
+                      ) {
+                        // Tell the new service worker to skip waiting
+                        newWorker.postMessage({ type: "SKIP_WAITING" });
+
+                        // Reload the page
+                        window.location.reload();
+                      }
+                    } else {
+                      // Content is cached for the first time
+                      console.log("Content is cached for offline use.");
+                    }
                   }
                 });
+              });
+
+              // Listen for controlling changes
+              navigator.serviceWorker.addEventListener(
+                "controllerchange",
+                () => {
+                  console.log(
+                    "Service worker controller changed, reloading..."
+                  );
+                  window.location.reload();
+                }
+              );
+
+              // Listen for messages from service worker
+              navigator.serviceWorker.addEventListener("message", (event) => {
+                if (event.data && event.data.type === "CACHE_UPDATED") {
+                  console.log("Cache updated to:", event.data.cacheName);
+                } else if (event.data && event.data.type === "CACHE_CLEARED") {
+                  console.log("Cache cleared successfully");
+                }
               });
             })
             .catch(function (err) {
@@ -258,6 +307,7 @@
     <script src="src/utils/analytics.js"></script>
     <script src="src/utils/pwa-installer.js"></script>
     <script src="src/utils/reset-progress.js"></script>
+    <script src="src/utils/cache-manager.js"></script>
     <script src="src/core/core.js"></script>
     <script src="src/features/flashcards/flashcard-mode.js"></script>
     <script src="src/features/flashcards/quiz-mode.js"></script>
