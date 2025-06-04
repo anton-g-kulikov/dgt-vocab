@@ -678,6 +678,11 @@ button:hover,
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: var(--spacing-5);
   }
+
+  /* Quiz option text for tablets */
+  .quiz-option-text {
+    font-size: 1.05rem;
+  }
 }
 
 /* Desktops (768px and up) */
@@ -1066,7 +1071,7 @@ button:hover,
 
   /* Ensure quiz option text is visible and readable */
   .quiz-option-text {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     line-height: 1.3;
     padding: var(--spacing-1);
     min-height: 2.6rem;
@@ -1086,6 +1091,21 @@ button:hover,
     align-items: center;
     justify-content: center;
     gap: var(--spacing-2);
+  }
+}
+
+/* Very small mobile devices (below 375px) */
+@media (max-width: 374px) {
+  .quiz-option-text {
+    font-size: 1rem;
+    padding: var(--spacing-2);
+    min-height: 3rem;
+    line-height: 1.2;
+  }
+
+  .quiz-card-container {
+    height: 110px;
+    margin-bottom: var(--spacing-3);
   }
 }
 
