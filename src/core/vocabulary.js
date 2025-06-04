@@ -251,6 +251,22 @@ window.vocabularyData = [
     example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
+    word: "agudeza",
+    translation: "acuity",
+    perevod: "острота",
+    category: "noun",
+    topics: ["topic05"],
+    example: "Por la noche, la agudeza visual",
+  },
+  {
+    word: "alcance",
+    translation: "extent",
+    perevod: "область применения",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
+  },
+  {
     word: "alcohol",
     translation: "alcohol",
     perevod: "алкоголь",
@@ -315,6 +331,14 @@ window.vocabularyData = [
     example: "El alumbrado público facilita la visión",
   },
   {
+    word: "amanecer",
+    translation: "sunrise",
+    perevod: "восход",
+    category: "verb",
+    topics: ["topic05"],
+    example: "Desde el anochecer hasta el amanecer, ¿qué luces son obligatorias?",
+  },
+  {
     word: "amortiguadores",
     translation: "amortiza",
     perevod: "амортизаторы",
@@ -337,6 +361,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Carril ancho para adelantar",
+  },
+  {
+    word: "anochecer",
+    translation: "dusk",
+    perevod: "сумерки",
+    category: "verb",
+    topics: ["topic05"],
+    example: "Desde el anochecer hasta el amanecer, ¿qué luces son obligatorias?",
   },
   {
     word: "anormalmente",
@@ -385,6 +417,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
+  },
+  {
+    word: "antiniebla",
+    translation: "fog lights",
+    perevod: "противотуманные фары",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En caso de lluvia no intensa, ¿está permitido utilizar la luz antiniebla",
   },
   {
     word: "anunciarle",
@@ -1651,6 +1691,14 @@ window.vocabularyData = [
     example: "Es obligatorio cumplir con las indicaciones del agente.",
   },
   {
+    word: "curva",
+    translation: "curve",
+    perevod: "изгиб",
+    category: "noun",
+    topics: ["topic05"],
+    example: "El que toma la curva a su derecha, será el primero en sustituir el alumbrado de carretera por el de cruce.",
+  },
+  {
     word: "daños",
     translation: "damage",
     perevod: "повреждать",
@@ -2267,6 +2315,14 @@ window.vocabularyData = [
     example: "supone algún peligro si emplea un sistema de 'manos libres",
   },
   {
+    word: "emplear",
+    translation: "use",
+    perevod: "использовать",
+    category: "verb",
+    topics: ["topic05"],
+    example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
+  },
+  {
     word: "encender",
     translation: "to turn on/light",
     perevod: "включить или зажечь",
@@ -2337,6 +2393,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Entra en la autopista usando el carril de aceleración",
+  },
+  {
+    word: "entre",
+    translation: "between",
+    perevod: "между",
+    category: "noun",
+    topics: ["topic05"],
+    example: "entre la puesta y la salida del sol.",
   },
   {
     word: "ergonómico",
@@ -3499,6 +3563,14 @@ window.vocabularyData = [
     example: "Un sistema de tráfico inteligente puede reducir atascos.",
   },
   {
+    word: "intensa",
+    translation: "intense",
+    perevod: "интенсивный",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En caso de lluvia no intensa, ¿está permitido utilizar la luz antiniebla",
+  },
+  {
     word: "interior",
     translation: "interior/inside",
     perevod: "интерьер или внутри",
@@ -3635,6 +3707,14 @@ window.vocabularyData = [
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
+    word: "largo",
+    translation: "long",
+    perevod: "дальний",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
+  },
+  {
     word: "legal",
     translation: "legal",
     perevod: "юридический",
@@ -3753,6 +3833,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic08"],
     example: "Obliga a llevar encendida, al menos, la luz de cruce.",
+  },
+  {
+    word: "lluvia",
+    translation: "rain",
+    perevod: "дождь",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En caso de lluvia no intensa, ¿está permitido utilizar la luz antiniebla",
   },
   {
     word: "lluvias",
@@ -4267,6 +4355,14 @@ window.vocabularyData = [
     example: "paso a nivel",
   },
   {
+    word: "noche",
+    translation: "evening",
+    perevod: "вечер",
+    category: "noun",
+    topics: ["topic05"],
+    example: "Por la noche, la agudeza visual",
+  },
+  {
     word: "norma",
     translation: "rule/standard",
     perevod: "правило или стандарт",
@@ -4385,6 +4481,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: [],
     example: "Debes usar obligatoriamente el casco en la motocicleta.",
+  },
+  {
+    word: "obligatorias",
+    translation: "mandatory",
+    perevod: "обязательный",
+    category: "noun",
+    topics: ["topic05"],
+    example: "Desde el anochecer hasta el amanecer, ¿qué luces son obligatorias?",
   },
   {
     word: "obligatorio",
@@ -5067,6 +5171,14 @@ window.vocabularyData = [
     example: "horas de la madrugada y las primeras horas de la tarde",
   },
   {
+    word: "primero",
+    translation: "first",
+    perevod: "первый",
+    category: "noun",
+    topics: ["topic05"],
+    example: "El que toma la curva a su derecha, será el primero en sustituir el alumbrado de carretera por el de cruce.",
+  },
+  {
     word: "principal",
     translation: "main/principal",
     perevod: "Главный или принципал",
@@ -5291,6 +5403,14 @@ window.vocabularyData = [
     example: "Espera la señal en el puente móvil.",
   },
   {
+    word: "qué",
+    translation: "that",
+    perevod: "что",
+    category: "noun",
+    topics: ["topic05"],
+    example: "Desde el anochecer hasta el amanecer, ¿qué luces son obligatorias?",
+  },
+  {
     word: "quedarse",
     translation: "stay",
     perevod: "оставаться",
@@ -5435,6 +5555,14 @@ window.vocabularyData = [
     example: "Puedes recurrir la multa si no estás conforme.",
   },
   {
+    word: "reduce",
+    translation: "reduces",
+    perevod: "уменьшается",
+    category: "verb",
+    topics: ["topic05"],
+    example: "Por la noche, la agudeza visual...A) no varía.B) aumenta.C) se reduce",
+  },
+  {
     word: "reducida",
     translation: "reduced",
     perevod: "уменьшенный",
@@ -5465,6 +5593,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "El régimen sancionador es muy estricto.",
+  },
+  {
+    word: "reglaje",
+    translation: "adjustment",
+    perevod: "корректирование",
+    category: "noun",
+    topics: ["topic05"],
+    example: "Si el reglaje del sistema de alumbrado de su vehículo está demasiado bajo...",
   },
   {
     word: "reglamentario",
@@ -5987,6 +6123,14 @@ window.vocabularyData = [
     example: "El separador divide los sentidos de circulación.",
   },
   {
+    word: "será",
+    translation: "will be",
+    perevod: "будет",
+    category: "noun",
+    topics: ["topic05"],
+    example: "El que toma la curva a su derecha, será el primero en sustituir el alumbrado de carretera por el de cruce.",
+  },
+  {
     word: "servicio público",
     translation: "public service",
     perevod: "государственная служба",
@@ -6067,6 +6211,14 @@ window.vocabularyData = [
     example: "supone algún peligro si emplea un sistema de 'manos libres",
   },
   {
+    word: "situación",
+    translation: "situation",
+    perevod: "ситуация",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En qué situación se puede encender solamente la luz de posición entre la puesta y la salida del sol",
+  },
+  {
     word: "situar",
     translation: "to place/locate",
     perevod: "поместить или найти",
@@ -6081,6 +6233,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic08"],
     example: "Que el carril está abierto y otorga preferencia sobre los demás vehículos.",
+  },
+  {
+    word: "sol",
+    translation: "sun",
+    perevod: "солнце",
+    category: "noun",
+    topics: ["topic05"],
+    example: "En qué situación se puede encender solamente la luz de posición entre la puesta y la salida del sol",
   },
   {
     word: "solamente",
@@ -6649,6 +6809,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Los VAO pueden usar este carril.",
+  },
+  {
+    word: "varía",
+    translation: "varies",
+    perevod: "варьируется",
+    category: "verb",
+    topics: ["topic05"],
+    example: "Por la noche, la agudeza visual...A) no varía.B) aumenta.C) se reduce",
   },
   {
     word: "veces",
