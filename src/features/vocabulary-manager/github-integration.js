@@ -254,13 +254,14 @@ Total vocabulary size after merge: ${
       this.showStatus("🌿 Creating new branch...", "info", statusDiv);
       await this.createBranch(owner, repo, branchName, defaultBranchSha, token);
 
-      // Step 3: Get current vocabulary.js file SHA (if it exists)
+      // Step 3: Get current vocabulary.js file SHA from the new branch (if it exists)
       this.showStatus("📄 Updating vocabulary file...", "info", statusDiv);
       const currentFileSha = await this.getFileSha(
         owner,
         repo,
         "src/core/vocabulary.js",
-        token
+        token,
+        branchName
       );
 
       // Step 4: Update vocabulary.js file
@@ -887,17 +888,19 @@ If you continue to have issues, try:
     return await response.json();
   }
 
-  async getFileSha(owner, repo, filePath, token) {
+  async getFileSha(owner, repo, filePath, token, branch = null) {
     try {
-      const response = await fetch(
-        `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`,
-        {
-          headers: {
-            Authorization: `token ${token}`,
-            Accept: "application/vnd.github.v3+json",
-          },
-        }
-      );
+      let url = `https://api.github.com/repos/${owner}/${repo}/contents/${filePath}`;
+      if (branch) {
+        url += `?ref=${branch}`;
+      }
+      
+      const response = await fetch(url, {
+        headers: {
+          Authorization: `token ${token}`,
+          Accept: "application/vnd.github.v3+json",
+        },
+      });
 
       if (response.ok) {
         const fileData = await response.json();

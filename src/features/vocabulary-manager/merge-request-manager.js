@@ -8,14 +8,7 @@ class MergeRequestManager {
   }
 
   setupEventListeners() {
-    // Add event listener to create merge req    summary += `🔧 GIT COMMANDS TO EXECUTE:\n`;
-    summary += `---------------------------\n`;
-    summary += `git checkout -b ${branchName}\n`;
-    summary += `# Replace src/core/vocabulary.js with the downloaded file\n`;
-    summary += `git add src/core/vocabulary.js\n`;
-    summary += `git commit -m "Add ${newWordsCount} new vocabulary words"\n`;
-    summary += `git push origin ${branchName}\n`;
-    summary += `# Then create a pull request on your Git platform\n`;ton
+    // Add event listener to create merge request button
     const createMergeRequestBtn = document.getElementById("createMergeRequest");
     if (createMergeRequestBtn) {
       createMergeRequestBtn.addEventListener("click", () =>
