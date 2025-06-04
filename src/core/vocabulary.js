@@ -11,6 +11,14 @@ window.vocabularyData = [
     example: "Una luz verde en forma de flecha apuntando hacia abajo en un semáforo de carril.",
   },
   {
+    word: "abierto",
+    translation: "open",
+    perevod: "открыть",
+    category: "noun",
+    topics: [],
+    example: "Por obras en la calzada se ha abierto un carril en sentido contrario al normal. ¿Puede circular por él un turismo con remolque?",
+  },
+  {
     word: "abrochado",
     translation: "buckled",
     perevod: "застегнуть",
@@ -33,6 +41,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+  },
+  {
+    word: "aceleración",
+    translation: "acceleration",
+    perevod: "ускорение",
+    category: "noun",
+    topics: ["topic08"],
+    example: "carril de aceleración",
   },
   {
     word: "acomodos",
@@ -1643,6 +1659,14 @@ window.vocabularyData = [
     example: "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
   },
   {
+    word: "demás",
+    translation: "others",
+    perevod: "другие",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Que el carril está abierto y otorga preferencia sobre los demás vehículos.",
+  },
+  {
     word: "demasiado",
     translation: "too much",
     perevod: "слишком",
@@ -2139,6 +2163,14 @@ window.vocabularyData = [
     example: "Enciende las luces si es necesario",
   },
   {
+    word: "encendida",
+    translation: "lit",
+    perevod: "горит",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Obliga a llevar encendida, al menos, la luz de cruce.",
+  },
+  {
     word: "encendido",
     translation: "on/lit",
     perevod: "на или зажжен",
@@ -2169,6 +2201,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+  },
+  {
+    word: "entrada",
+    translation: "entrance",
+    perevod: "вход",
+    category: "adjective",
+    topics: ["topic08"],
+    example: "En el carril de entrada",
   },
   {
     word: "entrar",
@@ -2579,6 +2619,14 @@ window.vocabularyData = [
     example: "Las flechas de selección de carril...",
   },
   {
+    word: "fluidez",
+    translation: "fluency",
+    perevod: "беглость",
+    category: "noun",
+    topics: ["topic08"],
+    example: "por razones de fluidez",
+  },
+  {
     word: "fluidez del tráfico",
     translation: "traffic flow",
     perevod: "трафик",
@@ -2859,6 +2907,14 @@ window.vocabularyData = [
     example: "Las primeras lluvias hacen más resbaladizas las carreteras",
   },
   {
+    word: "hacerlo",
+    translation: "do it",
+    perevod: "это делать обязательно",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Un conductor que se incorpora a una vía utilizando un carril de aceleración, ¿debe cerciorarse previamente de que puede hacerlo sin peligro",
+  },
+  {
     word: "hacerse",
     translation: "become",
     perevod: "становиться",
@@ -3003,6 +3059,14 @@ window.vocabularyData = [
     example: "herido está inconsciente",
   },
   {
+    word: "incorpora",
+    translation: "incorporated,",
+    perevod: "инкорпорировать",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Un conductor que se incorpora a una vía utilizando un carril de aceleración, ¿debe cerciorarse previamente de que puede hacerlo sin peligro",
+  },
+  {
     word: "incorporación",
     translation: "incorporation",
     perevod: "включение",
@@ -3017,6 +3081,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "Incorporándose al carril derecho a la mayor velocidad posible",
+  },
+  {
+    word: "incorporarse",
+    translation: "to join",
+    perevod: "присоединиться",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Al incorporarse a una autopista por un carril de aceleración",
   },
   {
     word: "incorrecto",
@@ -3459,6 +3531,14 @@ window.vocabularyData = [
     example: "Instantes antes de que el conductor llegue a quedarse dormido.",
   },
   {
+    word: "llevar",
+    translation: "carry",
+    perevod: "нести",
+    category: "verb",
+    topics: ["topic08"],
+    example: "Obliga a llevar encendida, al menos, la luz de cruce.",
+  },
+  {
     word: "lluvias",
     translation: "rains",
     perevod: "дожди",
@@ -3763,6 +3843,14 @@ window.vocabularyData = [
     example: "Plaza reservada para minusválido.",
   },
   {
+    word: "minusválidos",
+    translation: "disabled people",
+    perevod: "люди с ограниченными возможностями",
+    category: "noun",
+    topics: ["topic01"],
+    example: "minusválidos",
+  },
+  {
     word: "mirar",
     translation: "look",
     perevod: "смотреть",
@@ -3971,6 +4059,14 @@ window.vocabularyData = [
     example: "Normalmente debe circular por el carril derecho.",
   },
   {
+    word: "normas",
+    translation: "standards",
+    perevod: "стандарты",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Que el carril está abierto, pero se deben obedecer las señales y normas de preferencia.",
+  },
+  {
     word: "normativa",
     translation: "regulations",
     perevod: "правила",
@@ -4019,6 +4115,22 @@ window.vocabularyData = [
     example: "Nunca cruces cuando el semáforo está en rojo.",
   },
   {
+    word: "obedecer",
+    translation: "obey",
+    perevod: "подчиняться",
+    category: "verb",
+    topics: ["topic08"],
+    example: "Que el carril está abierto, pero se deben obedecer las señales y normas de preferencia.",
+  },
+  {
+    word: "obliga",
+    translation: "obliges",
+    perevod: "обязывает",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Obliga a llevar encendida, al menos, la luz de cruce.",
+  },
+  {
     word: "obligado",
     translation: "obliged/forced",
     perevod: "обязался или вынужден",
@@ -4049,6 +4161,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Es obligatorio usar el cinturón",
+  },
+  {
+    word: "obras",
+    translation: "works",
+    perevod: "ремонт",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Por obras en la calzada se ha abierto un carril en sentido contrario al normal. ¿Puede circular por él un turismo con remolque?",
   },
   {
     word: "observar",
@@ -4145,6 +4265,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Enciende luces en tiempo oscuro",
+  },
+  {
+    word: "otorga",
+    translation: "grants",
+    perevod: "предоставляет",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Que el carril está abierto y otorga preferencia sobre los demás vehículos.",
   },
   {
     word: "otra",
@@ -4425,6 +4553,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "No se permite circular a más de 50 km/h",
+  },
+  {
+    word: "pero",
+    translation: "but",
+    perevod: "но",
+    category: "noun",
+    topics: [],
+    example: "Que el carril está abierto, pero se deben obedecer las señales y normas de preferencia.",
   },
   {
     word: "personas",
@@ -4931,6 +5067,14 @@ window.vocabularyData = [
     example: "No seas demasiado rápido",
   },
   {
+    word: "razones",
+    translation: "reasons",
+    perevod: "причины",
+    category: "noun",
+    topics: ["topic08"],
+    example: "por razones de fluidez",
+  },
+  {
     word: "reacción",
     translation: "reaction",
     perevod: "реакция",
@@ -5161,6 +5305,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Las primeras lluvias hacen más resbaladizas las carreteras",
+  },
+  {
+    word: "reservada",
+    translation: "reserved",
+    perevod: "зарезервирована",
+    category: "adjective",
+    topics: ["topic08"],
+    example: "Está reservada únicamente a los turismos.",
   },
   {
     word: "resfriados",
@@ -5603,6 +5755,14 @@ window.vocabularyData = [
     example: "Sitúa el vehículo en el carril correcto",
   },
   {
+    word: "sobre",
+    translation: "about",
+    perevod: "о",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Que el carril está abierto y otorga preferencia sobre los demás vehículos.",
+  },
+  {
     word: "solamente",
     translation: "only",
     perevod: "только",
@@ -5721,6 +5881,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic02"],
     example: "A los grupos de población más prospensos a sufrir un accidente",
+  },
+  {
+    word: "sujeta",
+    translation: "subject",
+    perevod: "предмет",
+    category: "noun",
+    topics: ["topic08"],
+    example: "A) No está sujeta a limitación de velocidad.",
   },
   {
     word: "superficie",
@@ -6065,6 +6233,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Todo usuario de la vía debe cumplir las normas",
+  },
+  {
+    word: "utilizando",
+    translation: "utilizando",
+    perevod: "с помощью",
+    category: "noun",
+    topics: ["topic08"],
+    example: "Un conductor que se incorpora a una vía utilizando un carril de aceleración, ¿debe cerciorarse previamente de que puede hacerlo sin peligro",
   },
   {
     word: "utilizar",
