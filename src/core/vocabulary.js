@@ -355,6 +355,14 @@ window.vocabularyData = [
     example: "analgésico para el dolor de cabeza",
   },
   {
+    word: "anchas",
+    translation: "wide",
+    perevod: "широкий",
+    category: "noun",
+    topics: ["topic04"],
+    example: "No, sobre todo en las calles y avenidas anchas.",
+  },
+  {
     word: "ancho",
     translation: "wide",
     perevod: "широкий",
@@ -643,6 +651,14 @@ window.vocabularyData = [
     example: "Evita atropellar a los peatones",
   },
   {
+    word: "atropello",
+    translation: "run over",
+    perevod: "переехать",
+    category: "noun",
+    topics: ["topic04"],
+    example: "Sí, para que, en caso de atropello, el peatón tenga más posibilidades de sobrevivir.",
+  },
+  {
     word: "aumenta",
     translation: "increases",
     perevod: "увеличивается",
@@ -729,6 +745,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "La velocidad máxima en autovía es 120 km/h",
+  },
+  {
+    word: "avenidas",
+    translation: "avenues",
+    perevod: "проспекты",
+    category: "noun",
+    topics: ["topic04"],
+    example: "No, sobre todo en las calles y avenidas anchas.",
   },
   {
     word: "avería",
@@ -905,6 +929,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic04"],
     example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+  },
+  {
+    word: "calles",
+    translation: "streets",
+    perevod: "улицы",
+    category: "noun",
+    topics: ["topic04"],
+    example: "No, sobre todo en las calles y avenidas anchas.",
   },
   {
     word: "calzada",
@@ -1569,6 +1601,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
+  {
+    word: "convencionales",
+    translation: "conventional",
+    perevod: "обычные",
+    category: "noun",
+    topics: ["topic04"],
+    example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
   },
   {
     word: "convenientemente",
@@ -3267,6 +3307,14 @@ window.vocabularyData = [
     example: "Le van a imponer una multa por aparcar mal.",
   },
   {
+    word: "importante",
+    translation: "important",
+    perevod: "важно",
+    category: "adjective",
+    topics: ["topic04"],
+    example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
+  },
+  {
     word: "inadecuada",
     translation: "inadequate",
     perevod: "неадекватный",
@@ -3681,6 +3729,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic10"],
     example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+  },
+  {
+    word: "juntos",
+    translation: "together",
+    perevod: "вместе",
+    category: "noun",
+    topics: ["topic04"],
+    example: "Porque los sentidos de circulación están juntos y puede haber vehículos en sentido contrario.",
   },
   {
     word: "justificada",
@@ -5019,6 +5075,14 @@ window.vocabularyData = [
     example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
+    word: "posibilidades",
+    translation: "odds",
+    perevod: "шансы",
+    category: "noun",
+    topics: ["topic04"],
+    example: "Sí, para que, en caso de atropello, el peatón tenga más posibilidades de sobrevivir.",
+  },
+  {
     word: "posible",
     translation: "possible",
     perevod: "возможный",
@@ -5939,6 +6003,14 @@ window.vocabularyData = [
     example: "La sanción puede incluir pérdida de puntos",
   },
   {
+    word: "sancionado",
+    translation: "sanctioned",
+    perevod: "санкционированный",
+    category: "adjective",
+    topics: ["topic04"],
+    example: "Sí, pero sólo para no ser sancionado por exceso de velocidad.",
+  },
+  {
     word: "saturación del tráfico",
     translation: "traffic saturation",
     perevod: "насыщение трафика",
@@ -6235,6 +6307,14 @@ window.vocabularyData = [
     example: "Que el carril está abierto y otorga preferencia sobre los demás vehículos.",
   },
   {
+    word: "sobrevivir",
+    translation: "survive",
+    perevod: "выживать",
+    category: "verb",
+    topics: ["topic04"],
+    example: "Sí, para que, en caso de atropello, el peatón tenga más posibilidades de sobrevivir.",
+  },
+  {
     word: "sol",
     translation: "sun",
     perevod: "солнце",
@@ -6377,6 +6457,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic08"],
     example: "A) No está sujeta a limitación de velocidad.",
+  },
+  {
+    word: "superar",
+    translation: "get over",
+    perevod: "превышать",
+    category: "verb",
+    topics: ["topic04"],
+    example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
   },
   {
     word: "supere",
