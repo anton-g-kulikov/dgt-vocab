@@ -7,7 +7,7 @@ window.vocabularyData = [
     translation: "buckled",
     perevod: "застегнуть",
     category: "adjective",
-    topics: [],
+    topics: ["topic11"],
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {

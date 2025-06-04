@@ -12,12 +12,42 @@ class ExportManager {
       this.vocabApp.allCards.map((card) => card.word.toLowerCase().trim())
     );
 
+    // First, ensure all words have topics assigned
+    let wordsWithoutTopics = 0;
+
     this.vocabApp.vocabularyUpdates.forEach((word) => {
+      // Check if word has neither topics array nor topic string
+      const hasNoTopics =
+        (!word.topics ||
+          !Array.isArray(word.topics) ||
+          word.topics.length === 0) &&
+        (!word.topic || word.topic.trim() === "");
+
+      if (hasNoTopics) {
+        word.topic = ""; // Empty string for topic field
+        word.topics = []; // Empty array for "all topics" assignment
+        wordsWithoutTopics++;
+      }
+
       const normalizedWord = word.word.toLowerCase().trim();
       if (!existingWords.has(normalizedWord)) {
         uniqueResults.push(word);
       }
     });
+
+    // Notify if topics were automatically assigned
+    if (wordsWithoutTopics > 0) {
+      this.showMessage(
+        `Found ${wordsWithoutTopics} words without topic assignments. They'll be available in all topic categories.`,
+        "info"
+      );
+
+      // Save the updates with topics
+      localStorage.setItem(
+        "dgt-vocab-vocabulary-updates",
+        JSON.stringify(this.vocabApp.vocabularyUpdates)
+      );
+    }
 
     // Generate JavaScript content that matches vocabulary.js structure
     const jsContent = this.generateJavaScriptContent(uniqueResults);

@@ -50,6 +50,41 @@ class MergeRequestManager {
         return;
       }
 
+      // Validate that all words have topics
+      const wordsWithoutTopics = this.vocabApp.vocabularyUpdates.filter(
+        (word) => {
+          // Check if word has neither topics array nor topic string
+          const hasNoTopics =
+            (!word.topics ||
+              !Array.isArray(word.topics) ||
+              word.topics.length === 0) &&
+            (!word.topic || word.topic.trim() === "");
+          return hasNoTopics;
+        }
+      );
+
+      if (wordsWithoutTopics.length > 0) {
+        // Assign empty topic arrays to enable "all topics" assignment
+        this.showMessage(
+          `Found ${wordsWithoutTopics.length} words without topic assignments. They'll be available in all topic categories.`,
+          "info"
+        );
+
+        wordsWithoutTopics.forEach((word) => {
+          word.topic = ""; // Empty string for single topic field
+          word.topics = []; // Empty array for topics field
+        });
+
+        // Update UI to reflect these changes
+        this.vocabularyUpdatesManager.populateVocabularyUpdatesTable();
+
+        // Save the updates with topics
+        localStorage.setItem(
+          "dgt-vocab-vocabulary-updates",
+          JSON.stringify(this.vocabApp.vocabularyUpdates)
+        );
+      }
+
       // Generate the updated vocabulary.js content
       const updatedVocabularyContent =
         await this.generateUpdatedVocabularyFile();
@@ -93,13 +128,36 @@ class MergeRequestManager {
       this.vocabApp.vocabularyUpdates.forEach((newWord) => {
         const normalizedWord = newWord.word.toLowerCase().trim();
         if (!existingWordSet.has(normalizedWord)) {
-          allWords.push({
+          const wordToAdd = {
             word: newWord.word,
             translation: newWord.translation,
             perevod: newWord.perevod || "",
             category: newWord.category,
             example: newWord.example,
-          });
+          };
+
+          // Include topics from the word
+          if (
+            newWord.topics &&
+            Array.isArray(newWord.topics) &&
+            newWord.topics.length > 0
+          ) {
+            wordToAdd.topics = [...newWord.topics];
+          }
+          // If only the topic string exists (backward compatibility)
+          else if (
+            newWord.topic &&
+            typeof newWord.topic === "string" &&
+            newWord.topic.trim() !== ""
+          ) {
+            wordToAdd.topics = [newWord.topic];
+          }
+          // Use empty array for "all topics" assignment
+          else {
+            wordToAdd.topics = [];
+          }
+
+          allWords.push(wordToAdd);
         }
       });
 
@@ -123,6 +181,33 @@ class MergeRequestManager {
         vocabularyContent += `    category: "${this.escapeJavaScriptString(
           word.category
         )}",\n`;
+
+        // Add topics array if it exists and has entries
+        if (
+          word.topics &&
+          Array.isArray(word.topics) &&
+          word.topics.length > 0
+        ) {
+          const topicsStr = word.topics
+            .map((t) => `"${this.escapeJavaScriptString(t)}"`)
+            .join(", ");
+          vocabularyContent += `    topics: [${topicsStr}],\n`;
+        }
+        // If only the topic string exists (backward compatibility)
+        else if (
+          word.topic &&
+          typeof word.topic === "string" &&
+          word.topic.trim() !== ""
+        ) {
+          vocabularyContent += `    topics: ["${this.escapeJavaScriptString(
+            word.topic
+          )}"],\n`;
+        }
+        // Empty topics array for "all topics" assignment
+        else {
+          vocabularyContent += `    topics: [],\n`;
+        }
+
         vocabularyContent += `    example: "${this.escapeJavaScriptString(
           word.example
         )}",\n`;

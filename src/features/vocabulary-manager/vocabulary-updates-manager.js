@@ -239,11 +239,7 @@ class VocabularyUpdatesManager {
       console.log("Using fallback topic IDs:", topics);
     }
 
-    // Always include "safety" (topic11) if needed
-    if (!topics.includes("topic11")) {
-      topics.push("topic11");
-    }
-
+    // No need to force Safety topic anymore, we use empty arrays instead
     console.log("Available topics:", topics);
 
     // Build the HTML for the topic options
@@ -476,8 +472,9 @@ class VocabularyUpdatesManager {
         wordData.topics
       );
     } else {
+      // Use empty array for "all topics" assignment
       wordData.topics = []; // Empty array if no topic selected
-      console.log(`Cleared topics for word`);
+      console.log(`Set empty topics array for word (available in all topics)`);
     }
 
     return wordData;

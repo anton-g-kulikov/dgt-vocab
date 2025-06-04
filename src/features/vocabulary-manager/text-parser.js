@@ -205,11 +205,14 @@ class TextParser {
         example: originalText, // Use the original text as example
       };
 
-      // Add global topic if selected
+      // Add global topic if selected, otherwise use empty array
       const globalTopic = this.getSelectedGlobalTopic();
       if (globalTopic) {
         newWord.topic = globalTopic; // Set single topic field
         newWord.topics = [globalTopic]; // Set topics array for compatibility
+      } else {
+        newWord.topic = ""; // Empty string for topic field
+        newWord.topics = []; // Empty array for "all topics" assignment
       }
 
       // Add to vocabulary updates
@@ -255,7 +258,10 @@ class TextParser {
   // Get the currently selected global topic from the UI
   getSelectedGlobalTopic() {
     const topicSelector = document.getElementById("globalTopicSelector");
-    return topicSelector ? topicSelector.value : "";
+    // Get the selected topic value, which may be empty
+    const selectedTopic = topicSelector ? topicSelector.value : "";
+    // Return the selected topic or empty string (which will result in empty topics array)
+    return selectedTopic;
   }
 
   clearVocabularyUpdates() {
