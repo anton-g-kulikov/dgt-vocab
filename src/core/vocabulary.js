@@ -107,6 +107,14 @@ window.vocabularyData = [
     example: "El agente de tráfico dirige la circulación",
   },
   {
+    word: "alcance",
+    translation: "scope",
+    perevod: "область применения",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Mínimo 2 o 3 metros, para evitar golpear al vehículo de delante en caso de alcance trasero.",
+  },
+  {
     word: "alcohol",
     translation: "alcohol",
     perevod: "алкоголь",
@@ -1203,6 +1211,14 @@ window.vocabularyData = [
     example: "Tome la ruta más directa si es segura.",
   },
   {
+    word: "disco",
+    translation: "disk",
+    perevod: "диск",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Que el vehículo lleve frenos de disco.",
+  },
+  {
     word: "discontinuo",
     translation: "discontinuous",
     perevod: "прерывистый",
@@ -1723,6 +1739,14 @@ window.vocabularyData = [
     example: "Cede el paso al entrar en la glorieta",
   },
   {
+    word: "golpear",
+    translation: "hit",
+    perevod: "hit",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Mínimo 2 o 3 metros, para evitar golpear al vehículo de delante en caso de alcance trasero.",
+  },
+  {
     word: "grave",
     translation: "serious/severe",
     perevod: "серьезный или тяжелый",
@@ -1777,6 +1801,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "El tiempo desde que ve un peligro hasta que actúa",
+  },
+  {
+    word: "hielo",
+    translation: "ice",
+    perevod: "лед",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que haya nieve o hielo en la calzada.",
   },
   {
     word: "homologado",
@@ -2195,6 +2227,14 @@ window.vocabularyData = [
     example: "Usa las luces cuando sea necesario",
   },
   {
+    word: "mandos",
+    translation: "controls",
+    perevod: "контролирует",
+    category: "noun",
+    topics: ["topic02"],
+    example: "La distancia recorrida desde que se ve un peligro hasta que se actúa sobre los mandos del vehículo.",
+  },
+  {
     word: "manifiestamente",
     translation: "manifestly/clearly",
     perevod: "явно или ясно",
@@ -2481,6 +2521,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Si se niega a realizar las pruebas de detección alcohólica",
+  },
+  {
+    word: "nieve",
+    translation: "snow",
+    perevod: "снег",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que haya nieve o hielo en la calzada.",
   },
   {
     word: "norma",
@@ -3243,6 +3291,14 @@ window.vocabularyData = [
     example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
+    word: "recorrida",
+    translation: "tour",
+    perevod: "пройденная",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La distancia recorrida desde que se ve un peligro hasta que se actúa sobre los mandos del vehículo.",
+  },
+  {
     word: "recto",
     translation: "straight",
     perevod: "прямой",
@@ -3849,6 +3905,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "El transporte especial necesita autorización.",
+  },
+  {
+    word: "trasero",
+    translation: "panel",
+    perevod: "сзади",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Mínimo 2 o 3 metros, para evitar golpear al vehículo de delante en caso de alcance trasero.",
   },
   {
     word: "travesía",
