@@ -80,25 +80,11 @@ window.vocabularyData = [
     example: "El agente de tráfico dirige la circulación",
   },
   {
-    word: "alcohol",
-    translation: "alcohol",
-    perevod: "алкоголь",
-    category: "noun",
-    example: "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
-  },
-  {
     word: "alcoholemia",
     translation: "blood alcohol test",
     perevod: "анализ алкоголя в крови",
     category: "noun",
     example: "El control de alcoholemia es aleatorio.",
-  },
-  {
-    word: "alcohólicas",
-    translation: "alcoholic",
-    perevod: "алкогольные",
-    category: "adjective",
-    example: "Cuando un conductor ha tomado bebidas alcohólicas, como norma general",
   },
   {
     word: "alumbrado",
@@ -127,6 +113,13 @@ window.vocabularyData = [
     perevod: "ненормально",
     category: "adverb",
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+  },
+  {
+    word: "ante",
+    translation: "in view of",
+    perevod: "ввиду",
+    category: "noun",
+    example: "tarda menos en reaccionar ante cualquier peligro",
   },
   {
     word: "anterior",
@@ -211,13 +204,6 @@ window.vocabularyData = [
     perevod: "медицинская помощь",
     category: "noun",
     example: "Ambulancia de asistencia sanitaria.",
-  },
-  {
-    word: "asume",
-    translation: "assumes",
-    perevod: "предполагает",
-    category: "noun",
-    example: "es consciente de que asume mas riesgos durante la conducción.",
   },
   {
     word: "atasco",
@@ -325,13 +311,6 @@ window.vocabularyData = [
     example: "Balizan la zona de obras con conos.",
   },
   {
-    word: "bebidas",
-    translation: "drinks",
-    perevod: "напитки",
-    category: "noun",
-    example: "Cuando un conductor ha tomado bebidas alcohólicas, como norma general",
-  },
-  {
     word: "bloquear",
     translation: "to block",
     perevod: "чтобы заблокировать",
@@ -379,6 +358,13 @@ window.vocabularyData = [
     perevod: "грузовик",
     category: "noun",
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+  },
+  {
+    word: "capacidades",
+    translation: "capabilities",
+    perevod: "возможности",
+    category: "noun",
+    example: "sobrevalora sus propias capacidades y desprecia el peligro",
   },
   {
     word: "carga",
@@ -612,13 +598,6 @@ window.vocabularyData = [
     example: "Comunica cualquier cambio de domicilio.",
   },
   {
-    word: "conducción",
-    translation: "driving",
-    perevod: "вождение",
-    category: "noun",
-    example: "no suele ser consciente de que asume mas riesgos durante la conducción",
-  },
-  {
     word: "conducir",
     translation: "to drive",
     perevod: "водить",
@@ -647,25 +626,11 @@ window.vocabularyData = [
     example: "La congestión obliga a usar rutas alternativas.",
   },
   {
-    word: "consciente",
-    translation: "aware",
-    perevod: "осознает",
-    category: "noun",
-    example: "es consciente de que asume mas riesgos durante la conducción.",
-  },
-  {
     word: "considera",
     translation: "to consider",
     perevod: "рассмотреть",
     category: "verb",
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
-  },
-  {
-    word: "consigue",
-    translation: "get",
-    perevod: "получать",
-    category: "noun",
-    example: "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
   },
   {
     word: "constituir",
@@ -759,6 +724,13 @@ window.vocabularyData = [
     example: "Cruza la calle por el paso de peatones",
   },
   {
+    word: "cualquier",
+    translation: "any",
+    perevod: "любой",
+    category: "verb",
+    example: "responde mejor ante cualquier peligro.",
+  },
+  {
     word: "cumplir",
     translation: "to comply with",
     perevod: "соблюдать",
@@ -834,6 +806,13 @@ window.vocabularyData = [
     perevod: "беспорядочный или грязный",
     category: "adjective",
     example: "Evite el comportamiento desordenado en la vía.",
+  },
+  {
+    word: "desprecia",
+    translation: "despises",
+    perevod: "презирает",
+    category: "noun",
+    example: "sobrevalora sus propias capacidades y desprecia el peligro",
   },
   {
     word: "desviar",
@@ -962,20 +941,6 @@ window.vocabularyData = [
     example: "Lleva siempre la documentación",
   },
   {
-    word: "durante",
-    translation: "during",
-    perevod: "в течение",
-    category: "noun",
-    example: "no suele ser consciente de que asume mas riesgos durante la conducción",
-  },
-  {
-    word: "durmiendo",
-    translation: "sleeping",
-    perevod: "спящий",
-    category: "noun",
-    example: "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
-  },
-  {
     word: "eficacia",
     translation: "efficiency",
     perevod: "эффективность",
@@ -1002,13 +967,6 @@ window.vocabularyData = [
     perevod: "повышен или высокий",
     category: "adjective",
     example: "Paso elevado para peatones",
-  },
-  {
-    word: "eliminar",
-    translation: "eliminate",
-    perevod: "устранять",
-    category: "verb",
-    example: "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
   },
   {
     word: "emergencia",
@@ -2138,13 +2096,6 @@ window.vocabularyData = [
     example: "La placa de ensayo es para vehículos experimentales.",
   },
   {
-    word: "poco",
-    translation: "bit",
-    perevod: "немного",
-    category: "noun",
-    example: "Durmiendo un poco, ¿se consigue eliminar más rápidamente el alcohol?",
-  },
-  {
     word: "pontón trasbordador",
     translation: "ferry bridge",
     perevod: "Паромный мост",
@@ -2306,6 +2257,13 @@ window.vocabularyData = [
     example: "Se prohíbe aparcar aquí",
   },
   {
+    word: "propias",
+    translation: "own",
+    perevod: "собственный",
+    category: "noun",
+    example: "sobrevalora sus propias capacidades y desprecia el peligro",
+  },
+  {
     word: "protección civil",
     translation: "civil protection",
     perevod: "Гражданская защита",
@@ -2381,6 +2339,13 @@ window.vocabularyData = [
     perevod: "быстро или быстро",
     category: "adjective",
     example: "No seas demasiado rápido",
+  },
+  {
+    word: "reaccionar",
+    translation: "react",
+    perevod: "реагировать",
+    category: "verb",
+    example: "tarda menos en reaccionar ante cualquier peligro",
   },
   {
     word: "realizar",
@@ -2523,6 +2488,13 @@ window.vocabularyData = [
     example: "Respeta las señales de tráfico",
   },
   {
+    word: "responde",
+    translation: "reply",
+    perevod: "отвечать",
+    category: "noun",
+    example: "responde mejor ante cualquier peligro.",
+  },
+  {
     word: "responder",
     translation: "to respond",
     perevod: "ответить",
@@ -2563,20 +2535,6 @@ window.vocabularyData = [
     perevod: "осмотр или обзор",
     category: "noun",
     example: "La revisión del vehículo es anual.",
-  },
-  {
-    word: "riesgo",
-    translation: "risk",
-    perevod: "риск",
-    category: "noun",
-    example: "supone un riesgo para la seguridad vial",
-  },
-  {
-    word: "riesgos",
-    translation: "risks",
-    perevod: "риски",
-    category: "noun",
-    example: "es consciente de que asume mas riesgos durante la conducción.",
   },
   {
     word: "rotativo",
@@ -2761,6 +2719,13 @@ window.vocabularyData = [
     example: "Sitúa el vehículo en el carril correcto",
   },
   {
+    word: "sobrevalora",
+    translation: "overvalues",
+    perevod: "переоценивает",
+    category: "noun",
+    example: "sobrevalora sus propias capacidades y desprecia el peligro",
+  },
+  {
     word: "solamente",
     translation: "only",
     perevod: "только",
@@ -2782,25 +2747,11 @@ window.vocabularyData = [
     example: "Un vehículo sucio puede ocultar la matrícula.",
   },
   {
-    word: "suele",
-    translation: "usually",
-    perevod: "обычно",
-    category: "noun",
-    example: "no suele ser consciente de que asume mas riesgos durante la conducción",
-  },
-  {
     word: "suficientemente",
     translation: "sufficiently",
     perevod: "достаточно",
     category: "adverb",
     example: "Mantén una distancia suficientemente segura con el vehículo de delante.",
-  },
-  {
-    word: "supone",
-    translation: "supposes",
-    perevod: "предполагает",
-    category: "noun",
-    example: "supone un riesgo para la seguridad vial",
   },
   {
     word: "suspender",
@@ -2824,11 +2775,11 @@ window.vocabularyData = [
     example: "Sustituye las luces fundidas inmediatamente.",
   },
   {
-    word: "tasa",
-    translation: "rate",
-    perevod: "доза",
+    word: "tarda",
+    translation: "takes time",
+    perevod: "занимает время",
     category: "noun",
-    example: "Conducir con una tasa de alcoholemia por encima del límite legal",
+    example: "tarda menos en reaccionar ante cualquier peligro",
   },
   {
     word: "taxímetro",
@@ -2857,13 +2808,6 @@ window.vocabularyData = [
     perevod: "временный",
     category: "adjective",
     example: "Hay una señalización temporal por obras.",
-  },
-  {
-    word: "tomado",
-    translation: "taken",
-    perevod: "взятый",
-    category: "adjective",
-    example: "Cuando un conductor ha tomado bebidas alcohólicas, como norma general",
   },
   {
     word: "torpe",
