@@ -238,11 +238,11 @@ This script will:
 
 ## Technologies Used
 
-- **Progressive Web App (PWA)**: Service workers, web app manifest, offline caching
+- **Progressive Web App (PWA)**: Service workers, web app manifest, offline caching with intelligent update management
 - **HTML5**: Semantic structure and accessibility
 - **CSS3**: Modern styling with CSS Grid, Flexbox, and custom properties
 - **Vanilla JavaScript**: ES6+ modules with class-based architecture
-- **Service Workers**: Offline functionality and background sync
+- **Service Workers**: Optimized offline functionality with smart caching strategies and controlled update notifications
 - **Web App Manifest**: Native app installation and theming
 - **Local Storage API**: Client-side data persistence and progress tracking
 - **CSS Animations**: Smooth card flips and UI transitions
@@ -279,6 +279,40 @@ The vocabulary is sourced from official Spanish traffic regulations:
 - Edge 79+
 
 **Note**: PWA installation is not supported in Firefox, but the app works perfectly in-browser.
+
+## Troubleshooting
+
+### PWA Cache Issues
+
+If you're experiencing issues with updates not appearing:
+
+1. **Force Cache Refresh**: Open browser DevTools → Console → Type:
+
+   ```javascript
+   CacheManager.forceClearCache();
+   ```
+
+2. **Manual Service Worker Reset**:
+
+   - DevTools → Application → Service Workers
+   - Click "Unregister" next to the service worker
+   - Refresh the page
+
+3. **Clear Browser Cache**: Clear your browser's cache and hard refresh (Ctrl+Shift+R / Cmd+Shift+R)
+
+### Styling Issues on Mobile
+
+If Spanish words in quiz mode aren't properly highlighted:
+
+1. **Check Console**: Open DevTools and look for CSS or JavaScript errors
+2. **Force Refresh**: Use the cache clearing methods above
+3. **Verify Network**: Ensure you have a stable internet connection for initial load
+
+### Common Issues
+
+- **Update Notifications**: The app checks for updates only on page load to avoid spam notifications
+- **Offline Mode**: Some features require initial online load before working offline
+- **Mobile Installation**: Use browser's "Add to Home Screen" option for best PWA experience
 
 ## Architecture
 
@@ -365,6 +399,15 @@ The refactored vocabulary manager provides:
 - **Reduced Coupling** - Loose coupling through event-driven communication
 - **Better Code Organization** - Logical grouping of related functionality
 - **Easier Feature Addition** - Well-defined extension points for new functionality
+
+## Recent Improvements
+
+### Version 1.1.6 Updates
+
+- **Fixed Service Worker Update Issues**: Removed aggressive 60-second update checks that were causing false update notifications
+- **Enhanced Spanish Word Styling**: Improved CSS specificity and added fallback styles for better mobile device compatibility
+- **Optimized Cache Management**: Streamlined cache invalidation strategy for more reliable PWA updates
+- **Debug Improvements**: Added console logging for troubleshooting styling and caching issues
 
 ## Support the Project
 
