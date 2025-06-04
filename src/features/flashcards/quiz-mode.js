@@ -222,7 +222,22 @@ class QuizMode {
     // Set the quiz question text - this was missing!
     const quizQuestion = document.getElementById("quizQuestion");
     if (quizQuestion) {
-      quizQuestion.textContent = `What does "${correctCard.word}" mean?`;
+      // Clear existing content
+      quizQuestion.innerHTML = "";
+
+      // Create question text with Spanish word properly styled
+      const questionText = document.createTextNode('What does "');
+      quizQuestion.appendChild(questionText);
+
+      // Create span for the Spanish word with appropriate class
+      const spanishWordSpan = document.createElement("span");
+      spanishWordSpan.className = "spanish-word spanish-highlight";
+      spanishWordSpan.textContent = correctCard.word;
+      quizQuestion.appendChild(spanishWordSpan);
+
+      // Add the rest of the question
+      const endText = document.createTextNode('" mean?');
+      quizQuestion.appendChild(endText);
     }
 
     // Get options container
