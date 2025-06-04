@@ -5,6 +5,7 @@ class FlashcardMode {
     this.vocabApp = vocabApp;
     this.isFlipped = false;
     this.showingAllCards = false;
+    this.waitingForCardClick = false;
   }
 
   populateTopicSelector() {
@@ -53,7 +54,25 @@ class FlashcardMode {
       return;
     }
 
-    this.displayCard(card);
+    // Reset state when showing a new card
+    this.waitingForCardClick = false;
+    this.isFlipped = false;
+
+    const flashcard = document.getElementById("flashcard");
+    if (flashcard) {
+      // Ensure card is fully visible
+      flashcard.style.opacity = "";
+      flashcard.style.visibility = "";
+      flashcard.style.transition = "";
+
+      // Reset flip state
+      flashcard.classList.remove("flipped");
+
+      // Display the new card content
+      this.displayCard(card);
+    } else {
+      this.displayCard(card);
+    }
   }
 
   displayCard(card) {
@@ -66,11 +85,10 @@ class FlashcardMode {
       cardActions.style.display = "flex";
     }
 
-    // Reset flip state
+    // Ensure completely clean slate - this should already be done by showCurrentCard()
+    // but adding as extra safety
     this.isFlipped = false;
     flashcard.classList.remove("flipped");
-
-    // Clear existing content
     flashcard.innerHTML = "";
 
     // Create front face
@@ -126,6 +144,14 @@ class FlashcardMode {
     const flashcard = document.getElementById("flashcard");
     if (!flashcard) return;
 
+    // If card is currently showing back side and user clicks on it,
+    // and we got here via "I don't know this" button, advance to next card
+    if (this.isFlipped && this.waitingForCardClick) {
+      // Use the anti-spoiler method
+      this.clearCardAndProceedToNext();
+      return;
+    }
+
     this.isFlipped = !this.isFlipped;
 
     if (this.isFlipped) {
@@ -141,7 +167,7 @@ class FlashcardMode {
     }
   }
 
-  // Mark card as known/unknown and move to next
+  // Mark card as known/unknown and handle next card behavior
   markCard(isKnown) {
     if (this.vocabApp.currentCards.length === 0) return;
 
@@ -159,8 +185,61 @@ class FlashcardMode {
     this.vocabApp.trackCardInteraction(currentCard.id);
     this.vocabApp.saveProgress();
 
+    // Simplified anti-spoiler approach: if card is showing back side,
+    // clear content first, then flip, then show new card
+    if (this.isFlipped) {
+      // Card is showing back side - implement anti-spoiler sequence
+      this.clearCardAndProceedToNext();
+    } else {
+      // Card is showing front side
+      if (isKnown) {
+        // "I know this" from front - go to next card immediately
+        this.proceedToNextCard();
+      } else {
+        // "I don't know this" from front - flip to show back side, wait for click
+        this.flipCard();
+        this.waitingForCardClick = true;
+      }
+    }
+  }
+
+  // Anti-spoiler method: clear content, flip to front, then show new card
+  clearCardAndProceedToNext() {
+    const flashcard = document.getElementById("flashcard");
+    if (!flashcard) {
+      this.proceedToNextCard();
+      return;
+    }
+
+    // Step 1: Clear the text content immediately
+    const frontFace = flashcard.querySelector(".card-front .spanish-word");
+    const backFace = flashcard.querySelector(".card-back .translation");
+    const backExample = flashcard.querySelector(".card-back .example");
+
+    if (frontFace) frontFace.textContent = "";
+    if (backFace) backFace.textContent = "";
+    if (backExample) backExample.textContent = "";
+
+    // Step 2: Flip card back to front
+    this.isFlipped = false;
+    this.waitingForCardClick = false;
+    flashcard.classList.remove("flipped");
+
+    // Step 3: After flip animation completes, show new card
+    setTimeout(() => {
+      this.proceedToNextCard();
+    }, 600); // Wait for CSS flip animation to complete
+  }
+
+  // Helper method to handle advancing to the next card
+  proceedToNextCard() {
+    const currentCard = this.vocabApp.currentCards[this.vocabApp.currentIndex];
+
     // If we're in "unknown only" mode and card is now known, remove it from current cards
-    if (!this.showingAllCards && isKnown) {
+    if (
+      !this.showingAllCards &&
+      this.vocabApp.knownCardsSet.has(currentCard.id)
+    ) {
       this.vocabApp.currentCards.splice(this.vocabApp.currentIndex, 1);
 
       // Check if this was the last unknown card in the filtered set
@@ -195,8 +274,31 @@ class FlashcardMode {
         (this.vocabApp.currentIndex + 1) % this.vocabApp.currentCards.length;
     }
 
-    // Update stats and show next card
+    // Update stats
     this.vocabApp.updateStats();
+
+    // Show the new card
+    this.showCurrentCard();
+  }
+
+  // Navigate to next card manually (without marking as known/unknown)
+  nextCard() {
+    if (this.vocabApp.currentCards.length === 0) return;
+
+    this.vocabApp.currentIndex =
+      (this.vocabApp.currentIndex + 1) % this.vocabApp.currentCards.length;
+
+    this.showCurrentCard();
+  }
+
+  // Navigate to previous card manually (without marking as known/unknown)
+  previousCard() {
+    if (this.vocabApp.currentCards.length === 0) return;
+
+    this.vocabApp.currentIndex =
+      (this.vocabApp.currentIndex - 1 + this.vocabApp.currentCards.length) %
+      this.vocabApp.currentCards.length;
+
     this.showCurrentCard();
   }
 
