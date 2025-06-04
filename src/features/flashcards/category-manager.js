@@ -4,7 +4,19 @@ class CategoryManager {
   constructor(vocabApp) {
     this.vocabApp = vocabApp;
     this.populateCategoryFilter();
-    this.populateTopicFilter();
+
+    // Delay topic population to ensure TopicUtils is loaded
+    this.initializeTopics();
+  }
+
+  initializeTopics() {
+    if (window.TopicUtils) {
+      this.populateTopicFilter();
+    } else {
+      // Retry after a short delay
+      console.log("TopicUtils not ready yet, retrying in 100ms...");
+      setTimeout(() => this.initializeTopics(), 100);
+    }
   }
 
   initCategories(vocabulary) {
@@ -136,7 +148,10 @@ class CategoryManager {
 
   populateTopicFilter() {
     const topicSelector = document.getElementById("topicSelector");
-    if (!topicSelector) return;
+    if (!topicSelector) {
+      console.log("Topic selector element not found!");
+      return;
+    }
 
     // Clear existing options except the "All Topics" option
     topicSelector.innerHTML = "";
@@ -147,21 +162,35 @@ class CategoryManager {
     defaultOption.textContent = "All Topics";
     topicSelector.appendChild(defaultOption);
 
-    // Get available topics that have words
+    // Get available topics - use the same approach as vocabulary manager
     if (window.TopicUtils) {
-      const availableTopics = this.getTopicsWithWords();
+      console.log("TopicUtils found, getting all topics...");
+      // Use getAllTopics to get all available topics, regardless of whether vocabulary has topics assigned
+      const allTopics = window.TopicUtils.getAllTopics();
+      console.log("Found topics:", allTopics);
 
-      availableTopics.forEach((topicId) => {
+      allTopics.forEach((topic) => {
         const option = document.createElement("option");
-        option.value = topicId;
-        option.textContent = window.TopicUtils.getTopicName(topicId);
+        option.value = topic.id;
+        option.textContent = topic.name;
         topicSelector.appendChild(option);
+        console.log(`Added topic: ${topic.id} - ${topic.name}`);
       });
 
-      // Add event listener for topic selection
-      topicSelector.addEventListener("change", (e) => {
+      // Add event listener for topic selection (only add once)
+      topicSelector.removeEventListener("change", this.topicChangeHandler);
+      this.topicChangeHandler = (e) => {
         this.selectTopic(e.target.value);
-      });
+      };
+      topicSelector.addEventListener("change", this.topicChangeHandler);
+
+      console.log(
+        "Topic filter populated successfully with",
+        allTopics.length,
+        "topics"
+      );
+    } else {
+      console.log("TopicUtils not found! Check if topics.js is loaded.");
     }
   }
 

@@ -14,7 +14,6 @@ window.vocabularyData = [
     translation: "accident",
     perevod: "авария",
     category: "noun",
-    topics: ["topic12"],
     example: "Evita los accidentes conduciendo con prudencia",
   },
   {
@@ -22,7 +21,6 @@ window.vocabularyData = [
     translation: "to condition oneself/to adapt",
     perevod: "адаптироваться или приспосабливаться",
     category: "verb",
-    topics: ["topic11"],
     example: "El conductor debe acondicionarse a las circunstancias del tráfico.",
   },
   {
@@ -30,7 +28,6 @@ window.vocabularyData = [
     translation: "to accredit",
     perevod: "аккредитовать",
     category: "verb",
-    topics: ["topic06"],
     example: "Acredita tu identidad con el DNI.",
   },
   {
@@ -38,7 +35,6 @@ window.vocabularyData = [
     translation: "currently",
     perevod: "в настоящее время",
     category: "adverb",
-    topics: ["topic04"],
     example: "Actualmente, el límite de velocidad en esta vía es de 50 km/h.",
   },
   {
@@ -46,7 +42,6 @@ window.vocabularyData = [
     translation: "to adapt",
     perevod: "адаптироваться",
     category: "verb",
-    topics: ["topic04", "topic11"],
     example: "Adapta la velocidad a las condiciones.",
   },
   {
@@ -54,7 +49,6 @@ window.vocabularyData = [
     translation: "adequate/appropriate",
     perevod: "адекватный или уместный",
     category: "adjective",
-    topics: ["topic04"],
     example: "Mantén una velocidad adecuada",
   },
   {
@@ -216,7 +210,6 @@ window.vocabularyData = [
     translation: "drag",
     perevod: "тащить",
     category: "verb",
-    topics: ["topic02"],
     example: "Un turismo que arrastra un remolque ligero",
   },
   {
@@ -266,7 +259,6 @@ window.vocabularyData = [
     translation: "automobiles",
     perevod: "легковые автомобили",
     category: "noun",
-    topics: ["topic01"],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -365,7 +357,6 @@ window.vocabularyData = [
     translation: "calle (street)",
     perevod: "улица",
     category: "noun",
-    topics: ["topic04"],
     example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
@@ -387,7 +378,6 @@ window.vocabularyData = [
     translation: "truck",
     perevod: "грузовик",
     category: "noun",
-    topics: ["topic04"],
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
@@ -738,7 +728,6 @@ window.vocabularyData = [
     translation: "conventional",
     perevod: "обычная",
     category: "adjective",
-    topics: ["topic04"],
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
@@ -1691,7 +1680,6 @@ window.vocabularyData = [
     translation: "limitation",
     perevod: "ограничение",
     category: "noun",
-    topics: ["topic04"],
     example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
@@ -1797,7 +1785,6 @@ window.vocabularyData = [
     translation: "maximum",
     perevod: "максимальная",
     category: "noun",
-    topics: ["topic04"],
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
@@ -2169,7 +2156,6 @@ window.vocabularyData = [
     translation: "paved",
     perevod: "с твердым покрытием",
     category: "adjective",
-    topics: ["topic04"],
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
@@ -2590,7 +2576,6 @@ window.vocabularyData = [
     translation: "reduced",
     perevod: "уменьшенный",
     category: "adjective",
-    topics: ["topic04"],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -2962,7 +2947,6 @@ window.vocabularyData = [
     translation: "sufficiently",
     perevod: "достаточно",
     category: "adverb",
-    topics: ["topic11"],
     example: "Mantén una distancia suficientemente segura con el vehículo de delante.",
   },
   {
@@ -2970,7 +2954,6 @@ window.vocabularyData = [
     translation: "to suspend",
     perevod: "Чтобы приостановить",
     category: "verb",
-    topics: ["topic11"],
     example: "Pueden suspender el permiso de conducir.",
   },
   {
@@ -2978,7 +2961,6 @@ window.vocabularyData = [
     translation: "suspencion",
     perevod: "подвеска",
     category: "noun",
-    topics: ["topic11"],
     example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
@@ -2986,7 +2968,6 @@ window.vocabularyData = [
     translation: "substances",
     perevod: "вещества",
     category: "noun",
-    topics: ["topic11"],
     example: "Las pruebas de detección de sustancias estupefacientes",
   },
   {
@@ -2994,7 +2975,6 @@ window.vocabularyData = [
     translation: "to replace/substitute",
     perevod: "заменить или заменить",
     category: "verb",
-    topics: ["topic11"],
     example: "Sustituye las luces fundidas inmediatamente.",
   },
   {
@@ -3002,7 +2982,6 @@ window.vocabularyData = [
     translation: "taximeter",
     perevod: "таксометр",
     category: "noun",
-    topics: ["topic11"],
     example: "El taxímetro calcula el coste del viaje.",
   },
   {
@@ -3010,7 +2989,6 @@ window.vocabularyData = [
     translation: "technical",
     perevod: "технический",
     category: "adjective",
-    topics: ["topic11"],
     example: "La inspección técnica del vehículo es periódica.",
   },
   {
@@ -3018,7 +2996,6 @@ window.vocabularyData = [
     translation: "electronic toll",
     perevod: "Электронный проезд",
     category: "noun",
-    topics: ["topic11"],
     example: "El telepeaje acelera el paso por autopistas.",
   },
   {
@@ -3026,7 +3003,6 @@ window.vocabularyData = [
     translation: "temporary",
     perevod: "временный",
     category: "adjective",
-    topics: ["topic11"],
     example: "Hay una señalización temporal por obras.",
   },
   {
@@ -3034,7 +3010,6 @@ window.vocabularyData = [
     translation: "take",
     perevod: "употреблять",
     category: "verb",
-    topics: ["topic11"],
     example: "excepto si se toma en pequeñas cantidades",
   },
   {
@@ -3042,7 +3017,6 @@ window.vocabularyData = [
     translation: "taken",
     perevod: "взятый",
     category: "adjective",
-    topics: ["topic11"],
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
@@ -3050,7 +3024,6 @@ window.vocabularyData = [
     translation: "we take",
     perevod: "мы потребляем",
     category: "verb",
-    topics: ["topic11"],
     example: "Cuando tomamos alcohol con otras drogas",
   },
   {
@@ -3058,7 +3031,6 @@ window.vocabularyData = [
     translation: "clumsy/awkward",
     perevod: "неуклюжий или неловкий",
     category: "adjective",
-    topics: ["topic11"],
     example: "Una maniobra torpe puede causar un accidente.",
   },
   {
@@ -3066,7 +3038,6 @@ window.vocabularyData = [
     translation: "traffic",
     perevod: "трафик",
     category: "noun",
-    topics: ["topic11"],
     example: "El tráfico está muy denso esta mañana.",
   },
   {
@@ -3074,7 +3045,6 @@ window.vocabularyData = [
     translation: "to process",
     perevod: "для обработки",
     category: "verb",
-    topics: ["topic11"],
     example: "Tramita la denuncia en la comisaría.",
   },
   {
@@ -3082,7 +3052,6 @@ window.vocabularyData = [
     translation: "to transit/travel",
     perevod: "транзит или путешествовать",
     category: "verb",
-    topics: ["topic11"],
     example: "Transita con precaución por zonas escolares",
   },
   {
@@ -3090,7 +3059,6 @@ window.vocabularyData = [
     translation: "special transport",
     perevod: "Специальный транспорт",
     category: "noun",
-    topics: ["topic11"],
     example: "El transporte especial necesita autorización.",
   },
   {
@@ -3098,7 +3066,6 @@ window.vocabularyData = [
     translation: "crossing/traverse",
     perevod: "пересечение или проезд",
     category: "noun",
-    topics: ["topic11"],
     example: "Reduce la velocidad en travesías urbanas",
   },
   {
@@ -3106,7 +3073,6 @@ window.vocabularyData = [
     translation: "tunnel",
     perevod: "туннель",
     category: "noun",
-    topics: ["topic11"],
     example: "Enciende las luces en el túnel",
   },
   {
@@ -3114,7 +3080,6 @@ window.vocabularyData = [
     translation: "tourism",
     perevod: "легковая машина",
     category: "noun",
-    topics: ["topic01", "topic11"],
     example: "Un turismo que arrastra un remolque ligero",
   },
   {
@@ -3122,7 +3087,6 @@ window.vocabularyData = [
     translation: "saloons",
     perevod: "пассажирские автомобили",
     category: "noun",
-    topics: ["topic01", "topic11"],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -3130,7 +3094,6 @@ window.vocabularyData = [
     translation: "only/solely",
     perevod: "только или исключительно",
     category: "adverb",
-    topics: ["topic11"],
     example: "Únicamente los vehículos autorizados pueden usar este carril.",
   },
   {
@@ -3138,7 +3101,6 @@ window.vocabularyData = [
     translation: "urban/city",
     perevod: "городской или город",
     category: "adjective",
-    topics: ["topic11"],
     example: "En zona urbana la velocidad es 50 km/h",
   },
   {
@@ -3146,7 +3108,6 @@ window.vocabularyData = [
     translation: "to use",
     perevod: "использовать",
     category: "verb",
-    topics: ["topic11"],
     example: "Usa siempre el cinturón de seguridad",
   },
   {
@@ -3154,7 +3115,6 @@ window.vocabularyData = [
     translation: "user",
     perevod: "пользователь",
     category: "noun",
-    topics: ["topic11"],
     example: "Todo usuario de la vía debe cumplir las normas",
   },
   {
@@ -3162,7 +3122,6 @@ window.vocabularyData = [
     translation: "to use",
     perevod: "использовать",
     category: "verb",
-    topics: ["topic11"],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -3170,7 +3129,6 @@ window.vocabularyData = [
     translation: "empty",
     perevod: "пустой",
     category: "noun",
-    topics: ["topic11"],
     example: "el estómago vacío",
   },
   {
@@ -3178,7 +3136,6 @@ window.vocabularyData = [
     translation: "driveway access",
     perevod: "Доступ к дороге",
     category: "noun",
-    topics: ["topic11"],
     example: "No obstruyas el vado señalizado.",
   },
   {
@@ -3186,7 +3143,6 @@ window.vocabularyData = [
     translation: "valid",
     perevod: "действительный",
     category: "adjective",
-    topics: ["topic11"],
     example: "El permiso de conducir debe estar válido.",
   },
   {
@@ -3194,7 +3150,6 @@ window.vocabularyData = [
     translation: "high occupancy vehicle",
     perevod: "Высокопроизводительный автомобиль",
     category: "noun",
-    topics: ["topic11"],
     example: "Los VAO pueden usar este carril.",
   },
   {
@@ -3202,7 +3157,6 @@ window.vocabularyData = [
     translation: "vehicle",
     perevod: "транспортное средство",
     category: "noun",
-    topics: ["topic11"],
     example: "El vehículo debe estar matriculado",
   },
   {
@@ -3210,7 +3164,6 @@ window.vocabularyData = [
     translation: "pilot vehicle",
     perevod: "пилотный автомобиль",
     category: "noun",
-    topics: ["topic11"],
     example: "El vehículo piloto acompaña cargas especiales.",
   },
   {
@@ -3218,7 +3171,6 @@ window.vocabularyData = [
     translation: "speed",
     perevod: "скорость",
     category: "noun",
-    topics: ["topic11"],
     example: "Respeta los límites de velocidad",
   },
   {
@@ -3226,7 +3178,6 @@ window.vocabularyData = [
     translation: "to verify",
     perevod: "Чтобы проверить",
     category: "verb",
-    topics: ["topic11"],
     example: "Verifica que la documentación esté en regla.",
   },
   {
@@ -3234,7 +3185,6 @@ window.vocabularyData = [
     translation: "road/way",
     perevod: "дорога или путь",
     category: "noun",
-    topics: ["topic11"],
     example: "La vía pública es de todos",
   },
   {
@@ -3242,7 +3192,6 @@ window.vocabularyData = [
     translation: "service road",
     perevod: "сервисная дорога",
     category: "noun",
-    topics: ["topic11"],
     example: "La vía de servicio da acceso a los servicios.",
   },
   {
@@ -3250,7 +3199,6 @@ window.vocabularyData = [
     translation: "old",
     perevod: "старый",
     category: "adjective",
-    topics: ["topic11"],
     example: "Un coche viejo puede ser menos seguro.",
   },
   {
@@ -3258,7 +3206,6 @@ window.vocabularyData = [
     translation: "current/in force",
     perevod: "ток или в силе",
     category: "adjective",
-    topics: ["topic11"],
     example: "La normativa vigente es de 2003.",
   },
   {
@@ -3266,7 +3213,6 @@ window.vocabularyData = [
     translation: "traffic surveillance",
     perevod: "Наблюдение за дорожным движением",
     category: "noun",
-    topics: ["topic11"],
     example: "La vigilancia del tráfico es constante.",
   },
   {
@@ -3274,7 +3220,6 @@ window.vocabularyData = [
     translation: "visibility",
     perevod: "видимость",
     category: "noun",
-    topics: ["topic11"],
     example: "La visibilidad era reducida debido a la niebla.",
   },
   {
@@ -3282,7 +3227,6 @@ window.vocabularyData = [
     translation: "visible",
     perevod: "видимый",
     category: "adjective",
-    topics: ["topic11"],
     example: "La matrícula debe ser visible",
   },
   {
@@ -3290,7 +3234,6 @@ window.vocabularyData = [
     translation: "visible",
     perevod: "видимый",
     category: "noun",
-    topics: ["topic11"],
     example: "metros como mínimo y visibles",
   },
   {
@@ -3298,7 +3241,6 @@ window.vocabularyData = [
     translation: "visual",
     perevod: "визуальный",
     category: "noun",
-    topics: ["topic11"],
     example: "Incrementa el campo visual",
   },
   {
@@ -3306,7 +3248,6 @@ window.vocabularyData = [
     translation: "vulnerable",
     perevod: "уязвимый",
     category: "adjective",
-    topics: ["topic11"],
     example: "Los ciclistas son usuarios vulnerables",
   },
   {
@@ -3314,7 +3255,6 @@ window.vocabularyData = [
     translation: "to violate/breach",
     perevod: "нарушать",
     category: "verb",
-    topics: ["topic11"],
     example: "No vulneres la prioridad de paso en las intersecciones.",
   },
   {
@@ -3322,7 +3262,6 @@ window.vocabularyData = [
     translation: "zone/area",
     perevod: "зона",
     category: "noun",
-    topics: ["topic11"],
     example: "Esta es una zona de velocidad limitada.",
   },
   {
@@ -3330,7 +3269,6 @@ window.vocabularyData = [
     translation: "blue zone",
     perevod: "синяя зона",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona azul, debes pagar por aparcar.",
   },
   {
@@ -3338,7 +3276,6 @@ window.vocabularyData = [
     translation: "parking area",
     perevod: "зона парковки",
     category: "noun",
-    topics: ["topic11"],
     example: "Esta es una zona de aparcamiento regulado.",
   },
   {
@@ -3346,7 +3283,6 @@ window.vocabularyData = [
     translation: "loading and unloading zone",
     perevod: "зона погрузки и разгрузки",
     category: "noun",
-    topics: ["topic11"],
     example: "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
   },
   {
@@ -3354,7 +3290,6 @@ window.vocabularyData = [
     translation: "rest area",
     perevod: "зона отдыха",
     category: "noun",
-    topics: ["topic11"],
     example: "La zona de descanso es ideal para parar y descansar.",
   },
   {
@@ -3362,7 +3297,6 @@ window.vocabularyData = [
     translation: "construction zone",
     perevod: "зона строительства",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona de obras, reduce la velocidad.",
   },
   {
@@ -3370,7 +3304,6 @@ window.vocabularyData = [
     translation: "danger zone",
     perevod: "зона опасности",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona de peligro, aumenta la precaución.",
   },
   {
@@ -3378,7 +3311,6 @@ window.vocabularyData = [
     translation: "biological hazard zone",
     perevod: "зона биологической опасности",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona de peligro biológico, sigue las indicaciones.",
   },
   {
@@ -3386,7 +3318,6 @@ window.vocabularyData = [
     translation: "service area",
     perevod: "зона обслуживания",
     category: "noun",
-    topics: ["topic11"],
     example: "La zona de servicio ofrece combustible y comida.",
   },
   {
@@ -3394,7 +3325,6 @@ window.vocabularyData = [
     translation: "slow traffic zone",
     perevod: "зона медленного движения",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona de tráfico lento, reduce la velocidad.",
   },
   {
@@ -3402,7 +3332,6 @@ window.vocabularyData = [
     translation: "school zone",
     perevod: "школьная зона",
     category: "noun",
-    topics: ["topic11"],
     example: "En la zona escolar, reduce la velocidad.",
   },
   {
@@ -3410,7 +3339,6 @@ window.vocabularyData = [
     translation: "pedestrian zone",
     perevod: "пешеходная зона",
     category: "noun",
-    topics: ["topic11"],
     example: "No se puede circular por la zona peatonal.",
   },
   {
@@ -3418,7 +3346,6 @@ window.vocabularyData = [
     translation: "residential area",
     perevod: "жилой район",
     category: "noun",
-    topics: ["topic11"],
     example: "En zona residencial, la velocidad máxima es 30 km/h.",
   },
   {
@@ -3426,7 +3353,6 @@ window.vocabularyData = [
     translation: "urban area",
     perevod: "городская зона",
     category: "noun",
-    topics: ["topic11"],
     example: "En zona urbana, la velocidad máxima es de 50 km/h.",
   },
   {
@@ -3434,7 +3360,6 @@ window.vocabularyData = [
     translation: "green zone",
     perevod: "зеленая зона",
     category: "noun",
-    topics: ["topic11"],
     example: "La zona verde es para residentes.",
   }
 ];
