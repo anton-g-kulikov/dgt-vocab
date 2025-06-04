@@ -2544,6 +2544,13 @@ window.vocabularyData = [
     example: "La sanción puede incluir pérdida de puntos",
   },
   {
+    word: "sancionado",
+    translation: "sanctioned",
+    perevod: "санкционированный",
+    category: "adjective",
+    example: "solo puede ser sancionado con una multa de hasta 600 euros",
+  },
+  {
     word: "saturación del tráfico",
     translation: "traffic saturation",
     perevod: "насыщение трафика",
@@ -2773,13 +2780,6 @@ window.vocabularyData = [
     perevod: "временный",
     category: "adjective",
     example: "Hay una señalización temporal por obras.",
-  },
-  {
-    word: "tenga",
-    translation: "have",
-    perevod: "иметь",
-    category: "noun",
-    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
   },
   {
     word: "torpe",
