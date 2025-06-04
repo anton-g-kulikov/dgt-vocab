@@ -8,15 +8,16 @@ window.vocabularyData = [
     perevod: "авария",
     category: "noun",
     example: "Evita los accidentes conduciendo con prudencia",
-    topics: ["topic12"],
+    topics: ["topic12"], // Emergencies
   },
   {
     word: "acondicionarse",
     translation: "to condition oneself/to adapt",
     perevod: "адаптироваться или приспосабливаться",
     category: "verb",
-    example: "El conductor debe acondicionarse a las circunstancias del tráfico.",
-    topics: ["topic11"],
+    example:
+      "El conductor debe acondicionarse a las circunstancias del tráfico.",
+    topics: ["topic11"], // Safety
   },
   {
     word: "acreditar",
@@ -24,7 +25,7 @@ window.vocabularyData = [
     perevod: "аккредитовать",
     category: "verb",
     example: "Acredita tu identidad con el DNI.",
-    topics: ["topic06"],
+    topics: ["topic06"], // Documents
   },
   {
     word: "actualmente",
@@ -32,7 +33,7 @@ window.vocabularyData = [
     perevod: "в настоящее время",
     category: "adverb",
     example: "Actualmente, el límite de velocidad en esta vía es de 50 km/h.",
-    topics: ["topic04"],
+    topics: ["topic04"], // Roads and speed
   },
   {
     word: "adaptar",
@@ -40,7 +41,7 @@ window.vocabularyData = [
     perevod: "адаптироваться",
     category: "verb",
     example: "Adapta la velocidad a las condiciones.",
-    topics: ["topic04", "topic11"],
+    topics: ["topic04", "topic11"], // Roads and speed, Safety
   },
   {
     word: "adecuado",
@@ -48,7 +49,7 @@ window.vocabularyData = [
     perevod: "адекватный или уместный",
     category: "adjective",
     example: "Mantén una velocidad adecuada",
-    topics: ["topic04"],
+    topics: ["topic04"], // Roads and speed
   },
   {
     word: "adelantar",
@@ -56,7 +57,6 @@ window.vocabularyData = [
     perevod: "чтобы обогнать",
     category: "verb",
     example: "Solo adelanta cuando sea seguro",
-    topics: ["topic10"],
   },
   {
     word: "adicional",
@@ -64,7 +64,6 @@ window.vocabularyData = [
     perevod: "дополнительный",
     category: "adjective",
     example: "Puede haber información adicional en el panel.",
-    topics: [],
   },
   {
     word: "advertir",
@@ -72,7 +71,6 @@ window.vocabularyData = [
     perevod: "чтобы предупредить",
     category: "verb",
     example: "Advierte del peligro con las luces",
-    topics: [],
   },
   {
     word: "agente",
@@ -80,7 +78,6 @@ window.vocabularyData = [
     perevod: "офицер или агент",
     category: "noun",
     example: "El agente de tráfico dirige la circulación",
-    topics: ["topic01", "topic04"],
   },
   {
     word: "alcoholemia",
@@ -88,7 +85,6 @@ window.vocabularyData = [
     perevod: "анализ алкоголя в крови",
     category: "noun",
     example: "El control de alcoholemia es aleatorio.",
-    topics: [],
   },
   {
     word: "alumbrado",
@@ -96,7 +92,6 @@ window.vocabularyData = [
     perevod: "освещение",
     category: "noun",
     example: "El alumbrado público facilita la visión",
-    topics: ["topic05"],
   },
   {
     word: "ancho",
@@ -104,7 +99,6 @@ window.vocabularyData = [
     perevod: "широкий",
     category: "adjective",
     example: "Carril ancho para adelantar",
-    topics: ["topic04", "topic10"],
   },
   {
     word: "anterior",
@@ -112,7 +106,6 @@ window.vocabularyData = [
     perevod: "предыдущий/передний",
     category: "adjective",
     example: "El vehículo anterior frena",
-    topics: [],
   },
   {
     word: "apagado",
@@ -120,7 +113,6 @@ window.vocabularyData = [
     perevod: "выключить или выключить",
     category: "verb",
     example: "Motor apagado en semáforos largos",
-    topics: ["topic02", "topic10"],
   },
   {
     word: "apartadero",
@@ -128,7 +120,6 @@ window.vocabularyData = [
     perevod: "проложить или вытянуть",
     category: "noun",
     example: "Para en el apartadero si es necesario.",
-    topics: [],
   },
   {
     word: "apartadero",
@@ -136,7 +127,6 @@ window.vocabularyData = [
     perevod: "проложить или вытянуть",
     category: "verb",
     example: "Utilizó el apartadero para detenerse.",
-    topics: ["topic10"],
   },
   {
     word: "aplicable",
@@ -144,7 +134,6 @@ window.vocabularyData = [
     perevod: "применимый",
     category: "adjective",
     example: "Esta norma es aplicable a todos los vehículos.",
-    topics: ["topic07"],
   },
   {
     word: "aplicar",
@@ -152,7 +141,6 @@ window.vocabularyData = [
     perevod: "подать заявку",
     category: "verb",
     example: "Se aplica una multa por exceso de velocidad.",
-    topics: ["topic03"],
   },
   {
     word: "aprendizaje de conducción",
@@ -160,7 +148,6 @@ window.vocabularyData = [
     perevod: "вождение обучения",
     category: "noun",
     example: "Vehículo en aprendizaje de conducción.",
-    topics: [],
   },
   {
     word: "arcén",
@@ -168,7 +155,6 @@ window.vocabularyData = [
     perevod: "обочина",
     category: "noun",
     example: "Para en el arcén si es necesario",
-    topics: ["topic04"],
   },
   {
     word: "área de servicio",
@@ -176,7 +162,6 @@ window.vocabularyData = [
     perevod: "зона обслуживания",
     category: "noun",
     example: "Para en el área de servicio a repostar.",
-    topics: [],
   },
   {
     word: "artículo",
@@ -184,7 +169,6 @@ window.vocabularyData = [
     perevod: "статья",
     category: "noun",
     example: "El artículo 47 regula los adelantamientos.",
-    topics: [],
   },
   {
     word: "asistencia sanitaria",
@@ -192,7 +176,6 @@ window.vocabularyData = [
     perevod: "медицинская помощь",
     category: "noun",
     example: "Ambulancia de asistencia sanitaria.",
-    topics: ["topic12"],
   },
   {
     word: "atasco",
@@ -200,7 +183,6 @@ window.vocabularyData = [
     perevod: "пробка",
     category: "noun",
     example: "El atasco dura dos horas.",
-    topics: [],
   },
   {
     word: "atropellar",
@@ -208,7 +190,6 @@ window.vocabularyData = [
     perevod: "переехать",
     category: "verb",
     example: "Evita atropellar a los peatones",
-    topics: ["topic12"],
   },
   {
     word: "autobús",
@@ -216,15 +197,14 @@ window.vocabularyData = [
     perevod: "автобус",
     category: "noun",
     example: "El autobús tiene prioridad en las paradas.",
-    topics: ["topic01", "topic08", "topic09"],
   },
   {
     word: "automáticamente",
     translation: "automatically",
     perevod: "автоматически",
     category: "adverb",
-    example: "El sistema de frenado se activa automáticamente en caso de peligro.",
-    topics: ["topic06"],
+    example:
+      "El sistema de frenado se activa automáticamente en caso de peligro.",
   },
   {
     word: "autopista",
@@ -232,7 +212,6 @@ window.vocabularyData = [
     perevod: "шоссе или автомагистраль",
     category: "noun",
     example: "La velocidad máxima en autopista es 120 km/h.",
-    topics: ["topic02", "topic04"],
   },
   {
     word: "autoridad",
@@ -240,7 +219,6 @@ window.vocabularyData = [
     perevod: "власть",
     category: "noun",
     example: "Obedece a la autoridad competente",
-    topics: ["topic07"],
   },
   {
     word: "autorización complementaria",
@@ -248,7 +226,6 @@ window.vocabularyData = [
     perevod: "Дополнительное разрешение",
     category: "noun",
     example: "Necesitas una autorización complementaria para ese transporte.",
-    topics: ["topic13"],
   },
   {
     word: "autorizar",
@@ -256,7 +233,6 @@ window.vocabularyData = [
     perevod: "разрешить",
     category: "verb",
     example: "Solo pueden autorizar el paso los agentes.",
-    topics: ["topic01"],
   },
   {
     word: "autovía",
@@ -264,7 +240,6 @@ window.vocabularyData = [
     perevod: "шоссе",
     category: "noun",
     example: "La velocidad máxima en autovía es 120 km/h",
-    topics: ["topic04"],
   },
   {
     word: "avería",
@@ -272,7 +247,6 @@ window.vocabularyData = [
     perevod: "авария",
     category: "noun",
     example: "En caso de avería, para en lugar seguro.",
-    topics: ["topic12"],
   },
   {
     word: "avisar",
@@ -280,7 +254,6 @@ window.vocabularyData = [
     perevod: "предупредить или уведомлять",
     category: "verb",
     example: "Avisa con las luces de emergencia",
-    topics: [],
   },
   {
     word: "bajo",
@@ -288,7 +261,6 @@ window.vocabularyData = [
     perevod: "низкий",
     category: "adjective",
     example: "Puente bajo, altura limitada",
-    topics: ["topic04"],
   },
   {
     word: "balizamiento",
@@ -296,7 +268,6 @@ window.vocabularyData = [
     perevod: "маркировка",
     category: "noun",
     example: "El balizamiento delimita las obras.",
-    topics: [],
   },
   {
     word: "balizar",
@@ -304,7 +275,6 @@ window.vocabularyData = [
     perevod: "отметьте с помощью маркеров",
     category: "verb",
     example: "Balizan la zona de obras con conos.",
-    topics: ["topic09"],
   },
   {
     word: "bloquear",
@@ -312,7 +282,6 @@ window.vocabularyData = [
     perevod: "чтобы заблокировать",
     category: "verb",
     example: "No bloquees las intersecciones",
-    topics: [],
   },
   {
     word: "boletín",
@@ -320,7 +289,6 @@ window.vocabularyData = [
     perevod: "Бюллетень",
     category: "noun",
     example: "Las normas se publican en el Boletín Oficial.",
-    topics: ["topic07"],
   },
   {
     word: "caballería",
@@ -328,7 +296,6 @@ window.vocabularyData = [
     perevod: "кавалерия или лошадь",
     category: "noun",
     example: "Las caballerías tienen que circular por el arcén.",
-    topics: ["topic01", "topic04", "topic10"],
   },
   {
     word: "calzada",
@@ -336,7 +303,6 @@ window.vocabularyData = [
     perevod: "проезжая часть",
     category: "noun",
     example: "No pares en la calzada",
-    topics: ["topic04"],
   },
   {
     word: "camión",
@@ -344,7 +310,6 @@ window.vocabularyData = [
     perevod: "грузовик",
     category: "noun",
     example: "Los camiones tienen limitaciones especiales",
-    topics: ["topic01", "topic02"],
   },
   {
     word: "carga",
@@ -352,7 +317,6 @@ window.vocabularyData = [
     perevod: "груз или груз",
     category: "noun",
     example: "La carga debe estar bien sujeta",
-    topics: ["topic02"],
   },
   {
     word: "carga y descarga",
@@ -360,7 +324,6 @@ window.vocabularyData = [
     perevod: "загрузка и разгрузка",
     category: "noun",
     example: "Esta zona es de carga y descarga.",
-    topics: ["topic02", "topic09", "topic13"],
   },
   {
     word: "cargar",
@@ -368,7 +331,6 @@ window.vocabularyData = [
     perevod: "загрузить",
     category: "verb",
     example: "Carga el vehículo correctamente",
-    topics: ["topic02"],
   },
   {
     word: "cargas que sobresalen",
@@ -376,7 +338,6 @@ window.vocabularyData = [
     perevod: "выступающие нагрузки",
     category: "noun",
     example: "Señaliza las cargas que sobresalen.",
-    topics: ["topic02", "topic09"],
   },
   {
     word: "carretera",
@@ -384,7 +345,6 @@ window.vocabularyData = [
     perevod: "дорога или шоссе",
     category: "noun",
     example: "La carretera está en buen estado",
-    topics: ["topic04"],
   },
   {
     word: "carretera convencional",
@@ -392,7 +352,6 @@ window.vocabularyData = [
     perevod: "обычная дорога",
     category: "noun",
     example: "En carretera convencional el límite es 90 km/h.",
-    topics: ["topic04"],
   },
   {
     word: "carril",
@@ -400,7 +359,6 @@ window.vocabularyData = [
     perevod: "полоса",
     category: "noun",
     example: "Mantente en tu carril",
-    topics: ["topic01", "topic04"],
   },
   {
     word: "carril reservado",
@@ -408,15 +366,14 @@ window.vocabularyData = [
     perevod: "зарезервированная полоса",
     category: "noun",
     example: "El carril reservado es para autobuses.",
-    topics: ["topic01", "topic04", "topic08"],
   },
   {
     word: "caso",
     translation: "case",
     perevod: "случай",
     category: "noun",
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
-    topics: ["topic03", "topic09"],
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "cebreado",
@@ -424,7 +381,6 @@ window.vocabularyData = [
     perevod: "зебра",
     category: "noun",
     example: "El cebreado prohíbe la circulación.",
-    topics: ["topic09"],
   },
   {
     word: "ceder",
@@ -432,7 +388,6 @@ window.vocabularyData = [
     perevod: "уступить",
     category: "verb",
     example: "Cede el paso a los peatones",
-    topics: [],
   },
   {
     word: "cercano",
@@ -440,7 +395,6 @@ window.vocabularyData = [
     perevod: "рядом или близко",
     category: "adjective",
     example: "Mantente cercano al carril derecho",
-    topics: ["topic01", "topic04"],
   },
   {
     word: "cerciorarse",
@@ -448,7 +402,6 @@ window.vocabularyData = [
     perevod: "чтобы убедиться",
     category: "verb",
     example: "Debes cerciorarse de que no hay peligro antes de adelantar.",
-    topics: ["topic10"],
   },
   {
     word: "ciclista",
@@ -456,7 +409,6 @@ window.vocabularyData = [
     perevod: "велосипедист",
     category: "noun",
     example: "El ciclista debe respetar las normas de circulación.",
-    topics: ["topic01", "topic07"],
   },
   {
     word: "ciclomotor",
@@ -464,7 +416,6 @@ window.vocabularyData = [
     perevod: "мопед",
     category: "noun",
     example: "El ciclomotor no puede circular por autopistas.",
-    topics: ["topic01", "topic02", "topic04", "topic10"],
   },
   {
     word: "cinturón",
@@ -472,7 +423,6 @@ window.vocabularyData = [
     perevod: "ремень безопасности",
     category: "noun",
     example: "Es obligatorio usar el cinturón de seguridad",
-    topics: ["topic11"],
   },
   {
     word: "circulación",
@@ -480,7 +430,6 @@ window.vocabularyData = [
     perevod: "трафик или циркуляция",
     category: "noun",
     example: "La circulación está cortada por obras.",
-    topics: [],
   },
   {
     word: "circular",
@@ -488,7 +437,6 @@ window.vocabularyData = [
     perevod: "проезжать или водить",
     category: "verb",
     example: "Circula siempre por la derecha",
-    topics: ["topic10"],
   },
   {
     word: "claro",
@@ -496,7 +444,6 @@ window.vocabularyData = [
     perevod: "чистый или яркий",
     category: "adjective",
     example: "Conduce solo si tienes visión clara",
-    topics: [],
   },
   {
     word: "código",
@@ -504,7 +451,6 @@ window.vocabularyData = [
     perevod: "кодекс",
     category: "noun",
     example: "El código de circulación regula el tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "colocar",
@@ -512,15 +458,14 @@ window.vocabularyData = [
     perevod: "поместить или положение",
     category: "verb",
     example: "Coloca el triángulo de emergencia",
-    topics: [],
   },
   {
     word: "colocarse",
     translation: "to place",
     perevod: "поместить",
     category: "verb",
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
-    topics: ["topic03", "topic09"],
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "como",
@@ -528,7 +473,6 @@ window.vocabularyData = [
     perevod: "нравиться",
     category: "noun",
     example: "metros como mínimo y visibles",
-    topics: [],
   },
   {
     word: "cómodo",
@@ -536,7 +480,6 @@ window.vocabularyData = [
     perevod: "комфортный",
     category: "adjective",
     example: "Ajuste el asiento para una postura cómoda.",
-    topics: [],
   },
   {
     word: "competencia",
@@ -544,7 +487,6 @@ window.vocabularyData = [
     perevod: "компетенция или юрисдикция",
     category: "noun",
     example: "Esta infracción es competencia municipal.",
-    topics: ["topic03", "topic07"],
   },
   {
     word: "competente",
@@ -552,7 +494,6 @@ window.vocabularyData = [
     perevod: "компетентный",
     category: "adjective",
     example: "Acude a la autoridad competente.",
-    topics: ["topic07"],
   },
   {
     word: "completamente",
@@ -560,7 +501,6 @@ window.vocabularyData = [
     perevod: "полностью",
     category: "adverb",
     example: "Detén completamente el vehículo en los pasos a nivel.",
-    topics: [],
   },
   {
     word: "completo",
@@ -568,7 +508,6 @@ window.vocabularyData = [
     perevod: "полный",
     category: "adjective",
     example: "Haz una revisión completa",
-    topics: [],
   },
   {
     word: "comprobar",
@@ -576,7 +515,6 @@ window.vocabularyData = [
     perevod: "проверить",
     category: "verb",
     example: "Comprueba el estado del vehículo",
-    topics: [],
   },
   {
     word: "comunicar",
@@ -584,7 +522,6 @@ window.vocabularyData = [
     perevod: "общаться",
     category: "verb",
     example: "Comunica cualquier cambio de domicilio.",
-    topics: [],
   },
   {
     word: "conducir",
@@ -592,7 +529,6 @@ window.vocabularyData = [
     perevod: "водить",
     category: "verb",
     example: "Saber conducir requiere práctica",
-    topics: [],
   },
   {
     word: "conductor",
@@ -600,7 +536,6 @@ window.vocabularyData = [
     perevod: "водитель",
     category: "noun",
     example: "El conductor debe tener permiso de conducir",
-    topics: ["topic01", "topic03"],
   },
   {
     word: "conductor novel",
@@ -608,7 +543,6 @@ window.vocabularyData = [
     perevod: "начинающий водитель",
     category: "noun",
     example: "El conductor novel debe señalizarse.",
-    topics: ["topic01", "topic09"],
   },
   {
     word: "congestión",
@@ -616,7 +550,6 @@ window.vocabularyData = [
     perevod: "скопление",
     category: "noun",
     example: "La congestión obliga a usar rutas alternativas.",
-    topics: ["topic04", "topic06", "topic11"],
   },
   {
     word: "constituir",
@@ -624,7 +557,6 @@ window.vocabularyData = [
     perevod: "составлять",
     category: "verb",
     example: "Esta acción constituye una infracción grave.",
-    topics: ["topic03"],
   },
   {
     word: "continuo",
@@ -632,7 +564,6 @@ window.vocabularyData = [
     perevod: "непрерывный",
     category: "adjective",
     example: "Línea continua, prohibido adelantar.",
-    topics: ["topic09", "topic10"],
   },
   {
     word: "contrario",
@@ -640,7 +571,6 @@ window.vocabularyData = [
     perevod: "противоположный или противоположный",
     category: "adjective",
     example: "No circules en sentido contrario",
-    topics: [],
   },
   {
     word: "control",
@@ -648,7 +578,6 @@ window.vocabularyData = [
     perevod: "контроль",
     category: "noun",
     example: "Hay un control de documentación más adelante.",
-    topics: ["topic06"],
   },
   {
     word: "control del tráfico",
@@ -656,7 +585,6 @@ window.vocabularyData = [
     perevod: "управление движением",
     category: "noun",
     example: "El control del tráfico es automático.",
-    topics: ["topic04"],
   },
   {
     word: "controlar",
@@ -664,7 +592,6 @@ window.vocabularyData = [
     perevod: "контролировать",
     category: "verb",
     example: "Controla siempre tu vehículo",
-    topics: [],
   },
   {
     word: "convenientemente",
@@ -672,7 +599,6 @@ window.vocabularyData = [
     perevod: "удобно",
     category: "adverb",
     example: "La carga debe estar convenientemente asegurada.",
-    topics: ["topic02"],
   },
   {
     word: "convoy",
@@ -680,7 +606,6 @@ window.vocabularyData = [
     perevod: "конвои",
     category: "noun",
     example: "El convoy militar tiene prioridad de paso.",
-    topics: ["topic08", "topic09"],
   },
   {
     word: "correctamente",
@@ -688,7 +613,6 @@ window.vocabularyData = [
     perevod: "правильно",
     category: "adverb",
     example: "Es necesario colocar correctamente el cinturón de seguridad.",
-    topics: ["topic11"],
   },
   {
     word: "correcto",
@@ -696,7 +620,6 @@ window.vocabularyData = [
     perevod: "правильно",
     category: "adjective",
     example: "Siga el carril correcto.",
-    topics: ["topic04"],
   },
   {
     word: "cruce",
@@ -704,7 +627,6 @@ window.vocabularyData = [
     perevod: "пересечение или перекресток",
     category: "noun",
     example: "Cuidado en el cruce de calles",
-    topics: ["topic09"],
   },
   {
     word: "cruzar",
@@ -712,7 +634,6 @@ window.vocabularyData = [
     perevod: "пересечь",
     category: "verb",
     example: "Cruza la calle por el paso de peatones",
-    topics: ["topic09"],
   },
   {
     word: "cumplir",
@@ -720,15 +641,14 @@ window.vocabularyData = [
     perevod: "соблюдать",
     category: "verb",
     example: "Es obligatorio cumplir con las indicaciones del agente.",
-    topics: ["topic01"],
   },
   {
     word: "deben",
     translation: "they must",
     perevod: "они должны",
     category: "verb",
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
-    topics: ["topic03", "topic09"],
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "deber",
@@ -736,7 +656,6 @@ window.vocabularyData = [
     perevod: "должен или должен",
     category: "verb",
     example: "Debes respetar las normas",
-    topics: ["topic07"],
   },
   {
     word: "debidamente",
@@ -744,7 +663,6 @@ window.vocabularyData = [
     perevod: "правильно или должным образом",
     category: "adverb",
     example: "Toda carga debe estar debidamente asegurada.",
-    topics: ["topic02"],
   },
   {
     word: "decreto",
@@ -752,7 +670,6 @@ window.vocabularyData = [
     perevod: "указатель",
     category: "noun",
     example: "El Real Decreto establece las normas básicas.",
-    topics: ["topic07"],
   },
   {
     word: "definitivo",
@@ -760,7 +677,6 @@ window.vocabularyData = [
     perevod: "окончательный или окончательный",
     category: "adjective",
     example: "La resolución definitiva tardará dos meses.",
-    topics: ["topic06"],
   },
   {
     word: "dejar",
@@ -768,7 +684,6 @@ window.vocabularyData = [
     perevod: "уйти или позволить",
     category: "verb",
     example: "Deja espacio suficiente entre vehículos",
-    topics: [],
   },
   {
     word: "demostrar",
@@ -776,7 +691,6 @@ window.vocabularyData = [
     perevod: "продемонстрировать",
     category: "verb",
     example: "Demuestra que conoces las normas.",
-    topics: ["topic07"],
   },
   {
     word: "densidad del tráfico",
@@ -784,7 +698,6 @@ window.vocabularyData = [
     perevod: "Плотность движения",
     category: "noun",
     example: "La densidad del tráfico es alta.",
-    topics: ["topic04"],
   },
   {
     word: "deslumbramiento",
@@ -792,7 +705,6 @@ window.vocabularyData = [
     perevod: "блики или ослепительно",
     category: "noun",
     example: "Reduce la velocidad en caso de deslumbramiento.",
-    topics: ["topic05"],
   },
   {
     word: "desordenado",
@@ -800,7 +712,6 @@ window.vocabularyData = [
     perevod: "беспорядочный или грязный",
     category: "adjective",
     example: "Evite el comportamiento desordenado en la vía.",
-    topics: ["topic04"],
   },
   {
     word: "desviar",
@@ -808,7 +719,6 @@ window.vocabularyData = [
     perevod: "обойти или отвлечься",
     category: "verb",
     example: "Desvía el tráfico si hay obras",
-    topics: ["topic04", "topic10"],
   },
   {
     word: "detectar",
@@ -816,7 +726,6 @@ window.vocabularyData = [
     perevod: "Чтобы обнаружить",
     category: "verb",
     example: "Detecta los peligros a tiempo",
-    topics: [],
   },
   {
     word: "detener",
@@ -824,7 +733,6 @@ window.vocabularyData = [
     perevod: "остановить или остановить",
     category: "verb",
     example: "El agente puede detener el vehículo",
-    topics: ["topic01", "topic10"],
   },
   {
     word: "detenerse",
@@ -832,7 +740,6 @@ window.vocabularyData = [
     perevod: "чтобы остановиться",
     category: "verb",
     example: "Ante un stop debes detenerse completamente.",
-    topics: ["topic10"],
   },
   {
     word: "determinar",
@@ -840,7 +747,6 @@ window.vocabularyData = [
     perevod: "определить",
     category: "verb",
     example: "El juez determinará la sanción correspondiente.",
-    topics: ["topic03"],
   },
   {
     word: "diáfano",
@@ -848,7 +754,6 @@ window.vocabularyData = [
     perevod: "прозрачный или ясный",
     category: "adjective",
     example: "La superficie acristalada debe permitir la visibilidad diáfana.",
-    topics: ["topic03", "topic05", "topic09", "topic11"],
   },
   {
     word: "dimensiones máximas",
@@ -856,7 +761,6 @@ window.vocabularyData = [
     perevod: "максимальные размеры",
     category: "noun",
     example: "Las dimensiones máximas están reguladas.",
-    topics: [],
   },
   {
     word: "dirección",
@@ -864,7 +768,6 @@ window.vocabularyData = [
     perevod: "направление или рулевое управление",
     category: "noun",
     example: "Mantén la dirección correcta",
-    topics: ["topic01"],
   },
   {
     word: "directo",
@@ -872,7 +775,6 @@ window.vocabularyData = [
     perevod: "прямой",
     category: "adjective",
     example: "Tome la ruta más directa si es segura.",
-    topics: ["topic04"],
   },
   {
     word: "discontinuo",
@@ -880,7 +782,6 @@ window.vocabularyData = [
     perevod: "прерывистый",
     category: "adjective",
     example: "Línea discontinua, adelantamiento permitido.",
-    topics: ["topic03", "topic09"],
   },
   {
     word: "disposición",
@@ -888,7 +789,6 @@ window.vocabularyData = [
     perevod: "обеспечение или регулирование",
     category: "noun",
     example: "Esta disposición está vigente desde 2003.",
-    topics: ["topic07"],
   },
   {
     word: "dispositivo",
@@ -896,7 +796,6 @@ window.vocabularyData = [
     perevod: "устройство",
     category: "noun",
     example: "Los dispositivos de seguridad son obligatorios.",
-    topics: ["topic03", "topic11"],
   },
   {
     word: "dispositivo de barrera",
@@ -904,7 +803,6 @@ window.vocabularyData = [
     perevod: "Барьерное устройство",
     category: "noun",
     example: "El dispositivo de barrera cierra el paso.",
-    topics: ["topic03"],
   },
   {
     word: "dispositivo de preseñalización",
@@ -912,15 +810,14 @@ window.vocabularyData = [
     perevod: "предупреждающее устройство",
     category: "noun",
     example: "Coloca el dispositivo de preseñalización.",
-    topics: ["topic03", "topic09", "topic11"],
   },
   {
     word: "distancia",
     translation: "distance",
     perevod: "расстояние",
     category: "noun",
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
-    topics: ["topic03", "topic09"],
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "distintivo de nacionalidad",
@@ -928,7 +825,6 @@ window.vocabularyData = [
     perevod: "Значок национальности",
     category: "noun",
     example: "El distintivo de nacionalidad es obligatorio.",
-    topics: [],
   },
   {
     word: "distinto",
@@ -936,7 +832,6 @@ window.vocabularyData = [
     perevod: "разные или отчетливые",
     category: "adjective",
     example: "Cada señal tiene un significado distinto.",
-    topics: ["topic09"],
   },
   {
     word: "documento",
@@ -944,7 +839,6 @@ window.vocabularyData = [
     perevod: "документ",
     category: "noun",
     example: "Lleva siempre la documentación",
-    topics: ["topic06"],
   },
   {
     word: "eficaz",
@@ -952,7 +846,6 @@ window.vocabularyData = [
     perevod: "эффективно или эффективно",
     category: "adjective",
     example: "Una frenada eficaz es crucial.",
-    topics: [],
   },
   {
     word: "eficazmente",
@@ -960,7 +853,6 @@ window.vocabularyData = [
     perevod: "эффективно",
     category: "adverb",
     example: "Debes señalizar eficazmente cualquier obstáculo en la vía.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "elevado",
@@ -968,7 +860,6 @@ window.vocabularyData = [
     perevod: "повышен или высокий",
     category: "adjective",
     example: "Paso elevado para peatones",
-    topics: [],
   },
   {
     word: "emergencia",
@@ -976,7 +867,6 @@ window.vocabularyData = [
     perevod: "чрезвычайная ситуация",
     category: "noun",
     example: "Usa las luces de emergencia si es necesario.",
-    topics: ["topic12"],
   },
   {
     word: "encender",
@@ -984,7 +874,6 @@ window.vocabularyData = [
     perevod: "включить или зажечь",
     category: "verb",
     example: "Enciende las luces si es necesario",
-    topics: ["topic05", "topic10"],
   },
   {
     word: "encendido",
@@ -992,7 +881,6 @@ window.vocabularyData = [
     perevod: "на или зажжен",
     category: "adjective",
     example: "Mantén las luces encendidas",
-    topics: ["topic01", "topic05"],
   },
   {
     word: "enlace",
@@ -1000,7 +888,6 @@ window.vocabularyData = [
     perevod: "соединение или ссылка",
     category: "noun",
     example: "El enlace conecta dos autopistas.",
-    topics: ["topic04"],
   },
   {
     word: "entrar",
@@ -1008,7 +895,6 @@ window.vocabularyData = [
     perevod: "чтобы войти",
     category: "verb",
     example: "Entra en la autopista usando el carril de aceleración",
-    topics: ["topic04"],
   },
   {
     word: "especial",
@@ -1016,7 +902,6 @@ window.vocabularyData = [
     perevod: "особенный",
     category: "adjective",
     example: "Precaución especial con niños",
-    topics: ["topic11"],
   },
   {
     word: "especialmente",
@@ -1024,7 +909,6 @@ window.vocabularyData = [
     perevod: "особенно",
     category: "adverb",
     example: "Conduce con precaución, especialmente en condiciones de lluvia.",
-    topics: ["topic11"],
   },
   {
     word: "específico",
@@ -1032,7 +916,6 @@ window.vocabularyData = [
     perevod: "специфический",
     category: "adjective",
     example: "Hay normas específicas para motocicletas.",
-    topics: ["topic07"],
   },
   {
     word: "esperar",
@@ -1040,7 +923,6 @@ window.vocabularyData = [
     perevod: "чтобы подождать",
     category: "verb",
     example: "Espera a que el semáforo se ponga verde",
-    topics: [],
   },
   {
     word: "estable",
@@ -1048,7 +930,6 @@ window.vocabularyData = [
     perevod: "стабильный",
     category: "adjective",
     example: "Mantenga una velocidad estable.",
-    topics: ["topic01"],
   },
   {
     word: "establecer",
@@ -1056,7 +937,6 @@ window.vocabularyData = [
     perevod: "чтобы установить",
     category: "verb",
     example: "Las ordenanzas establecen las normas locales.",
-    topics: ["topic07"],
   },
   {
     word: "estacionamiento",
@@ -1064,7 +944,6 @@ window.vocabularyData = [
     perevod: "стоянка",
     category: "noun",
     example: "El estacionamiento está prohibido en esta zona.",
-    topics: ["topic09"],
   },
   {
     word: "estacionar",
@@ -1072,7 +951,6 @@ window.vocabularyData = [
     perevod: "Парк",
     category: "verb",
     example: "No se puede estacionar en doble fila.",
-    topics: ["topic10"],
   },
   {
     word: "estacionar",
@@ -1080,7 +958,6 @@ window.vocabularyData = [
     perevod: "Парк",
     category: "verb",
     example: "No estaciones en lugares prohibidos.",
-    topics: ["topic09", "topic10"],
   },
   {
     word: "estado",
@@ -1088,7 +965,6 @@ window.vocabularyData = [
     perevod: "состояние или состояние",
     category: "noun",
     example: "El estado de la carretera influye en la conducción.",
-    topics: ["topic04"],
   },
   {
     word: "estrecho",
@@ -1096,7 +972,6 @@ window.vocabularyData = [
     perevod: "узкий",
     category: "adjective",
     example: "Carretera estrecha, precaución",
-    topics: ["topic04", "topic11"],
   },
   {
     word: "eventual",
@@ -1104,7 +979,6 @@ window.vocabularyData = [
     perevod: "случайно или возможно",
     category: "adjective",
     example: "Posible hielo en la calzada",
-    topics: ["topic04"],
   },
   {
     word: "excepcional",
@@ -1112,15 +986,14 @@ window.vocabularyData = [
     perevod: "исключительный",
     category: "adjective",
     example: "Solo en casos excepcionales se permite.",
-    topics: ["topic03"],
   },
   {
     word: "excepcionalmente",
     translation: "exceptionally",
     perevod: "исключительно",
     category: "adverb",
-    example: "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
-    topics: ["topic03", "topic04", "topic10"],
+    example:
+      "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
   },
   {
     word: "exceptuar",
@@ -1128,7 +1001,6 @@ window.vocabularyData = [
     perevod: "кроме",
     category: "verb",
     example: "Se exceptúan los vehículos de emergencia.",
-    topics: [],
   },
   {
     word: "excesivo",
@@ -1136,7 +1008,6 @@ window.vocabularyData = [
     perevod: "излишний",
     category: "adjective",
     example: "Velocidad excesiva es peligrosa",
-    topics: ["topic06"],
   },
   {
     word: "exento",
@@ -1144,7 +1015,6 @@ window.vocabularyData = [
     perevod: "освобождать",
     category: "adjective",
     example: "Los vehículos de emergencia están exentos de algunas normas.",
-    topics: ["topic07"],
   },
   {
     word: "expedir",
@@ -1152,7 +1022,6 @@ window.vocabularyData = [
     perevod: "выпустить",
     category: "verb",
     example: "La DGT expide los permisos de conducir.",
-    topics: ["topic03", "topic06"],
   },
   {
     word: "expresamente",
@@ -1160,7 +1029,6 @@ window.vocabularyData = [
     perevod: "прямо",
     category: "adverb",
     example: "Lo que está expresamente prohibido por las normas.",
-    topics: ["topic07", "topic09"],
   },
   {
     word: "exterior",
@@ -1168,7 +1036,6 @@ window.vocabularyData = [
     perevod: "экстерьер или снаружи",
     category: "adjective",
     example: "Limpia los espejos exteriores",
-    topics: [],
   },
   {
     word: "extinción de incendios",
@@ -1176,7 +1043,6 @@ window.vocabularyData = [
     perevod: "Огненная борьба",
     category: "noun",
     example: "Vehículo de extinción de incendios.",
-    topics: ["topic12"],
   },
   {
     word: "extraordinario",
@@ -1184,7 +1050,6 @@ window.vocabularyData = [
     perevod: "необычайно",
     category: "adjective",
     example: "Medidas extraordinarias por la nevada.",
-    topics: [],
   },
   {
     word: "fijo",
@@ -1192,7 +1057,6 @@ window.vocabularyData = [
     perevod: "фиксированный или неподвижный",
     category: "adjective",
     example: "Obstáculo fijo en la vía",
-    topics: ["topic04"],
   },
   {
     word: "fluidez del tráfico",
@@ -1200,7 +1064,6 @@ window.vocabularyData = [
     perevod: "трафик",
     category: "noun",
     example: "Las obras afectan la fluidez del tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "frecuente",
@@ -1208,7 +1071,6 @@ window.vocabularyData = [
     perevod: "частый",
     category: "adjective",
     example: "Son frecuentes los controles",
-    topics: [],
   },
   {
     word: "garantizar",
@@ -1216,7 +1078,6 @@ window.vocabularyData = [
     perevod: "чтобы гарантировать",
     category: "verb",
     example: "Garantiza la seguridad de todos",
-    topics: ["topic11"],
   },
   {
     word: "general",
@@ -1224,15 +1085,14 @@ window.vocabularyData = [
     perevod: "общий",
     category: "adjective",
     example: "Esta es la norma general de circulación.",
-    topics: ["topic07"],
   },
   {
     word: "generalmente",
     translation: "generally",
     perevod: "в целом",
     category: "adverb",
-    example: "Generalmente, los límites de velocidad son menores en zonas urbanas.",
-    topics: ["topic09"],
+    example:
+      "Generalmente, los límites de velocidad son menores en zonas urbanas.",
   },
   {
     word: "gestión del tráfico",
@@ -1240,7 +1100,6 @@ window.vocabularyData = [
     perevod: "Управление трафиком",
     category: "noun",
     example: "La gestión del tráfico es telemática.",
-    topics: ["topic01", "topic04"],
   },
   {
     word: "girar",
@@ -1248,7 +1107,6 @@ window.vocabularyData = [
     perevod: "повернуть",
     category: "verb",
     example: "Indica antes de girar",
-    topics: ["topic10"],
   },
   {
     word: "glorieta",
@@ -1256,7 +1114,6 @@ window.vocabularyData = [
     perevod: "кольцевая развязка",
     category: "noun",
     example: "Cede el paso al entrar en la glorieta",
-    topics: ["topic09"],
   },
   {
     word: "grave",
@@ -1264,7 +1121,6 @@ window.vocabularyData = [
     perevod: "серьезный или тяжелый",
     category: "adjective",
     example: "Una infracción grave quita puntos",
-    topics: ["topic03"],
   },
   {
     word: "grúa",
@@ -1272,7 +1128,6 @@ window.vocabularyData = [
     perevod: "эвакуатор",
     category: "noun",
     example: "La grúa retirará el vehículo mal aparcado.",
-    topics: ["topic01", "topic02", "topic12"],
   },
   {
     word: "habitual",
@@ -1280,7 +1135,6 @@ window.vocabularyData = [
     perevod: "обычный или привычный",
     category: "adjective",
     example: "Usa tu ruta habitual",
-    topics: ["topic04"],
   },
   {
     word: "habitual",
@@ -1288,7 +1142,6 @@ window.vocabularyData = [
     perevod: "обычный или привычный",
     category: "adjective",
     example: "Siga su carril habitual a menos que se indique lo contrario.",
-    topics: ["topic04"],
   },
   {
     word: "homologado",
@@ -1296,7 +1149,6 @@ window.vocabularyData = [
     perevod: "утверждено или сертифицировано",
     category: "adjective",
     example: "Solo cascos homologados son válidos.",
-    topics: ["topic11"],
   },
   {
     word: "homologar",
@@ -1304,7 +1156,6 @@ window.vocabularyData = [
     perevod: "для утверждения или подтверждения",
     category: "verb",
     example: "Todos los cascos deben estar homologados.",
-    topics: ["topic06", "topic11"],
   },
   {
     word: "identificar",
@@ -1312,7 +1163,6 @@ window.vocabularyData = [
     perevod: "Чтобы идентифицировать",
     category: "verb",
     example: "Identifica las señales de tráfico",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "igual",
@@ -1320,7 +1170,6 @@ window.vocabularyData = [
     perevod: "то же самое или равный",
     category: "adjective",
     example: "Todos los carriles tienen la misma velocidad máxima.",
-    topics: ["topic04"],
   },
   {
     word: "ilegal",
@@ -1328,7 +1177,6 @@ window.vocabularyData = [
     perevod: "незаконно",
     category: "adjective",
     example: "Aparcar en doble fila es ilegal",
-    topics: [],
   },
   {
     word: "implicado",
@@ -1336,7 +1184,6 @@ window.vocabularyData = [
     perevod: "",
     category: "adjective",
     example: "En un accidente de tráfico en el que esté implicado",
-    topics: ["topic04", "topic12"],
   },
   {
     word: "imponer",
@@ -1344,7 +1191,6 @@ window.vocabularyData = [
     perevod: "навязывать",
     category: "verb",
     example: "Le van a imponer una multa por aparcar mal.",
-    topics: ["topic02", "topic03"],
   },
   {
     word: "incómodo",
@@ -1352,7 +1198,6 @@ window.vocabularyData = [
     perevod: "неудобно",
     category: "adjective",
     example: "Una conducción incómoda puede distraer.",
-    topics: [],
   },
   {
     word: "inconsciente",
@@ -1360,7 +1205,6 @@ window.vocabularyData = [
     perevod: "бессознательный",
     category: "adjective",
     example: "herido está inconsciente",
-    topics: [],
   },
   {
     word: "incorrecto",
@@ -1368,7 +1212,6 @@ window.vocabularyData = [
     perevod: "неверно или неправильно",
     category: "adjective",
     example: "Tomar una salida incorrecta puede ser peligroso.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "indirecto",
@@ -1376,7 +1219,6 @@ window.vocabularyData = [
     perevod: "косвенный",
     category: "adjective",
     example: "La luz indirecta puede afectar la visibilidad.",
-    topics: ["topic05", "topic11"],
   },
   {
     word: "ineficaz",
@@ -1384,7 +1226,6 @@ window.vocabularyData = [
     perevod: "неэффективный или неэффективный",
     category: "adjective",
     example: "Una señalización ineficaz puede confundir.",
-    topics: ["topic09"],
   },
   {
     word: "inestable",
@@ -1392,7 +1233,6 @@ window.vocabularyData = [
     perevod: "нестабильный",
     category: "adjective",
     example: "Una carga mal sujeta puede volver el vehículo inestable.",
-    topics: ["topic02"],
   },
   {
     word: "inexcusable",
@@ -1400,7 +1240,6 @@ window.vocabularyData = [
     perevod: "непростительно или обязательно",
     category: "adjective",
     example: "Es inexcusable cumplir las normas de tráfico.",
-    topics: ["topic01", "topic04", "topic07"],
   },
   {
     word: "informar",
@@ -1408,7 +1247,6 @@ window.vocabularyData = [
     perevod: "сообщить",
     category: "verb",
     example: "Informa sobre los accidentes a las authorities.",
-    topics: ["topic12"],
   },
   {
     word: "infracción",
@@ -1416,7 +1254,6 @@ window.vocabularyData = [
     perevod: "нарушение или преступление",
     category: "noun",
     example: "Evita cometer infracciones",
-    topics: ["topic03"],
   },
   {
     word: "infringir",
@@ -1424,7 +1261,6 @@ window.vocabularyData = [
     perevod: "нарушать или нарушать",
     category: "verb",
     example: "Infringir las normas de tráfico conlleva una sanción.",
-    topics: ["topic03", "topic04", "topic07"],
   },
   {
     word: "iniciar",
@@ -1432,7 +1268,6 @@ window.vocabularyData = [
     perevod: "начать или начать",
     category: "verb",
     example: "Inicia la marcha con precaución",
-    topics: ["topic11"],
   },
   {
     word: "inmediatamente",
@@ -1440,7 +1275,6 @@ window.vocabularyData = [
     perevod: "немедленно",
     category: "adverb",
     example: "Detente inmediatamente ante la señal de stop.",
-    topics: ["topic09"],
   },
   {
     word: "inmediato",
@@ -1448,7 +1282,6 @@ window.vocabularyData = [
     perevod: "немедленный",
     category: "adjective",
     example: "Aplicación inmediata de la nueva norma.",
-    topics: ["topic07", "topic12"],
   },
   {
     word: "inmediato",
@@ -1456,7 +1289,6 @@ window.vocabularyData = [
     perevod: "немедленный",
     category: "adjective",
     example: "Debes detenerte de inmediato cuando te lo indique un agente.",
-    topics: ["topic01", "topic10", "topic12"],
   },
   {
     word: "inmovilización",
@@ -1464,7 +1296,6 @@ window.vocabularyData = [
     perevod: "иммобилизация",
     category: "noun",
     example: "La inmovilización del vehículo es obligatoria en ese caso.",
-    topics: [],
   },
   {
     word: "inmovilizar",
@@ -1472,7 +1303,6 @@ window.vocabularyData = [
     perevod: "иммобилизовать",
     category: "verb",
     example: "El agente puede inmovilizar el vehículo si carece de seguro.",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "innecesario",
@@ -1480,7 +1310,6 @@ window.vocabularyData = [
     perevod: "ненужный",
     category: "adjective",
     example: "Evita realizar maniobras innecesarias.",
-    topics: ["topic01", "topic10"],
   },
   {
     word: "inseguro",
@@ -1488,7 +1317,6 @@ window.vocabularyData = [
     perevod: "небезопасно или небезопасно",
     category: "adjective",
     example: "Conducir con neumáticos gastados es inseguro.",
-    topics: ["topic02", "topic11"],
   },
   {
     word: "inspección técnica",
@@ -1496,7 +1324,6 @@ window.vocabularyData = [
     perevod: "Техническая проверка",
     category: "noun",
     example: "La inspección técnica es obligatoria.",
-    topics: ["topic06"],
   },
   {
     word: "inspeccionar",
@@ -1504,7 +1331,6 @@ window.vocabularyData = [
     perevod: "чтобы проверить",
     category: "verb",
     example: "Inspecciona el vehículo antes de viajar.",
-    topics: [],
   },
   {
     word: "inspector",
@@ -1512,7 +1338,6 @@ window.vocabularyData = [
     perevod: "инспектор",
     category: "noun",
     example: "El inspector revisa la documentación.",
-    topics: ["topic06"],
   },
   {
     word: "inteligente",
@@ -1520,7 +1345,6 @@ window.vocabularyData = [
     perevod: "умный или умный",
     category: "adjective",
     example: "Un sistema de tráfico inteligente puede reducir atascos.",
-    topics: ["topic04"],
   },
   {
     word: "interior",
@@ -1528,7 +1352,6 @@ window.vocabularyData = [
     perevod: "интерьер или внутри",
     category: "adjective",
     example: "Ajusta el espejo interior",
-    topics: [],
   },
   {
     word: "interrumpir",
@@ -1536,7 +1359,6 @@ window.vocabularyData = [
     perevod: "прервать",
     category: "verb",
     example: "No interrumpas el paso de otros vehículos",
-    topics: [],
   },
   {
     word: "intersección",
@@ -1544,7 +1366,6 @@ window.vocabularyData = [
     perevod: "пересечение",
     category: "noun",
     example: "La intersección está regulada por semáforos",
-    topics: ["topic09"],
   },
   {
     word: "interurbano",
@@ -1552,7 +1373,6 @@ window.vocabularyData = [
     perevod: "Interurban или между городами",
     category: "adjective",
     example: "En carretera interurbana 90 km/h",
-    topics: ["topic04"],
   },
   {
     word: "inválido",
@@ -1560,7 +1380,6 @@ window.vocabularyData = [
     perevod: "неверный",
     category: "adjective",
     example: "Un documento inválido no será aceptado.",
-    topics: ["topic06"],
   },
   {
     word: "isleta",
@@ -1568,7 +1387,6 @@ window.vocabularyData = [
     perevod: "Остров дорожного движения",
     category: "noun",
     example: "La isleta canaliza el tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "itinerario",
@@ -1576,7 +1394,6 @@ window.vocabularyData = [
     perevod: "маршрут или маршрут",
     category: "noun",
     example: "Sigue el itinerario señalizado.",
-    topics: ["topic09"],
   },
   {
     word: "justificar",
@@ -1584,7 +1401,6 @@ window.vocabularyData = [
     perevod: "чтобы оправдать",
     category: "verb",
     example: "Justifica el motivo de tu maniobra.",
-    topics: ["topic01", "topic10"],
   },
   {
     word: "legal",
@@ -1592,7 +1408,6 @@ window.vocabularyData = [
     perevod: "юридический",
     category: "adjective",
     example: "Asegúrate de que todo sea legal",
-    topics: [],
   },
   {
     word: "lento",
@@ -1600,7 +1415,6 @@ window.vocabularyData = [
     perevod: "медленный",
     category: "adjective",
     example: "Ir muy lento también es peligroso",
-    topics: [],
   },
   {
     word: "leve",
@@ -1608,7 +1422,6 @@ window.vocabularyData = [
     perevod: "несовершеннолетний или свет",
     category: "adjective",
     example: "Una falta leve tiene multa pequeña",
-    topics: ["topic03", "topic05"],
   },
   {
     word: "ligero",
@@ -1616,7 +1429,6 @@ window.vocabularyData = [
     perevod: "свет",
     category: "adjective",
     example: "Vehículo ligero hasta 3500 kg",
-    topics: ["topic05"],
   },
   {
     word: "límite",
@@ -1624,7 +1436,6 @@ window.vocabularyData = [
     perevod: "предел",
     category: "noun",
     example: "Respeta el límite de velocidad establecido.",
-    topics: [],
   },
   {
     word: "limpio",
@@ -1632,7 +1443,6 @@ window.vocabularyData = [
     perevod: "чистый",
     category: "adjective",
     example: "Mantenga los cristales limpios para una buena visibilidad.",
-    topics: ["topic01", "topic05", "topic11"],
   },
   {
     word: "línea de detención",
@@ -1640,7 +1450,6 @@ window.vocabularyData = [
     perevod: "Стоп",
     category: "noun",
     example: "Detente antes de la línea de detención.",
-    topics: [],
   },
   {
     word: "línea longitudinal",
@@ -1648,7 +1457,6 @@ window.vocabularyData = [
     perevod: "продольная линия",
     category: "noun",
     example: "La línea longitudinal delimita carriles.",
-    topics: ["topic04"],
   },
   {
     word: "luminoso",
@@ -1656,7 +1464,6 @@ window.vocabularyData = [
     perevod: "светящийся или яркий",
     category: "adjective",
     example: "Las señales luminosas tienen prioridad sobre las verticales.",
-    topics: ["topic09"],
   },
   {
     word: "luz",
@@ -1664,7 +1471,6 @@ window.vocabularyData = [
     perevod: "свет",
     category: "noun",
     example: "Usa las luces cuando sea necesario",
-    topics: ["topic05"],
   },
   {
     word: "manifiestamente",
@@ -1672,7 +1478,6 @@ window.vocabularyData = [
     perevod: "явно или ясно",
     category: "adverb",
     example: "Personas manifiestamente impedidas requieren especial atención.",
-    topics: ["topic01"],
   },
   {
     word: "maniobra",
@@ -1680,7 +1485,6 @@ window.vocabularyData = [
     perevod: "маневр",
     category: "noun",
     example: "Realiza la maniobra con precaución",
-    topics: ["topic01", "topic10", "topic11"],
   },
   {
     word: "mantener",
@@ -1688,7 +1492,6 @@ window.vocabularyData = [
     perevod: "поддерживать",
     category: "verb",
     example: "Mantén la distancia de seguridad",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "marca",
@@ -1696,7 +1499,6 @@ window.vocabularyData = [
     perevod: "маркировка или знак",
     category: "noun",
     example: "Las marcas viales delimitan los carriles.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "marca vial",
@@ -1704,7 +1506,6 @@ window.vocabularyData = [
     perevod: "дорожная маркировка",
     category: "noun",
     example: "Las marcas viales guían la circulación.",
-    topics: ["topic04"],
   },
   {
     word: "masa máxima autorizada",
@@ -1712,7 +1513,6 @@ window.vocabularyData = [
     perevod: "максимальный уполномоченный вес",
     category: "noun",
     example: "Respeta la masa máxima autorizada.",
-    topics: ["topic02"],
   },
   {
     word: "matrícula",
@@ -1720,7 +1520,6 @@ window.vocabularyData = [
     perevod: "номерной знак или регистрация",
     category: "noun",
     example: "La matrícula debe estar visible",
-    topics: ["topic03"],
   },
   {
     word: "matricular",
@@ -1728,7 +1527,6 @@ window.vocabularyData = [
     perevod: "для регистрации",
     category: "verb",
     example: "Hay que matricular el vehículo en España.",
-    topics: [],
   },
   {
     word: "máximo",
@@ -1736,7 +1534,6 @@ window.vocabularyData = [
     perevod: "максимум",
     category: "adjective",
     example: "Respeta la velocidad máxima",
-    topics: [],
   },
   {
     word: "máximo",
@@ -1744,7 +1541,6 @@ window.vocabularyData = [
     perevod: "максимум",
     category: "adjective",
     example: "El peso máximo autorizado es de 3500kg.",
-    topics: ["topic02"],
   },
   {
     word: "mediana",
@@ -1752,7 +1548,6 @@ window.vocabularyData = [
     perevod: "центральная часть дороги",
     category: "noun",
     example: "No pares en la mediana.",
-    topics: ["topic04"],
   },
   {
     word: "mercancías peligrosas",
@@ -1760,7 +1555,6 @@ window.vocabularyData = [
     perevod: "опасные товары",
     category: "noun",
     example: "Transporte especial de mercancías peligrosas.",
-    topics: ["topic08", "topic13"],
   },
   {
     word: "metros",
@@ -1768,7 +1562,6 @@ window.vocabularyData = [
     perevod: "метры",
     category: "noun",
     example: "metros como mínimo y visibles",
-    topics: [],
   },
   {
     word: "mínimo",
@@ -1776,7 +1569,6 @@ window.vocabularyData = [
     perevod: "минимум",
     category: "adjective",
     example: "Mantén la distancia mínima",
-    topics: ["topic01"],
   },
   {
     word: "mínimo",
@@ -1784,7 +1576,6 @@ window.vocabularyData = [
     perevod: "минимум",
     category: "adjective",
     example: "Se requiere un nivel mínimo de atención.",
-    topics: [],
   },
   {
     word: "ministerio",
@@ -1792,7 +1583,6 @@ window.vocabularyData = [
     perevod: "министерство",
     category: "noun",
     example: "El Ministerio de Interior regula el tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "minusválido",
@@ -1800,7 +1590,6 @@ window.vocabularyData = [
     perevod: "инвалид",
     category: "noun",
     example: "Plaza reservada para minusválido.",
-    topics: ["topic01", "topic13"],
   },
   {
     word: "modificar",
@@ -1808,7 +1597,6 @@ window.vocabularyData = [
     perevod: "изменить",
     category: "verb",
     example: "No modifiques el vehículo sin autorización.",
-    topics: [],
   },
   {
     word: "mostrar",
@@ -1816,7 +1604,6 @@ window.vocabularyData = [
     perevod: "Показать",
     category: "verb",
     example: "Muestra la documentación si te la piden",
-    topics: ["topic06"],
   },
   {
     word: "motocicleta",
@@ -1824,7 +1611,6 @@ window.vocabularyData = [
     perevod: "мотоцикл",
     category: "noun",
     example: "La motocicleta debe circular por el carril derecho",
-    topics: ["topic01", "topic02", "topic04", "topic10"],
   },
   {
     word: "motorizado",
@@ -1832,7 +1618,6 @@ window.vocabularyData = [
     perevod: "моторизованный",
     category: "adjective",
     example: "Vehículo motorizado necesita permiso",
-    topics: ["topic02", "topic03"],
   },
   {
     word: "móvil",
@@ -1840,7 +1625,6 @@ window.vocabularyData = [
     perevod: "мобильный или движущийся",
     category: "adjective",
     example: "Precaución con obstáculos móviles",
-    topics: ["topic11"],
   },
   {
     word: "multa",
@@ -1848,7 +1632,6 @@ window.vocabularyData = [
     perevod: "отлично",
     category: "noun",
     example: "Te pueden poner una multa por exceso de velocidad",
-    topics: ["topic03"],
   },
   {
     word: "necesario",
@@ -1856,7 +1639,6 @@ window.vocabularyData = [
     perevod: "необходимый",
     category: "adjective",
     example: "Es necesario llevar la documentación del vehículo.",
-    topics: ["topic06"],
   },
   {
     word: "neumático",
@@ -1864,7 +1646,6 @@ window.vocabularyData = [
     perevod: "шина",
     category: "noun",
     example: "Es importante revisar la presión del neumático.",
-    topics: ["topic02"],
   },
   {
     word: "norma",
@@ -1872,7 +1653,6 @@ window.vocabularyData = [
     perevod: "правило или стандарт",
     category: "noun",
     example: "Las normas de tráfico protegen a todos.",
-    topics: ["topic04", "topic07"],
   },
   {
     word: "normal",
@@ -1880,7 +1660,6 @@ window.vocabularyData = [
     perevod: "нормальный",
     category: "adjective",
     example: "Condiciones normales de tráfico",
-    topics: ["topic04", "topic07"],
   },
   {
     word: "normalmente",
@@ -1888,7 +1667,6 @@ window.vocabularyData = [
     perevod: "обычно",
     category: "adverb",
     example: "Normalmente debe circular por el carril derecho.",
-    topics: ["topic04", "topic07", "topic10"],
   },
   {
     word: "normativa",
@@ -1896,7 +1674,6 @@ window.vocabularyData = [
     perevod: "правила",
     category: "noun",
     example: "Cumple la normativa de tráfico",
-    topics: ["topic04", "topic06", "topic07"],
   },
   {
     word: "notificar",
@@ -1904,7 +1681,6 @@ window.vocabularyData = [
     perevod: "Чтобы уведомить",
     category: "verb",
     example: "Te notificarán la sanción por correo.",
-    topics: ["topic03"],
   },
   {
     word: "nuevo",
@@ -1912,7 +1688,6 @@ window.vocabularyData = [
     perevod: "новый",
     category: "adjective",
     example: "Este es un nuevo tipo de señal.",
-    topics: ["topic09"],
   },
   {
     word: "nunca",
@@ -1920,7 +1695,6 @@ window.vocabularyData = [
     perevod: "никогда",
     category: "adverb",
     example: "Nunca cruces cuando el semáforo está en rojo.",
-    topics: ["topic09"],
   },
   {
     word: "obligado",
@@ -1928,7 +1702,6 @@ window.vocabularyData = [
     perevod: "обязался или вынужден",
     category: "adjective",
     example: "Estás obligado a detenerte ante un stop.",
-    topics: ["topic10"],
   },
   {
     word: "obligar",
@@ -1936,7 +1709,6 @@ window.vocabularyData = [
     perevod: "Овертировать или применять",
     category: "verb",
     example: "La ley obliga a usar casco",
-    topics: ["topic11"],
   },
   {
     word: "obligatoriamente",
@@ -1944,7 +1716,6 @@ window.vocabularyData = [
     perevod: "мандатиально",
     category: "adverb",
     example: "Debes usar obligatoriamente el casco en la motocicleta.",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "obligatorio",
@@ -1952,7 +1723,6 @@ window.vocabularyData = [
     perevod: "обязательный или обязательный",
     category: "adjective",
     example: "Es obligatorio usar el cinturón",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "observar",
@@ -1960,7 +1730,6 @@ window.vocabularyData = [
     perevod: "чтобы наблюдать",
     category: "verb",
     example: "Observa bien antes de cambiar de carril",
-    topics: ["topic04"],
   },
   {
     word: "obstaculizar",
@@ -1968,7 +1737,6 @@ window.vocabularyData = [
     perevod: "Чтобы препятствовать",
     category: "verb",
     example: "No obstaculices el tráfico",
-    topics: ["topic04"],
   },
   {
     word: "obstáculo",
@@ -1976,7 +1744,6 @@ window.vocabularyData = [
     perevod: "препятствие",
     category: "noun",
     example: "Evita cualquier obstáculo en la vía",
-    topics: ["topic04"],
   },
   {
     word: "obvio",
@@ -1984,7 +1751,6 @@ window.vocabularyData = [
     perevod: "очевидный",
     category: "adjective",
     example: "Es obvio que no se puede aparcar aquí.",
-    topics: [],
   },
   {
     word: "oficial",
@@ -1992,7 +1758,6 @@ window.vocabularyData = [
     perevod: "официальный",
     category: "adjective",
     example: "Consulta solo fuentes oficiales.",
-    topics: [],
   },
   {
     word: "ordenado",
@@ -2000,7 +1765,6 @@ window.vocabularyData = [
     perevod: "упорядочен или аккуратный",
     category: "adjective",
     example: "El tráfico debe ser ordenado.",
-    topics: ["topic04"],
   },
   {
     word: "ordinario",
@@ -2008,7 +1772,6 @@ window.vocabularyData = [
     perevod: "обычный",
     category: "adjective",
     example: "En condiciones ordinarias de tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "oscuro",
@@ -2016,7 +1779,6 @@ window.vocabularyData = [
     perevod: "темный",
     category: "adjective",
     example: "Enciende luces en tiempo oscuro",
-    topics: [],
   },
   {
     word: "panel de mensaje variable",
@@ -2024,7 +1786,6 @@ window.vocabularyData = [
     perevod: "Панель сообщений переменной",
     category: "noun",
     example: "El panel de mensaje variable informa del tráfico.",
-    topics: ["topic04"],
   },
   {
     word: "parada",
@@ -2032,7 +1793,6 @@ window.vocabularyData = [
     perevod: "остановка или автобусная остановка",
     category: "noun",
     example: "No aparques cerca de una parada de autobús.",
-    topics: ["topic01", "topic08"],
   },
   {
     word: "paralelo",
@@ -2040,7 +1800,6 @@ window.vocabularyData = [
     perevod: "параллель",
     category: "adjective",
     example: "Aparca en paralelo a la acera",
-    topics: [],
   },
   {
     word: "parar",
@@ -2048,7 +1807,6 @@ window.vocabularyData = [
     perevod: "чтобы остановиться",
     category: "verb",
     example: "Debes parar en el semáforo rojo",
-    topics: ["topic10"],
   },
   {
     word: "parcial",
@@ -2056,7 +1814,6 @@ window.vocabularyData = [
     perevod: "частично",
     category: "adjective",
     example: "Visibilidad parcial por niebla",
-    topics: ["topic05", "topic11"],
   },
   {
     word: "pasajero",
@@ -2064,7 +1821,6 @@ window.vocabularyData = [
     perevod: "пассажир",
     category: "noun",
     example: "Los pasajeros deben usar cinturón",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "paso a nivel",
@@ -2072,7 +1828,6 @@ window.vocabularyData = [
     perevod: "ровная пересечение",
     category: "noun",
     example: "Extrema la precaución en el paso a nivel.",
-    topics: ["topic11"],
   },
   {
     word: "paso de peatones",
@@ -2080,7 +1835,6 @@ window.vocabularyData = [
     perevod: "пешеходный переход",
     category: "noun",
     example: "Cede el paso en el paso de peatones.",
-    topics: ["topic01", "topic09"],
   },
   {
     word: "paso rebajado",
@@ -2088,7 +1842,6 @@ window.vocabularyData = [
     perevod: "понижено",
     category: "noun",
     example: "El paso rebajado facilita el acceso.",
-    topics: [],
   },
   {
     word: "paulatino",
@@ -2096,7 +1849,6 @@ window.vocabularyData = [
     perevod: "постепенно",
     category: "adjective",
     example: "La reducción paulatina de la velocidad es más segura.",
-    topics: ["topic04"],
   },
   {
     word: "pavimento",
@@ -2104,7 +1856,6 @@ window.vocabularyData = [
     perevod: "тротуар",
     category: "noun",
     example: "El pavimento estaba mojado y resbaladizo.",
-    topics: ["topic02", "topic11"],
   },
   {
     word: "peatón",
@@ -2112,7 +1863,6 @@ window.vocabularyData = [
     perevod: "пешеход",
     category: "noun",
     example: "El peatón tiene prioridad en el paso de cebra",
-    topics: ["topic01", "topic09"],
   },
   {
     word: "peatonal",
@@ -2120,7 +1870,6 @@ window.vocabularyData = [
     perevod: "пешеход",
     category: "adjective",
     example: "Respeta la zona peatonal",
-    topics: ["topic01", "topic09"],
   },
   {
     word: "peligro",
@@ -2128,7 +1877,6 @@ window.vocabularyData = [
     perevod: "Опасность",
     category: "noun",
     example: "Señaliza el peligro con el triángulo",
-    topics: ["topic09"],
   },
   {
     word: "peligroso",
@@ -2136,7 +1884,6 @@ window.vocabularyData = [
     perevod: "опасный",
     category: "adjective",
     example: "Adelantar aquí es peligroso",
-    topics: ["topic10"],
   },
   {
     word: "permanente",
@@ -2144,7 +1891,6 @@ window.vocabularyData = [
     perevod: "постоянный",
     category: "adjective",
     example: "Esta es una señal permanente.",
-    topics: ["topic01", "topic09"],
   },
   {
     word: "permiso",
@@ -2152,7 +1898,6 @@ window.vocabularyData = [
     perevod: "лицензия или разрешение",
     category: "noun",
     example: "Necesitas permiso de conducir válido",
-    topics: ["topic03"],
   },
   {
     word: "permitido",
@@ -2160,7 +1905,6 @@ window.vocabularyData = [
     perevod: "разрешено или разрешено",
     category: "adjective",
     example: "Está permitido adelantar",
-    topics: ["topic03", "topic10"],
   },
   {
     word: "permitido",
@@ -2168,7 +1912,6 @@ window.vocabularyData = [
     perevod: "разрешено или разрешено",
     category: "adjective",
     example: "El adelantamiento está permitido en esta sección.",
-    topics: ["topic03"],
   },
   {
     word: "permitir",
@@ -2176,7 +1919,6 @@ window.vocabularyData = [
     perevod: "разрешить или разрешить",
     category: "verb",
     example: "No se permite circular a más de 50 km/h",
-    topics: ["topic03", "topic09", "topic10"],
   },
   {
     word: "pesado",
@@ -2184,7 +1926,6 @@ window.vocabularyData = [
     perevod: "тяжелый",
     category: "adjective",
     example: "Vehículo pesado más de 3500 kg",
-    topics: [],
   },
   {
     word: "placa de ensayo",
@@ -2192,7 +1933,6 @@ window.vocabularyData = [
     perevod: "тестовая пластина",
     category: "noun",
     example: "La placa de ensayo es para vehículos experimentales.",
-    topics: [],
   },
   {
     word: "pontón trasbordador",
@@ -2200,7 +1940,6 @@ window.vocabularyData = [
     perevod: "Паромный мост",
     category: "noun",
     example: "El pontón trasbordador transporta vehículos.",
-    topics: ["topic13"],
   },
   {
     word: "posterior",
@@ -2208,7 +1947,6 @@ window.vocabularyData = [
     perevod: "сзади или обратно",
     category: "adjective",
     example: "Mira por el espejo posterior",
-    topics: [],
   },
   {
     word: "posterior",
@@ -2216,7 +1954,6 @@ window.vocabularyData = [
     perevod: "последующий или задний",
     category: "adjective",
     example: "La revisión posterior es obligatoria.",
-    topics: [],
   },
   {
     word: "posterior",
@@ -2224,15 +1961,14 @@ window.vocabularyData = [
     perevod: "последующий или позже",
     category: "adjective",
     example: "La inspección posterior confirmó los daños.",
-    topics: ["topic06"],
   },
   {
     word: "posteriormente",
     translation: "later/afterwards",
     perevod: "позже или после",
     category: "adverb",
-    example: "Si no llevas la documentación, deberás presentarla posteriormente en la comisaría.",
-    topics: ["topic06"],
+    example:
+      "Si no llevas la documentación, deberás presentarla posteriormente en la comisaría.",
   },
   {
     word: "prácticamente",
@@ -2240,7 +1976,6 @@ window.vocabularyData = [
     perevod: "практически или практически",
     category: "adverb",
     example: "Con niebla densa, la visibilidad es prácticamente nula.",
-    topics: ["topic05", "topic11"],
   },
   {
     word: "prácticamente",
@@ -2248,7 +1983,6 @@ window.vocabularyData = [
     perevod: "практически",
     category: "adverb",
     example: "Con niebla densa, la visibilidad es prácticamente nula.",
-    topics: ["topic05", "topic11"],
   },
   {
     word: "preceptivo",
@@ -2256,7 +1990,6 @@ window.vocabularyData = [
     perevod: "обязательно или требуется",
     category: "adjective",
     example: "Es preceptivo llevar el dispositivo de retención infantil.",
-    topics: ["topic01", "topic03", "topic13"],
   },
   {
     word: "preseñalización",
@@ -2264,7 +1997,6 @@ window.vocabularyData = [
     perevod: "предварительный сигнал",
     category: "noun",
     example: "La preseñalización indica la próxima salida.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "presentar",
@@ -2272,7 +2004,6 @@ window.vocabularyData = [
     perevod: "представить или показать",
     category: "verb",
     example: "Presenta la documentación cuando te la pidan",
-    topics: ["topic06"],
   },
   {
     word: "preventivo",
@@ -2280,15 +2011,14 @@ window.vocabularyData = [
     perevod: "профилактическое",
     category: "adjective",
     example: "Se realizan controles de alcoholemia preventivos.",
-    topics: [],
   },
   {
     word: "previamente",
     translation: "previously/beforehand",
     perevod: "ранее или заранее",
     category: "adverb",
-    example: "El conductor debe advertir previamente su maniobra con las señales reglamentarias.",
-    topics: ["topic01", "topic05", "topic09", "topic10"],
+    example:
+      "El conductor debe advertir previamente su maniobra con las señales reglamentarias.",
   },
   {
     word: "previo",
@@ -2296,7 +2026,6 @@ window.vocabularyData = [
     perevod: "предыдущий или ранее",
     category: "adjective",
     example: "Es necesario un examen previo para obtener el permiso.",
-    topics: ["topic03"],
   },
   {
     word: "principal",
@@ -2304,7 +2033,6 @@ window.vocabularyData = [
     perevod: "Главный или принципал",
     category: "adjective",
     example: "Circula por la vía principal",
-    topics: ["topic04"],
   },
   {
     word: "principal",
@@ -2312,7 +2040,6 @@ window.vocabularyData = [
     perevod: "Главный или принципал",
     category: "adjective",
     example: "La carretera principal tiene preferencia.",
-    topics: ["topic04"],
   },
   {
     word: "principalmente",
@@ -2320,7 +2047,6 @@ window.vocabularyData = [
     perevod: "в основном или главным образом",
     category: "adverb",
     example: "Debes ser cauteloso principalmente en zonas escolares.",
-    topics: ["topic09"],
   },
   {
     word: "prioridad",
@@ -2328,7 +2054,6 @@ window.vocabularyData = [
     perevod: "приоритет",
     category: "noun",
     example: "Los peatones tienen prioridad",
-    topics: ["topic09"],
   },
   {
     word: "prioritario",
@@ -2336,7 +2061,6 @@ window.vocabularyData = [
     perevod: "приоритет",
     category: "adjective",
     example: "El vehículo de emergencia tiene paso prioritario.",
-    topics: [],
   },
   {
     word: "privado",
@@ -2344,7 +2068,6 @@ window.vocabularyData = [
     perevod: "частный",
     category: "adjective",
     example: "Propiedad privada, no aparcar",
-    topics: ["topic06"],
   },
   {
     word: "procedimiento",
@@ -2352,7 +2075,6 @@ window.vocabularyData = [
     perevod: "процедура",
     category: "noun",
     example: "Sigue el procedimiento establecido para recurrir.",
-    topics: [],
   },
   {
     word: "procurar",
@@ -2360,7 +2082,6 @@ window.vocabularyData = [
     perevod: "Чтобы попробовать или убедиться",
     category: "verb",
     example: "Procura mantener la calma al volante",
-    topics: ["topic01"],
   },
   {
     word: "prohibido",
@@ -2368,7 +2089,6 @@ window.vocabularyData = [
     perevod: "запрещено или запрещено",
     category: "adjective",
     example: "Está prohibido aparcar aquí",
-    topics: ["topic09"],
   },
   {
     word: "prohibir",
@@ -2376,7 +2096,6 @@ window.vocabularyData = [
     perevod: "запретить или запретить",
     category: "verb",
     example: "Se prohíbe aparcar aquí",
-    topics: [],
   },
   {
     word: "protección civil",
@@ -2384,7 +2103,6 @@ window.vocabularyData = [
     perevod: "Гражданская защита",
     category: "noun",
     example: "Los servicios de protección civil.",
-    topics: ["topic12"],
   },
   {
     word: "provisional",
@@ -2392,7 +2110,6 @@ window.vocabularyData = [
     perevod: "предварительный или временный",
     category: "adjective",
     example: "Permiso provisional hasta recibir el definitivo.",
-    topics: ["topic03"],
   },
   {
     word: "prudente",
@@ -2400,7 +2117,6 @@ window.vocabularyData = [
     perevod: "разумный или осторожный",
     category: "adjective",
     example: "Conduce de manera prudente",
-    topics: ["topic01", "topic11"],
   },
   {
     word: "público",
@@ -2408,7 +2124,6 @@ window.vocabularyData = [
     perevod: "публичный",
     category: "adjective",
     example: "Respeta el transporte público",
-    topics: ["topic13"],
   },
   {
     word: "puente móvil",
@@ -2416,7 +2131,6 @@ window.vocabularyData = [
     perevod: "подвижный мост",
     category: "noun",
     example: "Espera la señal en el puente móvil.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "racionalmente",
@@ -2424,7 +2138,6 @@ window.vocabularyData = [
     perevod: "рационально",
     category: "adverb",
     example: "Se debe prever racionalmente la irrupción de peatones.",
-    topics: [],
   },
   {
     word: "ramal",
@@ -2432,7 +2145,6 @@ window.vocabularyData = [
     perevod: "ветвь или рампа",
     category: "noun",
     example: "Toma el ramal hacia la ciudad.",
-    topics: [],
   },
   {
     word: "rápidamente",
@@ -2440,7 +2152,6 @@ window.vocabularyData = [
     perevod: "быстро или быстро",
     category: "adverb",
     example: "Abandona rápidamente el vehículo en caso de incendio.",
-    topics: ["topic12"],
   },
   {
     word: "rápido",
@@ -2448,7 +2159,6 @@ window.vocabularyData = [
     perevod: "быстро или быстро",
     category: "adjective",
     example: "No seas demasiado rápido",
-    topics: [],
   },
   {
     word: "realizar",
@@ -2456,7 +2166,6 @@ window.vocabularyData = [
     perevod: "выполнять или выполнять",
     category: "verb",
     example: "Realiza las maniobras con seguridad",
-    topics: ["topic01", "topic10", "topic11"],
   },
   {
     word: "reanudar",
@@ -2464,7 +2173,6 @@ window.vocabularyData = [
     perevod: "возобновить",
     category: "verb",
     example: "Reanuda la marcha cuando sea seguro.",
-    topics: [],
   },
   {
     word: "rebasar",
@@ -2472,7 +2180,6 @@ window.vocabularyData = [
     perevod: "превышать или обогнать",
     category: "verb",
     example: "No rebases el límite de velocidad",
-    topics: ["topic10"],
   },
   {
     word: "recibir",
@@ -2480,7 +2187,6 @@ window.vocabularyData = [
     perevod: "получить",
     category: "verb",
     example: "Recibe las instrucciones del examinador",
-    topics: [],
   },
   {
     word: "recto",
@@ -2488,7 +2194,6 @@ window.vocabularyData = [
     perevod: "прямой",
     category: "adjective",
     example: "Sigue recto hasta el semáforo",
-    topics: [],
   },
   {
     word: "recurrir",
@@ -2496,7 +2201,6 @@ window.vocabularyData = [
     perevod: "апеллировать",
     category: "verb",
     example: "Puedes recurrir la multa si no estás conforme.",
-    topics: ["topic03"],
   },
   {
     word: "reducir",
@@ -2504,7 +2208,6 @@ window.vocabularyData = [
     perevod: "чтобы уменьшить",
     category: "verb",
     example: "Reduce la velocidad en curvas",
-    topics: ["topic04"],
   },
   {
     word: "reflectante",
@@ -2512,7 +2215,6 @@ window.vocabularyData = [
     perevod: "отражающий",
     category: "adjective",
     example: "Es obligatorio llevar un chaleco reflectante en caso de avería.",
-    topics: ["topic11", "topic12"],
   },
   {
     word: "régimen",
@@ -2520,7 +2222,6 @@ window.vocabularyData = [
     perevod: "режим или система",
     category: "noun",
     example: "El régimen sancionador es muy estricto.",
-    topics: [],
   },
   {
     word: "reglamentario",
@@ -2528,7 +2229,6 @@ window.vocabularyData = [
     perevod: "нормативно -правовые или установленные законом",
     category: "adjective",
     example: "El uso del casco es reglamentario para motoristas.",
-    topics: ["topic02", "topic05", "topic07", "topic11"],
   },
   {
     word: "reglamentario",
@@ -2536,7 +2236,6 @@ window.vocabularyData = [
     perevod: "регаламентный",
     category: "adjective",
     example: "Equipo reglamentario obligatorio en el vehículo.",
-    topics: ["topic05", "topic07"],
   },
   {
     word: "reglamento",
@@ -2544,7 +2243,6 @@ window.vocabularyData = [
     perevod: "регулирование",
     category: "noun",
     example: "El reglamento de circulación es de obligado cumplimiento.",
-    topics: [],
   },
   {
     word: "regulación del tráfico",
@@ -2552,7 +2250,6 @@ window.vocabularyData = [
     perevod: "Регламент дорожного движения",
     category: "noun",
     example: "La regulación del tráfico es municipal.",
-    topics: ["topic04", "topic07"],
   },
   {
     word: "regular",
@@ -2560,7 +2257,6 @@ window.vocabularyData = [
     perevod: "регулировать",
     category: "verb",
     example: "Los semáforos regulan el tráfico urbano.",
-    topics: ["topic04"],
   },
   {
     word: "remolcar",
@@ -2568,7 +2264,6 @@ window.vocabularyData = [
     perevod: "чтобы буксировать",
     category: "verb",
     example: "La grúa va a remolcar el coche averiado.",
-    topics: ["topic12"],
   },
   {
     word: "remolque",
@@ -2576,7 +2271,6 @@ window.vocabularyData = [
     perevod: "трейлер",
     category: "noun",
     example: "El vehículo tractor arrastra un remolque ligero.",
-    topics: ["topic02"],
   },
   {
     word: "repetir",
@@ -2584,7 +2278,6 @@ window.vocabularyData = [
     perevod: "повторить",
     category: "verb",
     example: "No repitas la misma infracción",
-    topics: ["topic03"],
   },
   {
     word: "respetar",
@@ -2592,7 +2285,6 @@ window.vocabularyData = [
     perevod: "уважать или подчиняться",
     category: "verb",
     example: "Respeta las señales de tráfico",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "responder",
@@ -2600,7 +2292,6 @@ window.vocabularyData = [
     perevod: "ответить",
     category: "verb",
     example: "Responde rápido en emergencias",
-    topics: [],
   },
   {
     word: "responsable",
@@ -2608,7 +2299,6 @@ window.vocabularyData = [
     perevod: "ответственный",
     category: "adjective",
     example: "Sé responsable al volante",
-    topics: [],
   },
   {
     word: "restricciones de circulación",
@@ -2616,7 +2306,6 @@ window.vocabularyData = [
     perevod: "ограничения трафика",
     category: "noun",
     example: "Hay restricciones de circulación por obras.",
-    topics: [],
   },
   {
     word: "retención",
@@ -2624,7 +2313,6 @@ window.vocabularyData = [
     perevod: "пробка",
     category: "noun",
     example: "Hay retención de 5 kilómetros.",
-    topics: [],
   },
   {
     word: "retirar",
@@ -2632,7 +2320,6 @@ window.vocabularyData = [
     perevod: "Чтобы снять или удалить",
     category: "verb",
     example: "Van a retirar el vehículo mal aparcado.",
-    topics: ["topic02"],
   },
   {
     word: "revisión",
@@ -2640,7 +2327,6 @@ window.vocabularyData = [
     perevod: "осмотр или обзор",
     category: "noun",
     example: "La revisión del vehículo es anual.",
-    topics: [],
   },
   {
     word: "rotativo",
@@ -2648,7 +2334,6 @@ window.vocabularyData = [
     perevod: "вращающийся маяк",
     category: "noun",
     example: "El rotativo naranja señala vehículos especiales.",
-    topics: ["topic09"],
   },
   {
     word: "rutinario",
@@ -2656,7 +2341,6 @@ window.vocabularyData = [
     perevod: "рутинный",
     category: "adjective",
     example: "Un control rutinario de alcoholemia.",
-    topics: [],
   },
   {
     word: "salir",
@@ -2664,7 +2348,6 @@ window.vocabularyData = [
     perevod: "выйти или покинуть",
     category: "verb",
     example: "Sale del carril con cuidado",
-    topics: ["topic04"],
   },
   {
     word: "sanción",
@@ -2672,7 +2355,6 @@ window.vocabularyData = [
     perevod: "штраф или санкция",
     category: "noun",
     example: "La sanción puede incluir pérdida de puntos",
-    topics: ["topic03"],
   },
   {
     word: "saturación del tráfico",
@@ -2680,7 +2362,6 @@ window.vocabularyData = [
     perevod: "насыщение трафика",
     category: "noun",
     example: "La saturación del tráfico causa retrasos.",
-    topics: ["topic04"],
   },
   {
     word: "secundario",
@@ -2688,7 +2369,6 @@ window.vocabularyData = [
     perevod: "второстепенный",
     category: "adjective",
     example: "Cede paso desde vía secundaria",
-    topics: ["topic04"],
   },
   {
     word: "secundario",
@@ -2696,7 +2376,6 @@ window.vocabularyData = [
     perevod: "второстепенный",
     category: "adjective",
     example: "Acceda desde una vía secundaria con precaución.",
-    topics: ["topic04", "topic11"],
   },
   {
     word: "seguir",
@@ -2704,7 +2383,6 @@ window.vocabularyData = [
     perevod: "следовать или продолжить",
     category: "verb",
     example: "Sigue las indicaciones del agente",
-    topics: ["topic01"],
   },
   {
     word: "seguridad",
@@ -2712,7 +2390,6 @@ window.vocabularyData = [
     perevod: "безопасность",
     category: "noun",
     example: "La seguridad vial es fundamental",
-    topics: ["topic11"],
   },
   {
     word: "seguro",
@@ -2720,7 +2397,6 @@ window.vocabularyData = [
     perevod: "безопасно или безопасно",
     category: "adjective",
     example: "Conduce de forma segura",
-    topics: [],
   },
   {
     word: "seguro",
@@ -2728,7 +2404,6 @@ window.vocabularyData = [
     perevod: "страхование",
     category: "noun",
     example: "Es obligatorio tener seguro del vehículo.",
-    topics: [],
   },
   {
     word: "semáforo",
@@ -2736,7 +2411,6 @@ window.vocabularyData = [
     perevod: "светофор",
     category: "noun",
     example: "Respeta las indicaciones del semáforo.",
-    topics: ["topic05"],
   },
   {
     word: "señal",
@@ -2744,7 +2418,6 @@ window.vocabularyData = [
     perevod: "знак или сигнал",
     category: "noun",
     example: "Respeta todas las señales de tráfico",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "señal acústica",
@@ -2752,7 +2425,6 @@ window.vocabularyData = [
     perevod: "акустический сигнал",
     category: "noun",
     example: "La señal acústica es obligatoria.",
-    topics: ["topic09"],
   },
   {
     word: "señal luminosa",
@@ -2760,7 +2432,6 @@ window.vocabularyData = [
     perevod: "световой сигнал",
     category: "noun",
     example: "La señal luminosa es prioritaria.",
-    topics: ["topic05", "topic09"],
   },
   {
     word: "señalar",
@@ -2768,7 +2439,6 @@ window.vocabularyData = [
     perevod: "сигнализировать или указать",
     category: "verb",
     example: "Señala tus intenciones claramente",
-    topics: ["topic09"],
   },
   {
     word: "señalización",
@@ -2776,7 +2446,6 @@ window.vocabularyData = [
     perevod: "сигнализация",
     category: "noun",
     example: "La señalización vertical indica la velocidad máxima.",
-    topics: ["topic09"],
   },
   {
     word: "señalización circunstancial",
@@ -2784,7 +2453,6 @@ window.vocabularyData = [
     perevod: "ситуационная сигнализация",
     category: "noun",
     example: "La señalización circunstancial es temporal.",
-    topics: ["topic09"],
   },
   {
     word: "señalizar",
@@ -2792,7 +2460,6 @@ window.vocabularyData = [
     perevod: "для указателя",
     category: "verb",
     example: "Van a señalizar mejor esta intersección.",
-    topics: ["topic02", "topic09"],
   },
   {
     word: "senda ciclable",
@@ -2800,7 +2467,6 @@ window.vocabularyData = [
     perevod: "велосипедная дорожка",
     category: "noun",
     example: "La senda ciclable es solo para bicicletas.",
-    topics: [],
   },
   {
     word: "separador",
@@ -2808,7 +2474,6 @@ window.vocabularyData = [
     perevod: "делитель",
     category: "noun",
     example: "El separador divide los sentidos de circulación.",
-    topics: [],
   },
   {
     word: "servicio público",
@@ -2816,7 +2481,6 @@ window.vocabularyData = [
     perevod: "государственная служба",
     category: "noun",
     example: "Vehículo destinado al servicio público.",
-    topics: [],
   },
   {
     word: "servicio urgente",
@@ -2824,7 +2488,6 @@ window.vocabularyData = [
     perevod: "аварийная служба",
     category: "noun",
     example: "Vehículo en servicio urgente.",
-    topics: ["topic12"],
   },
   {
     word: "siempre",
@@ -2832,7 +2495,6 @@ window.vocabularyData = [
     perevod: "всегда",
     category: "adverb",
     example: "Siempre debes respetar las señales de tráfico.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "simultáneo",
@@ -2840,7 +2502,6 @@ window.vocabularyData = [
     perevod: "одновременный",
     category: "adjective",
     example: "Control simultáneo de velocidad y documentación.",
-    topics: ["topic03", "topic06"],
   },
   {
     word: "situar",
@@ -2848,15 +2509,14 @@ window.vocabularyData = [
     perevod: "поместить или найти",
     category: "verb",
     example: "Sitúa el vehículo en el carril correcto",
-    topics: ["topic04"],
   },
   {
     word: "solamente",
     translation: "only",
     perevod: "только",
     category: "adverb",
-    example: "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
-    topics: [],
+    example:
+      "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
   },
   {
     word: "sucesivo",
@@ -2864,7 +2524,6 @@ window.vocabularyData = [
     perevod: "последовательно",
     category: "adjective",
     example: "En controles sucesivos se detectaron más infracciones.",
-    topics: [],
   },
   {
     word: "sucio",
@@ -2872,15 +2531,14 @@ window.vocabularyData = [
     perevod: "грязный",
     category: "adjective",
     example: "Un vehículo sucio puede ocultar la matrícula.",
-    topics: [],
   },
   {
     word: "suficientemente",
     translation: "sufficiently",
     perevod: "достаточно",
     category: "adverb",
-    example: "Mantén una distancia suficientemente segura con el vehículo de delante.",
-    topics: ["topic01"],
+    example:
+      "Mantén una distancia suficientemente segura con el vehículo de delante.",
   },
   {
     word: "suspender",
@@ -2888,7 +2546,6 @@ window.vocabularyData = [
     perevod: "Чтобы приостановить",
     category: "verb",
     example: "Pueden suspender el permiso de conducir.",
-    topics: ["topic03"],
   },
   {
     word: "sustituir",
@@ -2896,7 +2553,6 @@ window.vocabularyData = [
     perevod: "заменить или заменить",
     category: "verb",
     example: "Sustituye las luces fundidas inmediatamente.",
-    topics: [],
   },
   {
     word: "taxímetro",
@@ -2904,7 +2560,6 @@ window.vocabularyData = [
     perevod: "таксометр",
     category: "noun",
     example: "El taxímetro calcula el coste del viaje.",
-    topics: ["topic01", "topic08"],
   },
   {
     word: "técnico",
@@ -2912,7 +2567,6 @@ window.vocabularyData = [
     perevod: "технический",
     category: "adjective",
     example: "La inspección técnica del vehículo es periódica.",
-    topics: ["topic06"],
   },
   {
     word: "telepeaje",
@@ -2920,7 +2574,6 @@ window.vocabularyData = [
     perevod: "Электронный проезд",
     category: "noun",
     example: "El telepeaje acelera el paso por autopistas.",
-    topics: ["topic04"],
   },
   {
     word: "temporal",
@@ -2928,7 +2581,6 @@ window.vocabularyData = [
     perevod: "временный",
     category: "adjective",
     example: "Hay una señalización temporal por obras.",
-    topics: ["topic09"],
   },
   {
     word: "torpe",
@@ -2936,7 +2588,6 @@ window.vocabularyData = [
     perevod: "неуклюжий или неловкий",
     category: "adjective",
     example: "Una maniobra torpe puede causar un accidente.",
-    topics: ["topic01", "topic10", "topic11", "topic12"],
   },
   {
     word: "tráfico",
@@ -2944,7 +2595,6 @@ window.vocabularyData = [
     perevod: "трафик",
     category: "noun",
     example: "El tráfico está muy denso esta mañana.",
-    topics: ["topic04"],
   },
   {
     word: "tramitar",
@@ -2952,7 +2602,6 @@ window.vocabularyData = [
     perevod: "для обработки",
     category: "verb",
     example: "Tramita la denuncia en la comisaría.",
-    topics: [],
   },
   {
     word: "transitar",
@@ -2960,7 +2609,6 @@ window.vocabularyData = [
     perevod: "транзит или путешествовать",
     category: "verb",
     example: "Transita con precaución por zonas escolares",
-    topics: ["topic09", "topic11"],
   },
   {
     word: "transporte especial",
@@ -2968,7 +2616,6 @@ window.vocabularyData = [
     perevod: "Специальный транспорт",
     category: "noun",
     example: "El transporte especial necesita autorización.",
-    topics: ["topic08", "topic13"],
   },
   {
     word: "travesía",
@@ -2976,7 +2623,6 @@ window.vocabularyData = [
     perevod: "пересечение или проезд",
     category: "noun",
     example: "Reduce la velocidad en travesías urbanas",
-    topics: [],
   },
   {
     word: "túnel",
@@ -2984,7 +2630,6 @@ window.vocabularyData = [
     perevod: "туннель",
     category: "noun",
     example: "Enciende las luces en el túnel",
-    topics: ["topic04"],
   },
   {
     word: "únicamente",
@@ -2992,7 +2637,6 @@ window.vocabularyData = [
     perevod: "только или исключительно",
     category: "adverb",
     example: "Únicamente los vehículos autorizados pueden usar este carril.",
-    topics: ["topic04", "topic11"],
   },
   {
     word: "urbano",
@@ -3000,7 +2644,6 @@ window.vocabularyData = [
     perevod: "городской или город",
     category: "adjective",
     example: "En zona urbana la velocidad es 50 km/h",
-    topics: ["topic09"],
   },
   {
     word: "usar",
@@ -3008,7 +2651,6 @@ window.vocabularyData = [
     perevod: "использовать",
     category: "verb",
     example: "Usa siempre el cinturón de seguridad",
-    topics: ["topic11"],
   },
   {
     word: "usuario",
@@ -3016,7 +2658,6 @@ window.vocabularyData = [
     perevod: "пользователь",
     category: "noun",
     example: "Todo usuario de la vía debe cumplir las normas",
-    topics: ["topic04", "topic07"],
   },
   {
     word: "vado",
@@ -3024,7 +2665,6 @@ window.vocabularyData = [
     perevod: "Доступ к дороге",
     category: "noun",
     example: "No obstruyas el vado señalizado.",
-    topics: ["topic09"],
   },
   {
     word: "válido",
@@ -3032,7 +2672,6 @@ window.vocabularyData = [
     perevod: "действительный",
     category: "adjective",
     example: "El permiso de conducir debe estar válido.",
-    topics: ["topic03"],
   },
   {
     word: "VAO",
@@ -3040,7 +2679,6 @@ window.vocabularyData = [
     perevod: "Высокопроизводительный автомобиль",
     category: "noun",
     example: "Los VAO pueden usar este carril.",
-    topics: ["topic02", "topic04", "topic11"],
   },
   {
     word: "vehículo",
@@ -3048,7 +2686,6 @@ window.vocabularyData = [
     perevod: "транспортное средство",
     category: "noun",
     example: "El vehículo debe estar matriculado",
-    topics: ["topic02"],
   },
   {
     word: "vehículo piloto",
@@ -3056,7 +2693,6 @@ window.vocabularyData = [
     perevod: "пилотный автомобиль",
     category: "noun",
     example: "El vehículo piloto acompaña cargas especiales.",
-    topics: ["topic02"],
   },
   {
     word: "velocidad",
@@ -3064,7 +2700,6 @@ window.vocabularyData = [
     perevod: "скорость",
     category: "noun",
     example: "Respeta los límites de velocidad",
-    topics: [],
   },
   {
     word: "verificar",
@@ -3072,7 +2707,6 @@ window.vocabularyData = [
     perevod: "Чтобы проверить",
     category: "verb",
     example: "Verifica que la documentación esté en regla.",
-    topics: ["topic06"],
   },
   {
     word: "vía",
@@ -3080,7 +2714,6 @@ window.vocabularyData = [
     perevod: "дорога или путь",
     category: "noun",
     example: "La vía pública es de todos",
-    topics: ["topic04"],
   },
   {
     word: "vía de servicio",
@@ -3088,7 +2721,6 @@ window.vocabularyData = [
     perevod: "сервисная дорога",
     category: "noun",
     example: "La vía de servicio da acceso a los servicios.",
-    topics: ["topic04"],
   },
   {
     word: "viejo",
@@ -3096,7 +2728,6 @@ window.vocabularyData = [
     perevod: "старый",
     category: "adjective",
     example: "Un coche viejo puede ser menos seguro.",
-    topics: [],
   },
   {
     word: "vigente",
@@ -3104,7 +2735,6 @@ window.vocabularyData = [
     perevod: "ток или в силе",
     category: "adjective",
     example: "La normativa vigente es de 2003.",
-    topics: ["topic06", "topic07"],
   },
   {
     word: "vigilancia del tráfico",
@@ -3112,7 +2742,6 @@ window.vocabularyData = [
     perevod: "Наблюдение за дорожным движением",
     category: "noun",
     example: "La vigilancia del tráfico es constante.",
-    topics: ["topic04"],
   },
   {
     word: "visibilidad",
@@ -3120,7 +2749,6 @@ window.vocabularyData = [
     perevod: "видимость",
     category: "noun",
     example: "La visibilidad era reducida debido a la niebla.",
-    topics: ["topic05", "topic11"],
   },
   {
     word: "visible",
@@ -3128,7 +2756,6 @@ window.vocabularyData = [
     perevod: "видимый",
     category: "adjective",
     example: "La matrícula debe ser visible",
-    topics: [],
   },
   {
     word: "visibles",
@@ -3136,7 +2763,6 @@ window.vocabularyData = [
     perevod: "видимый",
     category: "noun",
     example: "metros como mínimo y visibles",
-    topics: [],
   },
   {
     word: "vulnerable",
@@ -3144,7 +2770,6 @@ window.vocabularyData = [
     perevod: "уязвимый",
     category: "adjective",
     example: "Los ciclistas son usuarios vulnerables",
-    topics: ["topic01"],
   },
   {
     word: "vulnerar",
@@ -3152,7 +2777,6 @@ window.vocabularyData = [
     perevod: "нарушать",
     category: "verb",
     example: "No vulneres la prioridad de paso en las intersecciones.",
-    topics: ["topic09"],
   },
   {
     word: "zona",
@@ -3160,15 +2784,14 @@ window.vocabularyData = [
     perevod: "зона",
     category: "noun",
     example: "Esta es una zona de velocidad limitada.",
-    topics: ["topic09"],
   },
   {
     word: "zona de carga y descarga",
     translation: "loading and unloading zone",
     perevod: "зона погрузки и разгрузки",
     category: "noun",
-    example: "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
-    topics: ["topic02", "topic09", "topic11", "topic13"],
+    example:
+      "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
   },
   {
     word: "zona escolar",
@@ -3176,7 +2799,6 @@ window.vocabularyData = [
     perevod: "школьная зона",
     category: "noun",
     example: "En la zona escolar, reduce la velocidad.",
-    topics: ["topic09"],
   },
   {
     word: "zona peatonal",
@@ -3184,7 +2806,6 @@ window.vocabularyData = [
     perevod: "пешеходная зона",
     category: "noun",
     example: "No se puede circular por la zona peatonal.",
-    topics: ["topic01", "topic09", "topic10"],
   },
   {
     word: "zona residencial",
@@ -3192,7 +2813,6 @@ window.vocabularyData = [
     perevod: "жилой район",
     category: "noun",
     example: "En zona residencial, la velocidad máxima es 30 km/h.",
-    topics: ["topic09"],
   },
   {
     word: "zona urbana",
@@ -3200,7 +2820,6 @@ window.vocabularyData = [
     perevod: "городская зона",
     category: "noun",
     example: "En zona urbana, la velocidad máxima es de 50 km/h.",
-    topics: ["topic09"],
   },
   {
     word: "zona verde",
@@ -3208,7 +2827,6 @@ window.vocabularyData = [
     perevod: "зеленая зона",
     category: "noun",
     example: "La zona verde es para residentes.",
-    topics: ["topic09"],
   },
   {
     word: "zona azul",
@@ -3216,7 +2834,6 @@ window.vocabularyData = [
     perevod: "синяя зона",
     category: "noun",
     example: "En la zona azul, debes pagar por aparcar.",
-    topics: ["topic09"],
   },
   {
     word: "zona de aparcamiento",
@@ -3224,7 +2841,6 @@ window.vocabularyData = [
     perevod: "зона парковки",
     category: "noun",
     example: "Esta es una zona de aparcamiento regulado.",
-    topics: ["topic09"],
   },
   {
     word: "zona de obras",
@@ -3232,7 +2848,6 @@ window.vocabularyData = [
     perevod: "зона строительства",
     category: "noun",
     example: "En la zona de obras, reduce la velocidad.",
-    topics: ["topic09"],
   },
   {
     word: "zona de peligro",
@@ -3240,7 +2855,6 @@ window.vocabularyData = [
     perevod: "зона опасности",
     category: "noun",
     example: "En la zona de peligro, aumenta la precaución.",
-    topics: ["topic09", "topic11"],
   },
   {
     word: "zona de descanso",
@@ -3248,7 +2862,6 @@ window.vocabularyData = [
     perevod: "зона отдыха",
     category: "noun",
     example: "La zona de descanso es ideal para parar y descansar.",
-    topics: ["topic09", "topic10"],
   },
   {
     word: "zona de servicio",
@@ -3256,7 +2869,6 @@ window.vocabularyData = [
     perevod: "зона обслуживания",
     category: "noun",
     example: "La zona de servicio ofrece combustible y comida.",
-    topics: ["topic01", "topic08", "topic09"],
   },
   {
     word: "zona de tráfico lento",
@@ -3264,7 +2876,6 @@ window.vocabularyData = [
     perevod: "зона медленного движения",
     category: "noun",
     example: "En la zona de tráfico lento, reduce la velocidad.",
-    topics: ["topic04", "topic09"],
   },
   {
     word: "zona de peligro biológico",
@@ -3272,111 +2883,110 @@ window.vocabularyData = [
     perevod: "зона биологической опасности",
     category: "noun",
     example: "En la zona de peligro biológico, sigue las indicaciones.",
-    topics: ["topic09"],
   },
   {
     word: "pueden",
     translation: "the can",
     perevod: "они могут",
     category: "noun",
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
-    topics: ["topic11"],
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "perder",
     translation: "to lose",
     perevod: "терять",
     category: "verb",
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
-    topics: ["topic11"],
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "eficacia",
     translation: "efficiency",
     perevod: "эффективность",
     category: "noun",
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
-    topics: ["topic11"],
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "abrochado",
     translation: "buckled",
     perevod: "застегнуть",
     category: "adjective",
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
-    topics: ["topic11"],
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "suspensión",
     translation: "suspencion",
     perevod: "подвеска",
     category: "noun",
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
-    topics: [],
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "amortiguadores",
     translation: "amortiza",
     perevod: "амортизаторы",
     category: "noun",
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
-    topics: [],
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "reposacabezas",
     translation: "headrests",
     perevod: "подголовники",
     category: "noun",
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
-    topics: [],
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "personas",
     translation: "people",
     perevod: "люди",
     category: "noun",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "provistas",
     translation: "provided",
     perevod: "при условии",
     category: "noun",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "certificado",
     translation: "certification",
     perevod: "сертификат",
     category: "adjective",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "médico",
     translation: "médico (doctor)",
     perevod: "врачом",
     category: "adjective",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "exentas",
     translation: "exempt",
     perevod: "освобожден",
     category: "noun",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "utilizar",
     translation: "to use",
     perevod: "использовать",
     category: "verb",
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-    topics: ["topic11"],
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "casco",
@@ -3384,126 +2994,138 @@ window.vocabularyData = [
     perevod: "автошлем",
     category: "noun",
     example: "casco",
-    topics: ["topic11"],
   },
   {
     word: "convencional",
     translation: "conventional",
     perevod: "обычная",
     category: "adjective",
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
     topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "pavimentado",
     translation: "paved",
     perevod: "с твердым покрытием",
     category: "adjective",
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
     topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "máxima",
     translation: "maximum",
     perevod: "максимальная",
     category: "noun",
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
     topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "camión?",
     translation: "truck",
     perevod: "грузовик",
     category: "noun",
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
     topics: ["topic04"],
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "turismo",
     translation: "tourism",
     perevod: "легковая машина",
     category: "noun",
-    example: "Un turismo que arrastra un remolque ligero",
     topics: ["topic01"],
+    example: "Un turismo que arrastra un remolque ligero",
   },
   {
     word: "arrastra",
     translation: "drag",
     perevod: "тащить",
     category: "verb",
-    example: "Un turismo que arrastra un remolque ligero",
     topics: ["topic02"],
+    example: "Un turismo que arrastra un remolque ligero",
   },
   {
     word: "calle",
     translation: "calle (street)",
     perevod: "улица",
     category: "noun",
-    example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
     topics: ["topic04"],
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
     word: "limitación",
     translation: "limitation",
     perevod: "ограничение",
     category: "noun",
-    example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
     topics: ["topic04"],
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
     word: "automóviles",
     translation: "automobiles",
     perevod: "легковые автомобили",
     category: "noun",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
     topics: ["topic01"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "considera",
     translation: "to consider",
     perevod: "рассмотреть",
     category: "verb",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
-    topics: ["topic04", "topic07"],
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "anormalmente",
     translation: "abnormally",
     perevod: "ненормально",
     category: "adverb",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
-    topics: ["topic04", "topic07"],
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "reducida",
     translation: "reduced",
     perevod: "уменьшенный",
     category: "adjective",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
     topics: ["topic04"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "causa",
     translation: "causes",
     perevod: "причина",
     category: "noun",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
-    topics: ["topic04", "topic07"],
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "justificada",
     translation: "justified",
     perevod: "оправдание",
     category: "adjective",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
-    topics: ["topic04", "topic07"],
+    topics: [],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "turismos",
     translation: "saloons",
     perevod: "пассажирские автомобили",
     category: "noun",
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
     topics: ["topic01"],
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
 ];
