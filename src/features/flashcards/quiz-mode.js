@@ -52,7 +52,6 @@ class QuizMode {
           <div class="flashcard-container" style="max-width: 500px; margin: 0 auto;">
             <div class="flashcard">
               <div class="card-face card-front" style="background: var(--color-warning); color: white;">
-                <div class="category-badge" style="background: rgba(255,255,255,0.2); color: white;">⚠️ Not enough cards for quiz</div>
                 <div class="spanish-word">Need at least 2 unknown cards for quiz mode.</div>
               </div>
               <div class="card-face card-back">
