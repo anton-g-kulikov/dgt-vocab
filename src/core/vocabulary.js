@@ -8,7 +8,8 @@ window.vocabularyData = [
     perevod: "застегнуть",
     category: "adjective",
     topics: ["topic11"],
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "accidente",
@@ -24,7 +25,8 @@ window.vocabularyData = [
     perevod: "масло",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "acomodos",
@@ -32,7 +34,8 @@ window.vocabularyData = [
     perevod: "размещение",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "acondicionarse",
@@ -40,7 +43,8 @@ window.vocabularyData = [
     perevod: "адаптироваться или приспосабливаться",
     category: "verb",
     topics: ["topic11"],
-    example: "El conductor debe acondicionarse a las circunstancias del tráfico.",
+    example:
+      "El conductor debe acondicionarse a las circunstancias del tráfico.",
   },
   {
     word: "aconsejable",
@@ -48,7 +52,8 @@ window.vocabularyData = [
     perevod: "желательно",
     category: "noun",
     topics: ["topic11"],
-    example: "Como norma general, es aconsejable mantener con el vehículo que circula delante",
+    example:
+      "Como norma general, es aconsejable mantener con el vehículo que circula delante",
   },
   {
     word: "acreditar",
@@ -96,7 +101,8 @@ window.vocabularyData = [
     perevod: "правильно",
     category: "adverb",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "adecuado",
@@ -128,7 +134,8 @@ window.vocabularyData = [
     perevod: "продвигаться",
     category: "verb",
     topics: ["topic10"],
-    example: "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
+    example:
+      "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
   },
   {
     word: "adicional",
@@ -184,7 +191,8 @@ window.vocabularyData = [
     perevod: "вода",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "alcohol",
@@ -192,7 +200,8 @@ window.vocabularyData = [
     perevod: "алкоголь",
     category: "noun",
     topics: [],
-    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+    example:
+      "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "alcoholemia",
@@ -240,7 +249,8 @@ window.vocabularyData = [
     perevod: "изменения",
     category: "noun",
     topics: [],
-    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+    example:
+      "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "alumbrado",
@@ -256,7 +266,8 @@ window.vocabularyData = [
     perevod: "амортизаторы",
     category: "noun",
     topics: [],
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "analgésico",
@@ -280,7 +291,8 @@ window.vocabularyData = [
     perevod: "ненормально",
     category: "adverb",
     topics: [],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "ansiedad",
@@ -288,7 +300,8 @@ window.vocabularyData = [
     perevod: "беспокойство",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "antelación",
@@ -312,7 +325,8 @@ window.vocabularyData = [
     perevod: "до",
     category: "noun",
     topics: [],
-    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    example:
+      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "anunciarle",
@@ -352,7 +366,8 @@ window.vocabularyData = [
     perevod: "появление",
     category: "noun",
     topics: ["topic11"],
-    example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+    example:
+      "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
     word: "apartadero",
@@ -448,7 +463,8 @@ window.vocabularyData = [
     perevod: "убеждаться",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "asfalto",
@@ -456,7 +472,8 @@ window.vocabularyData = [
     perevod: "асфальт",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "asiento",
@@ -496,7 +513,8 @@ window.vocabularyData = [
     perevod: "назад",
     category: "noun",
     topics: ["topic10"],
-    example: "circular marcha atrás como maniobra complementaria de otras maniobras",
+    example:
+      "circular marcha atrás como maniobra complementaria de otras maniobras",
   },
   {
     word: "atropellar",
@@ -528,7 +546,8 @@ window.vocabularyData = [
     perevod: "хотя",
     category: "noun",
     topics: ["topic10"],
-    example: "realizar sin peligro, aunque tenga que invadir el sentido contrario",
+    example:
+      "realizar sin peligro, aunque tenga que invadir el sentido contrario",
   },
   {
     word: "autobús",
@@ -544,7 +563,8 @@ window.vocabularyData = [
     perevod: "автоматически",
     category: "adverb",
     topics: [],
-    example: "El sistema de frenado se activa automáticamente en caso de peligro.",
+    example:
+      "El sistema de frenado se activa automáticamente en caso de peligro.",
   },
   {
     word: "automóviles",
@@ -552,7 +572,8 @@ window.vocabularyData = [
     perevod: "легковые автомобили",
     category: "noun",
     topics: ["topic01"],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "autopista",
@@ -640,7 +661,8 @@ window.vocabularyData = [
     perevod: "группа",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "blandos",
@@ -688,7 +710,8 @@ window.vocabularyData = [
     perevod: "зевает",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "bruscos",
@@ -696,7 +719,8 @@ window.vocabularyData = [
     perevod: "резкий",
     category: "noun",
     topics: ["topic11"],
-    example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
+    example:
+      "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
     word: "caballería",
@@ -736,7 +760,8 @@ window.vocabularyData = [
     perevod: "коробка",
     category: "noun",
     topics: ["topic10"],
-    example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
+    example:
+      "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
   },
   {
     word: "caliente",
@@ -744,7 +769,8 @@ window.vocabularyData = [
     perevod: "горячий",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "calle",
@@ -752,7 +778,8 @@ window.vocabularyData = [
     perevod: "улица",
     category: "noun",
     topics: ["topic04"],
-    example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
     word: "calzada",
@@ -768,7 +795,8 @@ window.vocabularyData = [
     perevod: "чурки",
     category: "noun",
     topics: ["topic10"],
-    example: "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
+    example:
+      "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
   },
   {
     word: "cambiar",
@@ -784,7 +812,8 @@ window.vocabularyData = [
     perevod: "изменять",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "cambio",
@@ -808,7 +837,8 @@ window.vocabularyData = [
     perevod: "грузовик",
     category: "noun",
     topics: ["topic04"],
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "campo",
@@ -832,7 +862,8 @@ window.vocabularyData = [
     perevod: "слой",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "capacidad",
@@ -936,7 +967,8 @@ window.vocabularyData = [
     perevod: "случай",
     category: "noun",
     topics: [],
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "causa",
@@ -944,7 +976,8 @@ window.vocabularyData = [
     perevod: "причина",
     category: "noun",
     topics: [],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "cebreado",
@@ -992,7 +1025,8 @@ window.vocabularyData = [
     perevod: "сертификат",
     category: "adjective",
     topics: [],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "charcos",
@@ -1000,7 +1034,8 @@ window.vocabularyData = [
     perevod: "лужи",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "ciclista",
@@ -1032,7 +1067,8 @@ window.vocabularyData = [
     perevod: "циркуляция",
     category: "noun",
     topics: [],
-    example: "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
+    example:
+      "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
   },
   {
     word: "circulación",
@@ -1056,7 +1092,8 @@ window.vocabularyData = [
     perevod: "обстоятельства",
     category: "noun",
     topics: ["topic11"],
-    example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+    example:
+      "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
     word: "claro",
@@ -1088,7 +1125,8 @@ window.vocabularyData = [
     perevod: "размещен",
     category: "adjective",
     topics: ["topic10"],
-    example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
+    example:
+      "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
   },
   {
     word: "colocar",
@@ -1104,7 +1142,8 @@ window.vocabularyData = [
     perevod: "поместить",
     category: "verb",
     topics: [],
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "comida",
@@ -1112,7 +1151,8 @@ window.vocabularyData = [
     perevod: "еда",
     category: "noun",
     topics: [],
-    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    example:
+      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "comidas",
@@ -1168,7 +1208,8 @@ window.vocabularyData = [
     perevod: "дополнительный",
     category: "noun",
     topics: ["topic10"],
-    example: "circular marcha atrás como maniobra complementaria de otras maniobras",
+    example:
+      "circular marcha atrás como maniobra complementaria de otras maniobras",
   },
   {
     word: "complemento",
@@ -1200,7 +1241,8 @@ window.vocabularyData = [
     perevod: "поведение",
     category: "noun",
     topics: [],
-    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+    example:
+      "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "comprobar",
@@ -1232,7 +1274,8 @@ window.vocabularyData = [
     perevod: "концентраты",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "conducción",
@@ -1288,7 +1331,8 @@ window.vocabularyData = [
     perevod: "рассмотреть",
     category: "verb",
     topics: [],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "constituir",
@@ -1344,7 +1388,8 @@ window.vocabularyData = [
     perevod: "обычная",
     category: "adjective",
     topics: ["topic04"],
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "convenientemente",
@@ -1408,7 +1453,8 @@ window.vocabularyData = [
     perevod: "создание",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "cruce",
@@ -1472,7 +1518,8 @@ window.vocabularyData = [
     perevod: "они должны",
     category: "verb",
     topics: [],
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "deber",
@@ -1520,7 +1567,8 @@ window.vocabularyData = [
     perevod: "перед",
     category: "noun",
     topics: ["topic11"],
-    example: "Como norma general, es aconsejable mantener con el vehículo que circula delante",
+    example:
+      "Como norma general, es aconsejable mantener con el vehículo que circula delante",
   },
   {
     word: "delanteras",
@@ -1528,7 +1576,8 @@ window.vocabularyData = [
     perevod: "вперед",
     category: "noun",
     topics: ["topic10"],
-    example: "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
+    example:
+      "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
   },
   {
     word: "demasiado",
@@ -1568,7 +1617,8 @@ window.vocabularyData = [
     perevod: "депрессия",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "deprisa",
@@ -1576,7 +1626,8 @@ window.vocabularyData = [
     perevod: "быстро",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "derecha",
@@ -1584,7 +1635,8 @@ window.vocabularyData = [
     perevod: "правая",
     category: "noun",
     topics: ["topic10"],
-    example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+    example:
+      "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
     word: "derecho",
@@ -1616,7 +1668,8 @@ window.vocabularyData = [
     perevod: "от",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "deslizamiento",
@@ -1624,7 +1677,8 @@ window.vocabularyData = [
     perevod: "скольжение",
     category: "noun",
     topics: ["topic11"],
-    example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
+    example:
+      "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
     word: "deslumbramiento",
@@ -1656,7 +1710,8 @@ window.vocabularyData = [
     perevod: "предназначенный",
     category: "adjective",
     topics: ["topic10"],
-    example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+    example:
+      "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
   },
   {
     word: "desviar",
@@ -1704,7 +1759,8 @@ window.vocabularyData = [
     perevod: "определенный",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "determinar",
@@ -1736,7 +1792,8 @@ window.vocabularyData = [
     perevod: "рисунок",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "difícil",
@@ -1792,7 +1849,8 @@ window.vocabularyData = [
     perevod: "имеет",
     category: "noun",
     topics: ["topic10"],
-    example: "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
+    example:
+      "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
   },
   {
     word: "disposición",
@@ -1832,7 +1890,8 @@ window.vocabularyData = [
     perevod: "расстояние",
     category: "noun",
     topics: [],
-    example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
+    example:
+      "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
     word: "distintivo de nacionalidad",
@@ -1936,7 +1995,8 @@ window.vocabularyData = [
     perevod: "эффективность",
     category: "noun",
     topics: [],
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "eficaz",
@@ -1960,7 +2020,8 @@ window.vocabularyData = [
     perevod: "ось",
     category: "noun",
     topics: ["topic10"],
-    example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+    example:
+      "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
   },
   {
     word: "elevado",
@@ -2008,7 +2069,8 @@ window.vocabularyData = [
     perevod: "находить",
     category: "verb",
     topics: ["topic10"],
-    example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+    example:
+      "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
     word: "enlace",
@@ -2024,7 +2086,8 @@ window.vocabularyData = [
     perevod: "вокруг",
     category: "noun",
     topics: ["topic11"],
-    example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+    example:
+      "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
     word: "entrar",
@@ -2048,7 +2111,8 @@ window.vocabularyData = [
     perevod: "пространство",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "especial",
@@ -2144,7 +2208,8 @@ window.vocabularyData = [
     perevod: "стимул",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "estómago",
@@ -2168,7 +2233,8 @@ window.vocabularyData = [
     perevod: "портиться",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "estupefacientes",
@@ -2192,7 +2258,8 @@ window.vocabularyData = [
     perevod: "избегать",
     category: "verb",
     topics: ["topic11"],
-    example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
+    example:
+      "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
     word: "excepcional",
@@ -2208,7 +2275,8 @@ window.vocabularyData = [
     perevod: "исключительно",
     category: "adverb",
     topics: [],
-    example: "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
+    example:
+      "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
   },
   {
     word: "excepto",
@@ -2256,7 +2324,8 @@ window.vocabularyData = [
     perevod: "освобожден",
     category: "noun",
     topics: [],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "exento",
@@ -2280,7 +2349,8 @@ window.vocabularyData = [
     perevod: "существует",
     category: "noun",
     topics: ["topic10"],
-    example: "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
+    example:
+      "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
   },
   {
     word: "expedir",
@@ -2328,7 +2398,8 @@ window.vocabularyData = [
     perevod: "крайне",
     category: "adjective",
     topics: ["topic10"],
-    example: "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
+    example:
+      "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
   },
   {
     word: "facilitar",
@@ -2352,7 +2423,8 @@ window.vocabularyData = [
     perevod: "усталость",
     category: "noun",
     topics: ["topic11"],
-    example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+    example:
+      "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
     word: "fatigado",
@@ -2360,7 +2432,8 @@ window.vocabularyData = [
     perevod: "усталый",
     category: "adjective",
     topics: ["topic11"],
-    example: "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
+    example:
+      "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
   },
   {
     word: "favorecen",
@@ -2368,7 +2441,8 @@ window.vocabularyData = [
     perevod: "услуга",
     category: "noun",
     topics: ["topic11"],
-    example: "Qué circunstancias del entorno favorecen la aparición de la fatiga",
+    example:
+      "Qué circunstancias del entorno favorecen la aparición de la fatiga",
   },
   {
     word: "fijo",
@@ -2392,7 +2466,8 @@ window.vocabularyData = [
     perevod: "конец",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "finalización",
@@ -2424,7 +2499,8 @@ window.vocabularyData = [
     perevod: "формирование",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "frecuente",
@@ -2440,7 +2516,8 @@ window.vocabularyData = [
     perevod: "тормоза",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "frenar",
@@ -2448,7 +2525,8 @@ window.vocabularyData = [
     perevod: "бордюр",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "frenos",
@@ -2456,7 +2534,8 @@ window.vocabularyData = [
     perevod: "тормоза",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "fuera",
@@ -2464,7 +2543,8 @@ window.vocabularyData = [
     perevod: "вне",
     category: "noun",
     topics: ["topic10"],
-    example: "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
+    example:
+      "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
   },
   {
     word: "fuerte",
@@ -2480,7 +2560,8 @@ window.vocabularyData = [
     perevod: "сильный",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "fuerza",
@@ -2512,7 +2593,8 @@ window.vocabularyData = [
     perevod: "в целом",
     category: "adverb",
     topics: [],
-    example: "Generalmente, los límites de velocidad son menores en zonas urbanas.",
+    example:
+      "Generalmente, los límites de velocidad son menores en zonas urbanas.",
   },
   {
     word: "gestión del tráfico",
@@ -2568,7 +2650,8 @@ window.vocabularyData = [
     perevod: "большой",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "grave",
@@ -2616,7 +2699,8 @@ window.vocabularyData = [
     perevod: "уполномоченный",
     category: "adjective",
     topics: [],
-    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+    example:
+      "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
     word: "habitual",
@@ -2648,7 +2732,8 @@ window.vocabularyData = [
     perevod: "становиться",
     category: "noun",
     topics: [],
-    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+    example:
+      "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
     word: "hacia",
@@ -2656,7 +2741,8 @@ window.vocabularyData = [
     perevod: "к",
     category: "noun",
     topics: ["topic10"],
-    example: "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
+    example:
+      "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
   },
   {
     word: "harían",
@@ -2664,7 +2750,8 @@ window.vocabularyData = [
     perevod: "будет делать",
     category: "noun",
     topics: ["topic11"],
-    example: "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
+    example:
+      "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
   },
   {
     word: "hasta",
@@ -2680,7 +2767,8 @@ window.vocabularyData = [
     perevod: "есть",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "haya",
@@ -2760,7 +2848,8 @@ window.vocabularyData = [
     perevod: "неадекватный",
     category: "adjective",
     topics: [],
-    example: "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
+    example:
+      "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
   },
   {
     word: "incómodo",
@@ -2784,7 +2873,8 @@ window.vocabularyData = [
     perevod: "включение",
     category: "noun",
     topics: ["topic10"],
-    example: "trate de parada, estacionamiento o incorporación a la circulación",
+    example:
+      "trate de parada, estacionamiento o incorporación a la circulación",
   },
   {
     word: "incorporándose",
@@ -2848,7 +2938,8 @@ window.vocabularyData = [
     perevod: "раздутый",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "informar",
@@ -2880,7 +2971,8 @@ window.vocabularyData = [
     perevod: "исходный",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "iniciar",
@@ -3000,7 +3092,8 @@ window.vocabularyData = [
     perevod: "прерывистый",
     category: "noun",
     topics: ["topic10"],
-    example: "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
+    example:
+      "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
   },
   {
     word: "interrumpir",
@@ -3032,7 +3125,8 @@ window.vocabularyData = [
     perevod: "вторгаться",
     category: "verb",
     topics: ["topic10"],
-    example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+    example:
+      "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
   },
   {
     word: "inválido",
@@ -3072,7 +3166,8 @@ window.vocabularyData = [
     perevod: "вместе",
     category: "noun",
     topics: ["topic10"],
-    example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+    example:
+      "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
   },
   {
     word: "justificada",
@@ -3080,7 +3175,8 @@ window.vocabularyData = [
     perevod: "оправдание",
     category: "adjective",
     topics: [],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "justificar",
@@ -3144,7 +3240,8 @@ window.vocabularyData = [
     perevod: "ограничение",
     category: "noun",
     topics: ["topic04"],
-    example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+    example:
+      "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
   },
   {
     word: "límite",
@@ -3184,7 +3281,8 @@ window.vocabularyData = [
     perevod: "называют",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "llegue",
@@ -3264,7 +3362,8 @@ window.vocabularyData = [
     perevod: "маневры",
     category: "noun",
     topics: ["topic10"],
-    example: "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
+    example:
+      "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
   },
   {
     word: "manos",
@@ -3288,7 +3387,8 @@ window.vocabularyData = [
     perevod: "поддерживает",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "marca",
@@ -3312,7 +3412,8 @@ window.vocabularyData = [
     perevod: "маневрировать",
     category: "noun",
     topics: ["topic10"],
-    example: "circular marcha atrás como maniobra complementaria de otras maniobras",
+    example:
+      "circular marcha atrás como maniobra complementaria de otras maniobras",
   },
   {
     word: "masa máxima autorizada",
@@ -3328,7 +3429,8 @@ window.vocabularyData = [
     perevod: "предметы",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "matrícula",
@@ -3352,7 +3454,8 @@ window.vocabularyData = [
     perevod: "максимальная",
     category: "noun",
     topics: ["topic04"],
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "máximo",
@@ -3392,7 +3495,8 @@ window.vocabularyData = [
     perevod: "врачом",
     category: "adjective",
     topics: [],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "menos",
@@ -3400,7 +3504,8 @@ window.vocabularyData = [
     perevod: "меньше",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "mercancías peligrosas",
@@ -3424,7 +3529,8 @@ window.vocabularyData = [
     perevod: "смешивание",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "mientras",
@@ -3432,7 +3538,8 @@ window.vocabularyData = [
     perevod: "пока",
     category: "noun",
     topics: ["topic11"],
-    example: "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
+    example:
+      "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
   },
   {
     word: "mínimo",
@@ -3480,7 +3587,8 @@ window.vocabularyData = [
     perevod: "такой же",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "modificar",
@@ -3496,7 +3604,8 @@ window.vocabularyData = [
     perevod: "мокрые",
     category: "adjective",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "molestias",
@@ -3504,7 +3613,8 @@ window.vocabularyData = [
     perevod: "дискомфорт",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "mostrar",
@@ -3528,7 +3638,8 @@ window.vocabularyData = [
     perevod: "двигатель",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "motorizado",
@@ -3568,7 +3679,8 @@ window.vocabularyData = [
     perevod: "мускулистый",
     category: "verb",
     topics: [],
-    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    example:
+      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "muy",
@@ -3600,7 +3712,8 @@ window.vocabularyData = [
     perevod: "шины",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "niebla",
@@ -3628,8 +3741,8 @@ window.vocabularyData = [
   },
   {
     word: "nivel",
-    translation: "train",
-    perevod: "жд",
+    translation: "level",
+    perevod: "уровень",
     category: "noun",
     topics: ["topic04"],
     example: "paso a nivel",
@@ -3680,7 +3793,8 @@ window.vocabularyData = [
     perevod: "затылок",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "nueva",
@@ -3816,7 +3930,8 @@ window.vocabularyData = [
     perevod: "ориентированный",
     category: "adjective",
     topics: ["topic10"],
-    example: "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
+    example:
+      "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
   },
   {
     word: "oscuro",
@@ -3832,7 +3947,8 @@ window.vocabularyData = [
     perevod: "другой",
     category: "noun",
     topics: [],
-    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+    example:
+      "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
     word: "otras",
@@ -3896,7 +4012,8 @@ window.vocabularyData = [
     perevod: "часть",
     category: "noun",
     topics: ["topic04"],
-    example: "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
+    example:
+      "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
   },
   {
     word: "pasajero",
@@ -3944,7 +4061,8 @@ window.vocabularyData = [
     perevod: "таблетки",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "paulatino",
@@ -3960,7 +4078,8 @@ window.vocabularyData = [
     perevod: "с твердым покрытием",
     category: "adjective",
     topics: ["topic04"],
-    example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
+    example:
+      "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
     word: "pavimento",
@@ -4032,7 +4151,8 @@ window.vocabularyData = [
     perevod: "воспринимает",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "percibir",
@@ -4048,7 +4168,8 @@ window.vocabularyData = [
     perevod: "терять",
     category: "verb",
     topics: [],
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "perdiendo",
@@ -4056,7 +4177,8 @@ window.vocabularyData = [
     perevod: "проигрыш",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "permanente",
@@ -4104,7 +4226,8 @@ window.vocabularyData = [
     perevod: "люди",
     category: "noun",
     topics: [],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "pesado",
@@ -4128,7 +4251,8 @@ window.vocabularyData = [
     perevod: "зуд",
     category: "noun",
     topics: [],
-    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    example:
+      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "placa de ensayo",
@@ -4176,7 +4300,8 @@ window.vocabularyData = [
     perevod: "возможность",
     category: "noun",
     topics: ["topic11"],
-    example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
+    example:
+      "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
     word: "posible",
@@ -4224,7 +4349,8 @@ window.vocabularyData = [
     perevod: "позже или после",
     category: "adverb",
     topics: [],
-    example: "Si no llevas la documentación, deberás presentarla posteriormente en la comisaría.",
+    example:
+      "Si no llevas la documentación, deberás presentarla posteriormente en la comisaría.",
   },
   {
     word: "prácticamente",
@@ -4248,7 +4374,8 @@ window.vocabularyData = [
     perevod: "осторожность",
     category: "noun",
     topics: ["topic10"],
-    example: "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
+    example:
+      "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
   },
   {
     word: "preceptivo",
@@ -4264,7 +4391,8 @@ window.vocabularyData = [
     perevod: "осадки",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "preferencia",
@@ -4272,7 +4400,8 @@ window.vocabularyData = [
     perevod: "предпочтение",
     category: "noun",
     topics: ["topic10"],
-    example: "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
+    example:
+      "Encender el intermitente, ¿da preferencia siempre para hacer maniobras",
   },
   {
     word: "preseñalización",
@@ -4304,7 +4433,8 @@ window.vocabularyData = [
     perevod: "ранее или заранее",
     category: "adverb",
     topics: [],
-    example: "El conductor debe advertir previamente su maniobra con las señales reglamentarias.",
+    example:
+      "El conductor debe advertir previamente su maniobra con las señales reglamentarias.",
   },
   {
     word: "previo",
@@ -4320,7 +4450,8 @@ window.vocabularyData = [
     perevod: "первый",
     category: "noun",
     topics: ["topic10"],
-    example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
+    example:
+      "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
   },
   {
     word: "primeras",
@@ -4400,7 +4531,8 @@ window.vocabularyData = [
     perevod: "производит",
     category: "noun",
     topics: [],
-    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+    example:
+      "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "profudidad",
@@ -4408,7 +4540,8 @@ window.vocabularyData = [
     perevod: "глубина",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "prohibido",
@@ -4464,7 +4597,8 @@ window.vocabularyData = [
     perevod: "при условии",
     category: "noun",
     topics: [],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "provocan",
@@ -4504,7 +4638,8 @@ window.vocabularyData = [
     perevod: "может",
     category: "noun",
     topics: [],
-    example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+    example:
+      "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
     word: "pueden",
@@ -4512,7 +4647,8 @@ window.vocabularyData = [
     perevod: "они могут",
     category: "noun",
     topics: [],
-    example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
+    example:
+      "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
     word: "puente móvil",
@@ -4624,7 +4760,8 @@ window.vocabularyData = [
     perevod: "проезжает",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "recto",
@@ -4648,7 +4785,8 @@ window.vocabularyData = [
     perevod: "уменьшенный",
     category: "adjective",
     topics: ["topic04"],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "reducir",
@@ -4744,7 +4882,8 @@ window.vocabularyData = [
     perevod: "расслабляющий",
     category: "noun",
     topics: [],
-    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    example:
+      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "remolcar",
@@ -4776,7 +4915,8 @@ window.vocabularyData = [
     perevod: "подголовники",
     category: "noun",
     topics: [],
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "resbaladiza",
@@ -4784,7 +4924,8 @@ window.vocabularyData = [
     perevod: "скользкий",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "resbaladizas",
@@ -4816,7 +4957,8 @@ window.vocabularyData = [
     perevod: "отвечать",
     category: "noun",
     topics: ["topic11"],
-    example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+    example:
+      "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
   },
   {
     word: "responder",
@@ -4888,7 +5030,8 @@ window.vocabularyData = [
     perevod: "прокатка",
     category: "noun",
     topics: ["topic02"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "rotativo",
@@ -4944,7 +5087,8 @@ window.vocabularyData = [
     perevod: "кроме",
     category: "noun",
     topics: ["topic10"],
-    example: "salvo que la calzada goce de prioridad en la intersección y esté expresamente señalizada",
+    example:
+      "salvo que la calzada goce de prioridad en la intersección y esté expresamente señalizada",
   },
   {
     word: "sanción",
@@ -5088,7 +5232,8 @@ window.vocabularyData = [
     perevod: "обозначено",
     category: "adjective",
     topics: ["topic10"],
-    example: "salvo que la calzada goce de prioridad en la intersección y esté expresamente señalizada",
+    example:
+      "salvo que la calzada goce de prioridad en la intersección y esté expresamente señalizada",
   },
   {
     word: "señalizar",
@@ -5112,7 +5257,8 @@ window.vocabularyData = [
     perevod: "направление",
     category: "noun",
     topics: ["topic10"],
-    example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+    example:
+      "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
     word: "separador",
@@ -5192,7 +5338,8 @@ window.vocabularyData = [
     perevod: "только",
     category: "adverb",
     topics: [],
-    example: "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
+    example:
+      "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
   },
   {
     word: "sólo",
@@ -5224,7 +5371,8 @@ window.vocabularyData = [
     perevod: "подозревать",
     category: "verb",
     topics: ["topic11"],
-    example: "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
+    example:
+      "Mientras conduce, ¿qué síntomas le harían sospechar que está fatigado",
   },
   {
     word: "suceden",
@@ -5240,7 +5388,8 @@ window.vocabularyData = [
     perevod: "случаться",
     category: "verb",
     topics: [],
-    example: "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
+    example:
+      "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
   },
   {
     word: "sucesivo",
@@ -5256,7 +5405,8 @@ window.vocabularyData = [
     perevod: "грязь",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "sucio",
@@ -5288,7 +5438,8 @@ window.vocabularyData = [
     perevod: "достаточно",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+    example:
+      "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
     word: "suficientemente",
@@ -5296,7 +5447,8 @@ window.vocabularyData = [
     perevod: "достаточно",
     category: "adverb",
     topics: ["topic11"],
-    example: "Mantén una distancia suficientemente segura con el vehículo de delante.",
+    example:
+      "Mantén una distancia suficientemente segura con el vehículo de delante.",
   },
   {
     word: "sufrir",
@@ -5312,7 +5464,8 @@ window.vocabularyData = [
     perevod: "поверхность",
     category: "noun",
     topics: [],
-    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    example:
+      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "supone",
@@ -5336,7 +5489,8 @@ window.vocabularyData = [
     perevod: "подвеска",
     category: "noun",
     topics: ["topic11"],
-    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+    example:
+      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "sustancias",
@@ -5416,7 +5570,8 @@ window.vocabularyData = [
     perevod: "временно",
     category: "adverb",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "tenga",
@@ -5424,7 +5579,8 @@ window.vocabularyData = [
     perevod: "иметь",
     category: "noun",
     topics: ["topic10"],
-    example: "realizar sin peligro, aunque tenga que invadir el sentido contrario",
+    example:
+      "realizar sin peligro, aunque tenga que invadir el sentido contrario",
   },
   {
     word: "tiempo",
@@ -5440,7 +5596,8 @@ window.vocabularyData = [
     perevod: "имеет",
     category: "noun",
     topics: ["topic10"],
-    example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
+    example:
+      "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
   },
   {
     word: "toma",
@@ -5456,7 +5613,8 @@ window.vocabularyData = [
     perevod: "взятый",
     category: "adjective",
     topics: ["topic11"],
-    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    example:
+      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "tomamos",
@@ -5496,7 +5654,8 @@ window.vocabularyData = [
     perevod: "проезжей",
     category: "noun",
     topics: ["topic04"],
-    example: "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
+    example:
+      "carretera convencional, ¿se puede parar o estacionar fuera de la parte transitable del arcén",
   },
   {
     word: "transitar",
@@ -5544,7 +5703,8 @@ window.vocabularyData = [
     perevod: "пытаться",
     category: "verb",
     topics: ["topic10"],
-    example: "trate de parada, estacionamiento o incorporación a la circulación",
+    example:
+      "trate de parada, estacionamiento o incorporación a la circulación",
   },
   {
     word: "travesía",
@@ -5584,7 +5744,8 @@ window.vocabularyData = [
     perevod: "пассажирские автомобили",
     category: "noun",
     topics: ["topic01", "topic11"],
-    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    example:
+      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "únicamente",
@@ -5624,7 +5785,8 @@ window.vocabularyData = [
     perevod: "использовать",
     category: "verb",
     topics: ["topic11"],
-    example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+    example:
+      "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
     word: "vacío",
@@ -5688,7 +5850,8 @@ window.vocabularyData = [
     perevod: "транспортные средства",
     category: "noun",
     topics: ["topic10"],
-    example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+    example:
+      "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
     word: "velocidad",
@@ -5712,7 +5875,8 @@ window.vocabularyData = [
     perevod: "лето",
     category: "noun",
     topics: ["topic11"],
-    example: "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
+    example:
+      "Circular un poco más deprisa que en verano con el fin de asegurarse de que el motor se mantiene caliente.",
   },
   {
     word: "verificar",
@@ -5808,7 +5972,8 @@ window.vocabularyData = [
     perevod: "объем",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
   },
   {
     word: "volver",
@@ -5840,7 +6005,8 @@ window.vocabularyData = [
     perevod: "обувь",
     category: "noun",
     topics: ["topic11"],
-    example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+    example:
+      "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
     word: "zona",
@@ -5872,7 +6038,8 @@ window.vocabularyData = [
     perevod: "зона погрузки и разгрузки",
     category: "noun",
     topics: ["topic11"],
-    example: "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
+    example:
+      "Solo vehículos autorizados pueden usar la zona de carga y descarga.",
   },
   {
     word: "zona de descanso",
@@ -5968,6 +6135,7 @@ window.vocabularyData = [
     perevod: "области",
     category: "noun",
     topics: [],
-    example: "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
-  }
+    example:
+      "El volumen de precipitación inicial se concentra en determinadas zonas formándose grandes charcos",
+  },
 ];
