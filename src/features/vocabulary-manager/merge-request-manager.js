@@ -8,7 +8,14 @@ class MergeRequestManager {
   }
 
   setupEventListeners() {
-    // Add event listener to create merge request button
+    // Add event listener to create merge req    summary += `🔧 GIT COMMANDS TO EXECUTE:\n`;
+    summary += `---------------------------\n`;
+    summary += `git checkout -b ${branchName}\n`;
+    summary += `# Replace src/core/vocabulary.js with the downloaded file\n`;
+    summary += `git add src/core/vocabulary.js\n`;
+    summary += `git commit -m "Add ${newWordsCount} new vocabulary words"\n`;
+    summary += `git push origin ${branchName}\n`;
+    summary += `# Then create a pull request on your Git platform\n`;ton
     const createMergeRequestBtn = document.getElementById("createMergeRequest");
     if (createMergeRequestBtn) {
       createMergeRequestBtn.addEventListener("click", () =>
@@ -265,8 +272,8 @@ ${this.vocabApp.vocabularyUpdates
         <ol>
           <li>Click "Download Files" to get the new vocabulary.js file</li>
           <li>Create a new branch: <code>git checkout -b ${branchName}</code></li>
-          <li>Replace your vocabulary.js file with the downloaded version</li>
-          <li>Commit the changes: <code>git add vocabulary.js && git commit -m "Your commit message"</code></li>
+          <li>Replace your src/core/vocabulary.js file with the downloaded version</li>
+          <li>Commit the changes: <code>git add src/core/vocabulary.js && git commit -m "Your commit message"</code></li>
           <li>Push the branch: <code>git push origin ${branchName}</code></li>
           <li>Create a pull request on your Git platform (GitHub, GitLab, etc.)</li>
         </ol>
@@ -411,8 +418,8 @@ ${this.vocabApp.vocabularyUpdates
   // Copy git commands to clipboard
   async copyGitCommands(branchName, commitMessage) {
     const commands = `git checkout -b ${branchName}
-# Replace vocabulary.js with the downloaded file
-git add vocabulary.js
+# Replace src/core/vocabulary.js with the downloaded file
+git add src/core/vocabulary.js
 git commit -m "${commitMessage.replace(/"/g, '\\"')}"
 git push origin ${branchName}
 # Then create a pull request on your Git platform`;

@@ -259,7 +259,7 @@ Total vocabulary size after merge: ${
       const currentFileSha = await this.getFileSha(
         owner,
         repo,
-        "vocabulary.js",
+        "src/core/vocabulary.js",
         token
       );
 
@@ -267,7 +267,7 @@ Total vocabulary size after merge: ${
       await this.updateFile(
         owner,
         repo,
-        "vocabulary.js",
+        "src/core/vocabulary.js",
         updatedContent,
         `Add ${this.vocabManager.vocabApp.vocabularyUpdates.length} new vocabulary words`,
         branchName,
@@ -294,7 +294,7 @@ Total vocabulary size after merge: ${
         <small style="color: #666;">
           <strong>Branch:</strong> ${branchName}<br>
           <strong>Repository:</strong> ${owner}/${repo}<br>
-          <strong>Files Updated:</strong> vocabulary.js<br>
+          <strong>Files Updated:</strong> src/core/vocabulary.js<br>
           <strong>Words Added:</strong> ${this.vocabManager.vocabApp.vocabularyUpdates.length}
         </small>`,
         "success",
