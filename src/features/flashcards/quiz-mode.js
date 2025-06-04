@@ -10,6 +10,74 @@ class QuizMode {
     this.vocabApp.unknownCardsSet = this.vocabApp.unknownCardsSet || new Set();
   }
 
+  // Aggressive shuffle specifically for quiz mode to prevent alphabetical patterns
+  aggressiveShuffleForQuiz(array) {
+    // Step 1: Complete Fisher-Yates shuffle
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+
+    // Step 2: Additional randomization with multiple passes
+    // This ensures no subtle patterns remain from the original order
+    for (let pass = 0; pass < 3; pass++) {
+      for (let i = 0; i < array.length; i++) {
+        const j = Math.floor(Math.random() * array.length);
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+    }
+
+    // Step 3: Apply weighted randomization based on interaction history
+    // but with much more aggressive mixing than the original weightedShuffle
+    this.applyEducationalWeighting(array);
+  }
+
+  // Apply educational weighting but with aggressive randomization
+  applyEducationalWeighting(array) {
+    if (array.length <= 1) return;
+
+    // Create weights based on interaction history (less recent = higher weight)
+    const weights = array.map((card) => {
+      const lastInteraction =
+        this.vocabApp.cardInteractionHistory[card.id] || 0;
+      const timeSinceInteraction = Date.now() - lastInteraction;
+      // Cards that haven't been seen get maximum weight
+      // Cards seen recently get lower weight but still substantial randomness
+      return lastInteraction === 0
+        ? 100
+        : Math.max(
+            10,
+            Math.min(100, Math.floor(timeSinceInteraction / (1000 * 60 * 60)))
+          ); // Hours since interaction
+    });
+
+    // Multiple weighted shuffles with high randomness
+    for (let pass = 0; pass < 2; pass++) {
+      for (let i = 0; i < array.length; i++) {
+        // High chance of swapping with any position, weighted by priority
+        const totalWeight = weights.reduce((sum, w) => sum + w, 0);
+        let randomWeight = Math.random() * totalWeight;
+
+        let targetIndex = 0;
+        for (let k = 0; k < weights.length; k++) {
+          randomWeight -= weights[k];
+          if (randomWeight <= 0) {
+            targetIndex = k;
+            break;
+          }
+        }
+
+        // Add extra randomness - 30% chance to ignore weighting completely
+        if (Math.random() < 0.3) {
+          targetIndex = Math.floor(Math.random() * array.length);
+        }
+
+        [array[i], array[targetIndex]] = [array[targetIndex], array[i]];
+        [weights[i], weights[targetIndex]] = [weights[targetIndex], weights[i]];
+      }
+    }
+  }
+
   startQuiz() {
     console.log("Starting quiz mode...");
 
@@ -81,8 +149,9 @@ class QuizMode {
     // Use the filtered unknown cards
     this.vocabApp.currentCards = [...unknownCards];
 
-    // Sort cards by last interaction time to prioritize older cards
-    this.vocabApp.sortCardsByLastInteraction();
+    // For quiz mode, we want more aggressive randomization
+    // Apply multiple shuffles to ensure truly random order
+    this.aggressiveShuffleForQuiz(this.vocabApp.currentCards);
 
     this.quizScore = 0;
     this.quizTotal = 0;
@@ -107,13 +176,26 @@ class QuizMode {
       return;
     }
 
-    // Select correct card with weighted randomization
-    // Prioritize cards that haven't been interacted with recently (first 50% of sorted array)
-    // but add some randomness to avoid predictable patterns
-    const priorityPoolSize = Math.ceil(unknownCards.length * 0.5);
-    const priorityPool = unknownCards.slice(0, priorityPoolSize);
-    const correctCard =
-      priorityPool[Math.floor(Math.random() * priorityPool.length)];
+    // Select correct card with aggressive randomization
+    // Instead of just using the first 50%, use a more dynamic approach
+    let correctCard;
+
+    if (unknownCards.length <= 5) {
+      // For small sets, completely random selection
+      correctCard =
+        unknownCards[Math.floor(Math.random() * unknownCards.length)];
+    } else {
+      // For larger sets, weighted random selection with high randomness
+      const priorityPoolSize = Math.floor(unknownCards.length * 0.8); // Use 80% instead of 50%
+      const priorityPool = unknownCards.slice(0, priorityPoolSize);
+
+      // Extra shuffle of the priority pool itself
+      this.vocabApp.shuffleArray(priorityPool);
+      this.vocabApp.shuffleArray(priorityPool); // Double shuffle for extra randomness
+
+      correctCard =
+        priorityPool[Math.floor(Math.random() * priorityPool.length)];
+    }
 
     // Track this interaction
     this.vocabApp.trackCardInteraction(correctCard.id);
@@ -129,8 +211,10 @@ class QuizMode {
       (card) => card.id !== correctCard.id
     );
 
-    // Shuffle available wrong options to get random selection
+    // Aggressive shuffling for wrong options to prevent patterns
     this.vocabApp.shuffleArray(availableWrongOptions);
+    this.vocabApp.shuffleArray(availableWrongOptions); // Double shuffle
+    this.vocabApp.shuffleArray(availableWrongOptions); // Triple shuffle for maximum randomness
 
     // Add wrong options from current category cards only
     const translationField =
@@ -182,7 +266,9 @@ class QuizMode {
       }
     }
 
+    // Final aggressive shuffle of all options to ensure random order
     this.vocabApp.shuffleArray(options);
+    this.vocabApp.shuffleArray(options); // Double shuffle for final randomization
 
     // Final validation: ensure we have at least 2 options for a valid quiz
     if (options.length < 2) {
@@ -386,6 +472,9 @@ class QuizMode {
         this.vocabApp.currentCards = this.vocabApp.currentCards.filter(
           (card) => card.id !== correctId
         );
+
+        // Reshuffle remaining cards after each correct answer to ensure randomness
+        this.aggressiveShuffleForQuiz(this.vocabApp.currentCards);
 
         this.vocabApp.updateStats();
 
