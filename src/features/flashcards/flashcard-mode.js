@@ -8,6 +8,21 @@ class FlashcardMode {
     this.waitingForCardClick = false;
   }
 
+  // Use shared aggressive shuffle utility
+  aggressiveShuffleForFlashcards(array) {
+    if (!window.ShuffleUtils) {
+      console.warn("ShuffleUtils not loaded, falling back to basic shuffle");
+      // Fallback to basic Fisher-Yates if utility not loaded
+      for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+      }
+      return array;
+    }
+
+    return window.ShuffleUtils.aggressiveShuffle(array, this.vocabApp);
+  }
+
   populateTopicSelector() {
     // Get the topic selector element from the DOM
     const topicSelector = document.getElementById("topicSelector");
@@ -242,6 +257,11 @@ class FlashcardMode {
     ) {
       this.vocabApp.currentCards.splice(this.vocabApp.currentIndex, 1);
 
+      // Aggressively reshuffle remaining cards to prevent patterns after card removal
+      if (this.vocabApp.currentCards.length > 1) {
+        this.aggressiveShuffleForFlashcards(this.vocabApp.currentCards);
+      }
+
       // Check if this was the last unknown card in the filtered set
       if (this.vocabApp.currentCards.length === 0) {
         // Check if there are any unknown cards left in the filtered set
@@ -257,9 +277,9 @@ class FlashcardMode {
           return;
         } else {
           // There are still unknown cards, but not in current session
-          // Reload the unknown cards
+          // Reload the unknown cards with aggressive shuffling
           this.vocabApp.currentCards = [...unknownFilteredCards];
-          this.vocabApp.sortCardsByLastInteraction();
+          this.aggressiveShuffleForFlashcards(this.vocabApp.currentCards);
           this.vocabApp.currentIndex = 0;
         }
       } else {
@@ -354,8 +374,8 @@ class FlashcardMode {
   }
 
   refreshDisplay() {
-    // Sort by interaction time rather than shuffling
-    this.vocabApp.sortCardsByLastInteraction();
+    // Use aggressive shuffling instead of simple sorting to prevent alphabetical patterns
+    this.aggressiveShuffleForFlashcards(this.vocabApp.currentCards);
     this.vocabApp.currentIndex = 0;
 
     // Ensure card is reset to front side before showing new content
@@ -374,10 +394,10 @@ class FlashcardMode {
     }
   }
 
-  // Replace shuffleCards method with a method that sorts by interaction time
+  // Replace shuffleCards method with aggressive shuffling to prevent patterns
   shuffleCards() {
-    // Instead of shuffling, sort by interaction time
-    this.vocabApp.sortCardsByLastInteraction();
+    // Use aggressive shuffling instead of simple sorting
+    this.aggressiveShuffleForFlashcards(this.vocabApp.currentCards);
     this.vocabApp.currentIndex = 0;
     this.showCurrentCard();
   }

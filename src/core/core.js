@@ -305,8 +305,16 @@ class DGTVocabulary {
       `Current cards after known filter: ${this.currentCards.length}`
     );
 
-    // Sort by interaction time
-    this.sortCardsByLastInteraction();
+    // Apply aggressive shuffling to prevent alphabetical patterns
+    if (
+      this.flashcardMode &&
+      this.flashcardMode.aggressiveShuffleForFlashcards
+    ) {
+      this.flashcardMode.aggressiveShuffleForFlashcards(this.currentCards);
+    } else {
+      // Fallback to old method if flashcard mode isn't available yet
+      this.sortCardsByLastInteraction();
+    }
 
     // Reset index to 0
     this.currentIndex = 0;

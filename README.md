@@ -110,6 +110,7 @@ src/
     ├── cache-manager.js      # PWA cache management
     ├── pwa-installer.js      # PWA installation handler
     ├── reset-progress.js     # Progress reset utility
+    ├── shuffle-utils.js      # Shared shuffling algorithms for flashcards and quiz
     └── script.js             # Main application entry point
 ```
 
@@ -348,6 +349,35 @@ Components communicate using a custom event system:
 - `providerStatusChanged` - Triggered when translation provider status changes
 - `translationManagerReady` - Signals translation manager initialization
 
+### Shuffling Algorithm Architecture
+
+The application implements sophisticated shuffling algorithms to ensure truly random card distribution and prevent alphabetical patterns:
+
+#### Shared Shuffling Utilities (`shuffle-utils.js`)
+
+The shuffling functionality has been abstracted into a reusable utility module that both flashcard and quiz modes utilize:
+
+- **`aggressiveShuffle(array, vocabApp)`** - Main shuffling method combining multiple randomization techniques
+- **`applyEducationalWeighting(array, vocabApp)`** - Smart weighting based on card interaction history
+- **`basicShuffle(array)`** - Simple Fisher-Yates shuffle for basic randomization  
+- **`multiShuffle(array, passes)`** - Multiple shuffle passes for extra randomization
+
+#### Shuffling Algorithm Features
+
+1. **Fisher-Yates Shuffle** - Ensures mathematically sound randomization
+2. **Multiple Randomization Passes** - Eliminates subtle patterns from original ordering
+3. **Educational Weighting** - Prioritizes cards that haven't been seen recently while maintaining randomness
+4. **Fallback Logic** - Graceful degradation if utility fails to load
+5. **Aggressive Anti-Pattern Prevention** - Multiple techniques to prevent alphabetical or other predictable sequences
+
+#### Benefits of Shuffling Abstraction
+
+- **DRY Principle** - No code duplication between flashcard and quiz modes
+- **Consistency** - Both modes use identical shuffling algorithms
+- **Maintainability** - Improvements only need to be made in one location
+- **Flexibility** - Different shuffling methods available for different use cases
+- **Better Randomization** - Prevents alphabetical patterns that could occur after progress resets
+
 ## License
 
 This project is licensed under the MIT License.
@@ -401,6 +431,14 @@ The refactored vocabulary manager provides:
 - **Easier Feature Addition** - Well-defined extension points for new functionality
 
 ## Recent Improvements
+
+### Version 1.2.0 Updates
+
+- **Shuffling Algorithm Abstraction**: Abstracted shuffling functionality into a reusable utility (`shuffle-utils.js`) shared between flashcard and quiz modes
+- **Enhanced Randomization**: Implemented aggressive shuffling algorithms to prevent alphabetical patterns, especially after progress resets
+- **Educational Weighting**: Added smart card prioritization based on interaction history while maintaining high randomness
+- **Code Deduplication**: Eliminated duplicate shuffling code between flashcard and quiz modes for better maintainability
+- **Improved Card Distribution**: Multiple randomization passes ensure truly random card sequences
 
 ### Version 1.1.6 Updates
 
