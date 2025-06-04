@@ -7,6 +7,7 @@ window.vocabularyData = [
     translation: "buckled",
     perevod: "застегнуть",
     category: "adjective",
+    topics: [],
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
@@ -32,6 +33,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic06"],
     example: "Acredita tu identidad con el DNI.",
+  },
+  {
+    word: "actúa",
+    translation: "action",
+    perevod: "действию",
+    category: "noun",
+    topics: ["topic11"],
+    example: "El tiempo desde que ve un peligro hasta que actúa",
   },
   {
     word: "actualmente",
@@ -62,6 +71,7 @@ window.vocabularyData = [
     translation: "to overtake",
     perevod: "чтобы обогнать",
     category: "verb",
+    topics: [],
     example: "Solo adelanta cuando sea seguro",
   },
   {
@@ -69,6 +79,7 @@ window.vocabularyData = [
     translation: "additional",
     perevod: "дополнительный",
     category: "adjective",
+    topics: [],
     example: "Puede haber información adicional en el panel.",
   },
   {
@@ -76,6 +87,7 @@ window.vocabularyData = [
     translation: "to warn",
     perevod: "чтобы предупредить",
     category: "verb",
+    topics: [],
     example: "Advierte del peligro con las luces",
   },
   {
@@ -83,6 +95,7 @@ window.vocabularyData = [
     translation: "officer/agent",
     perevod: "офицер или агент",
     category: "noun",
+    topics: [],
     example: "El agente de tráfico dirige la circulación",
   },
   {
@@ -90,6 +103,7 @@ window.vocabularyData = [
     translation: "alcohol",
     perevod: "алкоголь",
     category: "noun",
+    topics: [],
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
@@ -97,6 +111,7 @@ window.vocabularyData = [
     translation: "blood alcohol test",
     perevod: "анализ алкоголя в крови",
     category: "noun",
+    topics: [],
     example: "El control de alcoholemia es aleatorio.",
   },
   {
@@ -104,6 +119,7 @@ window.vocabularyData = [
     translation: "alcoholic",
     perevod: "алкоголик",
     category: "adjective",
+    topics: [],
     example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
@@ -111,6 +127,7 @@ window.vocabularyData = [
     translation: "alterations",
     perevod: "изменения",
     category: "noun",
+    topics: [],
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
@@ -118,6 +135,7 @@ window.vocabularyData = [
     translation: "lighting",
     perevod: "освещение",
     category: "noun",
+    topics: [],
     example: "El alumbrado público facilita la visión",
   },
   {
@@ -125,6 +143,7 @@ window.vocabularyData = [
     translation: "amortiza",
     perevod: "амортизаторы",
     category: "noun",
+    topics: [],
     example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
@@ -132,6 +151,7 @@ window.vocabularyData = [
     translation: "wide",
     perevod: "широкий",
     category: "adjective",
+    topics: [],
     example: "Carril ancho para adelantar",
   },
   {
@@ -139,6 +159,7 @@ window.vocabularyData = [
     translation: "abnormally",
     perevod: "ненормально",
     category: "adverb",
+    topics: [],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -146,6 +167,7 @@ window.vocabularyData = [
     translation: "previous/front",
     perevod: "предыдущий/передний",
     category: "adjective",
+    topics: [],
     example: "El vehículo anterior frena",
   },
   {
@@ -153,6 +175,7 @@ window.vocabularyData = [
     translation: "before",
     perevod: "до",
     category: "noun",
+    topics: [],
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
@@ -160,6 +183,7 @@ window.vocabularyData = [
     translation: "off/turned off",
     perevod: "выключить или выключить",
     category: "verb",
+    topics: [],
     example: "Motor apagado en semáforos largos",
   },
   {
@@ -167,6 +191,7 @@ window.vocabularyData = [
     translation: "lay-by/pullout",
     perevod: "проложить или вытянуть",
     category: "noun",
+    topics: [],
     example: "Para en el apartadero si es necesario.",
   },
   {
@@ -174,6 +199,7 @@ window.vocabularyData = [
     translation: "lay-by/pullout",
     perevod: "проложить или вытянуть",
     category: "verb",
+    topics: [],
     example: "Utilizó el apartadero para detenerse.",
   },
   {
@@ -181,6 +207,7 @@ window.vocabularyData = [
     translation: "applicable",
     perevod: "применимый",
     category: "adjective",
+    topics: [],
     example: "Esta norma es aplicable a todos los vehículos.",
   },
   {
@@ -188,6 +215,7 @@ window.vocabularyData = [
     translation: "to apply",
     perevod: "подать заявку",
     category: "verb",
+    topics: [],
     example: "Se aplica una multa por exceso de velocidad.",
   },
   {
@@ -195,6 +223,7 @@ window.vocabularyData = [
     translation: "driving learning",
     perevod: "вождение обучения",
     category: "noun",
+    topics: [],
     example: "Vehículo en aprendizaje de conducción.",
   },
   {
@@ -202,6 +231,7 @@ window.vocabularyData = [
     translation: "road shoulder",
     perevod: "обочина",
     category: "noun",
+    topics: [],
     example: "Para en el arcén si es necesario",
   },
   {
@@ -209,6 +239,7 @@ window.vocabularyData = [
     translation: "service area",
     perevod: "зона обслуживания",
     category: "noun",
+    topics: [],
     example: "Para en el área de servicio a repostar.",
   },
   {
@@ -224,6 +255,7 @@ window.vocabularyData = [
     translation: "article",
     perevod: "статья",
     category: "noun",
+    topics: [],
     example: "El artículo 47 regula los adelantamientos.",
   },
   {
@@ -231,6 +263,7 @@ window.vocabularyData = [
     translation: "medical assistance",
     perevod: "медицинская помощь",
     category: "noun",
+    topics: [],
     example: "Ambulancia de asistencia sanitaria.",
   },
   {
@@ -238,6 +271,7 @@ window.vocabularyData = [
     translation: "traffic jam",
     perevod: "пробка",
     category: "noun",
+    topics: [],
     example: "El atasco dura dos horas.",
   },
   {
@@ -245,6 +279,7 @@ window.vocabularyData = [
     translation: "to run over",
     perevod: "переехать",
     category: "verb",
+    topics: [],
     example: "Evita atropellar a los peatones",
   },
   {
@@ -252,6 +287,7 @@ window.vocabularyData = [
     translation: "bus",
     perevod: "автобус",
     category: "noun",
+    topics: [],
     example: "El autobús tiene prioridad en las paradas.",
   },
   {
@@ -259,6 +295,7 @@ window.vocabularyData = [
     translation: "automatically",
     perevod: "автоматически",
     category: "adverb",
+    topics: [],
     example: "El sistema de frenado se activa automáticamente en caso de peligro.",
   },
   {
@@ -274,6 +311,7 @@ window.vocabularyData = [
     translation: "highway/motorway",
     perevod: "шоссе или автомагистраль",
     category: "noun",
+    topics: [],
     example: "La velocidad máxima en autopista es 120 km/h.",
   },
   {
@@ -281,6 +319,7 @@ window.vocabularyData = [
     translation: "authority",
     perevod: "власть",
     category: "noun",
+    topics: [],
     example: "Obedece a la autoridad competente",
   },
   {
@@ -288,6 +327,7 @@ window.vocabularyData = [
     translation: "supplementary authorization",
     perevod: "Дополнительное разрешение",
     category: "noun",
+    topics: [],
     example: "Necesitas una autorización complementaria para ese transporte.",
   },
   {
@@ -295,6 +335,7 @@ window.vocabularyData = [
     translation: "to authorize",
     perevod: "разрешить",
     category: "verb",
+    topics: [],
     example: "Solo pueden autorizar el paso los agentes.",
   },
   {
@@ -302,6 +343,7 @@ window.vocabularyData = [
     translation: "highway",
     perevod: "шоссе",
     category: "noun",
+    topics: [],
     example: "La velocidad máxima en autovía es 120 km/h",
   },
   {
@@ -309,6 +351,7 @@ window.vocabularyData = [
     translation: "breakdown",
     perevod: "авария",
     category: "noun",
+    topics: [],
     example: "En caso de avería, para en lugar seguro.",
   },
   {
@@ -316,6 +359,7 @@ window.vocabularyData = [
     translation: "to warn/notify",
     perevod: "предупредить или уведомлять",
     category: "verb",
+    topics: [],
     example: "Avisa con las luces de emergencia",
   },
   {
@@ -323,6 +367,7 @@ window.vocabularyData = [
     translation: "low",
     perevod: "низкий",
     category: "adjective",
+    topics: [],
     example: "Puente bajo, altura limitada",
   },
   {
@@ -330,6 +375,7 @@ window.vocabularyData = [
     translation: "marking",
     perevod: "маркировка",
     category: "noun",
+    topics: [],
     example: "El balizamiento delimita las obras.",
   },
   {
@@ -337,6 +383,7 @@ window.vocabularyData = [
     translation: "to mark with markers",
     perevod: "отметьте с помощью маркеров",
     category: "verb",
+    topics: [],
     example: "Balizan la zona de obras con conos.",
   },
   {
@@ -344,6 +391,7 @@ window.vocabularyData = [
     translation: "to block",
     perevod: "чтобы заблокировать",
     category: "verb",
+    topics: [],
     example: "No bloquees las intersecciones",
   },
   {
@@ -351,6 +399,7 @@ window.vocabularyData = [
     translation: "bulletin",
     perevod: "Бюллетень",
     category: "noun",
+    topics: [],
     example: "Las normas se publican en el Boletín Oficial.",
   },
   {
@@ -358,6 +407,7 @@ window.vocabularyData = [
     translation: "cavalry/horse",
     perevod: "кавалерия или лошадь",
     category: "noun",
+    topics: [],
     example: "Las caballerías tienen que circular por el arcén.",
   },
   {
@@ -373,6 +423,7 @@ window.vocabularyData = [
     translation: "roadway",
     perevod: "проезжая часть",
     category: "noun",
+    topics: [],
     example: "No pares en la calzada",
   },
   {
@@ -380,6 +431,7 @@ window.vocabularyData = [
     translation: "truck",
     perevod: "грузовик",
     category: "noun",
+    topics: [],
     example: "Los camiones tienen limitaciones especiales",
   },
   {
@@ -395,6 +447,7 @@ window.vocabularyData = [
     translation: "field",
     perevod: "поле",
     category: "noun",
+    topics: [],
     example: "Incrementa el campo visual",
   },
   {
@@ -402,6 +455,7 @@ window.vocabularyData = [
     translation: "quantities",
     perevod: "количества",
     category: "noun",
+    topics: [],
     example: "excepto si se toma en pequeñas cantidades",
   },
   {
@@ -409,6 +463,7 @@ window.vocabularyData = [
     translation: "load/cargo",
     perevod: "груз или груз",
     category: "noun",
+    topics: [],
     example: "La carga debe estar bien sujeta",
   },
   {
@@ -416,6 +471,7 @@ window.vocabularyData = [
     translation: "loading and unloading",
     perevod: "загрузка и разгрузка",
     category: "noun",
+    topics: [],
     example: "Esta zona es de carga y descarga.",
   },
   {
@@ -423,6 +479,7 @@ window.vocabularyData = [
     translation: "to load",
     perevod: "загрузить",
     category: "verb",
+    topics: [],
     example: "Carga el vehículo correctamente",
   },
   {
@@ -430,6 +487,7 @@ window.vocabularyData = [
     translation: "protruding loads",
     perevod: "выступающие нагрузки",
     category: "noun",
+    topics: [],
     example: "Señaliza las cargas que sobresalen.",
   },
   {
@@ -437,6 +495,7 @@ window.vocabularyData = [
     translation: "road/highway",
     perevod: "дорога или шоссе",
     category: "noun",
+    topics: [],
     example: "La carretera está en buen estado",
   },
   {
@@ -444,6 +503,7 @@ window.vocabularyData = [
     translation: "conventional road",
     perevod: "обычная дорога",
     category: "noun",
+    topics: [],
     example: "En carretera convencional el límite es 90 km/h.",
   },
   {
@@ -451,6 +511,7 @@ window.vocabularyData = [
     translation: "lane",
     perevod: "полоса",
     category: "noun",
+    topics: [],
     example: "Mantente en tu carril",
   },
   {
@@ -458,6 +519,7 @@ window.vocabularyData = [
     translation: "reserved lane",
     perevod: "зарезервированная полоса",
     category: "noun",
+    topics: [],
     example: "El carril reservado es para autobuses.",
   },
   {
@@ -465,6 +527,7 @@ window.vocabularyData = [
     translation: "auto helmet",
     perevod: "автошлем",
     category: "noun",
+    topics: [],
     example: "casco",
   },
   {
@@ -472,6 +535,7 @@ window.vocabularyData = [
     translation: "case",
     perevod: "случай",
     category: "noun",
+    topics: [],
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
@@ -479,6 +543,7 @@ window.vocabularyData = [
     translation: "causes",
     perevod: "причина",
     category: "noun",
+    topics: [],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -486,6 +551,7 @@ window.vocabularyData = [
     translation: "the zebra crossing",
     perevod: "зебра",
     category: "noun",
+    topics: [],
     example: "El cebreado prohíbe la circulación.",
   },
   {
@@ -493,6 +559,7 @@ window.vocabularyData = [
     translation: "to yield/give way",
     perevod: "уступить",
     category: "verb",
+    topics: [],
     example: "Cede el paso a los peatones",
   },
   {
@@ -500,6 +567,7 @@ window.vocabularyData = [
     translation: "near/close",
     perevod: "рядом или близко",
     category: "adjective",
+    topics: [],
     example: "Mantente cercano al carril derecho",
   },
   {
@@ -507,6 +575,7 @@ window.vocabularyData = [
     translation: "to make sure",
     perevod: "чтобы убедиться",
     category: "verb",
+    topics: [],
     example: "Debes cerciorarse de que no hay peligro antes de adelantar.",
   },
   {
@@ -514,6 +583,7 @@ window.vocabularyData = [
     translation: "certification",
     perevod: "сертификат",
     category: "adjective",
+    topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -521,6 +591,7 @@ window.vocabularyData = [
     translation: "cyclist",
     perevod: "велосипедист",
     category: "noun",
+    topics: [],
     example: "El ciclista debe respetar las normas de circulación.",
   },
   {
@@ -528,6 +599,7 @@ window.vocabularyData = [
     translation: "moped",
     perevod: "мопед",
     category: "noun",
+    topics: [],
     example: "El ciclomotor no puede circular por autopistas.",
   },
   {
@@ -535,6 +607,7 @@ window.vocabularyData = [
     translation: "seatbelt",
     perevod: "ремень безопасности",
     category: "noun",
+    topics: [],
     example: "Es obligatorio usar el cinturón de seguridad",
   },
   {
@@ -542,6 +615,7 @@ window.vocabularyData = [
     translation: "traffic/circulation",
     perevod: "трафик или циркуляция",
     category: "noun",
+    topics: [],
     example: "La circulación está cortada por obras.",
   },
   {
@@ -549,6 +623,7 @@ window.vocabularyData = [
     translation: "to circulate/drive",
     perevod: "проезжать или водить",
     category: "verb",
+    topics: [],
     example: "Circula siempre por la derecha",
   },
   {
@@ -556,6 +631,7 @@ window.vocabularyData = [
     translation: "clear/bright",
     perevod: "чистый или яркий",
     category: "adjective",
+    topics: [],
     example: "Conduce solo si tienes visión clara",
   },
   {
@@ -563,6 +639,7 @@ window.vocabularyData = [
     translation: "code",
     perevod: "кодекс",
     category: "noun",
+    topics: [],
     example: "El código de circulación regula el tráfico.",
   },
   {
@@ -570,6 +647,7 @@ window.vocabularyData = [
     translation: "to place/position",
     perevod: "поместить или положение",
     category: "verb",
+    topics: [],
     example: "Coloca el triángulo de emergencia",
   },
   {
@@ -577,6 +655,7 @@ window.vocabularyData = [
     translation: "to place",
     perevod: "поместить",
     category: "verb",
+    topics: [],
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
@@ -584,6 +663,7 @@ window.vocabularyData = [
     translation: "meal",
     perevod: "еда",
     category: "noun",
+    topics: [],
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
@@ -591,6 +671,7 @@ window.vocabularyData = [
     translation: "like",
     perevod: "нравиться",
     category: "noun",
+    topics: [],
     example: "metros como mínimo y visibles",
   },
   {
@@ -598,6 +679,7 @@ window.vocabularyData = [
     translation: "comfortable",
     perevod: "комфортный",
     category: "adjective",
+    topics: [],
     example: "Ajuste el asiento para una postura cómoda.",
   },
   {
@@ -605,6 +687,7 @@ window.vocabularyData = [
     translation: "competence/jurisdiction",
     perevod: "компетенция или юрисдикция",
     category: "noun",
+    topics: [],
     example: "Esta infracción es competencia municipal.",
   },
   {
@@ -612,6 +695,7 @@ window.vocabularyData = [
     translation: "competent",
     perevod: "компетентный",
     category: "adjective",
+    topics: [],
     example: "Acude a la autoridad competente.",
   },
   {
@@ -619,6 +703,7 @@ window.vocabularyData = [
     translation: "completely",
     perevod: "полностью",
     category: "adverb",
+    topics: [],
     example: "Detén completamente el vehículo en los pasos a nivel.",
   },
   {
@@ -626,6 +711,7 @@ window.vocabularyData = [
     translation: "complete/full",
     perevod: "полный",
     category: "adjective",
+    topics: [],
     example: "Haz una revisión completa",
   },
   {
@@ -633,6 +719,7 @@ window.vocabularyData = [
     translation: "behavior",
     perevod: "поведение",
     category: "noun",
+    topics: [],
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
@@ -640,6 +727,7 @@ window.vocabularyData = [
     translation: "to check/verify",
     perevod: "проверить",
     category: "verb",
+    topics: [],
     example: "Comprueba el estado del vehículo",
   },
   {
@@ -647,6 +735,7 @@ window.vocabularyData = [
     translation: "to communicate",
     perevod: "общаться",
     category: "verb",
+    topics: [],
     example: "Comunica cualquier cambio de domicilio.",
   },
   {
@@ -654,6 +743,7 @@ window.vocabularyData = [
     translation: "communicate them",
     perevod: "сообщать им",
     category: "noun",
+    topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
@@ -661,6 +751,7 @@ window.vocabularyData = [
     translation: "to drive",
     perevod: "водить",
     category: "verb",
+    topics: [],
     example: "Saber conducir requiere práctica",
   },
   {
@@ -668,6 +759,7 @@ window.vocabularyData = [
     translation: "driver",
     perevod: "водитель",
     category: "noun",
+    topics: [],
     example: "El conductor debe tener permiso de conducir",
   },
   {
@@ -675,6 +767,7 @@ window.vocabularyData = [
     translation: "novice driver",
     perevod: "начинающий водитель",
     category: "noun",
+    topics: [],
     example: "El conductor novel debe señalizarse.",
   },
   {
@@ -682,6 +775,7 @@ window.vocabularyData = [
     translation: "congestion",
     perevod: "скопление",
     category: "noun",
+    topics: [],
     example: "La congestión obliga a usar rutas alternativas.",
   },
   {
@@ -689,6 +783,7 @@ window.vocabularyData = [
     translation: "to consider",
     perevod: "рассмотреть",
     category: "verb",
+    topics: [],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -696,6 +791,7 @@ window.vocabularyData = [
     translation: "to constitute",
     perevod: "составлять",
     category: "verb",
+    topics: [],
     example: "Esta acción constituye una infracción grave.",
   },
   {
@@ -703,6 +799,7 @@ window.vocabularyData = [
     translation: "continuous",
     perevod: "непрерывный",
     category: "adjective",
+    topics: [],
     example: "Línea continua, prohibido adelantar.",
   },
   {
@@ -710,6 +807,7 @@ window.vocabularyData = [
     translation: "opposite/contrary",
     perevod: "противоположный или противоположный",
     category: "adjective",
+    topics: [],
     example: "No circules en sentido contrario",
   },
   {
@@ -717,6 +815,7 @@ window.vocabularyData = [
     translation: "control/checkpoint",
     perevod: "контроль",
     category: "noun",
+    topics: [],
     example: "Hay un control de documentación más adelante.",
   },
   {
@@ -724,6 +823,7 @@ window.vocabularyData = [
     translation: "traffic control",
     perevod: "управление движением",
     category: "noun",
+    topics: [],
     example: "El control del tráfico es automático.",
   },
   {
@@ -731,6 +831,7 @@ window.vocabularyData = [
     translation: "to control",
     perevod: "контролировать",
     category: "verb",
+    topics: [],
     example: "Controla siempre tu vehículo",
   },
   {
@@ -746,6 +847,7 @@ window.vocabularyData = [
     translation: "conveniently",
     perevod: "удобно",
     category: "adverb",
+    topics: [],
     example: "La carga debe estar convenientemente asegurada.",
   },
   {
@@ -753,6 +855,7 @@ window.vocabularyData = [
     translation: "convoy",
     perevod: "конвои",
     category: "noun",
+    topics: [],
     example: "El convoy militar tiene prioridad de paso.",
   },
   {
@@ -760,6 +863,7 @@ window.vocabularyData = [
     translation: "coordinate",
     perevod: "координировать",
     category: "verb",
+    topics: [],
     example: "Es más difícil que coordine correctamente sus movimientos",
   },
   {
@@ -767,6 +871,7 @@ window.vocabularyData = [
     translation: "correctly",
     perevod: "правильно",
     category: "adverb",
+    topics: [],
     example: "Es necesario colocar correctamente el cinturón de seguridad.",
   },
   {
@@ -774,6 +879,7 @@ window.vocabularyData = [
     translation: "correct/right",
     perevod: "правильно",
     category: "adjective",
+    topics: [],
     example: "Siga el carril correcto.",
   },
   {
@@ -781,6 +887,7 @@ window.vocabularyData = [
     translation: "intersection/crossing",
     perevod: "пересечение или перекресток",
     category: "noun",
+    topics: [],
     example: "Cuidado en el cruce de calles",
   },
   {
@@ -788,6 +895,7 @@ window.vocabularyData = [
     translation: "to cross",
     perevod: "пересечь",
     category: "verb",
+    topics: [],
     example: "Cruza la calle por el paso de peatones",
   },
   {
@@ -795,6 +903,7 @@ window.vocabularyData = [
     translation: "to comply with",
     perevod: "соблюдать",
     category: "verb",
+    topics: [],
     example: "Es obligatorio cumplir con las indicaciones del agente.",
   },
   {
@@ -802,6 +911,7 @@ window.vocabularyData = [
     translation: "data",
     perevod: "данные",
     category: "noun",
+    topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
@@ -809,6 +919,7 @@ window.vocabularyData = [
     translation: "they must",
     perevod: "они должны",
     category: "verb",
+    topics: [],
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
@@ -816,6 +927,7 @@ window.vocabularyData = [
     translation: "must/should",
     perevod: "должен или должен",
     category: "verb",
+    topics: [],
     example: "Debes respetar las normas",
   },
   {
@@ -823,6 +935,7 @@ window.vocabularyData = [
     translation: "properly/duly",
     perevod: "правильно или должным образом",
     category: "adverb",
+    topics: [],
     example: "Toda carga debe estar debidamente asegurada.",
   },
   {
@@ -830,6 +943,7 @@ window.vocabularyData = [
     translation: "decree",
     perevod: "указатель",
     category: "noun",
+    topics: [],
     example: "El Real Decreto establece las normas básicas.",
   },
   {
@@ -837,6 +951,7 @@ window.vocabularyData = [
     translation: "definitive/final",
     perevod: "окончательный или окончательный",
     category: "adjective",
+    topics: [],
     example: "La resolución definitiva tardará dos meses.",
   },
   {
@@ -844,6 +959,7 @@ window.vocabularyData = [
     translation: "to leave/let",
     perevod: "уйти или позволить",
     category: "verb",
+    topics: [],
     example: "Deja espacio suficiente entre vehículos",
   },
   {
@@ -851,6 +967,7 @@ window.vocabularyData = [
     translation: "to demonstrate",
     perevod: "продемонстрировать",
     category: "verb",
+    topics: [],
     example: "Demuestra que conoces las normas.",
   },
   {
@@ -858,6 +975,7 @@ window.vocabularyData = [
     translation: "traffic density",
     perevod: "Плотность движения",
     category: "noun",
+    topics: [],
     example: "La densidad del tráfico es alta.",
   },
   {
@@ -865,6 +983,7 @@ window.vocabularyData = [
     translation: "glare/dazzling",
     perevod: "блики или ослепительно",
     category: "noun",
+    topics: [],
     example: "Reduce la velocidad en caso de deslumbramiento.",
   },
   {
@@ -872,6 +991,7 @@ window.vocabularyData = [
     translation: "disorderly/messy",
     perevod: "беспорядочный или грязный",
     category: "adjective",
+    topics: [],
     example: "Evite el comportamiento desordenado en la vía.",
   },
   {
@@ -879,6 +999,7 @@ window.vocabularyData = [
     translation: "to detour/divert",
     perevod: "обойти или отвлечься",
     category: "verb",
+    topics: [],
     example: "Desvía el tráfico si hay obras",
   },
   {
@@ -886,6 +1007,7 @@ window.vocabularyData = [
     translation: "detection",
     perevod: "обнаружение",
     category: "noun",
+    topics: [],
     example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
@@ -893,6 +1015,7 @@ window.vocabularyData = [
     translation: "to detect",
     perevod: "Чтобы обнаружить",
     category: "verb",
+    topics: [],
     example: "Detecta los peligros a tiempo",
   },
   {
@@ -900,6 +1023,7 @@ window.vocabularyData = [
     translation: "to stop/halt",
     perevod: "остановить или остановить",
     category: "verb",
+    topics: [],
     example: "El agente puede detener el vehículo",
   },
   {
@@ -907,6 +1031,7 @@ window.vocabularyData = [
     translation: "to stop",
     perevod: "чтобы остановиться",
     category: "verb",
+    topics: [],
     example: "Ante un stop debes detenerse completamente.",
   },
   {
@@ -914,6 +1039,7 @@ window.vocabularyData = [
     translation: "to determine",
     perevod: "определить",
     category: "verb",
+    topics: [],
     example: "El juez determinará la sanción correspondiente.",
   },
   {
@@ -921,6 +1047,7 @@ window.vocabularyData = [
     translation: "transparent/clear",
     perevod: "прозрачный или ясный",
     category: "adjective",
+    topics: [],
     example: "La superficie acristalada debe permitir la visibilidad diáfana.",
   },
   {
@@ -928,6 +1055,7 @@ window.vocabularyData = [
     translation: "difficult",
     perevod: "трудный",
     category: "noun",
+    topics: [],
     example: "Es más difícil que coordine correctamente sus movimientos",
   },
   {
@@ -935,6 +1063,7 @@ window.vocabularyData = [
     translation: "maximum dimensions",
     perevod: "максимальные размеры",
     category: "noun",
+    topics: [],
     example: "Las dimensiones máximas están reguladas.",
   },
   {
@@ -942,6 +1071,7 @@ window.vocabularyData = [
     translation: "direction/steering",
     perevod: "направление или рулевое управление",
     category: "noun",
+    topics: [],
     example: "Mantén la dirección correcta",
   },
   {
@@ -949,6 +1079,7 @@ window.vocabularyData = [
     translation: "direct",
     perevod: "прямой",
     category: "adjective",
+    topics: [],
     example: "Tome la ruta más directa si es segura.",
   },
   {
@@ -956,6 +1087,7 @@ window.vocabularyData = [
     translation: "discontinuous",
     perevod: "прерывистый",
     category: "adjective",
+    topics: [],
     example: "Línea discontinua, adelantamiento permitido.",
   },
   {
@@ -963,6 +1095,7 @@ window.vocabularyData = [
     translation: "provision/regulation",
     perevod: "обеспечение или регулирование",
     category: "noun",
+    topics: [],
     example: "Esta disposición está vigente desde 2003.",
   },
   {
@@ -970,6 +1103,7 @@ window.vocabularyData = [
     translation: "device",
     perevod: "устройство",
     category: "noun",
+    topics: [],
     example: "Los dispositivos de seguridad son obligatorios.",
   },
   {
@@ -977,6 +1111,7 @@ window.vocabularyData = [
     translation: "barrier device",
     perevod: "Барьерное устройство",
     category: "noun",
+    topics: [],
     example: "El dispositivo de barrera cierra el paso.",
   },
   {
@@ -984,6 +1119,7 @@ window.vocabularyData = [
     translation: "warning device",
     perevod: "предупреждающее устройство",
     category: "noun",
+    topics: [],
     example: "Coloca el dispositivo de preseñalización.",
   },
   {
@@ -991,6 +1127,7 @@ window.vocabularyData = [
     translation: "distance",
     perevod: "расстояние",
     category: "noun",
+    topics: [],
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
@@ -998,6 +1135,7 @@ window.vocabularyData = [
     translation: "nationality badge",
     perevod: "Значок национальности",
     category: "noun",
+    topics: [],
     example: "El distintivo de nacionalidad es obligatorio.",
   },
   {
@@ -1005,6 +1143,7 @@ window.vocabularyData = [
     translation: "different/distinct",
     perevod: "разные или отчетливые",
     category: "adjective",
+    topics: [],
     example: "Cada señal tiene un significado distinto.",
   },
   {
@@ -1012,6 +1151,7 @@ window.vocabularyData = [
     translation: "document",
     perevod: "документ",
     category: "noun",
+    topics: [],
     example: "Lleva siempre la documentación",
   },
   {
@@ -1019,6 +1159,7 @@ window.vocabularyData = [
     translation: "drugs",
     perevod: "наркотики",
     category: "noun",
+    topics: [],
     example: "Cuando tomamos alcohol con otras drogas",
   },
   {
@@ -1026,6 +1167,7 @@ window.vocabularyData = [
     translation: "efficiency",
     perevod: "эффективность",
     category: "noun",
+    topics: [],
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
@@ -1033,6 +1175,7 @@ window.vocabularyData = [
     translation: "effective/efficient",
     perevod: "эффективно или эффективно",
     category: "adjective",
+    topics: [],
     example: "Una frenada eficaz es crucial.",
   },
   {
@@ -1040,6 +1183,7 @@ window.vocabularyData = [
     translation: "effectively",
     perevod: "эффективно",
     category: "adverb",
+    topics: [],
     example: "Debes señalizar eficazmente cualquier obstáculo en la vía.",
   },
   {
@@ -1047,6 +1191,7 @@ window.vocabularyData = [
     translation: "elevated/high",
     perevod: "повышен или высокий",
     category: "adjective",
+    topics: [],
     example: "Paso elevado para peatones",
   },
   {
@@ -1054,6 +1199,7 @@ window.vocabularyData = [
     translation: "emergency",
     perevod: "чрезвычайная ситуация",
     category: "noun",
+    topics: [],
     example: "Usa las luces de emergencia si es necesario.",
   },
   {
@@ -1061,6 +1207,7 @@ window.vocabularyData = [
     translation: "to turn on/light",
     perevod: "включить или зажечь",
     category: "verb",
+    topics: [],
     example: "Enciende las luces si es necesario",
   },
   {
@@ -1068,6 +1215,7 @@ window.vocabularyData = [
     translation: "on/lit",
     perevod: "на или зажжен",
     category: "adjective",
+    topics: [],
     example: "Mantén las luces encendidas",
   },
   {
@@ -1075,6 +1223,7 @@ window.vocabularyData = [
     translation: "junction/link",
     perevod: "соединение или ссылка",
     category: "noun",
+    topics: [],
     example: "El enlace conecta dos autopistas.",
   },
   {
@@ -1082,6 +1231,7 @@ window.vocabularyData = [
     translation: "to enter",
     perevod: "чтобы войти",
     category: "verb",
+    topics: [],
     example: "Entra en la autopista usando el carril de aceleración",
   },
   {
@@ -1089,6 +1239,7 @@ window.vocabularyData = [
     translation: "special",
     perevod: "особенный",
     category: "adjective",
+    topics: [],
     example: "Precaución especial con niños",
   },
   {
@@ -1096,6 +1247,7 @@ window.vocabularyData = [
     translation: "especially",
     perevod: "особенно",
     category: "adverb",
+    topics: [],
     example: "Conduce con precaución, especialmente en condiciones de lluvia.",
   },
   {
@@ -1103,6 +1255,7 @@ window.vocabularyData = [
     translation: "specific",
     perevod: "специфический",
     category: "adjective",
+    topics: [],
     example: "Hay normas específicas para motocicletas.",
   },
   {
@@ -1110,6 +1263,7 @@ window.vocabularyData = [
     translation: "to wait",
     perevod: "чтобы подождать",
     category: "verb",
+    topics: [],
     example: "Espera a que el semáforo se ponga verde",
   },
   {
@@ -1117,6 +1271,7 @@ window.vocabularyData = [
     translation: "stable",
     perevod: "стабильный",
     category: "adjective",
+    topics: [],
     example: "Mantenga una velocidad estable.",
   },
   {
@@ -1124,6 +1279,7 @@ window.vocabularyData = [
     translation: "to establish",
     perevod: "чтобы установить",
     category: "verb",
+    topics: [],
     example: "Las ordenanzas establecen las normas locales.",
   },
   {
@@ -1131,6 +1287,7 @@ window.vocabularyData = [
     translation: "parking",
     perevod: "стоянка",
     category: "noun",
+    topics: [],
     example: "El estacionamiento está prohibido en esta zona.",
   },
   {
@@ -1138,6 +1295,7 @@ window.vocabularyData = [
     translation: "to park",
     perevod: "Парк",
     category: "verb",
+    topics: [],
     example: "No se puede estacionar en doble fila.",
   },
   {
@@ -1145,6 +1303,7 @@ window.vocabularyData = [
     translation: "to park",
     perevod: "Парк",
     category: "verb",
+    topics: [],
     example: "No estaciones en lugares prohibidos.",
   },
   {
@@ -1152,6 +1311,7 @@ window.vocabularyData = [
     translation: "state/condition",
     perevod: "состояние или состояние",
     category: "noun",
+    topics: [],
     example: "El estado de la carretera influye en la conducción.",
   },
   {
@@ -1159,6 +1319,7 @@ window.vocabularyData = [
     translation: "stomach",
     perevod: "желудок",
     category: "noun",
+    topics: [],
     example: "el estómago vacío",
   },
   {
@@ -1166,6 +1327,7 @@ window.vocabularyData = [
     translation: "narrow",
     perevod: "узкий",
     category: "adjective",
+    topics: [],
     example: "Carretera estrecha, precaución",
   },
   {
@@ -1173,6 +1335,7 @@ window.vocabularyData = [
     translation: "narcotics",
     perevod: "наркотики",
     category: "noun",
+    topics: [],
     example: "Las pruebas de detección de sustancias estupefacientes",
   },
   {
@@ -1180,6 +1343,7 @@ window.vocabularyData = [
     translation: "occasional/possible",
     perevod: "случайно или возможно",
     category: "adjective",
+    topics: [],
     example: "Posible hielo en la calzada",
   },
   {
@@ -1187,6 +1351,7 @@ window.vocabularyData = [
     translation: "exceptional",
     perevod: "исключительный",
     category: "adjective",
+    topics: [],
     example: "Solo en casos excepcionales se permite.",
   },
   {
@@ -1194,6 +1359,7 @@ window.vocabularyData = [
     translation: "exceptionally",
     perevod: "исключительно",
     category: "adverb",
+    topics: [],
     example: "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
   },
   {
@@ -1201,6 +1367,7 @@ window.vocabularyData = [
     translation: "except",
     perevod: "кроме",
     category: "noun",
+    topics: [],
     example: "excepto si se toma en pequeñas cantidades",
   },
   {
@@ -1208,6 +1375,7 @@ window.vocabularyData = [
     translation: "to except",
     perevod: "кроме",
     category: "verb",
+    topics: [],
     example: "Se exceptúan los vehículos de emergencia.",
   },
   {
@@ -1215,6 +1383,7 @@ window.vocabularyData = [
     translation: "excessive",
     perevod: "излишний",
     category: "adjective",
+    topics: [],
     example: "Velocidad excesiva es peligrosa",
   },
   {
@@ -1222,6 +1391,7 @@ window.vocabularyData = [
     translation: "excess",
     perevod: "избыток",
     category: "noun",
+    topics: [],
     example: "Exceso de seguridad en sí mismo",
   },
   {
@@ -1229,6 +1399,7 @@ window.vocabularyData = [
     translation: "exempt",
     perevod: "освобожден",
     category: "noun",
+    topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -1236,6 +1407,7 @@ window.vocabularyData = [
     translation: "exempt",
     perevod: "освобождать",
     category: "adjective",
+    topics: [],
     example: "Los vehículos de emergencia están exentos de algunas normas.",
   },
   {
@@ -1243,6 +1415,7 @@ window.vocabularyData = [
     translation: "to issue",
     perevod: "выпустить",
     category: "verb",
+    topics: [],
     example: "La DGT expide los permisos de conducir.",
   },
   {
@@ -1250,6 +1423,7 @@ window.vocabularyData = [
     translation: "expressly",
     perevod: "прямо",
     category: "adverb",
+    topics: [],
     example: "Lo que está expresamente prohibido por las normas.",
   },
   {
@@ -1257,6 +1431,7 @@ window.vocabularyData = [
     translation: "exterior/outside",
     perevod: "экстерьер или снаружи",
     category: "adjective",
+    topics: [],
     example: "Limpia los espejos exteriores",
   },
   {
@@ -1264,6 +1439,7 @@ window.vocabularyData = [
     translation: "fire fighting",
     perevod: "Огненная борьба",
     category: "noun",
+    topics: [],
     example: "Vehículo de extinción de incendios.",
   },
   {
@@ -1271,6 +1447,7 @@ window.vocabularyData = [
     translation: "extraordinary",
     perevod: "необычайно",
     category: "adjective",
+    topics: [],
     example: "Medidas extraordinarias por la nevada.",
   },
   {
@@ -1278,6 +1455,7 @@ window.vocabularyData = [
     translation: "fixed/stationary",
     perevod: "фиксированный или неподвижный",
     category: "adjective",
+    topics: [],
     example: "Obstáculo fijo en la vía",
   },
   {
@@ -1285,6 +1463,7 @@ window.vocabularyData = [
     translation: "traffic flow",
     perevod: "трафик",
     category: "noun",
+    topics: [],
     example: "Las obras afectan la fluidez del tráfico.",
   },
   {
@@ -1292,6 +1471,7 @@ window.vocabularyData = [
     translation: "frequent",
     perevod: "частый",
     category: "adjective",
+    topics: [],
     example: "Son frecuentes los controles",
   },
   {
@@ -1299,6 +1479,7 @@ window.vocabularyData = [
     translation: "to guarantee",
     perevod: "чтобы гарантировать",
     category: "verb",
+    topics: [],
     example: "Garantiza la seguridad de todos",
   },
   {
@@ -1306,6 +1487,7 @@ window.vocabularyData = [
     translation: "general",
     perevod: "общий",
     category: "adjective",
+    topics: [],
     example: "Esta es la norma general de circulación.",
   },
   {
@@ -1313,6 +1495,7 @@ window.vocabularyData = [
     translation: "generally",
     perevod: "в целом",
     category: "adverb",
+    topics: [],
     example: "Generalmente, los límites de velocidad son menores en zonas urbanas.",
   },
   {
@@ -1320,6 +1503,7 @@ window.vocabularyData = [
     translation: "traffic management",
     perevod: "Управление трафиком",
     category: "noun",
+    topics: [],
     example: "La gestión del tráfico es telemática.",
   },
   {
@@ -1327,6 +1511,7 @@ window.vocabularyData = [
     translation: "to turn",
     perevod: "повернуть",
     category: "verb",
+    topics: [],
     example: "Indica antes de girar",
   },
   {
@@ -1334,6 +1519,7 @@ window.vocabularyData = [
     translation: "roundabout",
     perevod: "кольцевая развязка",
     category: "noun",
+    topics: [],
     example: "Cede el paso al entrar en la glorieta",
   },
   {
@@ -1341,6 +1527,7 @@ window.vocabularyData = [
     translation: "serious/severe",
     perevod: "серьезный или тяжелый",
     category: "adjective",
+    topics: [],
     example: "Una infracción grave quita puntos",
   },
   {
@@ -1348,6 +1535,7 @@ window.vocabularyData = [
     translation: "tow truck",
     perevod: "эвакуатор",
     category: "noun",
+    topics: [],
     example: "La grúa retirará el vehículo mal aparcado.",
   },
   {
@@ -1355,6 +1543,7 @@ window.vocabularyData = [
     translation: "enabled",
     perevod: "уполномоченный",
     category: "adjective",
+    topics: [],
     example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
@@ -1362,6 +1551,7 @@ window.vocabularyData = [
     translation: "usual/habitual",
     perevod: "обычный или привычный",
     category: "adjective",
+    topics: [],
     example: "Usa tu ruta habitual",
   },
   {
@@ -1369,6 +1559,7 @@ window.vocabularyData = [
     translation: "usual/habitual",
     perevod: "обычный или привычный",
     category: "adjective",
+    topics: [],
     example: "Siga su carril habitual a menos que se indique lo contrario.",
   },
   {
@@ -1376,13 +1567,23 @@ window.vocabularyData = [
     translation: "become",
     perevod: "становиться",
     category: "noun",
+    topics: [],
     example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+  },
+  {
+    word: "hasta",
+    translation: "until",
+    perevod: "пока",
+    category: "noun",
+    topics: ["topic11"],
+    example: "El tiempo desde que ve un peligro hasta que actúa",
   },
   {
     word: "homologado",
     translation: "approved/certified",
     perevod: "утверждено или сертифицировано",
     category: "adjective",
+    topics: [],
     example: "Solo cascos homologados son válidos.",
   },
   {
@@ -1390,6 +1591,7 @@ window.vocabularyData = [
     translation: "to approve/certify",
     perevod: "для утверждения или подтверждения",
     category: "verb",
+    topics: [],
     example: "Todos los cascos deben estar homologados.",
   },
   {
@@ -1397,6 +1599,7 @@ window.vocabularyData = [
     translation: "to identify",
     perevod: "Чтобы идентифицировать",
     category: "verb",
+    topics: [],
     example: "Identifica las señales de tráfico",
   },
   {
@@ -1404,6 +1607,7 @@ window.vocabularyData = [
     translation: "same/equal",
     perevod: "то же самое или равный",
     category: "adjective",
+    topics: [],
     example: "Todos los carriles tienen la misma velocidad máxima.",
   },
   {
@@ -1411,6 +1615,7 @@ window.vocabularyData = [
     translation: "illegal",
     perevod: "незаконно",
     category: "adjective",
+    topics: [],
     example: "Aparcar en doble fila es ilegal",
   },
   {
@@ -1418,6 +1623,7 @@ window.vocabularyData = [
     translation: "",
     perevod: "",
     category: "adjective",
+    topics: [],
     example: "En un accidente de tráfico en el que esté implicado",
   },
   {
@@ -1425,6 +1631,7 @@ window.vocabularyData = [
     translation: "to impose",
     perevod: "навязывать",
     category: "verb",
+    topics: [],
     example: "Le van a imponer una multa por aparcar mal.",
   },
   {
@@ -1432,6 +1639,7 @@ window.vocabularyData = [
     translation: "uncomfortable",
     perevod: "неудобно",
     category: "adjective",
+    topics: [],
     example: "Una conducción incómoda puede distraer.",
   },
   {
@@ -1439,6 +1647,7 @@ window.vocabularyData = [
     translation: "unconscious",
     perevod: "бессознательный",
     category: "adjective",
+    topics: [],
     example: "herido está inconsciente",
   },
   {
@@ -1446,6 +1655,7 @@ window.vocabularyData = [
     translation: "incorrect/wrong",
     perevod: "неверно или неправильно",
     category: "adjective",
+    topics: [],
     example: "Tomar una salida incorrecta puede ser peligroso.",
   },
   {
@@ -1453,6 +1663,7 @@ window.vocabularyData = [
     translation: "increases",
     perevod: "увеличивается",
     category: "noun",
+    topics: [],
     example: "Incrementa el campo visual",
   },
   {
@@ -1460,6 +1671,7 @@ window.vocabularyData = [
     translation: "indirect",
     perevod: "косвенный",
     category: "adjective",
+    topics: [],
     example: "La luz indirecta puede afectar la visibilidad.",
   },
   {
@@ -1467,6 +1679,7 @@ window.vocabularyData = [
     translation: "ineffective/inefficient",
     perevod: "неэффективный или неэффективный",
     category: "adjective",
+    topics: [],
     example: "Una señalización ineficaz puede confundir.",
   },
   {
@@ -1474,6 +1687,7 @@ window.vocabularyData = [
     translation: "unstable",
     perevod: "нестабильный",
     category: "adjective",
+    topics: [],
     example: "Una carga mal sujeta puede volver el vehículo inestable.",
   },
   {
@@ -1481,6 +1695,7 @@ window.vocabularyData = [
     translation: "inexcusable/mandatory",
     perevod: "непростительно или обязательно",
     category: "adjective",
+    topics: [],
     example: "Es inexcusable cumplir las normas de tráfico.",
   },
   {
@@ -1488,6 +1703,7 @@ window.vocabularyData = [
     translation: "to inform",
     perevod: "сообщить",
     category: "verb",
+    topics: [],
     example: "Informa sobre los accidentes a las authorities.",
   },
   {
@@ -1495,6 +1711,7 @@ window.vocabularyData = [
     translation: "violation/offense",
     perevod: "нарушение или преступление",
     category: "noun",
+    topics: [],
     example: "Evita cometer infracciones",
   },
   {
@@ -1502,6 +1719,7 @@ window.vocabularyData = [
     translation: "to infringe/violate",
     perevod: "нарушать или нарушать",
     category: "verb",
+    topics: [],
     example: "Infringir las normas de tráfico conlleva una sanción.",
   },
   {
@@ -1509,6 +1727,7 @@ window.vocabularyData = [
     translation: "to start/begin",
     perevod: "начать или начать",
     category: "verb",
+    topics: [],
     example: "Inicia la marcha con precaución",
   },
   {
@@ -1516,6 +1735,7 @@ window.vocabularyData = [
     translation: "immediately",
     perevod: "немедленно",
     category: "adverb",
+    topics: [],
     example: "Detente inmediatamente ante la señal de stop.",
   },
   {
@@ -1523,6 +1743,7 @@ window.vocabularyData = [
     translation: "immediate",
     perevod: "немедленный",
     category: "adjective",
+    topics: [],
     example: "Aplicación inmediata de la nueva norma.",
   },
   {
@@ -1530,6 +1751,7 @@ window.vocabularyData = [
     translation: "immediate",
     perevod: "немедленный",
     category: "adjective",
+    topics: [],
     example: "Debes detenerte de inmediato cuando te lo indique un agente.",
   },
   {
@@ -1537,6 +1759,7 @@ window.vocabularyData = [
     translation: "immobilization",
     perevod: "иммобилизация",
     category: "noun",
+    topics: [],
     example: "La inmovilización del vehículo es obligatoria en ese caso.",
   },
   {
@@ -1544,6 +1767,7 @@ window.vocabularyData = [
     translation: "to immobilize",
     perevod: "иммобилизовать",
     category: "verb",
+    topics: [],
     example: "El agente puede inmovilizar el vehículo si carece de seguro.",
   },
   {
@@ -1551,6 +1775,7 @@ window.vocabularyData = [
     translation: "unnecessary",
     perevod: "ненужный",
     category: "adjective",
+    topics: [],
     example: "Evita realizar maniobras innecesarias.",
   },
   {
@@ -1558,6 +1783,7 @@ window.vocabularyData = [
     translation: "unsafe/insecure",
     perevod: "небезопасно или небезопасно",
     category: "adjective",
+    topics: [],
     example: "Conducir con neumáticos gastados es inseguro.",
   },
   {
@@ -1565,6 +1791,7 @@ window.vocabularyData = [
     translation: "technical inspection",
     perevod: "Техническая проверка",
     category: "noun",
+    topics: [],
     example: "La inspección técnica es obligatoria.",
   },
   {
@@ -1572,6 +1799,7 @@ window.vocabularyData = [
     translation: "to inspect",
     perevod: "чтобы проверить",
     category: "verb",
+    topics: [],
     example: "Inspecciona el vehículo antes de viajar.",
   },
   {
@@ -1579,6 +1807,7 @@ window.vocabularyData = [
     translation: "inspector",
     perevod: "инспектор",
     category: "noun",
+    topics: [],
     example: "El inspector revisa la documentación.",
   },
   {
@@ -1586,6 +1815,7 @@ window.vocabularyData = [
     translation: "smart/intelligent",
     perevod: "умный или умный",
     category: "adjective",
+    topics: [],
     example: "Un sistema de tráfico inteligente puede reducir atascos.",
   },
   {
@@ -1593,6 +1823,7 @@ window.vocabularyData = [
     translation: "interior/inside",
     perevod: "интерьер или внутри",
     category: "adjective",
+    topics: [],
     example: "Ajusta el espejo interior",
   },
   {
@@ -1600,6 +1831,7 @@ window.vocabularyData = [
     translation: "to interrupt",
     perevod: "прервать",
     category: "verb",
+    topics: [],
     example: "No interrumpas el paso de otros vehículos",
   },
   {
@@ -1607,6 +1839,7 @@ window.vocabularyData = [
     translation: "intersection",
     perevod: "пересечение",
     category: "noun",
+    topics: [],
     example: "La intersección está regulada por semáforos",
   },
   {
@@ -1614,6 +1847,7 @@ window.vocabularyData = [
     translation: "interurban/between cities",
     perevod: "Interurban или между городами",
     category: "adjective",
+    topics: [],
     example: "En carretera interurbana 90 km/h",
   },
   {
@@ -1621,6 +1855,7 @@ window.vocabularyData = [
     translation: "invalid",
     perevod: "неверный",
     category: "adjective",
+    topics: [],
     example: "Un documento inválido no será aceptado.",
   },
   {
@@ -1628,6 +1863,7 @@ window.vocabularyData = [
     translation: "traffic island",
     perevod: "Остров дорожного движения",
     category: "noun",
+    topics: [],
     example: "La isleta canaliza el tráfico.",
   },
   {
@@ -1635,6 +1871,7 @@ window.vocabularyData = [
     translation: "itinerary/route",
     perevod: "маршрут или маршрут",
     category: "noun",
+    topics: [],
     example: "Sigue el itinerario señalizado.",
   },
   {
@@ -1642,6 +1879,7 @@ window.vocabularyData = [
     translation: "justified",
     perevod: "оправдание",
     category: "adjective",
+    topics: [],
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
@@ -1649,6 +1887,7 @@ window.vocabularyData = [
     translation: "to justify",
     perevod: "чтобы оправдать",
     category: "verb",
+    topics: [],
     example: "Justifica el motivo de tu maniobra.",
   },
   {
@@ -1656,6 +1895,7 @@ window.vocabularyData = [
     translation: "court, judge",
     perevod: "суд, судья",
     category: "adjective",
+    topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
@@ -1663,6 +1903,7 @@ window.vocabularyData = [
     translation: "legal",
     perevod: "юридический",
     category: "adjective",
+    topics: [],
     example: "Asegúrate de que todo sea legal",
   },
   {
@@ -1670,6 +1911,7 @@ window.vocabularyData = [
     translation: "slow",
     perevod: "медленный",
     category: "adjective",
+    topics: [],
     example: "Ir muy lento también es peligroso",
   },
   {
@@ -1677,6 +1919,7 @@ window.vocabularyData = [
     translation: "minor/light",
     perevod: "несовершеннолетний или свет",
     category: "adjective",
+    topics: [],
     example: "Una falta leve tiene multa pequeña",
   },
   {
@@ -1684,6 +1927,7 @@ window.vocabularyData = [
     translation: "light",
     perevod: "свет",
     category: "adjective",
+    topics: [],
     example: "Vehículo ligero hasta 3500 kg",
   },
   {
@@ -1699,6 +1943,7 @@ window.vocabularyData = [
     translation: "limit",
     perevod: "предел",
     category: "noun",
+    topics: [],
     example: "Respeta el límite de velocidad establecido.",
   },
   {
@@ -1706,6 +1951,7 @@ window.vocabularyData = [
     translation: "clean",
     perevod: "чистый",
     category: "adjective",
+    topics: [],
     example: "Mantenga los cristales limpios para una buena visibilidad.",
   },
   {
@@ -1713,6 +1959,7 @@ window.vocabularyData = [
     translation: "stop line",
     perevod: "Стоп",
     category: "noun",
+    topics: [],
     example: "Detente antes de la línea de detención.",
   },
   {
@@ -1720,6 +1967,7 @@ window.vocabularyData = [
     translation: "longitudinal line",
     perevod: "продольная линия",
     category: "noun",
+    topics: [],
     example: "La línea longitudinal delimita carriles.",
   },
   {
@@ -1727,6 +1975,7 @@ window.vocabularyData = [
     translation: "luminous/bright",
     perevod: "светящийся или яркий",
     category: "adjective",
+    topics: [],
     example: "Las señales luminosas tienen prioridad sobre las verticales.",
   },
   {
@@ -1734,6 +1983,7 @@ window.vocabularyData = [
     translation: "light",
     perevod: "свет",
     category: "noun",
+    topics: [],
     example: "Usa las luces cuando sea necesario",
   },
   {
@@ -1741,6 +1991,7 @@ window.vocabularyData = [
     translation: "manifestly/clearly",
     perevod: "явно или ясно",
     category: "adverb",
+    topics: [],
     example: "Personas manifiestamente impedidas requieren especial atención.",
   },
   {
@@ -1748,6 +1999,7 @@ window.vocabularyData = [
     translation: "maneuver",
     perevod: "маневр",
     category: "noun",
+    topics: [],
     example: "Realiza la maniobra con precaución",
   },
   {
@@ -1755,6 +2007,7 @@ window.vocabularyData = [
     translation: "to maintain",
     perevod: "поддерживать",
     category: "verb",
+    topics: [],
     example: "Mantén la distancia de seguridad",
   },
   {
@@ -1762,6 +2015,7 @@ window.vocabularyData = [
     translation: "marking/sign",
     perevod: "маркировка или знак",
     category: "noun",
+    topics: [],
     example: "Las marcas viales delimitan los carriles.",
   },
   {
@@ -1769,6 +2023,7 @@ window.vocabularyData = [
     translation: "road marking",
     perevod: "дорожная маркировка",
     category: "noun",
+    topics: [],
     example: "Las marcas viales guían la circulación.",
   },
   {
@@ -1776,6 +2031,7 @@ window.vocabularyData = [
     translation: "maximum authorized weight",
     perevod: "максимальный уполномоченный вес",
     category: "noun",
+    topics: [],
     example: "Respeta la masa máxima autorizada.",
   },
   {
@@ -1783,6 +2039,7 @@ window.vocabularyData = [
     translation: "license plate/registration",
     perevod: "номерной знак или регистрация",
     category: "noun",
+    topics: [],
     example: "La matrícula debe estar visible",
   },
   {
@@ -1790,6 +2047,7 @@ window.vocabularyData = [
     translation: "to register",
     perevod: "для регистрации",
     category: "verb",
+    topics: [],
     example: "Hay que matricular el vehículo en España.",
   },
   {
@@ -1805,6 +2063,7 @@ window.vocabularyData = [
     translation: "maximum",
     perevod: "максимум",
     category: "adjective",
+    topics: [],
     example: "Respeta la velocidad máxima",
   },
   {
@@ -1812,6 +2071,7 @@ window.vocabularyData = [
     translation: "maximum",
     perevod: "максимум",
     category: "adjective",
+    topics: [],
     example: "El peso máximo autorizado es de 3500kg.",
   },
   {
@@ -1819,6 +2079,7 @@ window.vocabularyData = [
     translation: "central part of the road",
     perevod: "центральная часть дороги",
     category: "noun",
+    topics: [],
     example: "No pares en la mediana.",
   },
   {
@@ -1826,6 +2087,7 @@ window.vocabularyData = [
     translation: "médico (doctor)",
     perevod: "врачом",
     category: "adjective",
+    topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -1833,6 +2095,7 @@ window.vocabularyData = [
     translation: "dangerous goods",
     perevod: "опасные товары",
     category: "noun",
+    topics: [],
     example: "Transporte especial de mercancías peligrosas.",
   },
   {
@@ -1840,6 +2103,7 @@ window.vocabularyData = [
     translation: "meters",
     perevod: "метры",
     category: "noun",
+    topics: [],
     example: "metros como mínimo y visibles",
   },
   {
@@ -1847,6 +2111,7 @@ window.vocabularyData = [
     translation: "minimum",
     perevod: "минимум",
     category: "adjective",
+    topics: [],
     example: "Mantén la distancia mínima",
   },
   {
@@ -1854,6 +2119,7 @@ window.vocabularyData = [
     translation: "minimum",
     perevod: "минимум",
     category: "adjective",
+    topics: [],
     example: "Se requiere un nivel mínimo de atención.",
   },
   {
@@ -1861,6 +2127,7 @@ window.vocabularyData = [
     translation: "ministry",
     perevod: "министерство",
     category: "noun",
+    topics: [],
     example: "El Ministerio de Interior regula el tráfico.",
   },
   {
@@ -1868,6 +2135,7 @@ window.vocabularyData = [
     translation: "disabled person",
     perevod: "инвалид",
     category: "noun",
+    topics: [],
     example: "Plaza reservada para minusválido.",
   },
   {
@@ -1875,6 +2143,7 @@ window.vocabularyData = [
     translation: "to modify",
     perevod: "изменить",
     category: "verb",
+    topics: [],
     example: "No modifiques el vehículo sin autorización.",
   },
   {
@@ -1882,6 +2151,7 @@ window.vocabularyData = [
     translation: "to show",
     perevod: "Показать",
     category: "verb",
+    topics: [],
     example: "Muestra la documentación si te la piden",
   },
   {
@@ -1889,6 +2159,7 @@ window.vocabularyData = [
     translation: "motorcycle",
     perevod: "мотоцикл",
     category: "noun",
+    topics: [],
     example: "La motocicleta debe circular por el carril derecho",
   },
   {
@@ -1896,6 +2167,7 @@ window.vocabularyData = [
     translation: "motorized",
     perevod: "моторизованный",
     category: "adjective",
+    topics: [],
     example: "Vehículo motorizado necesita permiso",
   },
   {
@@ -1903,6 +2175,7 @@ window.vocabularyData = [
     translation: "mobile/moving",
     perevod: "мобильный или движущийся",
     category: "adjective",
+    topics: [],
     example: "Precaución con obstáculos móviles",
   },
   {
@@ -1910,6 +2183,7 @@ window.vocabularyData = [
     translation: "movements",
     perevod: "движения",
     category: "noun",
+    topics: [],
     example: "Es más difícil que coordine correctamente sus movimientos",
   },
   {
@@ -1917,6 +2191,7 @@ window.vocabularyData = [
     translation: "fine",
     perevod: "отлично",
     category: "noun",
+    topics: [],
     example: "Te pueden poner una multa por exceso de velocidad",
   },
   {
@@ -1924,6 +2199,7 @@ window.vocabularyData = [
     translation: "muscular",
     perevod: "мускулистый",
     category: "verb",
+    topics: [],
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
@@ -1931,6 +2207,7 @@ window.vocabularyData = [
     translation: "necessary",
     perevod: "необходимый",
     category: "adjective",
+    topics: [],
     example: "Es necesario llevar la documentación del vehículo.",
   },
   {
@@ -1938,6 +2215,7 @@ window.vocabularyData = [
     translation: "tire",
     perevod: "шина",
     category: "noun",
+    topics: [],
     example: "Es importante revisar la presión del neumático.",
   },
   {
@@ -1945,6 +2223,7 @@ window.vocabularyData = [
     translation: "denies",
     perevod: "отрицает",
     category: "noun",
+    topics: [],
     example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
@@ -1952,6 +2231,7 @@ window.vocabularyData = [
     translation: "rule/standard",
     perevod: "правило или стандарт",
     category: "noun",
+    topics: [],
     example: "Las normas de tráfico protegen a todos.",
   },
   {
@@ -1959,6 +2239,7 @@ window.vocabularyData = [
     translation: "normal",
     perevod: "нормальный",
     category: "adjective",
+    topics: [],
     example: "Condiciones normales de tráfico",
   },
   {
@@ -1966,6 +2247,7 @@ window.vocabularyData = [
     translation: "normally",
     perevod: "обычно",
     category: "adverb",
+    topics: [],
     example: "Normalmente debe circular por el carril derecho.",
   },
   {
@@ -1973,6 +2255,7 @@ window.vocabularyData = [
     translation: "regulations",
     perevod: "правила",
     category: "noun",
+    topics: [],
     example: "Cumple la normativa de tráfico",
   },
   {
@@ -1980,6 +2263,7 @@ window.vocabularyData = [
     translation: "to notify",
     perevod: "Чтобы уведомить",
     category: "verb",
+    topics: [],
     example: "Te notificarán la sanción por correo.",
   },
   {
@@ -1987,6 +2271,7 @@ window.vocabularyData = [
     translation: "new",
     perevod: "новый",
     category: "adjective",
+    topics: [],
     example: "Este es un nuevo tipo de señal.",
   },
   {
@@ -1994,6 +2279,7 @@ window.vocabularyData = [
     translation: "never",
     perevod: "никогда",
     category: "adverb",
+    topics: [],
     example: "Nunca cruces cuando el semáforo está en rojo.",
   },
   {
@@ -2001,6 +2287,7 @@ window.vocabularyData = [
     translation: "obliged/forced",
     perevod: "обязался или вынужден",
     category: "adjective",
+    topics: [],
     example: "Estás obligado a detenerte ante un stop.",
   },
   {
@@ -2008,6 +2295,7 @@ window.vocabularyData = [
     translation: "to obligate/force",
     perevod: "Овертировать или применять",
     category: "verb",
+    topics: [],
     example: "La ley obliga a usar casco",
   },
   {
@@ -2015,6 +2303,7 @@ window.vocabularyData = [
     translation: "mandatorily",
     perevod: "мандатиально",
     category: "adverb",
+    topics: [],
     example: "Debes usar obligatoriamente el casco en la motocicleta.",
   },
   {
@@ -2022,6 +2311,7 @@ window.vocabularyData = [
     translation: "mandatory/compulsory",
     perevod: "обязательный или обязательный",
     category: "adjective",
+    topics: [],
     example: "Es obligatorio usar el cinturón",
   },
   {
@@ -2029,6 +2319,7 @@ window.vocabularyData = [
     translation: "to observe",
     perevod: "чтобы наблюдать",
     category: "verb",
+    topics: [],
     example: "Observa bien antes de cambiar de carril",
   },
   {
@@ -2036,6 +2327,7 @@ window.vocabularyData = [
     translation: "to obstruct",
     perevod: "Чтобы препятствовать",
     category: "verb",
+    topics: [],
     example: "No obstaculices el tráfico",
   },
   {
@@ -2043,6 +2335,7 @@ window.vocabularyData = [
     translation: "obstacle",
     perevod: "препятствие",
     category: "noun",
+    topics: [],
     example: "Evita cualquier obstáculo en la vía",
   },
   {
@@ -2050,6 +2343,7 @@ window.vocabularyData = [
     translation: "obvious",
     perevod: "очевидный",
     category: "adjective",
+    topics: [],
     example: "Es obvio que no se puede aparcar aquí.",
   },
   {
@@ -2057,6 +2351,7 @@ window.vocabularyData = [
     translation: "official",
     perevod: "официальный",
     category: "adjective",
+    topics: [],
     example: "Consulta solo fuentes oficiales.",
   },
   {
@@ -2064,6 +2359,7 @@ window.vocabularyData = [
     translation: "orderly/tidy",
     perevod: "упорядочен или аккуратный",
     category: "adjective",
+    topics: [],
     example: "El tráfico debe ser ordenado.",
   },
   {
@@ -2071,6 +2367,7 @@ window.vocabularyData = [
     translation: "ordinary",
     perevod: "обычный",
     category: "adjective",
+    topics: [],
     example: "En condiciones ordinarias de tráfico.",
   },
   {
@@ -2078,6 +2375,7 @@ window.vocabularyData = [
     translation: "dark",
     perevod: "темный",
     category: "adjective",
+    topics: [],
     example: "Enciende luces en tiempo oscuro",
   },
   {
@@ -2085,6 +2383,7 @@ window.vocabularyData = [
     translation: "other",
     perevod: "другой",
     category: "noun",
+    topics: [],
     example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
@@ -2092,6 +2391,7 @@ window.vocabularyData = [
     translation: "others",
     perevod: "другие",
     category: "noun",
+    topics: [],
     example: "Cuando tomamos alcohol con otras drogas",
   },
   {
@@ -2099,6 +2399,7 @@ window.vocabularyData = [
     translation: "variable message panel",
     perevod: "Панель сообщений переменной",
     category: "noun",
+    topics: [],
     example: "El panel de mensaje variable informa del tráfico.",
   },
   {
@@ -2106,6 +2407,7 @@ window.vocabularyData = [
     translation: "stop/bus stop",
     perevod: "остановка или автобусная остановка",
     category: "noun",
+    topics: [],
     example: "No aparques cerca de una parada de autobús.",
   },
   {
@@ -2113,6 +2415,7 @@ window.vocabularyData = [
     translation: "parallel",
     perevod: "параллель",
     category: "adjective",
+    topics: [],
     example: "Aparca en paralelo a la acera",
   },
   {
@@ -2120,6 +2423,7 @@ window.vocabularyData = [
     translation: "to stop",
     perevod: "чтобы остановиться",
     category: "verb",
+    topics: [],
     example: "Debes parar en el semáforo rojo",
   },
   {
@@ -2127,6 +2431,7 @@ window.vocabularyData = [
     translation: "partial",
     perevod: "частично",
     category: "adjective",
+    topics: [],
     example: "Visibilidad parcial por niebla",
   },
   {
@@ -2134,6 +2439,7 @@ window.vocabularyData = [
     translation: "passenger",
     perevod: "пассажир",
     category: "noun",
+    topics: [],
     example: "Los pasajeros deben usar cinturón",
   },
   {
@@ -2141,6 +2447,7 @@ window.vocabularyData = [
     translation: "level crossing",
     perevod: "ровная пересечение",
     category: "noun",
+    topics: [],
     example: "Extrema la precaución en el paso a nivel.",
   },
   {
@@ -2148,6 +2455,7 @@ window.vocabularyData = [
     translation: "pedestrian crossing",
     perevod: "пешеходный переход",
     category: "noun",
+    topics: [],
     example: "Cede el paso en el paso de peatones.",
   },
   {
@@ -2155,6 +2463,7 @@ window.vocabularyData = [
     translation: "lowered crossing",
     perevod: "понижено",
     category: "noun",
+    topics: [],
     example: "El paso rebajado facilita el acceso.",
   },
   {
@@ -2162,6 +2471,7 @@ window.vocabularyData = [
     translation: "gradual",
     perevod: "постепенно",
     category: "adjective",
+    topics: [],
     example: "La reducción paulatina de la velocidad es más segura.",
   },
   {
@@ -2177,6 +2487,7 @@ window.vocabularyData = [
     translation: "pavement",
     perevod: "тротуар",
     category: "noun",
+    topics: [],
     example: "El pavimento estaba mojado y resbaladizo.",
   },
   {
@@ -2184,6 +2495,7 @@ window.vocabularyData = [
     translation: "pedestrian",
     perevod: "пешеход",
     category: "noun",
+    topics: [],
     example: "El peatón tiene prioridad en el paso de cebra",
   },
   {
@@ -2191,6 +2503,7 @@ window.vocabularyData = [
     translation: "pedestrian",
     perevod: "пешеход",
     category: "adjective",
+    topics: [],
     example: "Respeta la zona peatonal",
   },
   {
@@ -2198,6 +2511,7 @@ window.vocabularyData = [
     translation: "danger",
     perevod: "Опасность",
     category: "noun",
+    topics: [],
     example: "Señaliza el peligro con el triángulo",
   },
   {
@@ -2205,6 +2519,7 @@ window.vocabularyData = [
     translation: "dangerous",
     perevod: "опасный",
     category: "adjective",
+    topics: [],
     example: "Adelantar aquí es peligroso",
   },
   {
@@ -2212,6 +2527,7 @@ window.vocabularyData = [
     translation: "small",
     perevod: "маленькие",
     category: "noun",
+    topics: [],
     example: "excepto si se toma en pequeñas cantidades",
   },
   {
@@ -2219,6 +2535,7 @@ window.vocabularyData = [
     translation: "to lose",
     perevod: "терять",
     category: "verb",
+    topics: [],
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
@@ -2226,6 +2543,7 @@ window.vocabularyData = [
     translation: "permanent",
     perevod: "постоянный",
     category: "adjective",
+    topics: [],
     example: "Esta es una señal permanente.",
   },
   {
@@ -2233,6 +2551,7 @@ window.vocabularyData = [
     translation: "license/permit",
     perevod: "лицензия или разрешение",
     category: "noun",
+    topics: [],
     example: "Necesitas permiso de conducir válido",
   },
   {
@@ -2240,6 +2559,7 @@ window.vocabularyData = [
     translation: "allowed/permitted",
     perevod: "разрешено или разрешено",
     category: "adjective",
+    topics: [],
     example: "Está permitido adelantar",
   },
   {
@@ -2247,6 +2567,7 @@ window.vocabularyData = [
     translation: "allowed/permitted",
     perevod: "разрешено или разрешено",
     category: "adjective",
+    topics: [],
     example: "El adelantamiento está permitido en esta sección.",
   },
   {
@@ -2254,6 +2575,7 @@ window.vocabularyData = [
     translation: "to allow/permit",
     perevod: "разрешить или разрешить",
     category: "verb",
+    topics: [],
     example: "No se permite circular a más de 50 km/h",
   },
   {
@@ -2261,6 +2583,7 @@ window.vocabularyData = [
     translation: "people",
     perevod: "люди",
     category: "noun",
+    topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -2268,6 +2591,7 @@ window.vocabularyData = [
     translation: "heavy",
     perevod: "тяжелый",
     category: "adjective",
+    topics: [],
     example: "Vehículo pesado más de 3500 kg",
   },
   {
@@ -2275,6 +2599,7 @@ window.vocabularyData = [
     translation: "weight",
     perevod: "масса",
     category: "noun",
+    topics: [],
     example: "están relacionados con el peso",
   },
   {
@@ -2282,6 +2607,7 @@ window.vocabularyData = [
     translation: "test plate",
     perevod: "тестовая пластина",
     category: "noun",
+    topics: [],
     example: "La placa de ensayo es para vehículos experimentales.",
   },
   {
@@ -2289,6 +2615,7 @@ window.vocabularyData = [
     translation: "ferry bridge",
     perevod: "Паромный мост",
     category: "noun",
+    topics: [],
     example: "El pontón trasbordador transporta vehículos.",
   },
   {
@@ -2296,6 +2623,7 @@ window.vocabularyData = [
     translation: "rear/back",
     perevod: "сзади или обратно",
     category: "adjective",
+    topics: [],
     example: "Mira por el espejo posterior",
   },
   {
@@ -2303,6 +2631,7 @@ window.vocabularyData = [
     translation: "subsequent/rear",
     perevod: "последующий или задний",
     category: "adjective",
+    topics: [],
     example: "La revisión posterior es obligatoria.",
   },
   {
@@ -2310,6 +2639,7 @@ window.vocabularyData = [
     translation: "subsequent/later",
     perevod: "последующий или позже",
     category: "adjective",
+    topics: [],
     example: "La inspección posterior confirmó los daños.",
   },
   {
@@ -2317,6 +2647,7 @@ window.vocabularyData = [
     translation: "later/afterwards",
     perevod: "позже или после",
     category: "adverb",
+    topics: [],
     example: "Si no llevas la documentación, deberás presentarla posteriormente en la comisaría.",
   },
   {
@@ -2324,6 +2655,7 @@ window.vocabularyData = [
     translation: "practically/virtually",
     perevod: "практически или практически",
     category: "adverb",
+    topics: [],
     example: "Con niebla densa, la visibilidad es prácticamente nula.",
   },
   {
@@ -2331,6 +2663,7 @@ window.vocabularyData = [
     translation: "practically",
     perevod: "практически",
     category: "adverb",
+    topics: [],
     example: "Con niebla densa, la visibilidad es prácticamente nula.",
   },
   {
@@ -2338,6 +2671,7 @@ window.vocabularyData = [
     translation: "mandatory/required",
     perevod: "обязательно или требуется",
     category: "adjective",
+    topics: [],
     example: "Es preceptivo llevar el dispositivo de retención infantil.",
   },
   {
@@ -2345,6 +2679,7 @@ window.vocabularyData = [
     translation: "pre-signaling",
     perevod: "предварительный сигнал",
     category: "noun",
+    topics: [],
     example: "La preseñalización indica la próxima salida.",
   },
   {
@@ -2352,6 +2687,7 @@ window.vocabularyData = [
     translation: "to present/show",
     perevod: "представить или показать",
     category: "verb",
+    topics: [],
     example: "Presenta la documentación cuando te la pidan",
   },
   {
@@ -2359,6 +2695,7 @@ window.vocabularyData = [
     translation: "preventive",
     perevod: "профилактическое",
     category: "adjective",
+    topics: [],
     example: "Se realizan controles de alcoholemia preventivos.",
   },
   {
@@ -2366,6 +2703,7 @@ window.vocabularyData = [
     translation: "previously/beforehand",
     perevod: "ранее или заранее",
     category: "adverb",
+    topics: [],
     example: "El conductor debe advertir previamente su maniobra con las señales reglamentarias.",
   },
   {
@@ -2373,6 +2711,7 @@ window.vocabularyData = [
     translation: "previous/prior",
     perevod: "предыдущий или ранее",
     category: "adjective",
+    topics: [],
     example: "Es necesario un examen previo para obtener el permiso.",
   },
   {
@@ -2380,6 +2719,7 @@ window.vocabularyData = [
     translation: "main/principal",
     perevod: "Главный или принципал",
     category: "adjective",
+    topics: [],
     example: "Circula por la vía principal",
   },
   {
@@ -2387,6 +2727,7 @@ window.vocabularyData = [
     translation: "main/principal",
     perevod: "Главный или принципал",
     category: "adjective",
+    topics: [],
     example: "La carretera principal tiene preferencia.",
   },
   {
@@ -2394,6 +2735,7 @@ window.vocabularyData = [
     translation: "mainly/principally",
     perevod: "в основном или главным образом",
     category: "adverb",
+    topics: [],
     example: "Debes ser cauteloso principalmente en zonas escolares.",
   },
   {
@@ -2401,6 +2743,7 @@ window.vocabularyData = [
     translation: "priority",
     perevod: "приоритет",
     category: "noun",
+    topics: [],
     example: "Los peatones tienen prioridad",
   },
   {
@@ -2408,6 +2751,7 @@ window.vocabularyData = [
     translation: "priority",
     perevod: "приоритет",
     category: "adjective",
+    topics: [],
     example: "El vehículo de emergencia tiene paso prioritario.",
   },
   {
@@ -2415,6 +2759,7 @@ window.vocabularyData = [
     translation: "private",
     perevod: "частный",
     category: "adjective",
+    topics: [],
     example: "Propiedad privada, no aparcar",
   },
   {
@@ -2422,6 +2767,7 @@ window.vocabularyData = [
     translation: "procedure",
     perevod: "процедура",
     category: "noun",
+    topics: [],
     example: "Sigue el procedimiento establecido para recurrir.",
   },
   {
@@ -2429,6 +2775,7 @@ window.vocabularyData = [
     translation: "to try/ensure",
     perevod: "Чтобы попробовать или убедиться",
     category: "verb",
+    topics: [],
     example: "Procura mantener la calma al volante",
   },
   {
@@ -2436,6 +2783,7 @@ window.vocabularyData = [
     translation: "produces",
     perevod: "производит",
     category: "noun",
+    topics: [],
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
@@ -2443,6 +2791,7 @@ window.vocabularyData = [
     translation: "prohibited/forbidden",
     perevod: "запрещено или запрещено",
     category: "adjective",
+    topics: [],
     example: "Está prohibido aparcar aquí",
   },
   {
@@ -2450,6 +2799,7 @@ window.vocabularyData = [
     translation: "to prohibit/forbid",
     perevod: "запретить или запретить",
     category: "verb",
+    topics: [],
     example: "Se prohíbe aparcar aquí",
   },
   {
@@ -2457,6 +2807,7 @@ window.vocabularyData = [
     translation: "civil protection",
     perevod: "Гражданская защита",
     category: "noun",
+    topics: [],
     example: "Los servicios de protección civil.",
   },
   {
@@ -2464,6 +2815,7 @@ window.vocabularyData = [
     translation: "provisional/temporary",
     perevod: "предварительный или временный",
     category: "adjective",
+    topics: [],
     example: "Permiso provisional hasta recibir el definitivo.",
   },
   {
@@ -2471,6 +2823,7 @@ window.vocabularyData = [
     translation: "provided",
     perevod: "при условии",
     category: "noun",
+    topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
@@ -2478,6 +2831,7 @@ window.vocabularyData = [
     translation: "prudent/careful",
     perevod: "разумный или осторожный",
     category: "adjective",
+    topics: [],
     example: "Conduce de manera prudente",
   },
   {
@@ -2485,6 +2839,7 @@ window.vocabularyData = [
     translation: "evidence",
     perevod: "доказательство",
     category: "noun",
+    topics: [],
     example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
@@ -2492,6 +2847,7 @@ window.vocabularyData = [
     translation: "public",
     perevod: "публичный",
     category: "adjective",
+    topics: [],
     example: "Respeta el transporte público",
   },
   {
@@ -2499,6 +2855,7 @@ window.vocabularyData = [
     translation: "the can",
     perevod: "они могут",
     category: "noun",
+    topics: [],
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
@@ -2506,6 +2863,7 @@ window.vocabularyData = [
     translation: "movable bridge",
     perevod: "подвижный мост",
     category: "noun",
+    topics: [],
     example: "Espera la señal en el puente móvil.",
   },
   {
@@ -2513,6 +2871,7 @@ window.vocabularyData = [
     translation: "rationally",
     perevod: "рационально",
     category: "adverb",
+    topics: [],
     example: "Se debe prever racionalmente la irrupción de peatones.",
   },
   {
@@ -2520,6 +2879,7 @@ window.vocabularyData = [
     translation: "branch/ramp",
     perevod: "ветвь или рампа",
     category: "noun",
+    topics: [],
     example: "Toma el ramal hacia la ciudad.",
   },
   {
@@ -2527,6 +2887,7 @@ window.vocabularyData = [
     translation: "quickly/rapidly",
     perevod: "быстро или быстро",
     category: "adverb",
+    topics: [],
     example: "Abandona rápidamente el vehículo en caso de incendio.",
   },
   {
@@ -2534,6 +2895,7 @@ window.vocabularyData = [
     translation: "fast/quick",
     perevod: "быстро или быстро",
     category: "adjective",
+    topics: [],
     example: "No seas demasiado rápido",
   },
   {
@@ -2541,6 +2903,7 @@ window.vocabularyData = [
     translation: "to carry out/perform",
     perevod: "выполнять или выполнять",
     category: "verb",
+    topics: [],
     example: "Realiza las maniobras con seguridad",
   },
   {
@@ -2548,6 +2911,7 @@ window.vocabularyData = [
     translation: "to resume",
     perevod: "возобновить",
     category: "verb",
+    topics: [],
     example: "Reanuda la marcha cuando sea seguro.",
   },
   {
@@ -2555,6 +2919,7 @@ window.vocabularyData = [
     translation: "to exceed/overtake",
     perevod: "превышать или обогнать",
     category: "verb",
+    topics: [],
     example: "No rebases el límite de velocidad",
   },
   {
@@ -2562,6 +2927,7 @@ window.vocabularyData = [
     translation: "to receive",
     perevod: "получить",
     category: "verb",
+    topics: [],
     example: "Recibe las instrucciones del examinador",
   },
   {
@@ -2569,6 +2935,7 @@ window.vocabularyData = [
     translation: "collect",
     perevod: "собирать",
     category: "verb",
+    topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
@@ -2576,6 +2943,7 @@ window.vocabularyData = [
     translation: "straight",
     perevod: "прямой",
     category: "adjective",
+    topics: [],
     example: "Sigue recto hasta el semáforo",
   },
   {
@@ -2583,6 +2951,7 @@ window.vocabularyData = [
     translation: "to appeal",
     perevod: "апеллировать",
     category: "verb",
+    topics: [],
     example: "Puedes recurrir la multa si no estás conforme.",
   },
   {
@@ -2598,6 +2967,7 @@ window.vocabularyData = [
     translation: "to reduce",
     perevod: "чтобы уменьшить",
     category: "verb",
+    topics: [],
     example: "Reduce la velocidad en curvas",
   },
   {
@@ -2605,6 +2975,7 @@ window.vocabularyData = [
     translation: "reflective",
     perevod: "отражающий",
     category: "adjective",
+    topics: [],
     example: "Es obligatorio llevar un chaleco reflectante en caso de avería.",
   },
   {
@@ -2612,6 +2983,7 @@ window.vocabularyData = [
     translation: "regime/system",
     perevod: "режим или система",
     category: "noun",
+    topics: [],
     example: "El régimen sancionador es muy estricto.",
   },
   {
@@ -2619,6 +2991,7 @@ window.vocabularyData = [
     translation: "regulatory/statutory",
     perevod: "нормативно -правовые или установленные законом",
     category: "adjective",
+    topics: [],
     example: "El uso del casco es reglamentario para motoristas.",
   },
   {
@@ -2626,6 +2999,7 @@ window.vocabularyData = [
     translation: "regulatory",
     perevod: "регаламентный",
     category: "adjective",
+    topics: [],
     example: "Equipo reglamentario obligatorio en el vehículo.",
   },
   {
@@ -2633,6 +3007,7 @@ window.vocabularyData = [
     translation: "regulation",
     perevod: "регулирование",
     category: "noun",
+    topics: [],
     example: "El reglamento de circulación es de obligado cumplimiento.",
   },
   {
@@ -2640,6 +3015,7 @@ window.vocabularyData = [
     translation: "traffic regulation",
     perevod: "Регламент дорожного движения",
     category: "noun",
+    topics: [],
     example: "La regulación del tráfico es municipal.",
   },
   {
@@ -2647,6 +3023,7 @@ window.vocabularyData = [
     translation: "to regulate",
     perevod: "регулировать",
     category: "verb",
+    topics: [],
     example: "Los semáforos regulan el tráfico urbano.",
   },
   {
@@ -2654,6 +3031,7 @@ window.vocabularyData = [
     translation: "related",
     perevod: "связанный",
     category: "noun",
+    topics: [],
     example: "están relacionados con el peso",
   },
   {
@@ -2661,6 +3039,7 @@ window.vocabularyData = [
     translation: "relaxing",
     perevod: "расслабляющий",
     category: "noun",
+    topics: [],
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
@@ -2668,6 +3047,7 @@ window.vocabularyData = [
     translation: "to tow",
     perevod: "чтобы буксировать",
     category: "verb",
+    topics: [],
     example: "La grúa va a remolcar el coche averiado.",
   },
   {
@@ -2675,6 +3055,7 @@ window.vocabularyData = [
     translation: "trailer",
     perevod: "трейлер",
     category: "noun",
+    topics: [],
     example: "El vehículo tractor arrastra un remolque ligero.",
   },
   {
@@ -2682,6 +3063,7 @@ window.vocabularyData = [
     translation: "to repeat",
     perevod: "повторить",
     category: "verb",
+    topics: [],
     example: "No repitas la misma infracción",
   },
   {
@@ -2689,6 +3071,7 @@ window.vocabularyData = [
     translation: "headrests",
     perevod: "подголовники",
     category: "noun",
+    topics: [],
     example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
@@ -2696,6 +3079,7 @@ window.vocabularyData = [
     translation: "to respect/obey",
     perevod: "уважать или подчиняться",
     category: "verb",
+    topics: [],
     example: "Respeta las señales de tráfico",
   },
   {
@@ -2703,6 +3087,7 @@ window.vocabularyData = [
     translation: "to respond",
     perevod: "ответить",
     category: "verb",
+    topics: [],
     example: "Responde rápido en emergencias",
   },
   {
@@ -2710,6 +3095,7 @@ window.vocabularyData = [
     translation: "responsible",
     perevod: "ответственный",
     category: "adjective",
+    topics: [],
     example: "Sé responsable al volante",
   },
   {
@@ -2717,6 +3103,7 @@ window.vocabularyData = [
     translation: "traffic restrictions",
     perevod: "ограничения трафика",
     category: "noun",
+    topics: [],
     example: "Hay restricciones de circulación por obras.",
   },
   {
@@ -2724,6 +3111,7 @@ window.vocabularyData = [
     translation: "traffic jam",
     perevod: "пробка",
     category: "noun",
+    topics: [],
     example: "Hay retención de 5 kilómetros.",
   },
   {
@@ -2731,6 +3119,7 @@ window.vocabularyData = [
     translation: "to withdraw/remove",
     perevod: "Чтобы снять или удалить",
     category: "verb",
+    topics: [],
     example: "Van a retirar el vehículo mal aparcado.",
   },
   {
@@ -2738,6 +3127,7 @@ window.vocabularyData = [
     translation: "inspection/review",
     perevod: "осмотр или обзор",
     category: "noun",
+    topics: [],
     example: "La revisión del vehículo es anual.",
   },
   {
@@ -2745,6 +3135,7 @@ window.vocabularyData = [
     translation: "rotating beacon",
     perevod: "вращающийся маяк",
     category: "noun",
+    topics: [],
     example: "El rotativo naranja señala vehículos especiales.",
   },
   {
@@ -2752,6 +3143,7 @@ window.vocabularyData = [
     translation: "routine",
     perevod: "рутинный",
     category: "adjective",
+    topics: [],
     example: "Un control rutinario de alcoholemia.",
   },
   {
@@ -2759,6 +3151,7 @@ window.vocabularyData = [
     translation: "to exit/leave",
     perevod: "выйти или покинуть",
     category: "verb",
+    topics: [],
     example: "Sale del carril con cuidado",
   },
   {
@@ -2766,6 +3159,7 @@ window.vocabularyData = [
     translation: "penalty/sanction",
     perevod: "штраф или санкция",
     category: "noun",
+    topics: [],
     example: "La sanción puede incluir pérdida de puntos",
   },
   {
@@ -2773,6 +3167,7 @@ window.vocabularyData = [
     translation: "traffic saturation",
     perevod: "насыщение трафика",
     category: "noun",
+    topics: [],
     example: "La saturación del tráfico causa retrasos.",
   },
   {
@@ -2780,6 +3175,7 @@ window.vocabularyData = [
     translation: "secondary",
     perevod: "второстепенный",
     category: "adjective",
+    topics: [],
     example: "Cede paso desde vía secundaria",
   },
   {
@@ -2787,6 +3183,7 @@ window.vocabularyData = [
     translation: "secondary",
     perevod: "второстепенный",
     category: "adjective",
+    topics: [],
     example: "Acceda desde una vía secundaria con precaución.",
   },
   {
@@ -2794,6 +3191,7 @@ window.vocabularyData = [
     translation: "to follow/continue",
     perevod: "следовать или продолжить",
     category: "verb",
+    topics: [],
     example: "Sigue las indicaciones del agente",
   },
   {
@@ -2801,6 +3199,7 @@ window.vocabularyData = [
     translation: "safety/security",
     perevod: "безопасность",
     category: "noun",
+    topics: [],
     example: "La seguridad vial es fundamental",
   },
   {
@@ -2808,6 +3207,7 @@ window.vocabularyData = [
     translation: "safe/secure",
     perevod: "безопасно или безопасно",
     category: "adjective",
+    topics: [],
     example: "Conduce de forma segura",
   },
   {
@@ -2815,6 +3215,7 @@ window.vocabularyData = [
     translation: "insurance",
     perevod: "страхование",
     category: "noun",
+    topics: [],
     example: "Es obligatorio tener seguro del vehículo.",
   },
   {
@@ -2822,6 +3223,7 @@ window.vocabularyData = [
     translation: "traffic light",
     perevod: "светофор",
     category: "noun",
+    topics: [],
     example: "Respeta las indicaciones del semáforo.",
   },
   {
@@ -2829,6 +3231,7 @@ window.vocabularyData = [
     translation: "sign/signal",
     perevod: "знак или сигнал",
     category: "noun",
+    topics: [],
     example: "Respeta todas las señales de tráfico",
   },
   {
@@ -2836,6 +3239,7 @@ window.vocabularyData = [
     translation: "acoustic signal",
     perevod: "акустический сигнал",
     category: "noun",
+    topics: [],
     example: "La señal acústica es obligatoria.",
   },
   {
@@ -2843,6 +3247,7 @@ window.vocabularyData = [
     translation: "light signal",
     perevod: "световой сигнал",
     category: "noun",
+    topics: [],
     example: "La señal luminosa es prioritaria.",
   },
   {
@@ -2850,6 +3255,7 @@ window.vocabularyData = [
     translation: "to signal/indicate",
     perevod: "сигнализировать или указать",
     category: "verb",
+    topics: [],
     example: "Señala tus intenciones claramente",
   },
   {
@@ -2857,6 +3263,7 @@ window.vocabularyData = [
     translation: "signage",
     perevod: "сигнализация",
     category: "noun",
+    topics: [],
     example: "La señalización vertical indica la velocidad máxima.",
   },
   {
@@ -2864,6 +3271,7 @@ window.vocabularyData = [
     translation: "circumstantial signaling",
     perevod: "ситуационная сигнализация",
     category: "noun",
+    topics: [],
     example: "La señalización circunstancial es temporal.",
   },
   {
@@ -2871,6 +3279,7 @@ window.vocabularyData = [
     translation: "to signpost",
     perevod: "для указателя",
     category: "verb",
+    topics: [],
     example: "Van a señalizar mejor esta intersección.",
   },
   {
@@ -2878,6 +3287,7 @@ window.vocabularyData = [
     translation: "cycle path",
     perevod: "велосипедная дорожка",
     category: "noun",
+    topics: [],
     example: "La senda ciclable es solo para bicicletas.",
   },
   {
@@ -2885,6 +3295,7 @@ window.vocabularyData = [
     translation: "divider",
     perevod: "делитель",
     category: "noun",
+    topics: [],
     example: "El separador divide los sentidos de circulación.",
   },
   {
@@ -2892,6 +3303,7 @@ window.vocabularyData = [
     translation: "public service",
     perevod: "государственная служба",
     category: "noun",
+    topics: [],
     example: "Vehículo destinado al servicio público.",
   },
   {
@@ -2899,6 +3311,7 @@ window.vocabularyData = [
     translation: "emergency service",
     perevod: "аварийная служба",
     category: "noun",
+    topics: [],
     example: "Vehículo en servicio urgente.",
   },
   {
@@ -2906,6 +3319,7 @@ window.vocabularyData = [
     translation: "always",
     perevod: "всегда",
     category: "adverb",
+    topics: [],
     example: "Siempre debes respetar las señales de tráfico.",
   },
   {
@@ -2913,6 +3327,7 @@ window.vocabularyData = [
     translation: "simultaneous",
     perevod: "одновременный",
     category: "adjective",
+    topics: [],
     example: "Control simultáneo de velocidad y documentación.",
   },
   {
@@ -2920,6 +3335,7 @@ window.vocabularyData = [
     translation: "symptomatic",
     perevod: "симптоматический",
     category: "noun",
+    topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
@@ -2927,6 +3343,7 @@ window.vocabularyData = [
     translation: "to place/locate",
     perevod: "поместить или найти",
     category: "verb",
+    topics: [],
     example: "Sitúa el vehículo en el carril correcto",
   },
   {
@@ -2934,6 +3351,7 @@ window.vocabularyData = [
     translation: "only",
     perevod: "только",
     category: "adverb",
+    topics: [],
     example: "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
   },
   {
@@ -2941,6 +3359,7 @@ window.vocabularyData = [
     translation: "undergo",
     perevod: "подвергаться",
     category: "adverb",
+    topics: [],
     example: "Qué usuarios deben someterse a las pruebas de alcoholemia",
   },
   {
@@ -2948,6 +3367,7 @@ window.vocabularyData = [
     translation: "successive",
     perevod: "последовательно",
     category: "adjective",
+    topics: [],
     example: "En controles sucesivos se detectaron más infracciones.",
   },
   {
@@ -2955,6 +3375,7 @@ window.vocabularyData = [
     translation: "dirty",
     perevod: "грязный",
     category: "adjective",
+    topics: [],
     example: "Un vehículo sucio puede ocultar la matrícula.",
   },
   {
@@ -3028,6 +3449,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Hay una señalización temporal por obras.",
+  },
+  {
+    word: "tiempo",
+    translation: "time",
+    perevod: "время",
+    category: "noun",
+    topics: ["topic11"],
+    example: "El tiempo desde que ve un peligro hasta que actúa",
   },
   {
     word: "toma",
