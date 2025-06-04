@@ -26,7 +26,7 @@
  * - Check DevTools > Application > Service Workers for registration status
  */
 
-const CACHE_NAME = "dgt-vocab-v1.1.1";
+const CACHE_NAME = "dgt-vocab-v1.1.2";
 const urlsToCache = [
   // Main pages
   "/",
