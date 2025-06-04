@@ -681,7 +681,7 @@ button:hover,
 
   /* Quiz option text for tablets */
   .quiz-option-text {
-    font-size: 1.05rem;
+    font-size: 1.26rem;
   }
 }
 
@@ -1071,7 +1071,7 @@ button:hover,
 
   /* Ensure quiz option text is visible and readable */
   .quiz-option-text {
-    font-size: 1.1rem;
+    font-size: 1.32rem;
     line-height: 1.3;
     padding: var(--spacing-1);
     min-height: 2.6rem;
@@ -1097,7 +1097,7 @@ button:hover,
 /* Very small mobile devices (below 375px) */
 @media (max-width: 374px) {
   .quiz-option-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: var(--spacing-2);
     min-height: 3rem;
     line-height: 1.2;
