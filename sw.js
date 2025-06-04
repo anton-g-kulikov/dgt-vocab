@@ -1,5 +1,5 @@
 // Service Worker for DGT Vocabulary App
-const CACHE_NAME = "dgt-vocab-v1.3.6";
+const CACHE_NAME = "dgt-vocab-v1.4.0";
 const urlsToCache = [
   // Main pages
   "/",
@@ -41,6 +41,7 @@ const urlsToCache = [
   "/src/utils/pwa-installer.js",
   "/src/utils/reset-progress.js",
   "/src/utils/cache-manager.js",
+  "/src/utils/version-sync.js",
   "/src/utils/script.js",
 
   // PWA files
