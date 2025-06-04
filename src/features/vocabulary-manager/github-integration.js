@@ -894,7 +894,7 @@ If you continue to have issues, try:
       if (branch) {
         url += `?ref=${branch}`;
       }
-      
+
       const response = await fetch(url, {
         headers: {
           Authorization: `token ${token}`,
