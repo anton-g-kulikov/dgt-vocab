@@ -73,25 +73,11 @@ window.vocabularyData = [
     example: "Advierte del peligro con las luces",
   },
   {
-    word: "afecta",
-    translation: "affects",
-    perevod: "влияет",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento",
-  },
-  {
     word: "agente",
     translation: "officer/agent",
     perevod: "офицер или агент",
     category: "noun",
     example: "El agente de tráfico dirige la circulación",
-  },
-  {
-    word: "alcohol",
-    translation: "alcohol",
-    perevod: "алкоголь",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
   },
   {
     word: "alcoholemia",
@@ -220,25 +206,11 @@ window.vocabularyData = [
     example: "El atasco dura dos horas.",
   },
   {
-    word: "atención",
-    translation: "attention",
-    perevod: "внимание",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
-  },
-  {
     word: "atropellar",
     translation: "to run over",
     perevod: "переехать",
     category: "verb",
     example: "Evita atropellar a los peatones",
-  },
-  {
-    word: "aumenta",
-    translation: "increases",
-    perevod: "увеличивается",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
   },
   {
     word: "autobús",
@@ -379,13 +351,6 @@ window.vocabularyData = [
     perevod: "грузовик",
     category: "noun",
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
-  },
-  {
-    word: "cannabis",
-    translation: "cannabis",
-    perevod: "каннабис",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento",
   },
   {
     word: "carga",
@@ -605,13 +570,6 @@ window.vocabularyData = [
     example: "Haz una revisión completa",
   },
   {
-    word: "comportamiento",
-    translation: "behavior",
-    perevod: "поведение",
-    category: "noun",
-    example: "Los efectos que provoca el LSD en el comportamiento del conductor",
-  },
-  {
     word: "comprobar",
     translation: "to check/verify",
     perevod: "проверить",
@@ -647,13 +605,6 @@ window.vocabularyData = [
     example: "El conductor novel debe señalizarse.",
   },
   {
-    word: "conductores",
-    translation: "drivers",
-    perevod: "водители",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
-  },
-  {
     word: "congestión",
     translation: "congestion",
     perevod: "скопление",
@@ -673,13 +624,6 @@ window.vocabularyData = [
     perevod: "составлять",
     category: "verb",
     example: "Esta acción constituye una infracción grave.",
-  },
-  {
-    word: "consumo",
-    translation: "consumption",
-    perevod: "потребление",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento",
   },
   {
     word: "continuo",
@@ -829,13 +773,6 @@ window.vocabularyData = [
     example: "La densidad del tráfico es alta.",
   },
   {
-    word: "desaparece",
-    translation: "disappears",
-    perevod: "исчезает",
-    category: "noun",
-    example: "El alcohol desaparece de la sangre",
-  },
-  {
     word: "deslumbramiento",
     translation: "glare/dazzling",
     perevod: "блики или ослепительно",
@@ -855,6 +792,13 @@ window.vocabularyData = [
     perevod: "обойти или отвлечься",
     category: "verb",
     example: "Desvía el tráfico si hay obras",
+  },
+  {
+    word: "detección",
+    translation: "detection",
+    perevod: "обнаружение",
+    category: "noun",
+    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
   },
   {
     word: "detectar",
@@ -920,13 +864,6 @@ window.vocabularyData = [
     example: "Línea discontinua, adelantamiento permitido.",
   },
   {
-    word: "disminuye",
-    translation: "decreases",
-    perevod: "уменьшается",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
-  },
-  {
     word: "disposición",
     translation: "provision/regulation",
     perevod: "обеспечение или регулирование",
@@ -981,20 +918,6 @@ window.vocabularyData = [
     perevod: "документ",
     category: "noun",
     example: "Lleva siempre la documentación",
-  },
-  {
-    word: "durante",
-    translation: "during",
-    perevod: "в течение",
-    category: "noun",
-    example: "Durante los dos años siguientes a la obtención del primer permiso de conducir no podrá circular",
-  },
-  {
-    word: "efectos",
-    translation: "effects",
-    perevod: "эффекты",
-    category: "noun",
-    example: "Los efectos que provoca el LSD en el comportamiento del conductor",
   },
   {
     word: "eficacia",
@@ -1746,13 +1669,6 @@ window.vocabularyData = [
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
-    word: "mercancías",
-    translation: "goods",
-    perevod: "товары",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
-  },
-  {
     word: "mercancías peligrosas",
     translation: "dangerous goods",
     perevod: "опасные товары",
@@ -1851,13 +1767,6 @@ window.vocabularyData = [
     example: "Es importante revisar la presión del neumático.",
   },
   {
-    word: "nivel",
-    translation: "level",
-    perevod: "уровень",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
-  },
-  {
     word: "norma",
     translation: "rule/standard",
     perevod: "правило или стандарт",
@@ -1954,13 +1863,6 @@ window.vocabularyData = [
     perevod: "препятствие",
     category: "noun",
     example: "Evita cualquier obstáculo en la vía",
-  },
-  {
-    word: "obtención",
-    translation: "obtaining",
-    perevod: "получение",
-    category: "noun",
-    example: "Durante los dos años siguientes a la obtención del primer permiso de conducir no podrá circular",
   },
   {
     word: "obvio",
@@ -2103,13 +2005,6 @@ window.vocabularyData = [
     example: "Señaliza el peligro con el triángulo",
   },
   {
-    word: "peligrosas",
-    translation: "dangerous",
-    perevod: "опасный",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
-  },
-  {
     word: "peligroso",
     translation: "dangerous",
     perevod: "опасный",
@@ -2180,18 +2075,18 @@ window.vocabularyData = [
     example: "La placa de ensayo es para vehículos experimentales.",
   },
   {
-    word: "podrá",
-    translation: "may",
-    perevod: "может",
-    category: "noun",
-    example: "Durante los dos años siguientes a la obtención del primer permiso de conducir no podrá circular",
-  },
-  {
     word: "pontón trasbordador",
     translation: "ferry bridge",
     perevod: "Паромный мост",
     category: "noun",
     example: "El pontón trasbordador transporta vehículos.",
+  },
+  {
+    word: "positivo",
+    translation: "positive",
+    perevod: "положительный",
+    category: "adjective",
+    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
   },
   {
     word: "posterior",
@@ -2276,13 +2171,6 @@ window.vocabularyData = [
     perevod: "предыдущий или ранее",
     category: "adjective",
     example: "Es necesario un examen previo para obtener el permiso.",
-  },
-  {
-    word: "primer",
-    translation: "first",
-    perevod: "первый",
-    category: "verb",
-    example: "Durante los dos años siguientes a la obtención del primer permiso de conducir no podrá circular",
   },
   {
     word: "principal",
@@ -2376,18 +2264,18 @@ window.vocabularyData = [
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
-    word: "provoca",
-    translation: "causes",
-    perevod: "причины",
-    category: "noun",
-    example: "Los efectos que provoca el LSD en el comportamiento del conductor",
-  },
-  {
     word: "prudente",
     translation: "prudent/careful",
     perevod: "разумный или осторожный",
     category: "adjective",
     example: "Conduce de manera prudente",
+  },
+  {
+    word: "prueba",
+    translation: "proof",
+    perevod: "доказательство",
+    category: "noun",
+    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
   },
   {
     word: "público",
@@ -2437,13 +2325,6 @@ window.vocabularyData = [
     perevod: "быстро или быстро",
     category: "adjective",
     example: "No seas demasiado rápido",
-  },
-  {
-    word: "reacción",
-    translation: "reaction",
-    perevod: "реакция",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
   },
   {
     word: "realizar",
@@ -2607,6 +2488,13 @@ window.vocabularyData = [
     example: "Hay restricciones de circulación por obras.",
   },
   {
+    word: "resultado",
+    translation: "result",
+    perevod: "результат",
+    category: "adjective",
+    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
+  },
+  {
     word: "retención",
     translation: "traffic jam",
     perevod: "пробка",
@@ -2654,13 +2542,6 @@ window.vocabularyData = [
     perevod: "штраф или санкция",
     category: "noun",
     example: "La sanción puede incluir pérdida de puntos",
-  },
-  {
-    word: "sangre",
-    translation: "blood",
-    perevod: "кровь",
-    category: "noun",
-    example: "El alcohol desaparece de la sangre",
   },
   {
     word: "saturación del tráfico",
@@ -2803,13 +2684,6 @@ window.vocabularyData = [
     example: "Siempre debes respetar las señales de tráfico.",
   },
   {
-    word: "siguientes",
-    translation: "following",
-    perevod: "следующий",
-    category: "noun",
-    example: "Durante los dos años siguientes a la obtención del primer permiso de conducir no podrá circular",
-  },
-  {
     word: "simultáneo",
     translation: "simultaneous",
     perevod: "одновременный",
@@ -2829,13 +2703,6 @@ window.vocabularyData = [
     perevod: "только",
     category: "adverb",
     example: "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
-  },
-  {
-    word: "somnolencia",
-    translation: "sleepiness",
-    perevod: "сонливость",
-    category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
   },
   {
     word: "sucesivo",
@@ -2880,13 +2747,6 @@ window.vocabularyData = [
     example: "Sustituye las luces fundidas inmediatamente.",
   },
   {
-    word: "tasa",
-    translation: "rate",
-    perevod: "уровень",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
-  },
-  {
     word: "taxímetro",
     translation: "taximeter",
     perevod: "таксометр",
@@ -2915,11 +2775,11 @@ window.vocabularyData = [
     example: "Hay una señalización temporal por obras.",
   },
   {
-    word: "tiempo",
-    translation: "time",
-    perevod: "время",
+    word: "tenga",
+    translation: "have",
+    perevod: "иметь",
     category: "noun",
-    example: "El consumo de cannabis afecta al comportamiento del conductor porque...A) aumenta su nivel de atención.B) disminuye la somnolencia.C) aumenta su tiempo de reacción.",
+    example: "Un conductor que tenga un resultado positivo en una prueba de detección de alcoholemia",
   },
   {
     word: "torpe",
@@ -2948,13 +2808,6 @@ window.vocabularyData = [
     perevod: "транзит или путешествовать",
     category: "verb",
     example: "Transita con precaución por zonas escolares",
-  },
-  {
-    word: "transportan",
-    translation: "transport",
-    perevod: "транспорт",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
   },
   {
     word: "transporte especial",
@@ -3060,13 +2913,6 @@ window.vocabularyData = [
     perevod: "пилотный автомобиль",
     category: "noun",
     example: "El vehículo piloto acompaña cargas especiales.",
-  },
-  {
-    word: "vehículos",
-    translation: "vehicles",
-    perevod: "транспортные средства",
-    category: "noun",
-    example: "La tasa máxima de alcohol para los conductores de vehículos que transportan mercancías peligrosas",
   },
   {
     word: "velocidad",
