@@ -84,8 +84,10 @@ src/
 │   ├── flashcards/           # Flashcard and quiz functionality
 │   │   ├── category-manager.js      # Category and topic filtering
 │   │   ├── flashcard-mode.js        # Flashcard display and interaction
-│   │   ├── quiz-mode.js             # Quiz functionality
+│   │   ├── quiz-mode.js             # Quiz functionality with enhanced styling
 │   │   └── stats-manager.js         # Progress tracking and statistics
+│   ├── stats/                # Statistics management
+│   │   └── stats-manager.js         # Centralized statistics handling
 │   └── vocabulary-manager/    # Vocabulary management system
 │       ├── vocabulary-manager.js        # Main orchestrator
 │       ├── text-parser.js              # Text analysis and word extraction

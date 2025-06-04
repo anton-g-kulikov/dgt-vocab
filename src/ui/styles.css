@@ -845,9 +845,20 @@ button:hover,
   text-align: center;
 }
 
-.quiz-question .spanish-highlight {
-  color: var(--color-accent);
-  font-weight: 600;
+.quiz-question .spanish-highlight,
+.spanish-highlight {
+  color: #dc8f64; /* Fallback color */
+  color: var(--color-accent) !important;
+  font-weight: 600 !important;
+}
+
+/* Ensure quiz question Spanish words are properly styled */
+.quiz-question .spanish-word.spanish-highlight,
+.quiz-question span.spanish-highlight {
+  color: #dc8f64; /* Fallback color */
+  color: var(--color-accent) !important;
+  font-weight: 600 !important;
+  font-family: "DM Serif Display", serif !important;
 }
 
 .quiz-options {

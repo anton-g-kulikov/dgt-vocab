@@ -232,12 +232,23 @@ class QuizMode {
       // Create span for the Spanish word with appropriate class
       const spanishWordSpan = document.createElement("span");
       spanishWordSpan.className = "spanish-word spanish-highlight";
+      // Also set inline styles as fallback to ensure visibility
+      spanishWordSpan.style.color = "#dc8f64"; // Direct color as fallback
+      spanishWordSpan.style.fontWeight = "600";
+      spanishWordSpan.style.fontFamily = '"DM Serif Display", serif';
       spanishWordSpan.textContent = correctCard.word;
       quizQuestion.appendChild(spanishWordSpan);
 
       // Add the rest of the question
       const endText = document.createTextNode('" mean?');
       quizQuestion.appendChild(endText);
+
+      // Debug log to help troubleshoot
+      console.log("Quiz question set:", {
+        word: correctCard.word,
+        className: spanishWordSpan.className,
+        computedStyle: window.getComputedStyle(spanishWordSpan).color,
+      });
     }
 
     // Get options container

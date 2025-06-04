@@ -45,15 +45,10 @@
                 registration.scope
               );
 
-              // Check for updates immediately and periodically
-              function checkForUpdates() {
-                registration.update().catch((err) => {
-                  console.log("Service worker update check failed:", err);
-                });
-              }
-
-              // Check for updates every 60 seconds
-              setInterval(checkForUpdates, 60000);
+              // Check for updates only on initial load
+              registration.update().catch((err) => {
+                console.log("Service worker update check failed:", err);
+              });
 
               // Handle updates
               registration.addEventListener("updatefound", function () {

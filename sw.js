@@ -26,7 +26,7 @@
  * - Check DevTools > Application > Service Workers for registration status
  */
 
-const CACHE_NAME = "dgt-vocab-v1.1.3";
+const CACHE_NAME = "dgt-vocab-v1.1.6";
 const urlsToCache = [
   // Main pages
   "/",
@@ -263,26 +263,6 @@ function doBackgroundSync() {
   return new Promise((resolve) => {
     console.log("Service Worker: Background sync triggered");
     resolve();
-  });
-}
-
-// Helper function to check if cache needs updating
-function isCacheStale() {
-  return caches.has(CACHE_NAME).then((hasCache) => {
-    if (!hasCache) return true;
-
-    return caches.open(CACHE_NAME).then((cache) => {
-      return cache.match("/manifest.json").then((response) => {
-        if (!response) return true;
-
-        // Check if the cached version is older than 1 hour
-        const cacheDate = new Date(response.headers.get("date") || 0);
-        const now = new Date();
-        const oneHour = 60 * 60 * 1000;
-
-        return now - cacheDate > oneHour;
-      });
-    });
   });
 }
 
