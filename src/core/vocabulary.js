@@ -80,11 +80,32 @@ window.vocabularyData = [
     example: "El agente de tráfico dirige la circulación",
   },
   {
+    word: "alcohol",
+    translation: "alcohol",
+    perevod: "алкоголь",
+    category: "noun",
+    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+  },
+  {
     word: "alcoholemia",
     translation: "blood alcohol test",
     perevod: "анализ алкоголя в крови",
     category: "noun",
     example: "El control de alcoholemia es aleatorio.",
+  },
+  {
+    word: "alcohólica",
+    translation: "alcoholic",
+    perevod: "алкоголик",
+    category: "adjective",
+    example: "Si se niega a realizar las pruebas de detección alcohólica",
+  },
+  {
+    word: "alteraciones",
+    translation: "alterations",
+    perevod: "изменения",
+    category: "noun",
+    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "alumbrado",
@@ -115,18 +136,18 @@ window.vocabularyData = [
     example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
-    word: "ante",
-    translation: "in view of",
-    perevod: "ввиду",
-    category: "noun",
-    example: "tarda menos en reaccionar ante cualquier peligro",
-  },
-  {
     word: "anterior",
     translation: "previous/front",
     perevod: "предыдущий/передний",
     category: "adjective",
     example: "El vehículo anterior frena",
+  },
+  {
+    word: "antes",
+    translation: "before",
+    perevod: "до",
+    category: "noun",
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "apagado",
@@ -360,11 +381,18 @@ window.vocabularyData = [
     example: "En una carretera convencional con arcén pavimentado de 1,50 metros de ancho, ¿a qué velocidad máxima puede adelantar un camión?",
   },
   {
-    word: "capacidades",
-    translation: "capabilities",
-    perevod: "возможности",
+    word: "campo",
+    translation: "field",
+    perevod: "поле",
     category: "noun",
-    example: "sobrevalora sus propias capacidades y desprecia el peligro",
+    example: "Incrementa el campo visual",
+  },
+  {
+    word: "cantidades",
+    translation: "quantities",
+    perevod: "количества",
+    category: "noun",
+    example: "excepto si se toma en pequeñas cantidades",
   },
   {
     word: "carga",
@@ -542,6 +570,13 @@ window.vocabularyData = [
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
+    word: "comida",
+    translation: "meal",
+    perevod: "еда",
+    category: "noun",
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+  },
+  {
     word: "como",
     translation: "like",
     perevod: "нравиться",
@@ -584,6 +619,13 @@ window.vocabularyData = [
     example: "Haz una revisión completa",
   },
   {
+    word: "comportamiento",
+    translation: "behavior",
+    perevod: "поведение",
+    category: "noun",
+    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+  },
+  {
     word: "comprobar",
     translation: "to check/verify",
     perevod: "проверить",
@@ -596,6 +638,13 @@ window.vocabularyData = [
     perevod: "общаться",
     category: "verb",
     example: "Comunica cualquier cambio de domicilio.",
+  },
+  {
+    word: "comunicarlos",
+    translation: "communicate them",
+    perevod: "сообщать им",
+    category: "noun",
+    example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
     word: "conducir",
@@ -696,6 +745,13 @@ window.vocabularyData = [
     example: "El convoy militar tiene prioridad de paso.",
   },
   {
+    word: "coordine",
+    translation: "coordinate",
+    perevod: "координировать",
+    category: "verb",
+    example: "Es más difícil que coordine correctamente sus movimientos",
+  },
+  {
     word: "correctamente",
     translation: "correctly",
     perevod: "правильно",
@@ -724,18 +780,18 @@ window.vocabularyData = [
     example: "Cruza la calle por el paso de peatones",
   },
   {
-    word: "cualquier",
-    translation: "any",
-    perevod: "любой",
-    category: "verb",
-    example: "responde mejor ante cualquier peligro.",
-  },
-  {
     word: "cumplir",
     translation: "to comply with",
     perevod: "соблюдать",
     category: "verb",
     example: "Es obligatorio cumplir con las indicaciones del agente.",
+  },
+  {
+    word: "datos",
+    translation: "data",
+    perevod: "данные",
+    category: "noun",
+    example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
     word: "deben",
@@ -808,18 +864,18 @@ window.vocabularyData = [
     example: "Evite el comportamiento desordenado en la vía.",
   },
   {
-    word: "desprecia",
-    translation: "despises",
-    perevod: "презирает",
-    category: "noun",
-    example: "sobrevalora sus propias capacidades y desprecia el peligro",
-  },
-  {
     word: "desviar",
     translation: "to detour/divert",
     perevod: "обойти или отвлечься",
     category: "verb",
     example: "Desvía el tráfico si hay obras",
+  },
+  {
+    word: "detección",
+    translation: "detection",
+    perevod: "обнаружение",
+    category: "noun",
+    example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
     word: "detectar",
@@ -855,6 +911,13 @@ window.vocabularyData = [
     perevod: "прозрачный или ясный",
     category: "adjective",
     example: "La superficie acristalada debe permitir la visibilidad diáfana.",
+  },
+  {
+    word: "difícil",
+    translation: "difficult",
+    perevod: "трудный",
+    category: "noun",
+    example: "Es más difícil que coordine correctamente sus movimientos",
   },
   {
     word: "dimensiones máximas",
@@ -939,6 +1002,13 @@ window.vocabularyData = [
     perevod: "документ",
     category: "noun",
     example: "Lleva siempre la documentación",
+  },
+  {
+    word: "drogas",
+    translation: "drugs",
+    perevod: "наркотики",
+    category: "noun",
+    example: "Cuando tomamos alcohol con otras drogas",
   },
   {
     word: "eficacia",
@@ -1074,11 +1144,25 @@ window.vocabularyData = [
     example: "El estado de la carretera influye en la conducción.",
   },
   {
+    word: "estómago",
+    translation: "stomach",
+    perevod: "желудок",
+    category: "noun",
+    example: "el estómago vacío",
+  },
+  {
     word: "estrecho",
     translation: "narrow",
     perevod: "узкий",
     category: "adjective",
     example: "Carretera estrecha, precaución",
+  },
+  {
+    word: "estupefacientes",
+    translation: "narcotics",
+    perevod: "наркотики",
+    category: "noun",
+    example: "Las pruebas de detección de sustancias estupefacientes",
   },
   {
     word: "eventual",
@@ -1102,6 +1186,13 @@ window.vocabularyData = [
     example: "Excepcionalmente, se permite circular por el arcén en caso de emergencia.",
   },
   {
+    word: "excepto",
+    translation: "except",
+    perevod: "кроме",
+    category: "noun",
+    example: "excepto si se toma en pequeñas cantidades",
+  },
+  {
     word: "exceptuar",
     translation: "to except",
     perevod: "кроме",
@@ -1114,6 +1205,13 @@ window.vocabularyData = [
     perevod: "излишний",
     category: "adjective",
     example: "Velocidad excesiva es peligrosa",
+  },
+  {
+    word: "exceso",
+    translation: "excess",
+    perevod: "избыток",
+    category: "noun",
+    example: "Exceso de seguridad en sí mismo",
   },
   {
     word: "exentas",
@@ -1242,6 +1340,13 @@ window.vocabularyData = [
     example: "La grúa retirará el vehículo mal aparcado.",
   },
   {
+    word: "habilitada",
+    translation: "enabled",
+    perevod: "уполномоченный",
+    category: "adjective",
+    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+  },
+  {
     word: "habitual",
     translation: "usual/habitual",
     perevod: "обычный или привычный",
@@ -1254,6 +1359,13 @@ window.vocabularyData = [
     perevod: "обычный или привычный",
     category: "adjective",
     example: "Siga su carril habitual a menos que se indique lo contrario.",
+  },
+  {
+    word: "hacerse",
+    translation: "become",
+    perevod: "становиться",
+    category: "noun",
+    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
   },
   {
     word: "homologado",
@@ -1324,6 +1436,13 @@ window.vocabularyData = [
     perevod: "неверно или неправильно",
     category: "adjective",
     example: "Tomar una salida incorrecta puede ser peligroso.",
+  },
+  {
+    word: "incrementa",
+    translation: "increases",
+    perevod: "увеличивается",
+    category: "noun",
+    example: "Incrementa el campo visual",
   },
   {
     word: "indirecto",
@@ -1520,6 +1639,13 @@ window.vocabularyData = [
     perevod: "чтобы оправдать",
     category: "verb",
     example: "Justifica el motivo de tu maniobra.",
+  },
+  {
+    word: "juzgado",
+    translation: "court, judge",
+    perevod: "суд, судья",
+    category: "adjective",
+    example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
     word: "legal",
@@ -1767,11 +1893,25 @@ window.vocabularyData = [
     example: "Precaución con obstáculos móviles",
   },
   {
+    word: "movimientos",
+    translation: "movements",
+    perevod: "движения",
+    category: "noun",
+    example: "Es más difícil que coordine correctamente sus movimientos",
+  },
+  {
     word: "multa",
     translation: "fine",
     perevod: "отлично",
     category: "noun",
     example: "Te pueden poner una multa por exceso de velocidad",
+  },
+  {
+    word: "muscular",
+    translation: "muscular",
+    perevod: "мускулистый",
+    category: "verb",
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "necesario",
@@ -1786,6 +1926,13 @@ window.vocabularyData = [
     perevod: "шина",
     category: "noun",
     example: "Es importante revisar la presión del neumático.",
+  },
+  {
+    word: "niega",
+    translation: "denies",
+    perevod: "отрицает",
+    category: "noun",
+    example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
     word: "norma",
@@ -1921,6 +2068,20 @@ window.vocabularyData = [
     example: "Enciende luces en tiempo oscuro",
   },
   {
+    word: "otra",
+    translation: "other",
+    perevod: "другой",
+    category: "noun",
+    example: "que pueda hacerse cargo de su conducción otra persona debidamente habilitada.",
+  },
+  {
+    word: "otras",
+    translation: "others",
+    perevod: "другие",
+    category: "noun",
+    example: "Cuando tomamos alcohol con otras drogas",
+  },
+  {
     word: "panel de mensaje variable",
     translation: "variable message panel",
     perevod: "Панель сообщений переменной",
@@ -2033,6 +2194,13 @@ window.vocabularyData = [
     example: "Adelantar aquí es peligroso",
   },
   {
+    word: "pequeñas",
+    translation: "small",
+    perevod: "маленькие",
+    category: "noun",
+    example: "excepto si se toma en pequeñas cantidades",
+  },
+  {
     word: "perder",
     translation: "to lose",
     perevod: "терять",
@@ -2087,6 +2255,13 @@ window.vocabularyData = [
     perevod: "тяжелый",
     category: "adjective",
     example: "Vehículo pesado más de 3500 kg",
+  },
+  {
+    word: "peso",
+    translation: "weight",
+    perevod: "масса",
+    category: "noun",
+    example: "están relacionados con el peso",
   },
   {
     word: "placa de ensayo",
@@ -2243,6 +2418,13 @@ window.vocabularyData = [
     example: "Procura mantener la calma al volante",
   },
   {
+    word: "produce",
+    translation: "produces",
+    perevod: "производит",
+    category: "noun",
+    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+  },
+  {
     word: "prohibido",
     translation: "prohibited/forbidden",
     perevod: "запрещено или запрещено",
@@ -2255,13 +2437,6 @@ window.vocabularyData = [
     perevod: "запретить или запретить",
     category: "verb",
     example: "Se prohíbe aparcar aquí",
-  },
-  {
-    word: "propias",
-    translation: "own",
-    perevod: "собственный",
-    category: "noun",
-    example: "sobrevalora sus propias capacidades y desprecia el peligro",
   },
   {
     word: "protección civil",
@@ -2290,6 +2465,13 @@ window.vocabularyData = [
     perevod: "разумный или осторожный",
     category: "adjective",
     example: "Conduce de manera prudente",
+  },
+  {
+    word: "pruebas",
+    translation: "evidence",
+    perevod: "доказательство",
+    category: "noun",
+    example: "Si se niega a realizar las pruebas de detección alcohólica",
   },
   {
     word: "público",
@@ -2341,13 +2523,6 @@ window.vocabularyData = [
     example: "No seas demasiado rápido",
   },
   {
-    word: "reaccionar",
-    translation: "react",
-    perevod: "реагировать",
-    category: "verb",
-    example: "tarda menos en reaccionar ante cualquier peligro",
-  },
-  {
     word: "realizar",
     translation: "to carry out/perform",
     perevod: "выполнять или выполнять",
@@ -2374,6 +2549,13 @@ window.vocabularyData = [
     perevod: "получить",
     category: "verb",
     example: "Recibe las instrucciones del examinador",
+  },
+  {
+    word: "recoger",
+    translation: "collect",
+    perevod: "собирать",
+    category: "verb",
+    example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
     word: "recto",
@@ -2453,6 +2635,20 @@ window.vocabularyData = [
     example: "Los semáforos regulan el tráfico urbano.",
   },
   {
+    word: "relacionados",
+    translation: "related",
+    perevod: "связанный",
+    category: "noun",
+    example: "están relacionados con el peso",
+  },
+  {
+    word: "relajante",
+    translation: "relaxing",
+    perevod: "расслабляющий",
+    category: "noun",
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+  },
+  {
     word: "remolcar",
     translation: "to tow",
     perevod: "чтобы буксировать",
@@ -2486,13 +2682,6 @@ window.vocabularyData = [
     perevod: "уважать или подчиняться",
     category: "verb",
     example: "Respeta las señales de tráfico",
-  },
-  {
-    word: "responde",
-    translation: "reply",
-    perevod: "отвечать",
-    category: "noun",
-    example: "responde mejor ante cualquier peligro.",
   },
   {
     word: "responder",
@@ -2712,6 +2901,13 @@ window.vocabularyData = [
     example: "Control simultáneo de velocidad y documentación.",
   },
   {
+    word: "sintomatológicos",
+    translation: "symptomatic",
+    perevod: "симптоматический",
+    category: "noun",
+    example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
+  },
+  {
     word: "situar",
     translation: "to place/locate",
     perevod: "поместить или найти",
@@ -2719,18 +2915,18 @@ window.vocabularyData = [
     example: "Sitúa el vehículo en el carril correcto",
   },
   {
-    word: "sobrevalora",
-    translation: "overvalues",
-    perevod: "переоценивает",
-    category: "noun",
-    example: "sobrevalora sus propias capacidades y desprecia el peligro",
-  },
-  {
     word: "solamente",
     translation: "only",
     perevod: "только",
     category: "adverb",
     example: "Solamente los vehículos de emergencia pueden exceder el límite de velocidad.",
+  },
+  {
+    word: "someterse",
+    translation: "undergo",
+    perevod: "подвергаться",
+    category: "adverb",
+    example: "Qué usuarios deben someterse a las pruebas de alcoholemia",
   },
   {
     word: "sucesivo",
@@ -2768,18 +2964,18 @@ window.vocabularyData = [
     example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
+    word: "sustancias",
+    translation: "substances",
+    perevod: "вещества",
+    category: "noun",
+    example: "Las pruebas de detección de sustancias estupefacientes",
+  },
+  {
     word: "sustituir",
     translation: "to replace/substitute",
     perevod: "заменить или заменить",
     category: "verb",
     example: "Sustituye las luces fundidas inmediatamente.",
-  },
-  {
-    word: "tarda",
-    translation: "takes time",
-    perevod: "занимает время",
-    category: "noun",
-    example: "tarda menos en reaccionar ante cualquier peligro",
   },
   {
     word: "taxímetro",
@@ -2808,6 +3004,27 @@ window.vocabularyData = [
     perevod: "временный",
     category: "adjective",
     example: "Hay una señalización temporal por obras.",
+  },
+  {
+    word: "toma",
+    translation: "take",
+    perevod: "употреблять",
+    category: "verb",
+    example: "excepto si se toma en pequeñas cantidades",
+  },
+  {
+    word: "tomado",
+    translation: "taken",
+    perevod: "взятый",
+    category: "adjective",
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+  },
+  {
+    word: "tomamos",
+    translation: "we take",
+    perevod: "мы потребляем",
+    category: "verb",
+    example: "Cuando tomamos alcohol con otras drogas",
   },
   {
     word: "torpe",
@@ -2906,6 +3123,13 @@ window.vocabularyData = [
     perevod: "использовать",
     category: "verb",
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "vacío",
+    translation: "empty",
+    perevod: "пустой",
+    category: "noun",
+    example: "el estómago vacío",
   },
   {
     word: "vado",
@@ -3011,6 +3235,13 @@ window.vocabularyData = [
     perevod: "видимый",
     category: "noun",
     example: "metros como mínimo y visibles",
+  },
+  {
+    word: "visual",
+    translation: "visual",
+    perevod: "визуальный",
+    category: "noun",
+    example: "Incrementa el campo visual",
   },
   {
     word: "vulnerable",
