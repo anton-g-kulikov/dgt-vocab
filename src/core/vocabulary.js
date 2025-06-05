@@ -1867,6 +1867,14 @@ window.vocabularyData = [
     example: "Cruza la calle por el paso de peatones",
   },
   {
+    word: "cuál",
+    translation: "which",
+    perevod: "который",
+    category: "noun",
+    topics: [],
+    example: "Cuál es la misión principal del líquido refrigerante",
+  },
+  {
     word: "cualquier",
     translation: "any",
     perevod: "любой",
@@ -2147,6 +2155,14 @@ window.vocabularyData = [
     example: "Después de la época de lluvias se habrán desgastado.",
   },
   {
+    word: "desgastan",
+    translation: "wear out",
+    perevod: "изнашиваться",
+    category: "noun",
+    topics: ["topic02"],
+    example: "los neumáticos se desgastan de forma regular",
+  },
+  {
     word: "deslizamiento",
     translation: "glide",
     perevod: "скольжение",
@@ -2193,6 +2209,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic10"],
     example: "sin invadir la zona destinada al sentido contrario, junto al eje de la calzada",
+  },
+  {
+    word: "desvía",
+    translation: "diverts",
+    perevod: "отвлекает",
+    category: "noun",
+    topics: ["topic02"],
+    example: "el vehículo no se desvía al soltar el volante",
   },
   {
     word: "desviar",
@@ -2505,6 +2529,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Cuando tomamos alcohol con otras drogas",
+  },
+  {
+    word: "dura",
+    translation: "hard",
+    perevod: "жесткий",
+    category: "noun",
+    topics: ["topic02"],
+    example: "se vuelve demasiado dura o demasiado floja",
   },
   {
     word: "durante",
@@ -3209,6 +3241,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic09"],
     example: "Las flechas de selección de carril...",
+  },
+  {
+    word: "floja",
+    translation: "loose",
+    perevod: "свободный",
+    category: "noun",
+    topics: ["topic02"],
+    example: "se vuelve demasiado dura o demasiado floja",
   },
   {
     word: "fluidez",
@@ -4339,6 +4379,14 @@ window.vocabularyData = [
     example: "Una marca longitudinal formada por dos líneas continuas adosadas",
   },
   {
+    word: "líquido",
+    translation: "liquid",
+    perevod: "жидкость",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Cuál es la misión principal del líquido refrigerante",
+  },
+  {
     word: "llama",
     translation: "called",
     perevod: "называют",
@@ -4729,6 +4777,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "mirar por los retrovisores",
+  },
+  {
+    word: "misión",
+    translation: "mission",
+    perevod: "миссия",
+    category: "noun",
+    topics: [],
+    example: "Cuál es la misión principal del líquido refrigerante",
   },
   {
     word: "mismo",
@@ -6251,6 +6307,14 @@ window.vocabularyData = [
     example: "Es obligatorio llevar un chaleco reflectante en caso de avería.",
   },
   {
+    word: "refrigerante",
+    translation: "refrigerant",
+    perevod: "хладагент",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Cuál es la misión principal del líquido refrigerante",
+  },
+  {
     word: "régimen",
     translation: "regime/system",
     perevod: "режим или система",
@@ -6977,6 +7041,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "sólo sea capaz de percibir con nitidez el centro de la vía.",
+  },
+  {
+    word: "soltar",
+    translation: "drop",
+    perevod: "уронить",
+    category: "verb",
+    topics: ["topic02"],
+    example: "el vehículo no se desvía al soltar el volante",
   },
   {
     word: "someterse",
@@ -7825,6 +7897,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic02"],
     example: "A corto plazo sí, pero después puede volver a aparecer el sueño.",
+  },
+  {
+    word: "vuelve",
+    translation: "comes back",
+    perevod: "возвращается",
+    category: "noun",
+    topics: ["topic02"],
+    example: "se vuelve demasiado dura o demasiado floja",
   },
   {
     word: "vulnerable",
