@@ -173,25 +173,6 @@
           </button>
         </div>
 
-        <!-- Language switcher commented out in favor of clickable title
-        <div class="language-switcher">
-          <button
-            class="lang-btn active"
-            data-lang="en"
-            onclick="switchLanguage('en', event)"
-          >
-            en
-          </button>
-          <span class="lang-separator">|</span>
-          <button
-            class="lang-btn"
-            data-lang="ru"
-            onclick="switchLanguage('ru', event)"
-          >
-            ru
-          </button>
-        </div> -->
-
         <div class="mode-selector">
           <button class="mode-btn" onclick="setMode('flashcard', event)">
             Flashcards
@@ -216,7 +197,22 @@
             </div>
           </div>
         </div>
-
+        <div class="controls-buttons-row">
+          <!-- <div class="toggle-container">
+            <span class="toggle-label left" onclick="toggleShowAllCards()"
+              >Unknown Only</span
+            >
+            <button
+              class="toggle-switch"
+              id="showAllToggle"
+              onclick="toggleShowAllCards()"
+            ></button>
+            <span class="toggle-label right" onclick="toggleShowAllCards()"
+              >All Cards</span
+            >
+          </div> -->
+          <button onclick="resetProgress()">Reset Progress</button>
+        </div>
         <div class="stats">
           <div class="stat">
             <div class="stat-number">
@@ -235,23 +231,6 @@
             <div class="stat-number" id="unknownCards">0</div>
             <div>Unknown</div>
           </div>
-        </div>
-
-        <div class="controls-buttons-row">
-          <div class="toggle-container">
-            <span class="toggle-label left" onclick="toggleShowAllCards()"
-              >Unknown Only</span
-            >
-            <button
-              class="toggle-switch"
-              id="showAllToggle"
-              onclick="toggleShowAllCards()"
-            ></button>
-            <span class="toggle-label right" onclick="toggleShowAllCards()"
-              >All Cards</span
-            >
-          </div>
-          <button onclick="resetProgress()">Reset Progress</button>
         </div>
 
         <div class="progress-bar">
