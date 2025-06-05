@@ -59,6 +59,14 @@ window.vocabularyData = [
     example: "carril de aceleración",
   },
   {
+    word: "aciete",
+    translation: "oil",
+    perevod: "масло",
+    category: "noun",
+    topics: [],
+    example: "La varilla de aciete de motor",
+  },
+  {
     word: "acomodos",
     translation: "accommodations",
     perevod: "размещение",
@@ -289,6 +297,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "El filtro del aire, ¿para qué sirve?",
+  },
+  {
+    word: "ajustado",
+    translation: "tight",
+    perevod: "тугой",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "el cinturón puede perder eficacia al no estar ajustado al cuerpo",
   },
   {
     word: "alcance",
@@ -587,6 +603,14 @@ window.vocabularyData = [
     example: "Vehículo en aprendizaje de conducción.",
   },
   {
+    word: "aproximación",
+    translation: "approach",
+    perevod: "подход",
+    category: "noun",
+    topics: ["topic11"],
+    example: "A) Cercanía.B) Proximidad.C) Aproximación.",
+  },
+  {
     word: "apuntando",
     translation: "pointing",
     perevod: "указывая",
@@ -777,6 +801,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: [],
     example: "El sistema de frenado se activa automáticamente en caso de peligro.",
+  },
+  {
+    word: "automóvil",
+    translation: "automobile",
+    perevod: "автомобиль",
+    category: "noun",
+    topics: ["topic01"],
+    example: "Que herramientas son obligatorias para todo tipo de automóvil Nada",
   },
   {
     word: "automóviles",
@@ -979,6 +1011,14 @@ window.vocabularyData = [
     example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
   },
   {
+    word: "buena",
+    translation: "good",
+    perevod: "хороший",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que tenga buena ventilación para que no se empañe.",
+  },
+  {
     word: "caballería",
     translation: "cavalry/horse",
     perevod: "кавалерия или лошадь",
@@ -1097,6 +1137,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "cambiar el sentido",
+  },
+  {
+    word: "cambiarlos",
+    translation: "change them",
+    perevod: "поменяй их",
+    category: "verb",
+    topics: [],
+    example: "cuándo hay que cambiarlos",
   },
   {
     word: "cambiarse",
@@ -1305,6 +1353,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "sólo sea capaz de percibir con nitidez el centro de la vía.",
+  },
+  {
+    word: "cercanía",
+    translation: "closeness",
+    perevod: "близость",
+    category: "noun",
+    topics: ["topic11"],
+    example: "A) Cercanía.B) Proximidad.C) Aproximación.",
   },
   {
     word: "cercano",
@@ -1579,6 +1635,14 @@ window.vocabularyData = [
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
+    word: "comportamientos",
+    translation: "behaviors",
+    perevod: "поведения",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Comportamientos excesivamente prudentes",
+  },
+  {
     word: "comportarse",
     translation: "behave",
     perevod: "вести себя",
@@ -1665,6 +1729,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "El conductor novel debe señalizarse.",
+  },
+  {
+    word: "conductores",
+    translation: "drivers",
+    perevod: "водители",
+    category: "noun",
+    topics: ["topic01"],
+    example: "El estrés, ¿qué efectos puede tener sobre los conductores?",
   },
   {
     word: "congestión",
@@ -1937,6 +2009,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "son los daños no cubiertos por el seguro obligatorio al causante de un accidente",
+  },
+  {
+    word: "cuerpo",
+    translation: "body",
+    perevod: "тело",
+    category: "noun",
+    topics: ["topic11"],
+    example: "el cinturón puede perder eficacia al no estar ajustado al cuerpo",
   },
   {
     word: "cumplir",
@@ -2419,6 +2499,14 @@ window.vocabularyData = [
     example: "Un diseño muy ergonómico del asiento",
   },
   {
+    word: "disminución",
+    translation: "decrease",
+    perevod: "снижаться",
+    category: "noun",
+    topics: ["topic10"],
+    example: "Disminución de la fatiga y el sueño",
+  },
+  {
     word: "dispone",
     translation: "has",
     perevod: "имеет",
@@ -2667,6 +2755,14 @@ window.vocabularyData = [
     example: "Usa las luces de emergencia si es necesario.",
   },
   {
+    word: "empañe",
+    translation: "tarnish",
+    perevod: "тускнеть",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que tenga buena ventilación para que no se empañe.",
+  },
+  {
     word: "empieza",
     translation: "begin",
     perevod: "начинающий",
@@ -2875,6 +2971,22 @@ window.vocabularyData = [
     example: "Espera a que el semáforo se ponga verde",
   },
   {
+    word: "ésta",
+    translation: "this",
+    perevod: "этот",
+    category: "noun",
+    topics: [],
+    example: "se podrá establecer una velocidad máxima superior a ésta",
+  },
+  {
+    word: "estabilidad",
+    translation: "stability",
+    perevod: "стабильность",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que el vehiculo gane estabilidad.",
+  },
+  {
     word: "estable",
     translation: "stable",
     perevod: "стабильный",
@@ -2939,6 +3051,14 @@ window.vocabularyData = [
     example: "El estado de la carretera influye en la conducción.",
   },
   {
+    word: "estar",
+    translation: "be",
+    perevod: "быть",
+    category: "verb",
+    topics: [],
+    example: "el cinturón puede perder eficacia al no estar ajustado al cuerpo",
+  },
+  {
     word: "estímulo",
     translation: "stimulus",
     perevod: "стимул",
@@ -2961,6 +3081,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Carretera estrecha, precaución",
+  },
+  {
+    word: "estrés",
+    translation: "stress",
+    perevod: "стресс",
+    category: "noun",
+    topics: ["topic11"],
+    example: "El estrés, ¿qué efectos puede tener sobre los conductores?",
   },
   {
     word: "estridente",
@@ -3049,6 +3177,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "excesiva ventilación en el interior del vehiculo.",
+  },
+  {
+    word: "excesivamente",
+    translation: "excessively",
+    perevod: "чрезмерно",
+    category: "adverb",
+    topics: ["topic11"],
+    example: "Comportamientos excesivamente prudentes",
   },
   {
     word: "excesivo",
@@ -3457,6 +3593,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Una furgoneta, con una antigüedad",
+  },
+  {
+    word: "gane",
+    translation: "ganes",
+    perevod: "получает",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Que el vehiculo gane estabilidad.",
   },
   {
     word: "garantizar",
@@ -4699,6 +4843,14 @@ window.vocabularyData = [
     example: "Respeta la masa máxima autorizada.",
   },
   {
+    word: "materiales",
+    translation: "material",
+    perevod: "материальные",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Daños materiales",
+  },
+  {
     word: "materias",
     translation: "subjects",
     perevod: "предметы",
@@ -4985,6 +5137,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Un diseño muy ergonómico del asiento",
+  },
+  {
+    word: "nada",
+    translation: "nothing",
+    perevod: "ничего",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Que herramientas son obligatorias para todo tipo de automóvil Nada",
   },
   {
     word: "necesarias",
@@ -5739,6 +5899,14 @@ window.vocabularyData = [
     example: "A los grupos de población más prospensos a sufrir un accidente",
   },
   {
+    word: "podrá",
+    translation: "may",
+    perevod: "может",
+    category: "noun",
+    topics: ["topic11"],
+    example: "se podrá establecer una velocidad máxima superior a ésta",
+  },
+  {
     word: "poner",
     translation: "put",
     perevod: "помещать",
@@ -6153,6 +6321,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Conduce de manera prudente",
+  },
+  {
+    word: "prudentes",
+    translation: "prudent",
+    perevod: "благоразумный",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Comportamientos excesivamente prudentes",
   },
   {
     word: "pruebas",
@@ -7315,6 +7491,14 @@ window.vocabularyData = [
     example: "A) No está sujeta a limitación de velocidad.",
   },
   {
+    word: "sujetar",
+    translation: "hold",
+    perevod: "держать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Que se pueda sujetar sin tener que llevarlo abrochado",
+  },
+  {
     word: "superar",
     translation: "get over",
     perevod: "превышать",
@@ -7481,6 +7665,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic11"],
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+  },
+  {
+    word: "tener",
+    translation: "have",
+    perevod: "иметь",
+    category: "verb",
+    topics: ["topic11"],
+    example: "El estrés, ¿qué efectos puede tener sobre los conductores?",
   },
   {
     word: "tenga",
@@ -7801,6 +7993,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic05"],
     example: "Por la noche, la agudeza visual...A) no varía.B) aumenta.C) se reduce",
+  },
+  {
+    word: "varilla",
+    translation: "rod",
+    perevod: "стержень",
+    category: "noun",
+    topics: [],
+    example: "La varilla de aciete de motor",
   },
   {
     word: "veces",
