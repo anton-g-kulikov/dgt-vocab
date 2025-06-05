@@ -29,7 +29,6 @@ class StatsManager {
 
     // Add null checks for all DOM elements
     const totalCardsElement = document.getElementById("totalCards");
-    const currentCardElement = document.getElementById("currentCard");
     const knownCardsElement = document.getElementById("knownCards");
     const unknownCardsElement = document.getElementById("unknownCards");
     const progressFillElement = document.getElementById("progressFill");
@@ -42,14 +41,6 @@ class StatsManager {
       totalCardsElement.textContent = isFiltered
         ? originalTotalCurrentCards
         : totalAllCards;
-    }
-
-    if (currentCardElement) {
-      // Show current position in the remaining unknown cards
-      currentCardElement.textContent =
-        this.vocabApp.currentCards.length > 0
-          ? this.vocabApp.currentIndex + 1
-          : 0;
     }
 
     if (knownCardsElement) {

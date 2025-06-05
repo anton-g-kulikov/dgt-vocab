@@ -1,5 +1,5 @@
 // Service Worker for DGT Vocabulary App
-const CACHE_NAME = "dgt-vocab-v1.5.4";
+const CACHE_NAME = "dgt-vocab-v1.5.6";
 const urlsToCache = [
   // Main pages
   "/",
@@ -22,7 +22,7 @@ const urlsToCache = [
   "/src/features/flashcards/flashcard-mode.js",
   "/src/features/flashcards/quiz-mode.js",
   "/src/features/flashcards/category-manager.js",
-  "/src/features/flashcards/stats-manager.js",
+  "/src/features/stats/stats-manager.js",
 
   // Features - Vocabulary Manager
   "/src/features/vocabulary-manager/vocabulary-manager.js",
