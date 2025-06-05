@@ -468,7 +468,7 @@ class QuizMode {
             // Continue with next quiz question
             this.nextQuizQuestion();
           }
-        }, 2000);
+        }, 1000);
       } else {
         backFace.classList.add("wrong");
         element.classList.add("wrong");
