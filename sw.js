@@ -1,5 +1,5 @@
 // Service Worker for DGT Vocabulary App
-const CACHE_NAME = "dgt-vocab-v1.5.7";
+const CACHE_NAME = "dgt-vocab-v1.6.0";
 const urlsToCache = [
   // Main pages
   "/",

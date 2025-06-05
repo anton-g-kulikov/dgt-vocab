@@ -1,4 +1,4 @@
-/* === Anthropic Design System === */
+/* === Global Styles === */
 @import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital,wght@0,400;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap");
 
 :root {
@@ -579,29 +579,34 @@ button:hover,
   border-radius: var(--radius-sm);
   font-size: 0.875rem;
   font-family: inherit;
-  background: white;
+  background: var(--color-surface);
+  color: var(--color-text);
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  background-color: var(--color-surface);
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+  border-color: var(--color-accent);
 }
 
 /* Safari-specific styling for form selects */
 .form-group select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
-  /* Custom dropdown arrow */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
   background-position: right var(--spacing-3) center;
   background-size: 16px;
   padding-right: calc(var(--spacing-3) * 2 + 16px);
   cursor: pointer;
-}
-
-.form-group select:focus {
-  outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
-  background-color: white;
 }
 
 /* === Table Styles === */
@@ -814,12 +819,9 @@ button:hover,
     font-size: 0.875rem;
     background: var(--color-surface);
     cursor: pointer;
+  }
 
-    /* Safari-specific styling fixes */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-
+  .filter-group select {
     /* Custom dropdown arrow for filter selects */
     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
     background-repeat: no-repeat;
@@ -1281,11 +1283,6 @@ button:hover,
   transition: all 0.2s ease;
   margin-bottom: var(--spacing-3);
 
-  /* Safari-specific styling fixes */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-
   /* Custom dropdown arrow */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
   background-repeat: no-repeat;
@@ -1475,11 +1472,6 @@ button:hover,
   cursor: pointer;
   transition: all 0.2s ease;
   min-height: 32px;
-
-  /* Safari-specific styling fixes */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
 
   /* Custom dropdown arrow for table selects */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
@@ -1700,58 +1692,31 @@ button:hover,
   }
 
   /* Add labels before each data cell */
+  .vocab-table tbody td:before {
+    font-weight: 600;
+    color: var(--color-text-light);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
   .vocab-table tbody td:nth-child(1):before {
     content: "Spanish: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-
   .vocab-table tbody td:nth-child(2):before {
     content: "English: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-
   .vocab-table tbody td:nth-child(3):before {
     content: "Русский: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-
   .vocab-table tbody td:nth-child(4):before {
     content: "Category: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-
   .vocab-table tbody td:nth-child(5):before {
     content: "Topic: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
-
   .vocab-table tbody td:nth-child(6):before {
     content: "Example: ";
-    font-weight: 600;
-    color: var(--color-text-light);
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
   }
 
   /* Style the first cell (Spanish word) prominently */
