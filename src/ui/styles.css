@@ -81,6 +81,14 @@ h1 a {
   transition: color 0.2s ease;
 }
 
+/* === Safari Select Fixes === */
+/* Global select styling to normalize Safari behavior */
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 h1 a:hover {
   color: var(--color-accent);
   text-decoration: underline;
@@ -245,9 +253,12 @@ button:hover,
   font-size: 0.875rem;
   font-weight: 500;
   border: 1px solid var(--color-border);
-  padding: var(--spacing-2) var(--spacing-3);
-  margin: var(--spacing-1);
+  padding: var(--spacing-3) var(--spacing-3);
   transition: all 0.2s ease;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .category-btn.active,
@@ -571,6 +582,28 @@ button:hover,
   background: white;
 }
 
+/* Safari-specific styling for form selects */
+.form-group select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Custom dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-3) center;
+  background-size: 16px;
+  padding-right: calc(var(--spacing-3) * 2 + 16px);
+  cursor: pointer;
+}
+
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  background-color: white;
+}
+
 /* === Table Styles === */
 .vocab-table-container {
   border-radius: var(--radius-sm);
@@ -780,6 +813,19 @@ button:hover,
     border-radius: var(--radius-sm);
     font-size: 0.875rem;
     background: var(--color-surface);
+    cursor: pointer;
+
+    /* Safari-specific styling fixes */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Custom dropdown arrow for filter selects */
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right var(--spacing-2) center;
+    background-size: 14px;
+    padding-right: calc(var(--spacing-3) + 14px + var(--spacing-2));
   }
 
   .filter-actions {
@@ -1234,12 +1280,26 @@ button:hover,
   cursor: pointer;
   transition: all 0.2s ease;
   margin-bottom: var(--spacing-3);
+
+  /* Safari-specific styling fixes */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Custom dropdown arrow */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-3) center;
+  background-size: 16px;
+  padding-right: calc(var(--spacing-3) * 2 + 16px);
 }
 
 .form-select:focus {
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  /* Ensure background stays consistent in Safari */
+  background-color: var(--color-surface);
 }
 
 .form-select:hover {
@@ -1274,12 +1334,17 @@ button:hover,
   }
 
   .form-select {
-    padding: var(--spacing-2);
-    font-size: 0.8rem;
+    padding: var(--spacing-3);
+    font-size: 0.875rem;
+    margin-bottom: var(--spacing-4);
   }
 
   .help-text-muted {
     font-size: 0.75rem;
+  }
+
+  .topic-selector-container .form-select {
+    margin-bottom: var(--spacing-4);
   }
 }
 
@@ -1293,6 +1358,17 @@ button:hover,
   flex-direction: column;
   gap: var(--spacing-3);
   align-items: stretch;
+}
+
+/* Mobile spacing for stacked layout */
+@media (max-width: 767px) {
+  .controls-row {
+    gap: var(--spacing-5);
+  }
+
+  .topic-selector-container {
+    margin-bottom: var(--spacing-2);
+  }
 }
 
 .topic-selector-container {
@@ -1311,14 +1387,25 @@ button:hover,
   justify-content: center;
   gap: var(--spacing-2);
   flex: 1;
+  align-items: flex-start;
 }
 
 /* Desktop layout - put topic selector and categories in same row */
 @media (min-width: 768px) {
   .controls-row {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: center;
     gap: var(--spacing-4);
+  }
+
+  .topic-selector-container {
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+
+  .category-filter-buttons {
+    align-items: center;
+    justify-content: flex-start;
   }
 
   .topic-selector-container {
@@ -1329,8 +1416,7 @@ button:hover,
 
   .category-filter-buttons {
     justify-content: flex-start;
-    align-items: flex-start;
-    padding-top: var(--spacing-1); /* Align with select field */
+    align-items: center;
   }
 }
 
@@ -1389,6 +1475,18 @@ button:hover,
   cursor: pointer;
   transition: all 0.2s ease;
   min-height: 32px;
+
+  /* Safari-specific styling fixes */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  /* Custom dropdown arrow for table selects */
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23565248' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6,9 12,15 18,9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right var(--spacing-2) center;
+  background-size: 12px;
+  padding-right: calc(var(--spacing-2) * 2 + 12px);
 }
 
 .vocab-table .category-select:focus,
@@ -1396,6 +1494,7 @@ button:hover,
   outline: none;
   border-color: var(--color-accent);
   box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  background-color: var(--color-surface);
 }
 
 .vocab-table .category-select:hover,
