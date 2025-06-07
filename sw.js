@@ -1,5 +1,5 @@
 // Service Worker for DGT Vocabulary App
-const CACHE_NAME = "dgt-vocab-v1.6.2";
+const CACHE_NAME = "dgt-vocab-v1.7.0";
 const urlsToCache = [
   // Main pages
   "/",
@@ -28,6 +28,7 @@ const urlsToCache = [
   "/src/features/vocabulary-manager/vocabulary-manager.js",
   "/src/features/vocabulary-manager/translation-service.js",
   "/src/features/vocabulary-manager/github-integration.js",
+  "/src/features/vocabulary-manager/word-categorizer.js",
   "/src/features/vocabulary-manager/text-parser.js",
   "/src/features/vocabulary-manager/vocabulary-updates-manager.js",
   "/src/features/vocabulary-manager/current-vocabulary-manager.js",

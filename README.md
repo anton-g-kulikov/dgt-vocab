@@ -90,6 +90,7 @@ src/
 │   │   └── stats-manager.js         # Centralized statistics handling
 │   └── vocabulary-manager/    # Vocabulary management system
 │       ├── vocabulary-manager.js        # Main orchestrator
+│       ├── word-categorizer.js         # Spanish word categorization logic
 │       ├── text-parser.js              # Text analysis and word extraction
 │       ├── vocabulary-updates-manager.js # Updates table management
 │       ├── current-vocabulary-manager.js # Vocabulary display and filtering
@@ -120,13 +121,14 @@ The Vocabulary Manager has been refactored from a monolithic file into a modular
 
 #### Component Managers
 
-1. **Text Parser** (`text-parser.js`) - Handles text analysis and word extraction
-2. **Vocabulary Updates Manager** (`vocabulary-updates-manager.js`) - Manages vocabulary updates table
-3. **Current Vocabulary Manager** (`current-vocabulary-manager.js`) - Handles vocabulary filtering and display
-4. **Export Manager** (`export-manager.js`) - Manages CSV export functionality
-5. **Translation Manager** (`translation-manager.js`) - Handles translation operations with progress tracking
-6. **API Key Manager** (`api-key-manager.js`) - Manages API key configuration
-7. **Merge Request Manager** (`merge-request-manager.js`) - Handles merge request creation
+1. **Word Categorizer** (`word-categorizer.js`) - Categorizes Spanish words based on linguistic patterns
+2. **Text Parser** (`text-parser.js`) - Handles text analysis and word extraction
+3. **Vocabulary Updates Manager** (`vocabulary-updates-manager.js`) - Manages vocabulary updates table
+4. **Current Vocabulary Manager** (`current-vocabulary-manager.js`) - Handles vocabulary filtering and display
+5. **Export Manager** (`export-manager.js`) - Manages CSV export functionality
+6. **Translation Manager** (`translation-manager.js`) - Handles translation operations with progress tracking
+7. **API Key Manager** (`api-key-manager.js`) - Manages API key configuration
+8. **Merge Request Manager** (`merge-request-manager.js`) - Handles merge request creation
 
 #### Supporting Services
 
@@ -144,6 +146,7 @@ Components communicate using a custom event system:
 ```
 src/features/vocabulary-manager/
 ├── vocabulary-manager.js          # Main orchestrator
+├── word-categorizer.js            # Spanish word categorization logic
 ├── text-parser.js                 # Text analysis component
 ├── vocabulary-updates-manager.js  # Updates table management
 ├── current-vocabulary-manager.js  # Current vocabulary display
@@ -359,7 +362,7 @@ The shuffling functionality has been abstracted into a reusable utility module t
 
 - **`aggressiveShuffle(array, vocabApp)`** - Main shuffling method combining multiple randomization techniques
 - **`applyEducationalWeighting(array, vocabApp)`** - Smart weighting based on card interaction history
-- **`basicShuffle(array)`** - Simple Fisher-Yates shuffle for basic randomization  
+- **`basicShuffle(array)`** - Simple Fisher-Yates shuffle for basic randomization
 - **`multiShuffle(array, passes)`** - Multiple shuffle passes for extra randomization
 
 #### Shuffling Algorithm Features

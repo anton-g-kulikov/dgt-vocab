@@ -341,14 +341,9 @@ class DGTVocabulary {
       this.categoryManager.populateCategoryFilter(topicId);
       // Reset category to "all" when changing topics to avoid empty results
       this.selectedCategory = "all";
-      const allCategoryBtn = document.querySelector(
-        '.category-btn[data-category="all"]'
-      );
-      if (allCategoryBtn) {
-        document
-          .querySelectorAll(".category-btn")
-          .forEach((btn) => btn.classList.remove("active"));
-        allCategoryBtn.classList.add("active");
+      const categorySelector = document.getElementById("categorySelector");
+      if (categorySelector) {
+        categorySelector.value = "all";
       }
     }
 

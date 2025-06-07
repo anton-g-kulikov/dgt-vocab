@@ -353,7 +353,7 @@ class FlashcardMode {
       <div class="card-face card-back">
         <div class="translation">What would you like to do next?</div>
         <div class="example">
-          Try changing the topic/category filter above, or toggle to "All Cards" mode to review everything you've learned.
+          Try changing the topic/category filter above, or reset the progress to review everything you've learned.
         </div>
       </div>
     `;

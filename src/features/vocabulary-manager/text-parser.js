@@ -3,6 +3,7 @@ class TextParser {
   constructor(vocabApp, showMessage) {
     this.vocabApp = vocabApp;
     this.showMessage = showMessage;
+    this.wordCategorizer = new WordCategorizer();
     this.setupEventListeners();
   }
 
@@ -110,44 +111,11 @@ class TextParser {
       .split(" ")
       .filter((word) => word.length > 2) // Filter out very short words
       .filter((word) => !commonWords.has(word)) // Filter out common words
-      .map((word) => this.guessWordProperties(word));
+      .map((word) => this.wordCategorizer.categorizeWord(word));
 
     return [...new Set(words.map((w) => JSON.stringify(w)))].map((w) =>
       JSON.parse(w)
     ); // Deduplicate
-  }
-
-  guessWordProperties(word) {
-    // Logic to guess the word category based on patterns
-    let category = "noun"; // Default
-
-    // Check for verb endings
-    if (word.endsWith("ar") || word.endsWith("er") || word.endsWith("ir")) {
-      category = "verb";
-    }
-    // Check for common adjective endings
-    else if (
-      word.endsWith("ado") ||
-      word.endsWith("ada") ||
-      word.endsWith("oso") ||
-      word.endsWith("osa") ||
-      word.endsWith("ivo") ||
-      word.endsWith("iva") ||
-      word.endsWith("ico") ||
-      word.endsWith("ica")
-    ) {
-      category = "adjective";
-    }
-    // Check for common adverb endings
-    else if (word.endsWith("mente")) {
-      category = "adverb";
-    }
-
-    return {
-      word: word,
-      category: category,
-      id: Date.now() + Math.floor(Math.random() * 1000), // Generate a unique ID
-    };
   }
 
   filterNewWords(words) {

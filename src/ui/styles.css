@@ -1343,6 +1343,10 @@ button:hover,
   .topic-selector-container .form-select {
     margin-bottom: var(--spacing-4);
   }
+
+  .category-selector-container .form-select {
+    margin-bottom: var(--spacing-4);
+  }
 }
 
 /* === Controls & Filter Row === */
@@ -1378,6 +1382,16 @@ button:hover,
   margin-bottom: 0;
 }
 
+.category-selector-container {
+  display: flex;
+  flex-direction: column;
+  min-width: 200px;
+}
+
+.category-selector-container .form-select {
+  margin-bottom: 0;
+}
+
 .category-filter-buttons {
   display: flex;
   flex-wrap: wrap;
@@ -1396,6 +1410,11 @@ button:hover,
   }
 
   .topic-selector-container {
+    min-width: 250px;
+    flex-shrink: 0;
+  }
+
+  .category-selector-container {
     min-width: 250px;
     flex-shrink: 0;
   }

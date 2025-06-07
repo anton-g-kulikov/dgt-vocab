@@ -21,88 +21,48 @@ class CategoryManager {
 
   initCategories(vocabulary) {
     this.vocabulary = vocabulary;
-    this.refreshCategories();
+    // Use the existing populateCategoryFilter method instead of refreshCategories
+    this.populateCategoryFilter();
   }
 
+  // Legacy method - now just calls populateCategoryFilter for compatibility
   refreshCategories(topic = "all") {
-    // Use the new function to get categories filtered by topic
-    this.categories = this.getAvailableCategoriesForTopic(
-      this.vocabulary,
-      topic
-    );
-
-    // Clear existing category buttons
-    this.categoryContainer.innerHTML = "";
-
-    // Create "All Categories" button
-    const allCategoryBtn = document.createElement("button");
-    allCategoryBtn.textContent = "All Categories";
-    allCategoryBtn.classList.add("category-btn");
-    allCategoryBtn.dataset.category = "all";
-    if (this.activeCategory === "all") {
-      allCategoryBtn.classList.add("active");
-    }
-    this.categoryContainer.appendChild(allCategoryBtn);
-
-    // Create buttons only for categories that exist in the selected topic
-    this.categories.forEach((category) => {
-      const btn = document.createElement("button");
-      btn.textContent = category;
-      btn.classList.add("category-btn");
-      btn.dataset.category = category;
-      if (this.activeCategory === category) {
-        btn.classList.add("active");
-      }
-      this.categoryContainer.appendChild(btn);
-    });
-
-    // If the currently active category is not available in this topic selection,
-    // reset to "all" categories
-    if (
-      this.activeCategory !== "all" &&
-      !this.categories.includes(this.activeCategory)
-    ) {
-      this.setActiveCategory("all");
-    }
+    this.populateCategoryFilter(topic);
   }
 
   populateCategoryFilter(selectedTopic = null) {
-    const categoryButtonsContainer = document.getElementById("categoryButtons");
-    if (!categoryButtonsContainer) return;
+    const categorySelector = document.getElementById("categorySelector");
+    if (!categorySelector) return;
 
-    categoryButtonsContainer.innerHTML = "";
+    // Clear existing options except "All Categories"
+    categorySelector.innerHTML = "";
 
-    // Create "All Categories" button first
-    const allButton = document.createElement("button");
-    allButton.className = "category-btn active";
-    allButton.textContent = "All Categories";
-    allButton.dataset.category = "all";
-    allButton.onclick = () => this.selectCategory("all", allButton);
-    categoryButtonsContainer.appendChild(allButton);
+    // Add "All Categories" option
+    const allOption = document.createElement("option");
+    allOption.value = "all";
+    allOption.textContent = "All Categories";
+    categorySelector.appendChild(allOption);
 
     // Get categories that actually have words in them, filtered by selected topic
     const categoriesWithWords = this.getCategoriesWithWords(selectedTopic);
 
     categoriesWithWords.forEach((category) => {
-      const button = document.createElement("button");
-      button.className = "category-btn";
-      button.textContent =
+      const option = document.createElement("option");
+      option.value = category;
+      option.textContent =
         category.charAt(0).toUpperCase() + category.slice(1) + "s"; // Pluralize category titles
-      button.dataset.category = category;
-      button.onclick = () => this.selectCategory(category, button);
-      categoryButtonsContainer.appendChild(button);
+      categorySelector.appendChild(option);
     });
+
+    // Add event listener for category selection (only add once)
+    categorySelector.removeEventListener("change", this.categoryChangeHandler);
+    this.categoryChangeHandler = (e) => {
+      this.selectCategory(e.target.value);
+    };
+    categorySelector.addEventListener("change", this.categoryChangeHandler);
   }
 
-  selectCategory(category, clickedButton) {
-    // Remove active class from all category buttons
-    document.querySelectorAll(".category-btn").forEach((btn) => {
-      btn.classList.remove("active");
-    });
-
-    // Add active class to clicked button
-    clickedButton.classList.add("active");
-
+  selectCategory(category) {
     // Track category selection
     if (window.Analytics) {
       window.Analytics.trackCategorySelect(category);
@@ -279,8 +239,8 @@ class CategoryManager {
     // Get categories available for this topic
     const availableCategories = this.getCategoriesForWords(topicWords);
 
-    // Update category buttons to reflect availability
-    this.updateCategoryButtons(availableCategories);
+    // Update category selector to reflect availability
+    this.updateCategorySelector(availableCategories);
   }
 
   getCategoriesForWords(words) {
@@ -295,20 +255,23 @@ class CategoryManager {
       .sort();
   }
 
-  updateCategoryButtons(availableCategories) {
-    const categoryButtons = document.querySelectorAll(".category-btn");
+  updateCategorySelector(availableCategories) {
+    const categorySelector = document.getElementById("categorySelector");
+    if (!categorySelector) return;
 
-    categoryButtons.forEach((button) => {
-      const category = button.dataset.category;
+    // Store current selection
+    const currentSelection = categorySelector.value;
+
+    // Enable/disable options based on availability
+    Array.from(categorySelector.options).forEach((option) => {
+      const category = option.value;
 
       if (category === "all" || availableCategories.includes(category)) {
-        button.style.opacity = "1";
-        button.disabled = false;
-        button.style.pointerEvents = "auto";
+        option.disabled = false;
+        option.style.color = "";
       } else {
-        button.style.opacity = "0.3";
-        button.disabled = true;
-        button.style.pointerEvents = "none";
+        option.disabled = true;
+        option.style.color = "#ccc";
       }
     });
 
@@ -317,12 +280,11 @@ class CategoryManager {
       this.vocabApp.selectedCategory !== "all" &&
       !availableCategories.includes(this.vocabApp.selectedCategory)
     ) {
-      const allCategoryButton = document.querySelector(
-        '.category-btn[data-category="all"]'
-      );
-      if (allCategoryButton) {
-        this.selectCategory("all", allCategoryButton);
-      }
+      categorySelector.value = "all";
+      this.selectCategory("all");
+    } else {
+      // Restore the selection
+      categorySelector.value = currentSelection;
     }
   }
 
