@@ -420,25 +420,29 @@ class QuizMode {
         );
         if (anyWrongAttempts) {
           this.vocabApp.unknownCardsSet.add(correctId);
+          // Don't remove the card from currentCards if there were wrong attempts
+          // Keep it in the quiz pool for continued practice
         } else {
           this.vocabApp.knownCardsSet.add(correctId);
           // Remove from unknown set if it was there
           this.vocabApp.unknownCardsSet.delete(correctId);
+          // Only remove from current cards if there were no wrong attempts
+          this.vocabApp.currentCards = this.vocabApp.currentCards.filter(
+            (card) => card.id !== correctId
+          );
         }
         this.vocabApp.saveProgress();
-
-        // Remove this card from the current cards to avoid seeing it again in this quiz session
-        this.vocabApp.currentCards = this.vocabApp.currentCards.filter(
-          (card) => card.id !== correctId
-        );
 
         // Reshuffle remaining cards after each correct answer to ensure randomness
         this.aggressiveShuffleForQuiz(this.vocabApp.currentCards);
 
         this.vocabApp.updateStats();
 
-        // Check if only one unknown card remains after this correct answer
-        const remainingUnknownCards = this.vocabApp.currentCards.filter(
+        // Check if there are still cards that need practice
+        // Cards need practice if they are either:
+        // 1. Not in the known set (unknown cards)
+        // 2. In the unknown set (cards with wrong attempts that need more practice)
+        const cardsNeedingPractice = this.vocabApp.currentCards.filter(
           (card) => !this.vocabApp.knownCardsSet.has(card.id)
         );
 
@@ -455,11 +459,11 @@ class QuizMode {
         // quizQuestion.textContent = `Correct!`;
 
         setTimeout(() => {
-          // If only one unknown card remains, switch to flashcard mode
-          if (remainingUnknownCards.length <= 1) {
-            if (remainingUnknownCards.length === 1) {
+          // If only one card needs practice, switch to flashcard mode
+          if (cardsNeedingPractice.length <= 1) {
+            if (cardsNeedingPractice.length === 1) {
               // Show transition and switch to flashcard mode
-              this.showLastCardTransition(remainingUnknownCards[0]);
+              this.showLastCardTransition(cardsNeedingPractice[0]);
             } else {
               // All cards are completed
               this.showQuizCompletionCard();
