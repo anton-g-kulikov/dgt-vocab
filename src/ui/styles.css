@@ -818,7 +818,28 @@ button:hover,
     border-radius: var(--radius-sm);
     font-size: 0.875rem;
     background: var(--color-surface);
+    color: var(--color-text);
     cursor: pointer;
+    transition: all 0.2s ease;
+    /* Safari-specific fixes */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* Ensure consistent height across browsers */
+    min-height: 40px;
+    line-height: 1.4;
+  }
+
+  .filter-group input:focus,
+  .filter-group select:focus {
+    outline: none;
+    border-color: var(--color-accent);
+    box-shadow: 0 0 0 2px rgba(193, 119, 67, 0.1);
+  }
+
+  .filter-group input:hover,
+  .filter-group select:hover {
+    border-color: var(--color-accent);
   }
 
   .filter-group select {
@@ -843,10 +864,25 @@ button:hover,
     text-align: right;
   }
 
-  /* Responsive filter controls */
+  /* Mobile-specific optimizations for filter controls */
+  @media (max-width: 767px) {
+    .filter-group input,
+    .filter-group select {
+      font-size: 16px; /* Prevent zoom on iOS */
+      min-height: 44px; /* iOS touch target minimum */
+    }
+
+    .filter-group select {
+      /* Larger arrow on mobile for easier tapping */
+      background-size: 16px;
+    }
+  }
+
+  /* Responsive filter controls - Desktop layout */
   @media (min-width: 768px) {
     .filter-controls {
-      grid-template-columns: repeat(3, 1fr) auto;
+      /* Word filter takes full width, category and topic share 50% each */
+      grid-template-columns: 1fr 0.5fr 0.5fr auto;
       align-items: flex-end;
       gap: var(--spacing-4);
     }
@@ -854,13 +890,36 @@ button:hover,
     .filter-actions {
       padding-top: 0;
     }
+
+    /* Ensure category and topic dropdowns are equal width */
+    .filter-group:nth-child(2),
+    .filter-group:nth-child(3) {
+      min-width: 0; /* Allow flexing */
+    }
+
+    .filter-group:nth-child(2) select,
+    .filter-group:nth-child(3) select {
+      min-width: 150px; /* Minimum width for readability */
+    }
+  }
+
+  /* Large desktop optimization */
+  @media (min-width: 1024px) {
+    .filter-controls {
+      grid-template-columns: 2fr 1fr 1fr auto;
+    }
+
+    .filter-group:nth-child(2) select,
+    .filter-group:nth-child(3) select {
+      min-width: 180px;
+    }
   }
 }
 
 /* Large desktops (1024px and up) */
 @media (min-width: 1024px) {
   .app-container {
-    max-width: 1100px;
+    max-width: 800px;
   }
 
   .intro-section {
@@ -1410,29 +1469,18 @@ button:hover,
   }
 
   .topic-selector-container {
-    min-width: 250px;
-    flex-shrink: 0;
+    flex: 1;
+    min-width: 0; /* Allow flex shrinking */
   }
 
   .category-selector-container {
-    min-width: 250px;
-    flex-shrink: 0;
+    flex: 1;
+    min-width: 0; /* Allow flex shrinking */
   }
 
   .category-filter-buttons {
     align-items: center;
     justify-content: flex-start;
-  }
-
-  .topic-selector-container {
-    flex-shrink: 0;
-    min-width: 180px;
-    max-width: 220px;
-  }
-
-  .category-filter-buttons {
-    justify-content: flex-start;
-    align-items: center;
   }
 }
 
@@ -1442,8 +1490,15 @@ button:hover,
     gap: var(--spacing-2);
   }
 
-  .topic-selector-container .form-select {
-    font-size: 0.8rem;
+  .topic-selector-container .form-select,
+  .category-selector-container .form-select {
+    font-size: 1rem;
+    /* Ensure consistent height and Safari compatibility */
+    min-height: 44px;
+    line-height: 1.4;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
   }
 }
 
