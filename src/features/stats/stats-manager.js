@@ -7,12 +7,25 @@ class StatsManager {
 
   updateStats() {
     const category = this.vocabApp.selectedCategory || "all";
+    const topic = this.vocabApp.selectedTopic || "all";
 
     // Get the original filtered cards (before removing known ones)
-    let originalFilteredCards =
-      category === "all"
-        ? [...this.vocabApp.allCards]
-        : this.vocabApp.allCards.filter((card) => card.category === category);
+    // Apply both topic and category filters
+    let originalFilteredCards = [...this.vocabApp.allCards];
+
+    // Apply topic filter first
+    if (topic !== "all") {
+      originalFilteredCards = originalFilteredCards.filter(
+        (card) => card.topics && card.topics.includes(topic)
+      );
+    }
+
+    // Then apply category filter
+    if (category !== "all") {
+      originalFilteredCards = originalFilteredCards.filter(
+        (card) => card.category === category
+      );
+    }
 
     // Calculate known cards in current category/filter
     const currentKnownCards = originalFilteredCards.filter((card) =>
@@ -34,7 +47,7 @@ class StatsManager {
     const progressFillElement = document.getElementById("progressFill");
 
     // Update display based on whether we're filtering or showing all
-    const isFiltered = category !== "all";
+    const isFiltered = category !== "all" || topic !== "all";
 
     if (totalCardsElement) {
       // Show original total (including known cards) for the current filter
