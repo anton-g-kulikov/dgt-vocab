@@ -137,11 +137,35 @@ class VocabularyManager {
   }
 
   // Utility method to show messages
-  showMessage(text, type) {
+  showMessage(text, type, duration = 5000) {
     const messageContainer = document.getElementById("messageContainer");
     if (messageContainer) {
-      messageContainer.innerHTML = `<div class="${type}-message">${text}</div>`;
-      messageContainer.scrollIntoView({ behavior: "smooth", block: "nearest" });
+      // Create unique ID for this message
+      const messageId = `msg-${Date.now()}-${Math.random()
+        .toString(36)
+        .substr(2, 9)}`;
+
+      // Create message element
+      const messageElement = document.createElement("div");
+      messageElement.className = `${type}-message`;
+      messageElement.id = messageId;
+      messageElement.innerHTML = `
+        ${text}
+        <button class="message-close" onclick="document.getElementById('${messageId}').remove()">&times;</button>
+      `;
+
+      // Add to container
+      messageContainer.appendChild(messageElement);
+
+      // Auto-hide message after specified duration
+      if (duration > 0) {
+        setTimeout(() => {
+          const msgElement = document.getElementById(messageId);
+          if (msgElement) {
+            msgElement.remove();
+          }
+        }, duration);
+      }
     } else {
       alert(text);
     }

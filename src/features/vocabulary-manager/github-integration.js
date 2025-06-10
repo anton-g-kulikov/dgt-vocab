@@ -195,30 +195,65 @@ class GitHubIntegration {
     const statusDiv = document.getElementById("githubStatusMessage");
     const createBtn = document.getElementById("createGitHubPRBtn");
 
+    // Separate new words from edited words for better PR messaging and commit messages
+    const newWords = this.vocabManager.vocabApp.vocabularyUpdates.filter(
+      (word) => !word.isEdit
+    );
+    const editedWords = this.vocabManager.vocabApp.vocabularyUpdates.filter(
+      (word) => word.isEdit === true
+    );
+
     try {
       // Use default settings - no form inputs needed
       const owner = this.defaultSettings.owner;
       const repo = this.defaultSettings.repo;
-      const prTitle = `Add ${this.vocabManager.vocabApp.vocabularyUpdates.length} new vocabulary words`;
-      const prDescription = `This pull request adds ${
-        this.vocabManager.vocabApp.vocabularyUpdates.length
-      } new vocabulary words to the DGT vocabulary.
 
-## 📋 Words Added:
-${this.vocabManager.vocabApp.vocabularyUpdates
-  .map(
-    (word, index) =>
-      `${index + 1}. **${word.word}** → ${word.translation} (${word.category})`
-  )
-  .join("\n")}
+      // Generate appropriate title based on content
+      let prTitle;
+      if (newWords.length > 0 && editedWords.length > 0) {
+        prTitle = `Add ${newWords.length} new words and update ${editedWords.length} existing words`;
+      } else if (newWords.length > 0) {
+        prTitle = `Add ${newWords.length} new vocabulary words`;
+      } else if (editedWords.length > 0) {
+        prTitle = `Update ${editedWords.length} vocabulary words`;
+      } else {
+        prTitle = `Update vocabulary`;
+      }
 
-Total vocabulary size after merge: ${
-        this.vocabManager.vocabApp.allCards.length +
-        this.vocabManager.vocabApp.vocabularyUpdates.length
-      } words
+      // Generate detailed description
+      let prDescription = `This pull request updates the DGT vocabulary.\n\n`;
 
----
-*This PR was automatically created by the DGT Vocabulary Manager.*`;
+      if (newWords.length > 0) {
+        prDescription += `## 📝 New Words Added (${newWords.length}):\n`;
+        prDescription += newWords
+          .map(
+            (word, index) =>
+              `${index + 1}. **${word.word}** → ${word.translation} (${
+                word.category
+              })`
+          )
+          .join("\n");
+        prDescription += "\n\n";
+      }
+
+      if (editedWords.length > 0) {
+        prDescription += `## ✏️ Words Updated (${editedWords.length}):\n`;
+        prDescription += editedWords
+          .map(
+            (word, index) =>
+              `${index + 1}. **${word.word}** → ${word.category}${
+                word.topics && word.topics.length > 0
+                  ? ` (${word.topics.join(", ")})`
+                  : ""
+              }`
+          )
+          .join("\n");
+        prDescription += "\n\n";
+      }
+
+      prDescription += `Total vocabulary size after merge: ${
+        this.vocabManager.vocabApp.allCards.length + newWords.length
+      } words\n\n---\n*This PR was automatically created by the DGT Vocabulary Manager.*`;
 
       // Get GitHub token (should be available since we authenticated upfront)
       const token = localStorage.getItem("github_token");
@@ -265,12 +300,24 @@ Total vocabulary size after merge: ${
       );
 
       // Step 4: Update vocabulary.js file
+      // Generate appropriate commit message
+      let commitMessage;
+      if (newWords.length > 0 && editedWords.length > 0) {
+        commitMessage = `Add ${newWords.length} new words and update ${editedWords.length} existing words`;
+      } else if (newWords.length > 0) {
+        commitMessage = `Add ${newWords.length} new vocabulary words`;
+      } else if (editedWords.length > 0) {
+        commitMessage = `Update ${editedWords.length} vocabulary words`;
+      } else {
+        commitMessage = `Update vocabulary`;
+      }
+
       await this.updateFile(
         owner,
         repo,
         "src/core/vocabulary.js",
         updatedContent,
-        `Add ${this.vocabManager.vocabApp.vocabularyUpdates.length} new vocabulary words`,
+        commitMessage,
         branchName,
         currentFileSha,
         token

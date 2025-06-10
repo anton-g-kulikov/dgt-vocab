@@ -127,7 +127,52 @@ class MergeRequestManager {
 
       this.vocabApp.vocabularyUpdates.forEach((newWord) => {
         const normalizedWord = newWord.word.toLowerCase().trim();
-        if (!existingWordSet.has(normalizedWord)) {
+
+        // For edited words, we need to update the existing word instead of adding a new one
+        if (newWord.isEdit === true) {
+          // Find and update the existing word
+          const existingWordIndex = allWords.findIndex(
+            (word) => word.word.toLowerCase().trim() === normalizedWord
+          );
+          if (existingWordIndex !== -1) {
+            // Update the existing word with new category/topic information
+            allWords[existingWordIndex].category = newWord.category;
+
+            // Update topics
+            if (
+              newWord.topics &&
+              Array.isArray(newWord.topics) &&
+              newWord.topics.length > 0
+            ) {
+              allWords[existingWordIndex].topics = [...newWord.topics];
+            }
+            // If only the topic string exists (backward compatibility)
+            else if (
+              newWord.topic &&
+              typeof newWord.topic === "string" &&
+              newWord.topic.trim() !== ""
+            ) {
+              allWords[existingWordIndex].topics = [newWord.topic];
+            }
+            // Use empty array for "all topics" assignment
+            else {
+              allWords[existingWordIndex].topics = [];
+            }
+
+            // Also update other fields if they exist
+            if (newWord.translation) {
+              allWords[existingWordIndex].translation = newWord.translation;
+            }
+            if (newWord.perevod) {
+              allWords[existingWordIndex].perevod = newWord.perevod;
+            }
+            if (newWord.example) {
+              allWords[existingWordIndex].example = newWord.example;
+            }
+          }
+        }
+        // For new words (not edits), add them if they don't already exist
+        else if (!existingWordSet.has(normalizedWord)) {
           const wordToAdd = {
             word: newWord.word,
             translation: newWord.translation,

@@ -36,6 +36,18 @@ window.TopicUtils = {
   },
 
   /**
+   * Get topic ID by name
+   */
+  getTopicIdByName(topicName) {
+    for (const [id, name] of Object.entries(window.TOPICS)) {
+      if (name === topicName) {
+        return id;
+      }
+    }
+    return null;
+  },
+
+  /**
    * Check if a word has a specific topic
    */
   wordHasTopic(word, topicId) {

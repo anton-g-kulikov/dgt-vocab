@@ -10,6 +10,13 @@ class VocabularyUpdatesManager {
   setupEventListeners() {
     // Listen for vocabulary updates changes
     document.addEventListener("vocabularyUpdatesChanged", () => {
+      console.log(
+        "VocabularyUpdatesManager: Received vocabularyUpdatesChanged event"
+      );
+      console.log(
+        "Current vocabulary updates:",
+        this.vocabApp.vocabularyUpdates
+      );
       this.populateVocabularyUpdatesTable();
     });
 
@@ -61,12 +68,21 @@ class VocabularyUpdatesManager {
   }
 
   populateVocabularyUpdatesTable() {
+    console.log(
+      "VocabularyUpdatesManager: Populating vocabulary updates table"
+    );
     const tableBody = document.getElementById("vocabularyUpdatesTableBody");
-    if (!tableBody) return;
+    if (!tableBody) {
+      console.log("VocabularyUpdatesManager: No table body found!");
+      return;
+    }
 
     tableBody.innerHTML = "";
 
     const vocabularyUpdates = this.vocabApp.vocabularyUpdates || [];
+    console.log(
+      `VocabularyUpdatesManager: Found ${vocabularyUpdates.length} vocabulary updates`
+    );
 
     if (vocabularyUpdates.length === 0) {
       tableBody.innerHTML =
@@ -90,8 +106,15 @@ class VocabularyUpdatesManager {
         word.topics
       );
 
+      // Add special styling for edited words
+      const isEdit = word.isEdit === true;
+      const editClass = isEdit ? ' class="edited-word"' : "";
+      const editIndicator = isEdit
+        ? ' <span class="edit-indicator">(EDIT)</span>'
+        : "";
+
       row.innerHTML = `
-        <td>${word.word}</td>
+        <td${editClass}>${word.word}${editIndicator}</td>
         <td><input type="text" class="translation-input" value="${
           word.translation || ""
         }"></td>
