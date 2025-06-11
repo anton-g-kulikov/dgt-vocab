@@ -143,7 +143,7 @@ class VocabularyUpdatesManager {
     // Add event listeners for deleting words
     document.querySelectorAll(".delete-btn").forEach((btn) => {
       btn.addEventListener("click", (e) => {
-        const id = parseInt(e.target.dataset.id);
+        const id = parseFloat(e.target.dataset.id); // Fixed: Changed from parseInt to parseFloat
         this.vocabApp.vocabularyUpdates =
           this.vocabApp.vocabularyUpdates.filter((word) => word.id !== id);
         e.target.closest("tr").remove();
@@ -171,6 +171,20 @@ class VocabularyUpdatesManager {
       .forEach((element) => {
         element.addEventListener("input", debounceSave);
         element.addEventListener("change", debounceSave);
+
+        // Special debug logging for perevod changes
+        if (element.classList.contains("perevod-input")) {
+          element.addEventListener("input", (e) => {
+            const row = e.target.closest("tr");
+            const word = row
+              .querySelector("td")
+              .textContent.replace(" (EDIT)", "")
+              .trim();
+            console.log(
+              `🔧 DEBUG: Perevod input changed for "${word}": "${e.target.value}"`
+            );
+          });
+        }
       });
   }
 
@@ -294,21 +308,62 @@ class VocabularyUpdatesManager {
       "#vocabularyUpdatesTableBody tr[data-id]"
     );
 
+    console.log("🔧 DEBUG: updateVocabularyUpdatesFromUI called");
+
     rows.forEach((row) => {
-      const id = parseInt(row.dataset.id);
+      const id = parseFloat(row.dataset.id); // Fixed: Changed from parseInt to parseFloat
       const translation = row.querySelector(".translation-input").value.trim();
       const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;
       const topic = row.querySelector(".topic-select").value;
       const example = row.querySelector(".example-input").value.trim();
 
+      // Debug: Log what we're reading from the UI
+      console.log(`🔧 DEBUG: Reading from UI for word ID ${id}:`);
+      console.log(`  - Translation input value: "${translation}"`);
+      console.log(`  - Perevod input value: "${perevod}"`);
+      console.log(`  - Category: "${category}"`);
+      console.log(`  - Topic: "${topic}"`);
+
       const wordIndex = this.vocabApp.vocabularyUpdates.findIndex(
         (word) => word.id === id
       );
+
+      // Debug: Check if we found the word
+      console.log(`🔧 DEBUG: Looking for word with ID ${id}`);
+      console.log(`🔧 DEBUG: Found word at index: ${wordIndex}`);
+      console.log(
+        `🔧 DEBUG: Current vocabularyUpdates array:`,
+        JSON.stringify(this.vocabApp.vocabularyUpdates, null, 2)
+      );
+
       if (wordIndex !== -1) {
+        const oldPerevod = this.vocabApp.vocabularyUpdates[wordIndex].perevod;
+
+        // Debug: Show current array state vs UI state
+        console.log(`🔧 DEBUG: Before update for word ID ${id}:`);
+        console.log(`  - Array perevod: "${oldPerevod}"`);
+        console.log(`  - UI perevod: "${perevod}"`);
+        console.log(`  - Are they equal? ${oldPerevod === perevod}`);
+        console.log(
+          `  - Word data:`,
+          JSON.stringify(this.vocabApp.vocabularyUpdates[wordIndex], null, 2)
+        );
+
         this.vocabApp.vocabularyUpdates[wordIndex].translation = translation;
         this.vocabApp.vocabularyUpdates[wordIndex].perevod = perevod;
         this.vocabApp.vocabularyUpdates[wordIndex].category = category;
+
+        // Debug logging for perevod changes
+        if (oldPerevod !== perevod) {
+          console.log(
+            `🔧 DEBUG: Perevod changed for word "${this.vocabApp.vocabularyUpdates[wordIndex].word}": "${oldPerevod}" → "${perevod}"`
+          );
+        } else {
+          console.log(
+            `🔧 DEBUG: Perevod NOT changed for word "${this.vocabApp.vocabularyUpdates[wordIndex].word}": both are "${perevod}"`
+          );
+        }
 
         // Update topic using our helper method
         this.updateTopicDataStructure(
@@ -325,6 +380,8 @@ class VocabularyUpdatesManager {
       "dgt-vocab-vocabulary-updates",
       JSON.stringify(this.vocabApp.vocabularyUpdates)
     );
+
+    console.log("🔧 DEBUG: Vocabulary updates saved to localStorage");
   }
 
   // Update a specific row in the vocabulary updates table
@@ -370,7 +427,7 @@ class VocabularyUpdatesManager {
     );
 
     rows.forEach((row) => {
-      const id = parseInt(row.dataset.id);
+      const id = parseFloat(row.dataset.id); // Fixed: Changed from parseInt to parseFloat
       const translation = row.querySelector(".translation-input").value.trim();
       const perevod = row.querySelector(".perevod-input").value.trim();
       const category = row.querySelector(".category-select").value;

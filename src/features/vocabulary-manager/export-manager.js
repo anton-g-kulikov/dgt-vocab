@@ -6,6 +6,25 @@ class ExportManager {
   }
 
   exportVocabularyUpdates() {
+    console.log("🔧 DEBUG: Export button clicked");
+
+    // CRITICAL: Update vocabulary updates from UI before export
+    // This ensures any pending changes (like perevod edits) are captured
+    console.log(
+      "🔧 DEBUG: Updating vocabulary updates from UI before export..."
+    );
+    if (
+      window.vocabularyManager &&
+      window.vocabularyManager.vocabularyUpdatesManager
+    ) {
+      window.vocabularyManager.vocabularyUpdatesManager.updateVocabularyUpdatesFromUI();
+    }
+
+    console.log(
+      "🔧 DEBUG: Current vocabularyUpdates array after UI update:",
+      JSON.stringify(this.vocabApp.vocabularyUpdates, null, 2)
+    );
+
     // Before generating content, make one final check for duplicates
     const uniqueResults = [];
     const existingWords = new Set(
@@ -94,6 +113,18 @@ class ExportManager {
       vocabularyUpdates.length
     );
 
+    // Debug: Log all vocabulary updates with their perevod values
+    console.log("🔧 DEBUG: Vocabulary updates being exported:");
+    vocabularyUpdates.forEach((word, index) => {
+      console.log(
+        `  ${index + 1}. "${word.word}" - translation: "${
+          word.translation
+        }", perevod: "${word.perevod}", category: "${word.category}", isEdit: ${
+          word.isEdit
+        }`
+      );
+    });
+
     // Start with all existing vocabulary
     const allWords = [...this.vocabApp.allCards];
     console.log("Starting with existing vocabulary entries:", allWords.length);
@@ -117,12 +148,22 @@ class ExportManager {
 
       if (existingWordIndex !== -1) {
         console.log(`Updating existing word: ${editedWord.word}`);
+        console.log(
+          `🔧 DEBUG: Original perevod: "${allWords[existingWordIndex].perevod}", New perevod: "${editedWord.perevod}"`
+        );
+
         // Update the existing word with new information
         allWords[existingWordIndex] = {
           word: editedWord.word,
           translation:
-            editedWord.translation || allWords[existingWordIndex].translation,
-          perevod: editedWord.perevod || allWords[existingWordIndex].perevod,
+            editedWord.translation !== undefined &&
+            editedWord.translation !== null
+              ? editedWord.translation
+              : allWords[existingWordIndex].translation,
+          perevod:
+            editedWord.perevod !== undefined && editedWord.perevod !== null
+              ? editedWord.perevod
+              : allWords[existingWordIndex].perevod,
           category: editedWord.category || allWords[existingWordIndex].category,
           topics:
             editedWord.topics && editedWord.topics.length > 0
@@ -132,6 +173,10 @@ class ExportManager {
               : [],
           example: editedWord.example || allWords[existingWordIndex].example,
         };
+
+        console.log(
+          `🔧 DEBUG: Final perevod for "${editedWord.word}": "${allWords[existingWordIndex].perevod}"`
+        );
       } else {
         console.warn(
           `Could not find existing word to update: ${editedWord.word}`
