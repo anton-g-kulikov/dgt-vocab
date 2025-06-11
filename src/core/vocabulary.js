@@ -5020,14 +5020,6 @@ window.vocabularyData = [
     example: "Mantén la distancia mínima",
   },
   {
-    word: "mínimo",
-    translation: "minimum",
-    perevod: "минимум",
-    category: "noun",
-    topics: [],
-    example: "Se requiere un nivel mínimo de atención.",
-  },
-  {
     word: "ministerio",
     translation: "ministry",
     perevod: "министерство",
@@ -6012,22 +6004,6 @@ window.vocabularyData = [
     example: "La revisión posterior es obligatoria.",
   },
   {
-    word: "posterior",
-    translation: "subsequent/rear",
-    perevod: "последующий или задний",
-    category: "noun",
-    topics: [],
-    example: "La revisión posterior es obligatoria.",
-  },
-  {
-    word: "posterior",
-    translation: "subsequent/later",
-    perevod: "последующий или позже",
-    category: "noun",
-    topics: [],
-    example: "La inspección posterior confirmó los daños.",
-  },
-  {
     word: "posteriormente",
     translation: "later/afterwards",
     perevod: "позже или после",
@@ -6134,7 +6110,7 @@ window.vocabularyData = [
   {
     word: "primera",
     translation: "first",
-    perevod: "первый",
+    perevod: "первая",
     category: "noun",
     topics: ["topic10"],
     example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
@@ -6142,7 +6118,7 @@ window.vocabularyData = [
   {
     word: "primeras",
     translation: "first",
-    perevod: "первый",
+    perevod: "первые",
     category: "adjective",
     topics: ["topic11"],
     example: "horas de la madrugada y las primeras horas de la tarde",
@@ -8066,14 +8042,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "y resultan tan familiares que a veces se olvidan sus síntomas",
-  },
-  {
-    word: "vehiculo",
-    translation: "vehicle",
-    perevod: "транспортное средство",
-    category: "noun",
-    topics: ["topic01"],
-    example: "Pueden los agentes inmovilizar un vehiculo que supere los límites de humo establecidos?",
   },
   {
     word: "vehículo",
