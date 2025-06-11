@@ -45,6 +45,101 @@ A **Progressive Web App** for studying Spanish vocabulary for the DGT (Direcció
 - **Smart Analysis** - Automatic word categorization and topic assignment
 - **Multi-language Support** - Spanish-English-Russian translations
 
+## Root Directory Overview
+
+| File/Folder                | Purpose                                                                 |
+|----------------------------|-------------------------------------------------------------------------|
+| `index.html`               | Main entry point for flashcard and quiz app                             |
+| `vocabulary-manager.html`  | Entry point for vocabulary management interface                         |
+| `sw.js`                    | Service worker for offline/PWA support                                 |
+| `manifest.json`            | Web app manifest for PWA installation and theming                      |
+| `icons/`                   | App icons for Android/iOS/desktop (with `android/` and `ios/` subdirs) |
+| `CNAME`                    | Custom domain configuration for deployment (GitHub Pages)               |
+| `.gitignore`               | Git ignore rules                                                        |
+| `README.md`                | Project documentation (this file)                                       |
+| `src/`                     | Main application source code                                            |
+| `sources/`                 | (If present) Source/reference materials (not required for app)          |
+| `.creds`, `.DS_Store`, `venv/`, `.git/` | Not relevant for users; ignored by app and version control |
+
+## Project Structure
+
+```
+src/
+├── core/                      # Core application logic and data
+│   ├── analytics.js           # Google Analytics integration
+│   ├── core.js                # Main DGTVocabulary class
+│   ├── filter-utils.js        # Vocabulary filtering utilities
+│   ├── init.js                # Application initialization
+│   ├── topics.js              # DGT topic definitions and utilities
+│   ├── vocabulary.js          # Core vocabulary data structure
+│   ├── vocabulary.js.backup.* # Backup files (not used by app, for recovery only)
+├── features/                  # Feature modules
+│   ├── flashcards/            # Flashcard and quiz functionality
+│   │   ├── category-manager.js    # Category and topic filtering
+│   │   ├── flashcard-mode.js      # Flashcard display and interaction
+│   │   └── quiz-mode.js           # Quiz functionality
+│   ├── stats/                 # Statistics management
+│   │   └── stats-manager.js       # Centralized statistics handling
+│   └── vocabulary-manager/    # Vocabulary management system
+│       ├── api-key-manager.js         # API key configuration
+│       ├── current-vocabulary-manager.js # Vocabulary display and filtering
+│       ├── export-manager.js          # CSV and JavaScript export
+│       ├── github-integration.js      # GitHub API integration
+│       ├── merge-request-manager.js   # GitHub merge request handling
+│       ├── text-parser.js             # Text analysis and word extraction
+│       ├── translation-manager.js     # Translation UI and operations
+│       ├── translation-service.js     # Multi-provider translation service
+│       ├── vocabulary-manager.js      # Main orchestrator
+│       ├── vocabulary-updates-manager.js # Updates table management
+│       └── word-categorizer.js        # Spanish word categorization logic
+├── ui/                       # User interface components and styles
+│   ├── icons.js              # SVG icon system
+│   ├── language-switcher.css # Language switcher styles
+│   ├── language-switcher.js  # Language toggle functionality
+│   ├── styles.css            # Main application styles
+│   └── ui-helpers.js         # UI utility functions
+└── utils/                    # Utility functions and helpers
+    ├── analytics.js          # Analytics helper functions
+    ├── cache-manager.js      # PWA cache management
+    ├── deep_translator_script.py # Python script for updating Russian translations
+    ├── pwa-installer.js      # PWA installation handler
+    ├── reset-progress.js     # Progress reset utility
+    ├── script.js             # Main application entry point for utilities
+    ├── shuffle-utils.js      # Shared shuffling algorithms for flashcards and quiz
+    └── version-sync.js       # Version synchronization utility
+```
+
+> **Note:**  
+> - Backup files (e.g., `vocabulary.js.backup.*`) are for recovery only and not used by the app.  
+> - System files like `.DS_Store` and folders like `.git/`, `venv/`, and `.creds` are ignored by the app and version control.
+
+### Vocabulary Manager Architecture
+
+The Vocabulary Manager is modular and component-based for maintainability and code organization.
+
+#### Component Managers
+
+- **Word Categorizer** (`word-categorizer.js`): Categorizes Spanish words based on linguistic patterns
+- **Text Parser** (`text-parser.js`): Handles text analysis and word extraction
+- **Vocabulary Updates Manager** (`vocabulary-updates-manager.js`): Manages vocabulary updates table
+- **Current Vocabulary Manager** (`current-vocabulary-manager.js`): Handles vocabulary filtering and display
+- **Export Manager** (`export-manager.js`): Manages CSV and JavaScript export
+- **Translation Manager** (`translation-manager.js`): Handles translation operations with progress tracking
+- **API Key Manager** (`api-key-manager.js`): Manages API key configuration
+- **Merge Request Manager** (`merge-request-manager.js`): Handles GitHub integration and pull request creation
+
+#### Supporting Services
+
+- **Translation Service** (`translation-service.js`): Multi-provider translation capabilities
+- **GitHub Integration** (`github-integration.js`): Automated pull request creation
+
+#### Inter-Component Communication
+
+Components communicate using a custom event system:
+- `vocabularyUpdatesChanged` - Vocabulary updates modified
+- `currentVocabularyChanged` - Current vocabulary updated
+- `providerStatusChanged` - Translation provider status changes
+
 ## Getting Started
 
 ### Option 1: Install as Native App (Recommended)
@@ -68,95 +163,6 @@ A **Progressive Web App** for studying Spanish vocabulary for the DGT (Direcció
 - **Offline Access** - Study even without internet
 - **Home Screen Icon** - Quick access from your device
 - **Background Updates** - Automatic updates when online
-
-## Project Structure
-
-```
-src/
-├── core/                      # Core application logic
-│   ├── analytics.js           # Google Analytics integration
-│   ├── core.js               # Main DGTVocabulary class
-│   ├── filter-utils.js       # Vocabulary filtering utilities
-│   ├── init.js               # Application initialization
-│   ├── topics.js             # DGT topic definitions and utilities
-│   └── vocabulary.js         # Core vocabulary data structure
-├── features/                  # Feature modules
-│   ├── flashcards/           # Flashcard and quiz functionality
-│   │   ├── category-manager.js      # Category and topic filtering
-│   │   ├── flashcard-mode.js        # Flashcard display and interaction
-│   │   ├── quiz-mode.js             # Quiz functionality with enhanced styling
-│   │   └── stats-manager.js         # Progress tracking and statistics
-│   ├── stats/                # Statistics management
-│   │   └── stats-manager.js         # Centralized statistics handling
-│   └── vocabulary-manager/    # Vocabulary management system
-│       ├── vocabulary-manager.js        # Main orchestrator
-│       ├── word-categorizer.js         # Spanish word categorization logic
-│       ├── text-parser.js              # Text analysis and word extraction
-│       ├── vocabulary-updates-manager.js # Updates table management
-│       ├── current-vocabulary-manager.js # Vocabulary display and filtering
-│       ├── export-manager.js           # CSV and JavaScript export
-│       ├── translation-manager.js      # Translation UI and operations
-│       ├── translation-service.js      # Multi-provider translation service
-│       ├── api-key-manager.js          # API key configuration
-│       ├── merge-request-manager.js    # GitHub integration manager
-│       └── github-integration.js       # GitHub API integration
-├── ui/                       # User interface components
-│   ├── icons.js              # SVG icon system
-│   ├── language-switcher.js  # Language toggle functionality
-│   ├── language-switcher.css # Language switcher styles
-│   ├── styles.css            # Main application styles
-│   └── ui-helpers.js         # UI utility functions
-└── utils/                    # Utility functions and helpers
-    ├── analytics.js          # Analytics helper functions
-    ├── cache-manager.js      # PWA cache management
-    ├── pwa-installer.js      # PWA installation handler
-    ├── reset-progress.js     # Progress reset utility
-    ├── shuffle-utils.js      # Shared shuffling algorithms for flashcards and quiz
-    └── script.js             # Main application entry point
-```
-
-### Vocabulary Manager Architecture
-
-The Vocabulary Manager has been refactored from a monolithic file into a modular, component-based architecture for better maintainability and code organization.
-
-#### Component Managers
-
-1. **Word Categorizer** (`word-categorizer.js`) - Categorizes Spanish words based on linguistic patterns
-2. **Text Parser** (`text-parser.js`) - Handles text analysis and word extraction
-3. **Vocabulary Updates Manager** (`vocabulary-updates-manager.js`) - Manages vocabulary updates table
-4. **Current Vocabulary Manager** (`current-vocabulary-manager.js`) - Handles vocabulary filtering and display
-5. **Export Manager** (`export-manager.js`) - Manages CSV export functionality
-6. **Translation Manager** (`translation-manager.js`) - Handles translation operations with progress tracking
-7. **API Key Manager** (`api-key-manager.js`) - Manages API key configuration
-8. **Merge Request Manager** (`merge-request-manager.js`) - Handles merge request creation
-
-#### Supporting Services
-
-- **Translation Service** (`translation-service.js`) - Multi-provider translation capabilities
-- **GitHub Integration** (`github-integration.js`) - Automated pull request creation
-
-#### Inter-Component Communication
-
-Components communicate using a custom event system:
-
-- `vocabularyUpdatesChanged` - Vocabulary updates modified
-- `currentVocabularyChanged` - Current vocabulary updated
-- `providerStatusChanged` - Translation provider status changes
-
-```
-src/features/vocabulary-manager/
-├── vocabulary-manager.js          # Main orchestrator
-├── word-categorizer.js            # Spanish word categorization logic
-├── text-parser.js                 # Text analysis component
-├── vocabulary-updates-manager.js  # Updates table management
-├── current-vocabulary-manager.js  # Current vocabulary display
-├── export-manager.js              # CSV export functionality
-├── translation-manager.js         # Translation UI and operations
-├── api-key-manager.js             # API key configuration
-├── merge-request-manager.js       # Merge request handling
-├── translation-service.js         # Translation service
-└── github-integration.js          # GitHub API integration
-```
 
 ## Installation
 
@@ -233,7 +239,6 @@ For developers or contributors who want to update or add missing translations:
    ```
 
 This script will:
-
 - Identify vocabulary entries with missing Russian translations
 - Use the `deep_translator` library with Google Translate backend to automatically translate English definitions to Russian
 - Update the vocabulary.js file with the new translations
@@ -335,18 +340,17 @@ The Vocabulary Manager uses a modular component system with event-driven communi
 
 #### Component Managers
 
-1. **Text Parser** - Handles text analysis and word extraction with automatic categorization
-2. **Vocabulary Updates Manager** - Manages the vocabulary updates table and operations
-3. **Current Vocabulary Manager** - Handles vocabulary filtering and display
-4. **Export Manager** - Manages CSV and JavaScript export functionality
-5. **Translation Manager** - Handles translation operations with progress tracking
-6. **API Key Manager** - Manages translation service API key configuration
-7. **Merge Request Manager** - Handles GitHub integration and pull request creation
+- **Text Parser** - Handles text analysis and word extraction with automatic categorization
+- **Vocabulary Updates Manager** - Manages the vocabulary updates table and operations
+- **Current Vocabulary Manager** - Handles vocabulary filtering and display
+- **Export Manager** - Manages CSV and JavaScript export functionality
+- **Translation Manager** - Handles translation operations with progress tracking
+- **API Key Manager** - Manages translation service API key configuration
+- **Merge Request Manager** - Handles GitHub integration and pull request creation
 
 #### Inter-Component Communication
 
 Components communicate using a custom event system:
-
 - `vocabularyUpdatesChanged` - Triggered when vocabulary updates are modified
 - `currentVocabularyChanged` - Triggered when current vocabulary is updated
 - `providerStatusChanged` - Triggered when translation provider status changes
@@ -394,7 +398,7 @@ Anton Kulikov
 ### Quick Start
 
 1. Visit [Vocabulary Manager](https://dgtvocab.app/vocabulary-manager.html)
-2. Add new words or parse Spanish text
+2. Add by parsing Spanish text
 3. Use automated GitHub integration to contribute changes
 
 ### Development
@@ -403,52 +407,6 @@ Anton Kulikov
 2. Create feature branch: `git checkout -b feature-name`
 3. Make changes and test locally
 4. Submit pull request with detailed description
-
-### Extending the Vocabulary Manager
-
-The modular architecture makes it easy to add new features:
-
-1. **Create a new component manager class** following the existing pattern
-2. **Add it to the `initializeComponents()` method** in `vocabulary-manager.js`
-3. **Set up event listeners** for inter-component communication
-4. **Add necessary HTML script tags** in `vocabulary-manager.html`
-
-#### Future Enhancement Opportunities
-
-- **Analytics Component** - Track vocabulary learning progress and patterns
-- **Audio Manager** - Add pronunciation features and audio support
-- **Study Planner** - Create scheduled study sessions and reminders
-- **Import Manager** - Support importing vocabulary from various file formats
-- **Sync Manager** - Synchronize vocabulary and progress across devices
-- **Gamification System** - Add achievements, streaks, and learning rewards
-
-### Architecture Benefits
-
-The refactored vocabulary manager provides:
-
-- **Improved Maintainability** - Single responsibility principle for each component
-- **Better Testability** - Components can be tested in isolation
-- **Enhanced Reusability** - Components can be reused across different contexts
-- **Reduced Coupling** - Loose coupling through event-driven communication
-- **Better Code Organization** - Logical grouping of related functionality
-- **Easier Feature Addition** - Well-defined extension points for new functionality
-
-## Recent Improvements
-
-### Version 1.2.0 Updates
-
-- **Shuffling Algorithm Abstraction**: Abstracted shuffling functionality into a reusable utility (`shuffle-utils.js`) shared between flashcard and quiz modes
-- **Enhanced Randomization**: Implemented aggressive shuffling algorithms to prevent alphabetical patterns, especially after progress resets
-- **Educational Weighting**: Added smart card prioritization based on interaction history while maintaining high randomness
-- **Code Deduplication**: Eliminated duplicate shuffling code between flashcard and quiz modes for better maintainability
-- **Improved Card Distribution**: Multiple randomization passes ensure truly random card sequences
-
-### Version 1.1.6 Updates
-
-- **Fixed Service Worker Update Issues**: Removed aggressive 60-second update checks that were causing false update notifications
-- **Enhanced Spanish Word Styling**: Improved CSS specificity and added fallback styles for better mobile device compatibility
-- **Optimized Cache Management**: Streamlined cache invalidation strategy for more reliable PWA updates
-- **Debug Improvements**: Added console logging for troubleshooting styling and caching issues
 
 ## Support the Project
 
