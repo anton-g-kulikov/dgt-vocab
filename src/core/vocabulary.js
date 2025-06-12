@@ -16,9 +16,8 @@ window.vocabularyData = [
     translation: "open",
     perevod: "открыть",
     category: "verb",
-    topics: [],
-    example:
-      "Por obras en la calzada se ha abierto un carril en sentido contrario al normal. ¿Puede circular por él un turismo con remolque?",
+    topics: ["topic10"],
+    example: "Por obras en la calzada se ha abierto un carril en sentido contrario al normal. ¿Puede circular por él un turismo con remolque?",
   },
   {
     word: "abrochado",
@@ -60,9 +59,8 @@ window.vocabularyData = [
     translation: "oil",
     perevod: "масло",
     category: "noun",
-    topics: [],
-    example:
-      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    topics: ["topic02"],
+    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "aceleración",
@@ -77,9 +75,8 @@ window.vocabularyData = [
     translation: "accommodations",
     perevod: "размещение",
     category: "noun",
-    topics: [],
-    example:
-      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    topics: ["topic11"],
+    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "acondicionada",
@@ -154,7 +151,7 @@ window.vocabularyData = [
     translation: "to act",
     perevod: "действовать",
     category: "verb",
-    topics: [],
+    topics: ["topic11"],
     example: "Cómo se debe actuar cuando las ruedas traseras derrapen",
   },
   {
@@ -203,7 +200,7 @@ window.vocabularyData = [
     translation: "to overtake",
     perevod: "обогнать",
     category: "verb",
-    topics: [],
+    topics: ["topic10"],
     example: "Solo adelanta cuando sea seguro",
   },
   {
@@ -220,7 +217,7 @@ window.vocabularyData = [
     translation: "additional",
     perevod: "дополнительный",
     category: "adjective",
-    topics: [],
+    topics: ["topic02"],
     example: "Puede haber información adicional en el panel.",
   },
   {
@@ -260,7 +257,7 @@ window.vocabularyData = [
     translation: "to grab",
     perevod: "схватить",
     category: "verb",
-    topics: [],
+    topics: ["topic11"],
     example: "Agarrar el volante fuerte y no girarlo",
   },
   {
@@ -268,7 +265,7 @@ window.vocabularyData = [
     translation: "officer/agent",
     perevod: "офицер или агент",
     category: "noun",
-    topics: [],
+    topics: ["topic07"],
     example: "El agente de tráfico dirige la circulación",
   },
   {
@@ -285,9 +282,8 @@ window.vocabularyData = [
     translation: "water",
     perevod: "вода",
     category: "noun",
-    topics: [],
-    example:
-      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    topics: ["topic11"],
+    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "agudeza",
@@ -336,16 +332,15 @@ window.vocabularyData = [
     translation: "alcohol",
     perevod: "алкоголь",
     category: "noun",
-    topics: [],
-    example:
-      "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+    topics: ["topic11"],
+    example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
     word: "alcoholemia",
     translation: "blood alcohol test",
     perevod: "анализ алкоголя в крови",
     category: "noun",
-    topics: [],
+    topics: ["topic03"],
     example: "El control de alcoholemia es aleatorio.",
   },
   {
@@ -394,7 +389,7 @@ window.vocabularyData = [
     translation: "lighting",
     perevod: "освещение",
     category: "noun",
-    topics: [],
+    topics: ["topic11"],
     example: "El alumbrado público facilita la visión",
   },
   {
@@ -411,9 +406,8 @@ window.vocabularyData = [
     translation: "amortiza",
     perevod: "амортизаторы",
     category: "noun",
-    topics: [],
-    example:
-      "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
+    topics: ["topic02"],
+    example: "La suspensión y los amortiguadores.B) Los airbag y los reposacabezas.",
   },
   {
     word: "analgésico",
@@ -436,7 +430,7 @@ window.vocabularyData = [
     translation: "wide",
     perevod: "широкий",
     category: "adjective",
-    topics: [],
+    topics: ["topic04"],
     example: "Carril ancho para adelantar",
   },
   {
@@ -453,18 +447,16 @@ window.vocabularyData = [
     translation: "abnormally",
     perevod: "ненормально",
     category: "adverb",
-    topics: [],
-    example:
-      "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
+    topics: ["topic04"],
+    example: "En esta vía para automóviles, ¿qué velocidad se considera anormalmente reducida, sin causa justificada, para un turismo?",
   },
   {
     word: "ansiedad",
     translation: "anxiety",
     perevod: "беспокойство",
     category: "noun",
-    topics: [],
-    example:
-      "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+    topics: ["topic11"],
+    example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
     word: "antelación",
@@ -479,7 +471,7 @@ window.vocabularyData = [
     translation: "previous/front",
     perevod: "предыдущий/передний",
     category: "adjective",
-    topics: [],
+    topics: ["topic02"],
     example: "El vehículo anterior frena",
   },
   {
@@ -487,9 +479,8 @@ window.vocabularyData = [
     translation: "before",
     perevod: "до",
     category: "other",
-    topics: [],
-    example:
-      "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
+    topics: ["topic11"],
+    example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
     word: "anticongelante",
@@ -522,7 +513,7 @@ window.vocabularyData = [
     translation: "announce to him",
     perevod: "объявить ему",
     category: "noun",
-    topics: [],
+    topics: ["topic11"],
     example: "Algunos síntomas que pueden anunciarle la fatiga",
   },
   {
@@ -530,7 +521,7 @@ window.vocabularyData = [
     translation: "turned off",
     perevod: "выключенный",
     category: "adjective",
-    topics: [],
+    topics: ["topic11"],
     example: "Motor apagado en semáforos largos",
   },
   {
@@ -596,8 +587,8 @@ window.vocabularyData = [
     word: "aplicable",
     translation: "applicable",
     perevod: "применимый",
-    category: "adjective",
-    topics: [],
+    category: "adverb",
+    topics: ["topic11"],
     example: "Esta norma es aplicable a todos los vehículos.",
   },
   {
@@ -605,7 +596,7 @@ window.vocabularyData = [
     translation: "to apply",
     perevod: "подать заявку",
     category: "verb",
-    topics: [],
+    topics: ["topic03"],
     example: "Se aplica una multa por exceso de velocidad.",
   },
   {
@@ -621,7 +612,7 @@ window.vocabularyData = [
     translation: "driving learning",
     perevod: "вождение обучения",
     category: "noun",
-    topics: [],
+    topics: ["topic01"],
     example: "Vehículo en aprendizaje de conducción.",
   },
   {
@@ -646,7 +637,7 @@ window.vocabularyData = [
     translation: "road shoulder",
     perevod: "обочина",
     category: "noun",
-    topics: [],
+    topics: ["topic10"],
     example: "Para en el arcén si es necesario",
   },
   {
@@ -654,7 +645,7 @@ window.vocabularyData = [
     translation: "service area",
     perevod: "зона обслуживания",
     category: "noun",
-    topics: [],
+    topics: ["topic10"],
     example: "Para en el área de servicio a repostar.",
   },
   {
@@ -687,7 +678,7 @@ window.vocabularyData = [
     translation: "article",
     perevod: "статья",
     category: "noun",
-    topics: [],
+    topics: ["topic07"],
     example: "El artículo 47 regula los adelantamientos.",
   },
   {
@@ -721,9 +712,8 @@ window.vocabularyData = [
     translation: "asphalt",
     perevod: "асфальт",
     category: "noun",
-    topics: [],
-    example:
-      "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
+    topics: ["topic11"],
+    example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
   },
   {
     word: "asiento",
@@ -762,7 +752,7 @@ window.vocabularyData = [
     translation: "traffic jam",
     perevod: "пробка",
     category: "noun",
-    topics: [],
+    topics: ["topic10"],
     example: "El atasco dura dos horas.",
   },
   {
@@ -779,7 +769,7 @@ window.vocabularyData = [
     translation: "to run over",
     perevod: "переехать",
     category: "verb",
-    topics: [],
+    topics: ["topic11"],
     example: "Evita atropellar a los peatones",
   },
   {
@@ -821,7 +811,7 @@ window.vocabularyData = [
     translation: "bus",
     perevod: "автобус",
     category: "noun",
-    topics: [],
+    topics: ["topic01"],
     example: "El autobús tiene prioridad en las paradas.",
   },
   {
@@ -829,9 +819,8 @@ window.vocabularyData = [
     translation: "automatically",
     perevod: "автоматически",
     category: "adverb",
-    topics: [],
-    example:
-      "El sistema de frenado se activa automáticamente en caso de peligro.",
+    topics: ["topic02"],
+    example: "El sistema de frenado se activa automáticamente en caso de peligro.",
   },
   {
     word: "automóvil",
@@ -856,7 +845,7 @@ window.vocabularyData = [
     translation: "highway/motorway",
     perevod: "шоссе или автомагистраль",
     category: "noun",
-    topics: [],
+    topics: ["topic04"],
     example: "La velocidad máxima en autopista es 120 km/h.",
   },
   {
@@ -880,7 +869,7 @@ window.vocabularyData = [
     translation: "authority",
     perevod: "власть",
     category: "noun",
-    topics: [],
+    topics: ["topic07"],
     example: "Obedece a la autoridad competente",
   },
   {
@@ -896,7 +885,7 @@ window.vocabularyData = [
     translation: "to authorize",
     perevod: "разрешить",
     category: "verb",
-    topics: [],
+    topics: ["topic07"],
     example: "Solo pueden autorizar el paso los agentes.",
   },
   {
@@ -904,7 +893,7 @@ window.vocabularyData = [
     translation: "highway",
     perevod: "шоссе",
     category: "noun",
-    topics: [],
+    topics: ["topic04"],
     example: "La velocidad máxima en autovía es 120 km/h",
   },
   {
@@ -920,7 +909,7 @@ window.vocabularyData = [
     translation: "breakdown",
     perevod: "авария",
     category: "noun",
-    topics: [],
+    topics: ["topic12"],
     example: "En caso de avería, para en lugar seguro.",
   },
   {
@@ -928,7 +917,7 @@ window.vocabularyData = [
     translation: "to warn/notify",
     perevod: "предупредить или уведомлять",
     category: "verb",
-    topics: [],
+    topics: ["topic12"],
     example: "Avisa con las luces de emergencia",
   },
   {
