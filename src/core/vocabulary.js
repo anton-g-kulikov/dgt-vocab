@@ -7205,7 +7205,7 @@ window.vocabularyData = [
   {
     word: "sea",
     translation: "to be",
-    perevod: "море",
+    perevod: "быть",
     category: "noun",
     topics: ["topic11"],
     example: "Bombear siempre los frenos con fuerza cuando sea necesario",
