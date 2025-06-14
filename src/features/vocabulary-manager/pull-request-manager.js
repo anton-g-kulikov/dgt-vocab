@@ -1,5 +1,5 @@
-// Merge Request Manager - Handles merge request creation and dialog
-class MergeRequestManager {
+// Pull Request Manager - Handles pull request creation and dialog
+class PullRequestManager {
   constructor(vocabApp, vocabularyUpdatesManager, showMessage) {
     this.vocabApp = vocabApp;
     this.vocabularyUpdatesManager = vocabularyUpdatesManager;
@@ -8,17 +8,17 @@ class MergeRequestManager {
   }
 
   setupEventListeners() {
-    // Add event listener to create merge request button
-    const createMergeRequestBtn = document.getElementById("createMergeRequest");
-    if (createMergeRequestBtn) {
-      createMergeRequestBtn.addEventListener("click", () =>
-        this.createMergeRequest()
+    // Add event listener to create pull request button
+    const createPullRequestBtn = document.getElementById("createPullRequest");
+    if (createPullRequestBtn) {
+      createPullRequestBtn.addEventListener("click", () =>
+        this.createPullRequest()
       );
     }
   }
 
-  // Create merge request functionality
-  async createMergeRequest() {
+  // Create pull request functionality
+  async createPullRequest() {
     try {
       // Validate vocabulary updates first
       if (
@@ -26,13 +26,13 @@ class MergeRequestManager {
         this.vocabApp.vocabularyUpdates.length === 0
       ) {
         this.showMessage(
-          "No vocabulary updates to create a merge request for.",
+          "No vocabulary updates to create a pull request for.",
           "error"
         );
         return;
       }
 
-      this.showMessage("Creating merge request... Please wait.", "info");
+      this.showMessage("Creating pull request... Please wait.", "info");
 
       // Get the updated vocabulary updates from the UI FIRST
       this.vocabularyUpdatesManager.updateVocabularyUpdatesFromUI();
@@ -44,7 +44,7 @@ class MergeRequestManager {
 
       if (incompleteWords.length > 0) {
         this.showMessage(
-          `Please provide translations for all words before creating a merge request. ${incompleteWords.length} words are missing translations.`,
+          `Please provide translations for all words before creating a pull request. ${incompleteWords.length} words are missing translations.`,
           "error"
         );
         return;
@@ -96,12 +96,12 @@ class MergeRequestManager {
         .replace(/-/g, "");
       const branchName = `vocab-update-${timestamp}-${Date.now()}`;
 
-      // Show merge request dialog
-      this.showMergeRequestDialog(updatedVocabularyContent, branchName);
+      // Show pull request dialog
+      this.showPullRequestDialog(updatedVocabularyContent, branchName);
     } catch (error) {
-      console.error("Error creating merge request:", error);
+      console.error("Error creating pull request:", error);
       this.showMessage(
-        "Error creating merge request: " + error.message,
+        "Error creating pull request: " + error.message,
         "error"
       );
     }
@@ -285,8 +285,8 @@ class MergeRequestManager {
       .replace(/\t/g, "\\t");
   }
 
-  // Show merge request dialog - simplified to only use GitHub integration
-  showMergeRequestDialog(updatedContent, branchName) {
+  // Show pull request dialog - simplified to only use GitHub integration
+  showPullRequestDialog(updatedContent, branchName) {
     // Directly trigger GitHub integration
     this.triggerGitHubIntegration(updatedContent, branchName);
   }
@@ -306,7 +306,7 @@ class MergeRequestManager {
     }
 
     // Trigger GitHub integration dialog
-    window.vocabularyManager.githubIntegration.showMergeRequestDialog(
+    window.vocabularyManager.githubIntegration.showPullRequestDialog(
       updatedContent,
       branchName
     );
@@ -314,4 +314,4 @@ class MergeRequestManager {
 }
 
 // Export for use in other modules
-window.MergeRequestManager = MergeRequestManager;
+window.PullRequestManager = PullRequestManager;

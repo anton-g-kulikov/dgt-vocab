@@ -35,7 +35,7 @@ const urlsToCache = [
   "/src/features/vocabulary-manager/export-manager.js",
   "/src/features/vocabulary-manager/translation-manager.js",
   "/src/features/vocabulary-manager/api-key-manager.js",
-  "/src/features/vocabulary-manager/merge-request-manager.js",
+  "/src/features/vocabulary-manager/pull-request-manager.js",
 
   // Utilities
   "/src/utils/analytics.js",

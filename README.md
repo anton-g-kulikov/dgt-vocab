@@ -85,7 +85,7 @@ src/
 │       ├── current-vocabulary-manager.js # Vocabulary display and filtering
 │       ├── export-manager.js          # CSV and JavaScript export
 │       ├── github-integration.js      # GitHub API integration
-│       ├── merge-request-manager.js   # GitHub merge request handling
+│       ├── pull-request-manager.js   # GitHub pull request handling
 │       ├── text-parser.js             # Text analysis and word extraction
 │       ├── translation-manager.js     # Translation UI and operations
 │       ├── translation-service.js     # Multi-provider translation service
@@ -126,7 +126,7 @@ The Vocabulary Manager is modular and component-based for maintainability and co
 - **Export Manager** (`export-manager.js`): Manages CSV and JavaScript export
 - **Translation Manager** (`translation-manager.js`): Handles translation operations with progress tracking
 - **API Key Manager** (`api-key-manager.js`): Manages API key configuration
-- **Merge Request Manager** (`merge-request-manager.js`): Handles GitHub integration and pull request creation
+- **Pull Request Manager** (`pull-request-manager.js`): Handles GitHub integration and pull request creation
 
 #### Supporting Services
 
@@ -346,7 +346,7 @@ The Vocabulary Manager uses a modular component system with event-driven communi
 - **Export Manager** - Manages CSV and JavaScript export functionality
 - **Translation Manager** - Handles translation operations with progress tracking
 - **API Key Manager** - Manages translation service API key configuration
-- **Merge Request Manager** - Handles GitHub integration and pull request creation
+- **Pull Request Manager** - Handles GitHub integration and pull request creation
 
 #### Inter-Component Communication
 

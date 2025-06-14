@@ -66,7 +66,7 @@ class VocabularyManager {
       this.translationService,
       this.showMessage.bind(this)
     );
-    this.mergeRequestManager = new MergeRequestManager(
+    this.pullRequestManager = new PullRequestManager(
       this.vocabApp,
       this.vocabularyUpdatesManager,
       this.showMessage.bind(this)
@@ -193,41 +193,41 @@ class VocabularyManager {
   }
 
   generateUpdatedVocabularyFile() {
-    return this.mergeRequestManager.generateUpdatedVocabularyFile();
+    return this.pullRequestManager.generateUpdatedVocabularyFile();
   }
 
   escapeJavaScriptString(str) {
-    return this.mergeRequestManager.escapeJavaScriptString(str);
+    return this.pullRequestManager.escapeJavaScriptString(str);
   }
 
-  showMergeRequestDialog(updatedContent, branchName) {
-    return this.mergeRequestManager.showMergeRequestDialog(
+  showPullRequestDialog(updatedContent, branchName) {
+    return this.pullRequestManager.showPullRequestDialog(
       updatedContent,
       branchName
     );
   }
 
-  downloadMergeRequestFiles(updatedContent, branchName) {
-    return this.mergeRequestManager.downloadMergeRequestFiles(
+  downloadPullRequestFiles(updatedContent, branchName) {
+    return this.pullRequestManager.downloadPullRequestFiles(
       updatedContent,
       branchName
     );
   }
 
-  generateMergeRequestSummary(branchName) {
-    return this.mergeRequestManager.generateMergeRequestSummary(branchName);
+  generatePullRequestSummary(branchName) {
+    return this.pullRequestManager.generatePullRequestSummary(branchName);
   }
 
   copyGitCommands(branchName, commitMessage) {
-    return this.mergeRequestManager.copyGitCommands(branchName, commitMessage);
+    return this.pullRequestManager.copyGitCommands(branchName, commitMessage);
   }
 
   showGitCommandsDialog(commands) {
-    return this.mergeRequestManager.showGitCommandsDialog(commands);
+    return this.pullRequestManager.showGitCommandsDialog(commands);
   }
 
   downloadFile(blob, fileName) {
-    return this.mergeRequestManager.downloadFile(blob, fileName);
+    return this.pullRequestManager.downloadFile(blob, fileName);
   }
 }
 

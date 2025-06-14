@@ -87,8 +87,8 @@ class GitHubIntegration {
     }
   }
 
-  // Show GitHub-integrated merge request dialog (simplified)
-  async showMergeRequestDialog(updatedContent, branchName) {
+  // Show GitHub-integrated pull request dialog (simplified)
+  async showPullRequestDialog(updatedContent, branchName) {
     // Check authentication first
     const isAuth = await this.isAuthenticated();
     if (!isAuth) {
@@ -98,7 +98,7 @@ class GitHubIntegration {
     }
 
     const modalOverlay = document.createElement("div");
-    modalOverlay.className = "github-merge-request-modal-overlay";
+    modalOverlay.className = "github-pull-request-modal-overlay";
     modalOverlay.style.cssText = `
       position: fixed;
       top: 0;
@@ -113,7 +113,7 @@ class GitHubIntegration {
     `;
 
     const modal = document.createElement("div");
-    modal.className = "github-merge-request-modal";
+    modal.className = "github-pull-request-modal";
     modal.style.cssText = `
       background: white;
       border-radius: 8px;
@@ -160,7 +160,7 @@ class GitHubIntegration {
         <button id="createGitHubPRBtn" class="primary-btn" style="background: #28a745; color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer; font-weight: bold; font-size: 1rem;">
           🚀 Create Pull Request
         </button>
-        <button id="closeGitHubMergeRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer;">
+        <button id="closeGitHubPullRequestModal" class="secondary-btn" style="background: #6c757d; color: white; border: none; padding: 1rem 2rem; border-radius: 4px; cursor: pointer;">
           ❌ Cancel
         </button>
       </div>
@@ -177,7 +177,7 @@ class GitHubIntegration {
       });
 
     document
-      .getElementById("closeGitHubMergeRequestModal")
+      .getElementById("closeGitHubPullRequestModal")
       .addEventListener("click", () => {
         document.body.removeChild(modalOverlay);
       });
@@ -686,7 +686,7 @@ class GitHubIntegration {
           // Close auth modal and proceed with GitHub workflow
           setTimeout(() => {
             document.body.removeChild(modalOverlay);
-            this.showMergeRequestDialog(updatedContent, branchName);
+            this.showPullRequestDialog(updatedContent, branchName);
           }, 1500);
         } catch (error) {
           console.error("Error validating GitHub token:", error);
