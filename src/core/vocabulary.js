@@ -6627,6 +6627,14 @@ window.vocabularyData = [
     example: "Comportamientos excesivamente prudentes",
   },
   {
+    word: "prueba",
+    translation: "sample",
+    perevod: "образец",
+    category: "noun",
+    topics: ["topic11"],
+    example: "En un control preventivo, ¿pueden los agentes someter a un conductor a una prueba de detección de estupefacientes",
+  },
+  {
     word: "pruebas",
     translation: "evidence",
     perevod: "доказательство",
@@ -7705,6 +7713,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic02"],
     example: "el vehículo no se desvía al soltar el volante",
+  },
+  {
+    word: "someter",
+    translation: "submit",
+    perevod: "отправить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "En un control preventivo, ¿pueden los agentes someter a un conductor a una prueba de detección de estupefacientes",
   },
   {
     word: "someterse",
