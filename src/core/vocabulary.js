@@ -243,14 +243,6 @@ window.vocabularyData = [
     example: "le afecta el exceso de ruido",
   },
   {
-    word: "afectado",
-    translation: "affected",
-    perevod: "пострадавших",
-    category: "noun",
-    topics: ["topic11"],
-    example: "El medioambiente, ¿se ve afectado por los accidentes de tráfico?",
-  },
-  {
     word: "agarrar",
     translation: "to grab",
     perevod: "схватить",
@@ -531,14 +523,6 @@ window.vocabularyData = [
     example: "Motor apagado en semáforos largos",
   },
   {
-    word: "apagar",
-    translation: "to shut down",
-    perevod: "выключить",
-    category: "verb",
-    topics: ["topic11"],
-    example: "apagar el motor, conectar la señal de emergencia y mantener encendidas las luces de posición",
-  },
-  {
     word: "aparece",
     translation: "to appear",
     perevod: "появляется",
@@ -795,6 +779,14 @@ window.vocabularyData = [
     example: "Sí, para que, en caso de atropello, el peatón tenga más posibilidades de sobrevivir.",
   },
   {
+    word: "atropellos",
+    translation: "being run over",
+    perevod: "наезды",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La mayoría de los atropellos a niños se produce al término de la jornada escolar.",
+  },
+  {
     word: "aumenta",
     translation: "increases",
     perevod: "увеличивает",
@@ -817,6 +809,14 @@ window.vocabularyData = [
     category: "other",
     topics: [],
     example: "realizar sin peligro, aunque tenga que invadir el sentido contrario",
+  },
+  {
+    word: "auriculares",
+    translation: "headphones",
+    perevod: "наушники",
+    category: "noun",
+    topics: ["topic11"],
+    example: "siempre que emplee un dispositivo de manos libres y no use cascos o auriculares",
   },
   {
     word: "autobús",
@@ -1363,6 +1363,14 @@ window.vocabularyData = [
     example: "casco",
   },
   {
+    word: "cascos",
+    translation: "helmets",
+    perevod: "шлемы",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "siempre que emplee un dispositivo de manos libres y no use cascos o auriculares",
+  },
+  {
     word: "caso",
     translation: "case",
     perevod: "случай",
@@ -1817,14 +1825,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic01"],
     example: "El estrés, ¿qué efectos puede tener sobre los conductores?",
-  },
-  {
-    word: "conectar",
-    translation: "to connect",
-    perevod: "соединить",
-    category: "verb",
-    topics: ["topic11"],
-    example: "apagar el motor, conectar la señal de emergencia y mantener encendidas las luces de posición",
   },
   {
     word: "congestión",
@@ -2667,14 +2667,6 @@ window.vocabularyData = [
     example: "Disminución de la fatiga y el sueño",
   },
   {
-    word: "disminuye",
-    translation: "decreases",
-    perevod: "уменьшает",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Si el equipaje disminuye la visibilidad por el espejo interior",
-  },
-  {
     word: "dispone",
     translation: "has",
     perevod: "имеет",
@@ -3075,14 +3067,6 @@ window.vocabularyData = [
     example: "Después de la época de lluvias se habrán desgastado.",
   },
   {
-    word: "equipaje",
-    translation: "baggage",
-    perevod: "багаж",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Si el equipaje disminuye la visibilidad por el espejo interior",
-  },
-  {
     word: "ergonómico",
     translation: "ergonomic",
     perevod: "эргономичный",
@@ -3097,6 +3081,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic02"],
     example: "Cómo se puede detectar que las escobillas están en mal estado",
+  },
+  {
+    word: "escolar",
+    translation: "school",
+    perevod: "школьный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "La mayoría de los atropellos a niños se produce al término de la jornada escolar.",
   },
   {
     word: "escuelas",
@@ -3145,14 +3137,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic09"],
     example: "Hay normas específicas para motocicletas.",
-  },
-  {
-    word: "espejo",
-    translation: "mirror",
-    perevod: "зеркало",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Si el equipaje disminuye la visibilidad por el espejo interior",
   },
   {
     word: "espejos",
@@ -3531,14 +3515,6 @@ window.vocabularyData = [
     example: "y resultan tan familiares que a veces se olvidan sus síntomas",
   },
   {
-    word: "farmacológico",
-    translation: "pharmacological",
-    perevod: "фармакология",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Ante un tratamiento farmacológico, ¿reaccionan todas las personas de igual forma?",
-  },
-  {
     word: "fatiga",
     translation: "fatigue",
     perevod: "усталость",
@@ -3827,14 +3803,6 @@ window.vocabularyData = [
     example: "Una furgoneta, con una antigüedad",
   },
   {
-    word: "gálibo",
-    translation: "clearance light",
-    perevod: "габариты",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Un vehículo debe llevar encendida la luz de gálibo si mide",
-  },
-  {
     word: "gane",
     translation: "to gain",
     perevod: "получает",
@@ -3865,14 +3833,6 @@ window.vocabularyData = [
     category: "adverb",
     topics: [],
     example: "Generalmente, los límites de velocidad son menores en zonas urbanas.",
-  },
-  {
-    word: "genérica",
-    translation: "generic",
-    perevod: "общая",
-    category: "adjective",
-    topics: ["topic09"],
-    example: "Recuerda, de forma genérica, que debe guardarse la distancia de seguridad reglamentaria entre vehículos.",
   },
   {
     word: "gestión del tráfico",
@@ -3993,14 +3953,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "A los grupos de población más prospensos a sufrir un accidente",
-  },
-  {
-    word: "guardarse",
-    translation: "to save / to keep",
-    perevod: "сохранять",
-    category: "verb",
-    topics: ["topic09"],
-    example: "Recuerda, de forma genérica, que debe guardarse la distancia de seguridad reglamentaria entre vehículos.",
   },
   {
     word: "habitual",
@@ -4209,6 +4161,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
+  },
+  {
+    word: "importantes",
+    translation: "key",
+    perevod: "важные",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "puede ocasionar importantes problemas de salud",
   },
   {
     word: "imprescindible",
@@ -4539,6 +4499,14 @@ window.vocabularyData = [
     example: "El inspector revisa la documentación.",
   },
   {
+    word: "instalar",
+    translation: "install",
+    perevod: "установить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Puede instalar láminas adhesivas en las ventanas traseras de su vehículo",
+  },
+  {
     word: "instantes",
     translation: "moments",
     perevod: "моменты",
@@ -4683,6 +4651,14 @@ window.vocabularyData = [
     example: "El intermitente izquierdo encendido",
   },
   {
+    word: "jornada",
+    translation: "day",
+    perevod: "день",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La mayoría de los atropellos a niños se produce al término de la jornada escolar.",
+  },
+  {
     word: "jóvenes",
     translation: "youths",
     perevod: "молодежь",
@@ -4737,14 +4713,6 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
-  },
-  {
-    word: "láminas adhesivas",
-    translation: "adhesive sheets",
-    perevod: "тонировочную пленку",
-    category: "noun",
-    topics: ["topic02"],
-    example: "¿Puede instalar láminas adhesivas en las ventanas traseras de su vehículo?",
   },
   {
     word: "largo",
@@ -4913,14 +4881,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic02"],
     example: "Antes de iniciar la marcha en terreno llano y recto.",
-  },
-  {
-    word: "llave",
-    translation: "key",
-    perevod: "ключ",
-    category: "noun",
-    topics: ["topic02"],
-    example: "dejar el motor encendido y la llave puesta.",
   },
   {
     word: "llegue",
@@ -5211,6 +5171,14 @@ window.vocabularyData = [
     example: "El peso máximo autorizado es de 3500kg.",
   },
   {
+    word: "mayoría",
+    translation: "majority",
+    perevod: "большинство",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "La mayoría de los atropellos a niños se produce al término de la jornada escolar.",
+  },
+  {
     word: "mediana",
     translation: "central part of the road",
     perevod: "центральная часть дороги",
@@ -5241,14 +5209,6 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
-  },
-  {
-    word: "medioambiente",
-    translation: "environment",
-    perevod: "окружающая среда",
-    category: "noun",
-    topics: ["topic11"],
-    example: "El medioambiente, ¿se ve afectado por los accidentes de tráfico?",
   },
   {
     word: "menor",
@@ -5289,14 +5249,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "El agua se mezcla con la suciedad, aceite y otras materias que hay en el asfalto, creando una capa resbaladiza en la superficie de la carretera.",
-  },
-  {
-    word: "mide",
-    translation: "measure",
-    perevod: "размер",
-    category: "noun",
-    topics: ["topic01"],
-    example: "Un vehículo debe llevar encendida la luz de gálibo si mide",
   },
   {
     word: "mientras",
@@ -5785,6 +5737,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Es obvio que no se puede aparcar aquí.",
+  },
+  {
+    word: "ocasionar",
+    translation: "cause",
+    perevod: "становиться причиной",
+    category: "verb",
+    topics: ["topic11"],
+    example: "puede ocasionar importantes problemas de salud",
   },
   {
     word: "ocupando",
@@ -6571,6 +6531,14 @@ window.vocabularyData = [
     example: "Es menos probable que aparezca la fatiga",
   },
   {
+    word: "problemas",
+    translation: "problems",
+    perevod: "проблемы",
+    category: "noun",
+    topics: ["topic11"],
+    example: "puede ocasionar importantes problemas de salud",
+  },
+  {
     word: "procedimiento",
     translation: "procedure",
     perevod: "процедура",
@@ -6715,14 +6683,6 @@ window.vocabularyData = [
     example: "peligro por la proximidad de un lugar frecuentado por niños, tales como escuelas ó zonas de juegos",
   },
   {
-    word: "proximidades",
-    translation: "proximities",
-    perevod: "окрестности",
-    category: "noun",
-    topics: ["topic11"],
-    example: "No, ni siquiera en sus proximidades.",
-  },
-  {
     word: "proyectar",
     translation: "project",
     perevod: "выбрасывать",
@@ -6745,6 +6705,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Comportamientos excesivamente prudentes",
+  },
+  {
+    word: "prueba",
+    translation: "sample",
+    perevod: "образец",
+    category: "noun",
+    topics: ["topic11"],
+    example: "En un control preventivo, ¿pueden los agentes someter a un conductor a una prueba de detección de estupefacientes",
   },
   {
     word: "pruebas",
@@ -6907,14 +6875,6 @@ window.vocabularyData = [
     example: "aumenta la capacidad de reacción",
   },
   {
-    word: "reaccionan",
-    translation: "react",
-    perevod: "реагировать",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Ante un tratamiento farmacológico, ¿reaccionan todas las personas de igual forma?",
-  },
-  {
     word: "realizar",
     translation: "to carry out/perform",
     perevod: "выполнять",
@@ -7073,14 +7033,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic05"],
     example: "Si el reglaje del sistema de alumbrado de su vehículo está demasiado bajo...",
-  },
-  {
-    word: "reglamentaria",
-    translation: "regulatory",
-    perevod: "регламентированную",
-    category: "adjective",
-    topics: ["topic09"],
-    example: "Recuerda, de forma genérica, que debe guardarse la distancia de seguridad reglamentaria entre vehículos.",
   },
   {
     word: "reglamentario",
@@ -7459,6 +7411,14 @@ window.vocabularyData = [
     example: "Sale del carril con cuidado",
   },
   {
+    word: "salud",
+    translation: "health",
+    perevod: "здоровье",
+    category: "noun",
+    topics: ["topic11"],
+    example: "puede ocasionar importantes problemas de salud",
+  },
+  {
     word: "salvo",
     translation: "except",
     perevod: "кроме",
@@ -7763,14 +7723,6 @@ window.vocabularyData = [
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
-    word: "siquiera",
-    translation: "not even",
-    perevod: "даже",
-    category: "adverb",
-    topics: ["topic11"],
-    example: "No, ni siquiera en sus proximidades.",
-  },
-  {
     word: "sirve",
     translation: "to serve",
     perevod: "служит",
@@ -7849,6 +7801,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic02"],
     example: "el vehículo no se desvía al soltar el volante",
+  },
+  {
+    word: "someter",
+    translation: "submit",
+    perevod: "отправить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "En un control preventivo, ¿pueden los agentes someter a un conductor a una prueba de detección de estupefacientes",
   },
   {
     word: "someterse",
@@ -8187,6 +8147,14 @@ window.vocabularyData = [
     example: "que tengan una MMA. superior a 750 kg",
   },
   {
+    word: "término",
+    translation: "at the end",
+    perevod: "окончание",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La mayoría de los atropellos a niños se produce al término de la jornada escolar.",
+  },
+  {
     word: "terreno",
     translation: "land",
     perevod: "земля",
@@ -8233,14 +8201,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "El titular del vehículo",
-  },
-  {
-    word: "todas",
-    translation: "all",
-    perevod: "все",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Ante un tratamiento farmacológico, ¿reaccionan todas las personas de igual forma?",
   },
   {
     word: "toma",
@@ -8569,6 +8529,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "En caso de venta de un vehículo",
+  },
+  {
+    word: "ventanas",
+    translation: "windows",
+    perevod: "окна",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Puede instalar láminas adhesivas en las ventanas traseras de su vehículo",
   },
   {
     word: "ventanillas",
