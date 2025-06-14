@@ -4739,6 +4739,14 @@ window.vocabularyData = [
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
+    word: "láminas adhesivas",
+    translation: "adhesive sheets",
+    perevod: "тонировочную пленку",
+    category: "noun",
+    topics: ["topic02"],
+    example: "¿Puede instalar láminas adhesivas en las ventanas traseras de su vehículo?",
+  },
+  {
     word: "largo",
     translation: "long",
     perevod: "дальний",
