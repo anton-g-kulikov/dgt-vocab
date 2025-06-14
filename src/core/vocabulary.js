@@ -7491,6 +7491,14 @@ window.vocabularyData = [
     example: "un dispositivo silenciador de explosiones.",
   },
   {
+    word: "silla de ruedas",
+    translation: "wheelchair",
+    perevod: "инвалидная коляска",
+    category: "noun",
+    topics: ["topic01"],
+    example: "El usuario de silla de ruedas debe ser ayudado por un peatón.",
+  },
+  {
     word: "similar",
     translation: "similar",
     perevod: "похожий",
