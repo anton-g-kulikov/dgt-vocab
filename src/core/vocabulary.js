@@ -1979,6 +1979,14 @@ window.vocabularyData = [
     example: "las comidas copiosas",
   },
   {
+    word: "correa de sujeción",
+    translation: "the tether strap",
+    perevod: "застегивающий ремешок",
+    category: "noun",
+    topics: ["topic11"],
+    example: "El uso adecuado del casco implica que la correa de sujeción debe llevarse correctamente abrochada para que el casco cumpla eficazmente su función",
+  },
+  {
     word: "correctamente",
     translation: "correctly",
     perevod: "правильно",
