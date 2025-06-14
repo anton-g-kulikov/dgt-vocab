@@ -27,6 +27,14 @@ window.vocabularyData = [
     example: "Qué sistemas de seguridad pueden perder eficacia si no se lleva abrochado el cinturón de seguridad",
   },
   {
+    word: "acabe",
+    translation: "finish",
+    perevod: "заканчивать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "es probable que con el tiempo acabe sufriendo un accidente",
+  },
+  {
     word: "accidente",
     translation: "accident",
     perevod: "авария",
@@ -7244,10 +7252,10 @@ window.vocabularyData = [
   },
   {
     word: "rebasar",
-    translation: "to exceed/overtake",
-    perevod: "превышать или обогнать",
+    translation: "to exceed",
+    perevod: "превышать",
     category: "verb",
-    topics: [],
+    topics: ["topic11"],
     example: "No rebases el límite de velocidad",
   },
   {
@@ -8281,6 +8289,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic06"],
     example: "Los daños personales que sufra el conductor responsable",
+  },
+  {
+    word: "sufriendo",
+    translation: "suffering",
+    perevod: "страдания",
+    category: "verb",
+    topics: ["topic11"],
+    example: "es probable que con el tiempo acabe sufriendo un accidente",
   },
   {
     word: "sufrir",
