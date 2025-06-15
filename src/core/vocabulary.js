@@ -35,6 +35,14 @@ window.vocabularyData = [
     example: "es probable que con el tiempo acabe sufriendo un accidente",
   },
   {
+    word: "acceso",
+    translation: "access",
+    perevod: "доступ",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
+  },
+  {
     word: "accidentados",
     translation: "accident victims",
     perevod: "жертвы несчастных случаев",
@@ -185,6 +193,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic04", "topic11"],
     example: "Adapta la velocidad a las condiciones.",
+  },
+  {
+    word: "adecuada",
+    translation: "adequate",
+    perevod: "адекватный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "está obligado a cuidar que el resto de pasajeros mantenga una posición adecuada en el vehículo",
   },
   {
     word: "adecuadamente",
@@ -443,6 +459,14 @@ window.vocabularyData = [
     example: "El automóvil es un vehículo a motor que sirve normalmente para transportar personas o cosas o ambas a la vez, o para la tracción de otros vehículos con ese fin",
   },
   {
+    word: "ambiental",
+    translation: "environmental",
+    perevod: "относящийся к окружающей среде",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
+  },
+  {
     word: "ambientales",
     translation: "environmental",
     perevod: "относящийся к окружающей среде",
@@ -497,6 +521,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "Carril ancho para adelantar",
+  },
+  {
+    word: "anchura",
+    translation: "width",
+    perevod: "ширина",
+    category: "noun",
+    topics: ["topic09"],
+    example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
   },
   {
     word: "animales",
@@ -577,6 +609,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic05"],
     example: "En caso de lluvia no intensa, ¿está permitido utilizar la luz antiniebla",
+  },
+  {
+    word: "antirreglamentaria",
+    translation: "unlawful",
+    perevod: "незаконный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Adelantar de forma antirreglamentaria y circular por lugar prohibido",
   },
   {
     word: "anunciarle",
@@ -963,6 +1003,14 @@ window.vocabularyData = [
     example: "Necesitas una autorización complementaria para ese transporte.",
   },
   {
+    word: "autorizada",
+    translation: "authorized",
+    perevod: "авторизованный",
+    category: "adjective",
+    topics: ["topic07"],
+    example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
+  },
+  {
     word: "autorizar",
     translation: "to authorize",
     perevod: "разрешить",
@@ -1259,6 +1307,14 @@ window.vocabularyData = [
     example: "No pares en la calzada",
   },
   {
+    word: "calzado",
+    translation: "footwear",
+    perevod: "обувь",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Es aconsejable conducir un turismo calzado con unas chanclas",
+  },
+  {
     word: "calzos",
     translation: "chocks",
     perevod: "чурки",
@@ -1459,6 +1515,14 @@ window.vocabularyData = [
     example: "Qué función tiene la carrocería como elemento de seguridad pasiva",
   },
   {
+    word: "cartel publicitario",
+    translation: "advertising poster",
+    perevod: "рекламный плакат",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Mirar un cartel publicitario situado en el entorno de la vía, ¿puede distraer al conductor de un vehículo?",
+  },
+  {
     word: "casco",
     translation: "auto helmet",
     perevod: "автошлем",
@@ -1579,6 +1643,14 @@ window.vocabularyData = [
     example: "En qué tipo de accidentes es más frecuente que se produzca el latigazo cervical",
   },
   {
+    word: "chanclas",
+    translation: "flip flops",
+    perevod: "шлепанцы",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Es aconsejable conducir un turismo calzado con unas chanclas",
+  },
+  {
     word: "charcos",
     translation: "puddles",
     perevod: "лужи",
@@ -1683,6 +1755,14 @@ window.vocabularyData = [
     example: "El código de circulación regula el tráfico.",
   },
   {
+    word: "colocación",
+    translation: "placement",
+    perevod: "размещение",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Invadir parcialmente el sentido contrario y exceso o mala colocación de la carga",
+  },
+  {
     word: "colocada",
     translation: "placed",
     perevod: "размещен",
@@ -1721,6 +1801,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Para limpiar el aire que se mezcla con el combustible",
+  },
+  {
+    word: "cometen",
+    translation: "to commit",
+    perevod: "совершить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
   },
   {
     word: "cometidas",
@@ -2027,14 +2115,6 @@ window.vocabularyData = [
     example: "Esta acción constituye una infracción grave.",
   },
   {
-    word: "construcción",
-    translation: "construction",
-    perevod: "конструкцию",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
-  },
-  {
     word: "contacto",
     translation: "contact",
     perevod: "контакт",
@@ -2283,6 +2363,14 @@ window.vocabularyData = [
     example: "Cuál es la misión principal del líquido refrigerante",
   },
   {
+    word: "cuáles",
+    translation: "which",
+    perevod: "который",
+    category: "noun",
+    topics: ["topic11"],
+    example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
+  },
+  {
     word: "cualquier",
     translation: "any",
     perevod: "любой",
@@ -2337,6 +2425,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "el cinturón puede perder eficacia al no estar ajustado al cuerpo",
+  },
+  {
+    word: "cuidar",
+    translation: "to care",
+    perevod: "заботиться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "está obligado a cuidar que el resto de pasajeros mantenga una posición adecuada en el vehículo",
   },
   {
     word: "culpable",
@@ -2497,6 +2593,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "Apoyar una de las ruedas delanteras en el bordillo, orientada hacia el centro de la calzada",
+  },
+  {
+    word: "delimitada",
+    translation: "delimited",
+    perevod: "разграниченный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
   },
   {
     word: "demás",
@@ -2915,6 +3019,14 @@ window.vocabularyData = [
     example: "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
   },
   {
+    word: "disponga",
+    translation: "dispose",
+    perevod: "распоряжаться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
+  },
+  {
     word: "disposición",
     translation: "provision/regulation",
     perevod: "обеспечение или регулирование",
@@ -2963,6 +3075,14 @@ window.vocabularyData = [
     example: "Si existen señales verticales distintas a la derecha y la izquierda de su carril, ¿a qué señal debe obedecer para continuar de frente",
   },
   {
+    word: "distintivo",
+    translation: "distinctive",
+    perevod: "отличительный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
+  },
+  {
     word: "distintivo de nacionalidad",
     translation: "nationality badge",
     perevod: "национальный значок",
@@ -2993,6 +3113,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Las distracciones suelen estar relacionadas",
+  },
+  {
+    word: "distraer",
+    translation: "to distract",
+    perevod: "отвлекать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Mirar un cartel publicitario situado en el entorno de la vía, ¿puede distraer al conductor de un vehículo?",
   },
   {
     word: "doble",
@@ -3171,6 +3299,14 @@ window.vocabularyData = [
     example: "Usa las luces de emergencia si es necesario.",
   },
   {
+    word: "emisiones",
+    translation: "emissions",
+    perevod: "выбросы",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
+  },
+  {
     word: "empañe",
     translation: "tarnish",
     perevod: "тускнеть",
@@ -3233,14 +3369,6 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
-  },
-  {
-    word: "encuentra",
-    translation: "finds",
-    perevod: "находить",
-    category: "verb",
-    topics: ["topic11"],
-    example: "no se encuentra en perfectas condiciones para conducir",
   },
   {
     word: "endurecida",
@@ -3353,14 +3481,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Sí, si la circulación es escasa, pero no si es densa.",
-  },
-  {
-    word: "esclarecer",
-    translation: "clarify",
-    perevod: "объяснить",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Todo conductor implicado en un accidente de tráfico, ¿está obligado a detenerse para esclarecer los hechos",
   },
   {
     word: "escobillas",
@@ -3739,14 +3859,6 @@ window.vocabularyData = [
     example: "La DGT expide los permisos de conducir.",
   },
   {
-    word: "explicar",
-    translation: "explain",
-    perevod: "объяснять",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
-  },
-  {
     word: "explosiones",
     translation: "explosions",
     perevod: "выхлопы",
@@ -3817,14 +3929,6 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "Facilitar la finalización de la maniobra de adelantamiento",
-  },
-  {
-    word: "factor",
-    translation: "factor",
-    perevod: "фактор",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
   },
   {
     word: "falta",
@@ -4155,6 +4259,14 @@ window.vocabularyData = [
     example: "Una furgoneta, con una antigüedad",
   },
   {
+    word: "furgonetas",
+    translation: "vans",
+    perevod: "фургоны",
+    category: "noun",
+    topics: ["topic01"],
+    example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
+  },
+  {
     word: "gálibo",
     translation: "clearance light",
     perevod: "габариты",
@@ -4257,14 +4369,6 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Las primeras gotas son más densas y provocan peor drenaje",
-  },
-  {
-    word: "grado",
-    translation: "degree",
-    perevod: "степень",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
   },
   {
     word: "gradual",
@@ -4443,14 +4547,6 @@ window.vocabularyData = [
     example: "El autor del hecho en que consista la infracción",
   },
   {
-    word: "hechos",
-    translation: "facts",
-    perevod: "факты",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Todo conductor implicado en un accidente de tráfico, ¿está obligado a detenerse para esclarecer los hechos",
-  },
-  {
     word: "herramientas",
     translation: "tools",
     perevod: "инструменты",
@@ -4555,6 +4651,14 @@ window.vocabularyData = [
     example: "En un accidente de tráfico en el que esté implicado",
   },
   {
+    word: "implicados",
+    translation: "involved",
+    perevod: "вовлеченный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
+  },
+  {
     word: "imponer",
     translation: "to impose",
     perevod: "навязывать",
@@ -4569,14 +4673,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
-  },
-  {
-    word: "importantes",
-    translation: "key",
-    perevod: "важные",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
   },
   {
     word: "imprescindible",
@@ -4995,14 +5091,6 @@ window.vocabularyData = [
     example: "En carretera interurbana 90 km/h",
   },
   {
-    word: "introducidas",
-    translation: "introduced",
-    perevod: "введен",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
-  },
-  {
     word: "invadiendo",
     translation: "invading",
     perevod: "вторгаясь",
@@ -5121,6 +5209,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
+  },
+  {
+    word: "la puesta y la salida del sol",
+    translation: "the sunset and sunrise",
+    perevod: "закат и восход солнца",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Un turismo que circula entre la puesta y la salida del sol",
   },
   {
     word: "láminas adhesivas",
@@ -5347,6 +5443,14 @@ window.vocabularyData = [
     example: "Las primeras lluvias hacen más resbaladizas las carreteras",
   },
   {
+    word: "longitud",
+    translation: "length",
+    perevod: "длина",
+    category: "noun",
+    topics: ["topic09"],
+    example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
+  },
+  {
     word: "longitudinal",
     translation: "longitudinal",
     perevod: "продольный",
@@ -5409,6 +5513,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic02"],
     example: "los amortiguadores estén en mal estado.",
+  },
+  {
+    word: "mala",
+    translation: "bad",
+    perevod: "плохой",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Invadir parcialmente el sentido contrario y exceso o mala colocación de la carga",
   },
   {
     word: "malas",
@@ -5499,6 +5611,14 @@ window.vocabularyData = [
     example: "Mantén la distancia de seguridad",
   },
   {
+    word: "mantenga",
+    translation: "to keep",
+    perevod: "соблюдать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "está obligado a cuidar que el resto de pasajeros mantenga una posición adecuada en el vehículo",
+  },
+  {
     word: "manteniendo",
     translation: "maintaining",
     perevod: "поддержание",
@@ -5561,6 +5681,14 @@ window.vocabularyData = [
     category: "other",
     topics: [],
     example: "es consciente de que asume mas riesgos durante la conducción",
+  },
+  {
+    word: "masa",
+    translation: "mass",
+    perevod: "масса",
+    category: "adjective",
+    topics: ["topic07"],
+    example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
   },
   {
     word: "masa máxima autorizada",
@@ -5627,6 +5755,14 @@ window.vocabularyData = [
     example: "Aunque no se superen los límites máximos de velocidad",
   },
   {
+    word: "mayor",
+    translation: "bigger",
+    perevod: "больший",
+    category: "adjective",
+    topics: ["topic10"],
+    example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
+  },
+  {
     word: "mediana",
     translation: "central part of the road",
     perevod: "центральная часть дороги",
@@ -5665,14 +5801,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "El medioambiente, ¿se ve afectado por los accidentes de tráfico?",
-  },
-  {
-    word: "mejoras",
-    translation: "improvements",
-    perevod: "улучшения",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
   },
   {
     word: "menor",
@@ -6443,6 +6571,14 @@ window.vocabularyData = [
     example: "Visibilidad parcial por niebla",
   },
   {
+    word: "parcialmente",
+    translation: "partially",
+    perevod: "частично",
+    category: "adverb",
+    topics: ["topic11"],
+    example: "Invadir parcialmente el sentido contrario y exceso o mala colocación de la carga",
+  },
+  {
     word: "parpadeo",
     translation: "flicker",
     perevod: "мерцание",
@@ -6465,6 +6601,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Los pasajeros deben usar cinturón",
+  },
+  {
+    word: "pasajeros",
+    translation: "passengers",
+    perevod: "пассажиры",
+    category: "noun",
+    topics: ["topic11"],
+    example: "está obligado a cuidar que el resto de pasajeros mantenga una posición adecuada en el vehículo",
   },
   {
     word: "pasar",
@@ -6649,14 +6793,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
-  },
-  {
-    word: "perfectas",
-    translation: "perfect",
-    perevod: "идеальный",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "no se encuentra en perfectas condiciones para conducir",
   },
   {
     word: "periódicamente",
@@ -7811,6 +7947,14 @@ window.vocabularyData = [
     example: "Sé responsable al volante",
   },
   {
+    word: "resto",
+    translation: "rest of",
+    perevod: "остальные",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "está obligado a cuidar que el resto de pasajeros mantenga una posición adecuada en el vehículo",
+  },
+  {
     word: "restricciones de circulación",
     translation: "traffic restrictions",
     perevod: "ограничения трафика",
@@ -8283,14 +8427,6 @@ window.vocabularyData = [
     example: "tiene el mismo significado que una marca longitudinal continua",
   },
   {
-    word: "siguientes",
-    translation: "following",
-    perevod: "следующий",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
-  },
-  {
     word: "silbato",
     translation: "whistle",
     perevod: "свист",
@@ -8385,6 +8521,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Evitando las situaciones que puedan provocar una crisis",
+  },
+  {
+    word: "situado",
+    translation: "situated",
+    perevod: "распроложеный",
+    category: "adverb",
+    topics: ["topic11"],
+    example: "Mirar un cartel publicitario situado en el entorno de la vía, ¿puede distraer al conductor de un vehículo?",
   },
   {
     word: "situar",
@@ -9291,6 +9435,14 @@ window.vocabularyData = [
     example: "Observando si la goma está endurecida, en cuyo caso aparecerán chirridos, vibraciones y un funcionamiento defectuoso",
   },
   {
+    word: "víctimas",
+    translation: "victims",
+    perevod: "жертвы",
+    category: "noun",
+    topics: ["topic11"],
+    example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
+  },
+  {
     word: "viejo",
     translation: "old",
     perevod: "старый",
@@ -9441,6 +9593,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Esta es una zona de aparcamiento regulado.",
+  },
+  {
+    word: "zona de bajas emisiones",
+    translation: "low emission zone",
+    perevod: "зона с низким уровнем выбросов",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Le está permitido el acceso a un vehículo a motor que disponga del distintivo ambiental B a una 'zona de bajas emisiones' delimitada por estas señales?",
   },
   {
     word: "zona de carga y descarga",
