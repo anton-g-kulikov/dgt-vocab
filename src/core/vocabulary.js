@@ -315,6 +315,14 @@ window.vocabularyData = [
     example: "Agarrar el volante fuerte y no girarlo",
   },
   {
+    word: "agarre",
+    translation: "grip",
+    perevod: "сцепление (с дорогой)",
+    category: "noun",
+    topics: ["topic11"],
+    example: "afecta al agarre de las ruedas del vehículo a la calzada",
+  },
+  {
     word: "agente",
     translation: "officer/agent",
     perevod: "офицер или агент",
@@ -955,6 +963,14 @@ window.vocabularyData = [
     example: "El sistema de frenado se activa automáticamente en caso de peligro.",
   },
   {
+    word: "automático",
+    translation: "automatic",
+    perevod: "автоматический",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "El limpiaparabrisas automático",
+  },
+  {
     word: "automóvil",
     translation: "automobile",
     perevod: "автомобиль",
@@ -1449,6 +1465,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "puede poner punto muerto para ahorrar carburante",
+  },
+  {
+    word: "carecen",
+    translation: "lack",
+    perevod: "недостаток",
+    category: "noun",
+    topics: ["topic11"],
+    example: "porque carecen de la suficiente experiencia en la conducción",
   },
   {
     word: "carga",
@@ -2347,7 +2371,6 @@ window.vocabularyData = [
     example: "El automóvil es un vehículo a motor que sirve normalmente para transportar personas o cosas o ambas a la vez, o para la tracción de otros vehículos con ese fin",
   },
   {
-
     word: "costado",
     translation: "side",
     perevod: "сторона",
@@ -2355,7 +2378,7 @@ window.vocabularyData = [
     topics: ["topic10"],
     example: "lo máximo de calzada sin mover la cabeza y, moviéndola ligeramente, un poco del costado del vehículo",
   },
- {
+  {
     word: "costes",
     translation: "costs",
     perevod: "расходы",
@@ -2754,6 +2777,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "puede llevar desabrochado el casco",
+  },
+  {
+    word: "desarrollo",
+    translation: "development",
+    perevod: "разработка",
+    category: "verb",
+    topics: ["topic07"],
+    example: "Sí, y también pueden indicar el desarrollo o trazado de la vía",
   },
   {
     word: "descanso",
@@ -3940,6 +3971,14 @@ window.vocabularyData = [
     example: "La DGT expide los permisos de conducir.",
   },
   {
+    word: "experiencia",
+    translation: "experience",
+    perevod: "опыт",
+    category: "noun",
+    topics: ["topic11"],
+    example: "porque carecen de la suficiente experiencia en la conducción",
+  },
+  {
     word: "explosiones",
     translation: "explosions",
     perevod: "выхлопы",
@@ -4724,6 +4763,14 @@ window.vocabularyData = [
     example: "Sí, manteniendo una velocidad que permita detener el vehículo dentro de la zona iluminada",
   },
   {
+    word: "impide",
+    translation: "prevents",
+    perevod: "предотвращает",
+    category: "verb",
+    topics: ["topic11"],
+    example: "impide manejar el volante de forma adecuada",
+  },
+  {
     word: "implica",
     translation: "implies",
     perevod: "подразумевает",
@@ -4788,7 +4835,6 @@ window.vocabularyData = [
     example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
   },
   {
-
     word: "incide",
     translation: "affects",
     perevod: "влияет",
@@ -4796,7 +4842,7 @@ window.vocabularyData = [
     topics: ["topic11"],
     example: "Reduciendo la intensidad de la luz que incide directamente sobre los usuarios de la vía y permitiendo al conductor gozar de la máxima visibilidad del resto de la carretera",
   },
- {
+  {
     word: "incidencias",
     translation: "incidents",
     perevod: "инциденты",
@@ -4891,6 +4937,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic09"],
     example: "Aconsejan seguir las direcciones indicadas por las flechas.",
+  },
+  {
+    word: "indicar",
+    translation: "indicate",
+    perevod: "указывать",
+    category: "verb",
+    topics: ["topic07"],
+    example: "pueden utilizarse para indicar los obstáculos que se encuentran sobre la vía",
   },
   {
     word: "indique",
@@ -5325,6 +5379,14 @@ window.vocabularyData = [
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
+    word: "la palanca del freno de mano",
+    translation: "the handbrake lever",
+    perevod: "рычаг ручного тормоза",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La palanca del freno de mano, ¿puede estar situada en el salpicadero?",
+  },
+  {
     word: "la puesta y la salida del sol",
     translation: "the sunset and sunrise",
     perevod: "закат и восход солнца",
@@ -5467,6 +5529,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "Pueden los agentes inmovilizar un vehiculo que supere los límites de humo establecidos?",
+  },
+  {
+    word: "limpiaparabrisas",
+    translation: "wiper",
+    perevod: "стеклоочиститель",
+    category: "noun",
+    topics: ["topic02"],
+    example: "El limpiaparabrisas automático",
   },
   {
     word: "limpiar",
@@ -6189,6 +6259,14 @@ window.vocabularyData = [
     example: "Precaución con obstáculos móviles",
   },
   {
+    word: "movilidad",
+    translation: "mobility",
+    perevod: "мобильность",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Puede un vehículo de movilidad personal tener sillín",
+  },
+  {
     word: "movimientos",
     translation: "movements",
     perevod: "движения",
@@ -6531,6 +6609,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Evita cualquier obstáculo en la vía",
+  },
+  {
+    word: "obstáculos",
+    translation: "obstacles",
+    perevod: "препятствия",
+    category: "noun",
+    topics: ["topic07"],
+    example: "pueden utilizarse para indicar los obstáculos que se encuentran sobre la vía",
   },
   {
     word: "obvio",
@@ -7045,6 +7131,14 @@ window.vocabularyData = [
     example: "Que el carril está abierto, pero se deben obedecer las señales y normas de preferencia.",
   },
   {
+    word: "personal",
+    translation: "personal",
+    perevod: "персональное",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "Puede un vehículo de movilidad personal tener sillín",
+  },
+  {
     word: "personales",
     translation: "personal",
     perevod: "личный",
@@ -7117,7 +7211,6 @@ window.vocabularyData = [
     example: "A los grupos de población más prospensos a sufrir un accidente",
   },
   {
-
     word: "poco",
     translation: "bit",
     perevod: "кусочек",
@@ -8398,6 +8491,14 @@ window.vocabularyData = [
     example: "Sale del carril con cuidado",
   },
   {
+    word: "salpicadero",
+    translation: "dashboard",
+    perevod: "панель приборов",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La palanca del freno de mano, ¿puede estar situada en el salpicadero?",
+  },
+  {
     word: "salpicar",
     translation: "splash",
     perevod: "брызги",
@@ -8686,6 +8787,14 @@ window.vocabularyData = [
     example: "un dispositivo silenciador de explosiones.",
   },
   {
+    word: "sillín",
+    translation: "saddle",
+    perevod: "седло",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Puede un vehículo de movilidad personal tener sillín",
+  },
+  {
     word: "similar",
     translation: "similar",
     perevod: "похожий",
@@ -8772,6 +8881,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Evitando las situaciones que puedan provocar una crisis",
+  },
+  {
+    word: "situada",
+    translation: "located",
+    perevod: "расположен",
+    category: "verb",
+    topics: ["topic11"],
+    example: "La palanca del freno de mano, ¿puede estar situada en el salpicadero?",
   },
   {
     word: "situado",
@@ -9414,6 +9531,22 @@ window.vocabularyData = [
     example: "Tan pronto como el vehículo haya tomado la nueva trayectoria",
   },
   {
+    word: "trazado",
+    translation: "layout",
+    perevod: "план",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Sí, y también pueden indicar el desarrollo o trazado de la vía",
+  },
+  {
+    word: "trazado de la vía",
+    translation: "layout of the track",
+    perevod: "план трассы",
+    category: "noun",
+    topics: ["topic07"],
+    example: "Sí, y también pueden indicar el desarrollo o trazado de la vía",
+  },
+  {
     word: "túnel",
     translation: "tunnel",
     perevod: "туннель",
@@ -9500,6 +9633,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "utilizarse",
+    translation: "be used",
+    perevod: "быть использованным",
+    category: "verb",
+    topics: ["topic07"],
+    example: "pueden utilizarse para indicar los obstáculos que se encuentran sobre la vía",
   },
   {
     word: "vacío",
