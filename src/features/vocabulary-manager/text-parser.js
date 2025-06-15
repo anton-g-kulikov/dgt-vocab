@@ -31,6 +31,13 @@ class TextParser {
       return;
     }
 
+    // Check if text is wrapped in single quotes
+    if (this.isTextInSingleQuotes(text)) {
+      // Handle single-quoted text as exact phrase
+      this.handleSingleQuotedText(text);
+      return;
+    }
+
     // Clean the text and extract words
     const words = this.extractWords(text);
 
@@ -39,13 +46,55 @@ class TextParser {
 
     if (newWords.length === 0) {
       this.showMessage(
-        "No new words found in the text - all words already exist in your vocabulary",
+        "No new items found in the text - all content already exists in your vocabulary",
         "info"
       );
       return;
     }
 
     // Add the words directly to vocabulary updates
+    this.addWordsToVocabularyUpdates(newWords, text);
+  }
+
+  // Check if text is wrapped in single quotes
+  isTextInSingleQuotes(text) {
+    return text.startsWith("'") && text.endsWith("'") && text.length > 2;
+  }
+
+  // Handle text that is wrapped in single quotes - use it as-is
+  handleSingleQuotedText(text) {
+    // Remove the single quotes from the text
+    const exactPhrase = text.slice(1, -1).trim();
+
+    if (!exactPhrase) {
+      this.showMessage(
+        "Please enter some text inside the single quotes",
+        "error"
+      );
+      return;
+    }
+
+    // Check if this exact phrase already exists in vocabulary
+    const normalizedPhrase = exactPhrase.toLowerCase().trim();
+
+    // Create a single word object for the exact phrase
+    const phraseObj = {
+      word: normalizedPhrase, // Use the lowercase version for consistency
+      category: this.wordCategorizer.categorizeWord(normalizedPhrase).category,
+    };
+
+    // Use the same filtering logic as regular words
+    const newWords = this.filterNewWords([phraseObj]);
+
+    if (newWords.length === 0) {
+      this.showMessage(
+        `The phrase "${normalizedPhrase}" already exists in your vocabulary`,
+        "info"
+      );
+      return;
+    }
+
+    // Add the phrase to vocabulary updates
     this.addWordsToVocabularyUpdates(newWords, text);
   }
 
@@ -196,8 +245,9 @@ class TextParser {
       );
 
       // Show success message
+      const itemType = addedCount === 1 ? "item" : "items";
       this.showMessage(
-        `Added ${addedCount} words to vocabulary updates. Please provide translations below.`,
+        `Added ${addedCount} ${itemType} to vocabulary updates. Please provide translations below.`,
         "success"
       );
 
