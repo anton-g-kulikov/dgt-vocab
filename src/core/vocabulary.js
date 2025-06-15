@@ -3,14 +3,6 @@
 
 window.vocabularyData = [
   {
-    word: "a pesar",
-    translation: "despite",
-    perevod: "несмотря на",
-    category: "verb",
-    topics: ["topic11"],
-    example: "el cinturón tiene holguras a pesar de estar abrochado",
-  },
-  {
     word: "abajo",
     translation: "below",
     perevod: "ниже",
@@ -2035,6 +2027,14 @@ window.vocabularyData = [
     example: "Esta acción constituye una infracción grave.",
   },
   {
+    word: "construcción",
+    translation: "construction",
+    perevod: "конструкцию",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
+  },
+  {
     word: "contacto",
     translation: "contact",
     perevod: "контакт",
@@ -2345,14 +2345,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic06"],
     example: "El seguro de suscripción obligatoria, ¿cubre los daños causados al conductor no culpable de un accidente",
-  },
-  {
-    word: "cumplimiento",
-    translation: "compliance",
-    perevod: "подчинение",
-    category: "noun",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
   },
   {
     word: "cumplir",
@@ -3003,14 +2995,6 @@ window.vocabularyData = [
     example: "Las distracciones suelen estar relacionadas",
   },
   {
-    word: "dobladas",
-    translation: "folded",
-    perevod: "согнутые",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Cuando llevo las piernas un poco dobladas y el cuerpo recto",
-  },
-  {
     word: "doble",
     translation: "double",
     perevod: "двойной",
@@ -3251,6 +3235,14 @@ window.vocabularyData = [
     example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
+    word: "encuentra",
+    translation: "finds",
+    perevod: "находить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "no se encuentra en perfectas condiciones para conducir",
+  },
+  {
     word: "endurecida",
     translation: "hardened",
     perevod: "закаленный",
@@ -3361,6 +3353,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Sí, si la circulación es escasa, pero no si es densa.",
+  },
+  {
+    word: "esclarecer",
+    translation: "clarify",
+    perevod: "объяснить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Todo conductor implicado en un accidente de tráfico, ¿está obligado a detenerse para esclarecer los hechos",
   },
   {
     word: "escobillas",
@@ -3739,6 +3739,14 @@ window.vocabularyData = [
     example: "La DGT expide los permisos de conducir.",
   },
   {
+    word: "explicar",
+    translation: "explain",
+    perevod: "объяснять",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
+  },
+  {
     word: "explosiones",
     translation: "explosions",
     perevod: "выхлопы",
@@ -3809,6 +3817,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "Facilitar la finalización de la maniobra de adelantamiento",
+  },
+  {
+    word: "factor",
+    translation: "factor",
+    perevod: "фактор",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
   },
   {
     word: "falta",
@@ -4243,6 +4259,14 @@ window.vocabularyData = [
     example: "Las primeras gotas son más densas y provocan peor drenaje",
   },
   {
+    word: "grado",
+    translation: "degree",
+    perevod: "степень",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
+  },
+  {
     word: "gradual",
     translation: "gradual",
     perevod: "постепенный",
@@ -4305,14 +4329,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "A los grupos de población más prospensos a sufrir un accidente",
-  },
-  {
-    word: "grupos vulnerables",
-    translation: "vulnerable groups",
-    perevod: "уязвимыми группами",
-    category: "noun",
-    topics: ["topic01"],
-    example: "Llamamos grupos vulnerables",
   },
   {
     word: "guardarse",
@@ -4427,6 +4443,14 @@ window.vocabularyData = [
     example: "El autor del hecho en que consista la infracción",
   },
   {
+    word: "hechos",
+    translation: "facts",
+    perevod: "факты",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Todo conductor implicado en un accidente de tráfico, ¿está obligado a detenerse para esclarecer los hechos",
+  },
+  {
     word: "herramientas",
     translation: "tools",
     perevod: "инструменты",
@@ -4441,14 +4465,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "en tanto que la velocidad debe adecuarse a las circunstancias de la vía, como por ejemplo, la lluvia, nieve o hielo",
-  },
-  {
-    word: "holguras",
-    translation: "clearances",
-    perevod: "зазоры",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "el cinturón tiene holguras a pesar de estar abrochado",
   },
   {
     word: "homologado",
@@ -4553,6 +4569,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "En carreteras convencionales, ¿por qué es importante no superar los 90 km/h?",
+  },
+  {
+    word: "importantes",
+    translation: "key",
+    perevod: "важные",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
   },
   {
     word: "imprescindible",
@@ -4891,14 +4915,6 @@ window.vocabularyData = [
     example: "Instantes antes de que el conductor llegue a quedarse dormido.",
   },
   {
-    word: "instrucciones",
-    translation: "instructions",
-    perevod: "инструкции",
-    category: "noun",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
-  },
-  {
     word: "inteligente",
     translation: "smart/intelligent",
     perevod: "умный",
@@ -4977,6 +4993,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "En carretera interurbana 90 km/h",
+  },
+  {
+    word: "introducidas",
+    translation: "introduced",
+    perevod: "введен",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
   },
   {
     word: "invadiendo",
@@ -5265,14 +5289,6 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
-  },
-  {
-    word: "llamamos",
-    translation: "we call",
-    perevod: "мы называем",
-    category: "verb",
-    topics: ["topic01"],
-    example: "Llamamos grupos vulnerables",
   },
   {
     word: "llano",
@@ -5651,6 +5667,14 @@ window.vocabularyData = [
     example: "El medioambiente, ¿se ve afectado por los accidentes de tráfico?",
   },
   {
+    word: "mejoras",
+    translation: "improvements",
+    perevod: "улучшения",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Las importantes mejoras técnicas introducidas en su diseño y construcción",
+  },
+  {
     word: "menor",
     translation: "minor",
     perevod: "незначительный",
@@ -5665,14 +5689,6 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic11"],
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
-  },
-  {
-    word: "mensaje",
-    translation: "message",
-    perevod: "сообщение",
-    category: "noun",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
   },
   {
     word: "mercancías peligrosas",
@@ -6387,14 +6403,6 @@ window.vocabularyData = [
     example: "El panel de mensaje variable informa del tráfico.",
   },
   {
-    word: "paneles",
-    translation: "panels",
-    perevod: "панели",
-    category: "noun",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
-  },
-  {
     word: "parabrisas",
     translation: "windshield",
     perevod: "лобовое стекло",
@@ -6571,14 +6579,6 @@ window.vocabularyData = [
     example: "",
   },
   {
-    word: "pedal del embrague",
-    translation: "clutch pedal",
-    perevod: "педаль сцепления",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Pedal del embrague",
-  },
-  {
     word: "peligro",
     translation: "danger",
     perevod: "опасность",
@@ -6649,6 +6649,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+  },
+  {
+    word: "perfectas",
+    translation: "perfect",
+    perevod: "идеальный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "no se encuentra en perfectas condiciones para conducir",
   },
   {
     word: "periódicamente",
@@ -6755,14 +6763,6 @@ window.vocabularyData = [
     example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
   },
   {
-    word: "piernas",
-    translation: "legs",
-    perevod: "ноги",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Cuando llevo las piernas un poco dobladas y el cuerpo recto",
-  },
-  {
     word: "placa de ensayo",
     translation: "test plate",
     perevod: "тестовая табличка",
@@ -6785,14 +6785,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "A los grupos de población más prospensos a sufrir un accidente",
-  },
-  {
-    word: "poco",
-    translation: "bit",
-    perevod: "немного",
-    category: "adverb",
-    topics: ["topic11"],
-    example: "Cuando llevo las piernas un poco dobladas y el cuerpo recto",
   },
   {
     word: "podrá",
@@ -6825,14 +6817,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic04"],
     example: "El pontón trasbordador transporta vehículos.",
-  },
-  {
-    word: "por este orden",
-    translation: "in this order",
-    perevod: "в этом порядке",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Lo primero que debe tener en cuenta en un accidente de tráfico es por este orden",
   },
   {
     word: "porque",
@@ -8299,6 +8283,14 @@ window.vocabularyData = [
     example: "tiene el mismo significado que una marca longitudinal continua",
   },
   {
+    word: "siguientes",
+    translation: "following",
+    perevod: "следующий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Cuál de las siguientes razones puede explicar que el vehículo sea el factor de riesgo que aparece en un grado menor como causa principal de los accidentes de tráfico",
+  },
+  {
     word: "silbato",
     translation: "whistle",
     perevod: "свист",
@@ -8787,14 +8779,6 @@ window.vocabularyData = [
     example: "El estrés, ¿qué efectos puede tener sobre los conductores?",
   },
   {
-    word: "tener en cuenta",
-    translation: "take into account",
-    perevod: "принять во внимание",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Lo primero que debe tener en cuenta en un accidente de tráfico es por este orden",
-  },
-  {
     word: "tenga",
     translation: "to have",
     perevod: "иметь",
@@ -9115,14 +9099,6 @@ window.vocabularyData = [
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
   },
   {
-    word: "utilizarse",
-    translation: "be used",
-    perevod: "быть использованным",
-    category: "verb",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
-  },
-  {
     word: "vacío",
     translation: "empty",
     perevod: "пустой",
@@ -9161,14 +9137,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic05"],
     example: "Por la noche, la agudeza visual...A) no varía.B) aumenta.C) se reduce",
-  },
-  {
-    word: "variable",
-    translation: "variable",
-    perevod: "переменная",
-    category: "adjective",
-    topics: ["topic09"],
-    example: "Los paneles de mensaje variable, ¿pueden utilizarse para dar instrucciones de obligado cumplimiento?",
   },
   {
     word: "varilla",
