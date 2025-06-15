@@ -1051,6 +1051,14 @@ window.vocabularyData = [
     example: "En caso de avería, para en lugar seguro.",
   },
   {
+    word: "averiado",
+    translation: "broken down",
+    perevod: "сломанный",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida",
+  },
+  {
     word: "avisan",
     translation: "they warn",
     perevod: "они предупреждают",
@@ -2083,6 +2091,14 @@ window.vocabularyData = [
     example: "La congestión obliga a usar rutas alternativas.",
   },
   {
+    word: "conocer",
+    translation: "know",
+    perevod: "знать",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
     word: "conocida",
     translation: "known",
     perevod: "известный",
@@ -2353,6 +2369,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic01"],
     example: "El automóvil es un vehículo a motor que sirve normalmente para transportar personas o cosas o ambas a la vez, o para la tracción de otros vehículos con ese fin",
+  },
+  {
+    word: "costes",
+    translation: "costs",
+    perevod: "расходы",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
   },
   {
     word: "creando",
@@ -2833,6 +2857,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Evite el comportamiento desordenado en la vía.",
+  },
+  {
+    word: "despacio",
+    translation: "slowly",
+    perevod: "медленно",
+    category: "adjective",
+    topics: ["topic12"],
+    example: "Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida",
   },
   {
     word: "desplazarse",
@@ -3433,6 +3465,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
+  },
+  {
+    word: "encuentran",
+    translation: "find",
+    perevod: "находить",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
   },
   {
     word: "endurecida",
@@ -4771,6 +4811,14 @@ window.vocabularyData = [
     example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
   },
   {
+    word: "incidencias",
+    translation: "incidents",
+    perevod: "инциденты",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
     word: "incómodo",
     translation: "uncomfortable",
     perevod: "неудобно",
@@ -4921,6 +4969,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic02"],
     example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+  },
+  {
+    word: "información",
+    translation: "information",
+    perevod: "информация",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
   },
   {
     word: "informar",
@@ -5291,6 +5347,14 @@ window.vocabularyData = [
     example: "Un turismo que circula entre la puesta y la salida del sol",
   },
   {
+    word: "laminado",
+    translation: "laminate",
+    perevod: "ламинированное",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "De vidrio laminado",
+  },
+  {
     word: "láminas adhesivas",
     translation: "adhesive sheets",
     perevod: "тонировочную пленку",
@@ -5369,6 +5433,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Ir muy lento también es peligroso",
+  },
+  {
+    word: "lesiones",
+    translation: "injuries",
+    perevod: "травмы",
+    category: "noun",
+    topics: ["topic12"],
+    example: "mortalidad y lesiones",
   },
   {
     word: "leve",
@@ -5585,6 +5657,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Usa las luces cuando sea necesario",
+  },
+  {
+    word: "luz de emergencia",
+    translation: "emergency light",
+    perevod: "аварийная сигнализация",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida",
   },
   {
     word: "madrugada",
@@ -5809,6 +5889,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Respeta la masa máxima autorizada.",
+  },
+  {
+    word: "materiales",
+    translation: "materials",
+    perevod: "материалы",
+    category: "adjective",
+    topics: ["topic12"],
+    example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
   },
   {
     word: "materias",
@@ -6507,6 +6595,14 @@ window.vocabularyData = [
     example: "irán al paso, lo más cerca al borde derecho de la vía y sin ocupar más de la mitad derecha de la calzada",
   },
   {
+    word: "ocurrido",
+    translation: "occurred",
+    perevod: "произошел",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
     word: "oficial",
     translation: "official",
     perevod: "официальный",
@@ -7059,6 +7155,14 @@ window.vocabularyData = [
     example: "A los grupos de población más prospensos a sufrir un accidente",
   },
   {
+    word: "poder",
+    translation: "can",
+    perevod: "может",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
     word: "podrá",
     translation: "will be able to",
     perevod: "может",
@@ -7385,6 +7489,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
+  },
+  {
+    word: "producidos",
+    translation: "produced",
+    perevod: "произведено",
+    category: "adverb",
+    topics: ["topic12"],
+    example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
   },
   {
     word: "producir",
@@ -7819,6 +7931,14 @@ window.vocabularyData = [
     example: "Montar neumáticos con un código de velocidad distinto al que recomienda el fabricante",
   },
   {
+    word: "recopila",
+    translation: "collects",
+    perevod: "собирает",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
     word: "recorre",
     translation: "to travel",
     perevod: "проезжает",
@@ -7897,6 +8017,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "El régimen sancionador es muy estricto.",
+  },
+  {
+    word: "registrador",
+    translation: "recorder",
+    perevod: "регистратор",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
   },
   {
     word: "reglaje",
@@ -8633,6 +8761,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Control simultáneo de velocidad y documentación.",
+  },
+  {
+    word: "siniestro",
+    translation: "accident",
+    perevod: "проишествие",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
   },
   {
     word: "síntomas",
@@ -9641,6 +9777,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "En vías interurbanas, ¿cuáles son las infracciones que cometen con mayor frecuencia los conductores de furgonetas implicados en accidentes con víctimas",
+  },
+  {
+    word: "vidrio",
+    translation: "glass",
+    perevod: "стекло",
+    category: "noun",
+    topics: ["topic02"],
+    example: "De vidrio laminado",
   },
   {
     word: "viejo",
