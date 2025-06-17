@@ -627,6 +627,14 @@ window.vocabularyData = [
     example: "Si antes de circular ha tomado con la comida un vaso de vino y un relajante muscular ¿es seguro conducir",
   },
   {
+    word: "anticiparse",
+    translation: "anticipate",
+    perevod: "ожидать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "prever y anticiparse a los posibles comportamientos de los demás usuarios",
+  },
+  {
     word: "anticongelante",
     translation: "antifreeze",
     perevod: "антифриз",
@@ -2827,6 +2835,14 @@ window.vocabularyData = [
     example: "Las primeras gotas son más densas y provocan peor drenaje",
   },
   {
+    word: "densidad",
+    translation: "density",
+    perevod: "плотность",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La densidad del tráfico en zona urbana produce frecuentes zonas de incertidumbre",
+  },
+  {
     word: "densidad del tráfico",
     translation: "traffic density",
     perevod: "плотность движения",
@@ -4483,6 +4499,14 @@ window.vocabularyData = [
     example: "Fríos.",
   },
   {
+    word: "fuego",
+    translation: "fire",
+    perevod: "огонь",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Intentar impedir la propagación del fuego",
+  },
+  {
     word: "fuera",
     translation: "out",
     perevod: "вне",
@@ -4947,6 +4971,14 @@ window.vocabularyData = [
     example: "Sí, manteniendo una velocidad que permita detener el vehículo dentro de la zona iluminada",
   },
   {
+    word: "impedir",
+    translation: "prevent",
+    perevod: "предотвращать",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Intentar impedir la propagación del fuego",
+  },
+  {
     word: "implica",
     translation: "implies",
     perevod: "подразумевает",
@@ -5003,12 +5035,28 @@ window.vocabularyData = [
     example: "Qué le puede suceder a un conductor que circula a velocidad inadecuada",
   },
   {
+    word: "incendio",
+    translation: "fire",
+    perevod: "огонь",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Cuando en un accidente el incendio del vehículo ya se ha producido, siempre que sea posible",
+  },
+  {
     word: "incendios",
     translation: "fires",
     perevod: "пожары",
     category: "noun",
     topics: ["topic03"],
     example: "Está prohibido arrojar cualquier objeto que pueda dar lugar a la producción de incendios o poner en peligro la seguridad vial",
+  },
+  {
+    word: "incertidumbre",
+    translation: "uncertainty",
+    perevod: "неопределенность",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La densidad del tráfico en zona urbana produce frecuentes zonas de incertidumbre",
   },
   {
     word: "incide",
@@ -5377,6 +5425,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "En caso de avería del alumbradopuede circular por la noche con un alumbrado de intensidad inferior",
+  },
+  {
+    word: "intentar",
+    translation: "attempt",
+    perevod: "пытаться",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Intentar impedir la propagación del fuego",
   },
   {
     word: "interior",
@@ -7523,6 +7579,14 @@ window.vocabularyData = [
     example: "Incorporándose al carril derecho a la mayor velocidad posible",
   },
   {
+    word: "posibles",
+    translation: "possible",
+    perevod: "возможный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "prever y anticiparse a los posibles comportamientos de los demás usuarios",
+  },
+  {
     word: "posición",
     translation: "position",
     perevod: "позиция",
@@ -7651,6 +7715,14 @@ window.vocabularyData = [
     example: "los conductores de vehículos que sean requeridos en controles preventivos",
   },
   {
+    word: "prever",
+    translation: "foresee",
+    perevod: "предвидеть",
+    category: "verb",
+    topics: ["topic11"],
+    example: "prever y anticiparse a los posibles comportamientos de los demás usuarios",
+  },
+  {
     word: "previamente",
     translation: "previously/beforehand",
     perevod: "ранее или заранее",
@@ -7665,6 +7737,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Es necesario un examen previo para obtener el permiso.",
+  },
+  {
+    word: "primer",
+    translation: "first",
+    perevod: "первый",
+    category: "adjective",
+    topics: [],
+    example: "qué se debe hacer en primer lugar",
   },
   {
     word: "primera",
@@ -7795,6 +7875,14 @@ window.vocabularyData = [
     example: "Qué alteraciones produce el alcohol en el comportamiento del conductor",
   },
   {
+    word: "producido",
+    translation: "produced",
+    perevod: "произведено",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Cuando en un accidente el incendio del vehículo ya se ha producido, siempre que sea posible",
+  },
+  {
     word: "producidos",
     translation: "produced",
     perevod: "произведено",
@@ -7873,6 +7961,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic10"],
     example: "Tan pronto como el vehículo haya tomado la nueva trayectoria",
+  },
+  {
+    word: "propagación",
+    translation: "spread",
+    perevod: "распространение",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Intentar impedir la propagación del fuego",
   },
   {
     word: "prospensos",
@@ -9905,6 +10001,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic11"],
     example: "Únicamente los vehículos autorizados pueden usar este carril.",
+  },
+  {
+    word: "urbana",
+    translation: "urban",
+    perevod: "городской",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "La densidad del tráfico en zona urbana produce frecuentes zonas de incertidumbre",
   },
   {
     word: "urbano",
