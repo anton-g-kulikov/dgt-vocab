@@ -107,6 +107,14 @@ window.vocabularyData = [
     example: "carril de aceleración",
   },
   {
+    word: "acomodarse",
+    translation: "accommodate",
+    perevod: "подстроиться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "reducir la velocidad, acomodarse a las circunstancias y sujetar el manillar, con firmeza pero sin rigidez, girándolo ligeramente hacia la izquierda",
+  },
+  {
     word: "acomodos",
     translation: "accommodations",
     perevod: "размещение",
@@ -267,6 +275,14 @@ window.vocabularyData = [
     example: "Sólo si existe espacio suficiente y extremando la precaución, excepcionalmente adelantará por la derecha",
   },
   {
+    word: "adherencia",
+    translation: "adherence",
+    perevod: "сцепление",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Preparar un terreno estable colocando el material adecuado cerca de las ruedas motrices para que estas tengan la adherencia suficiente",
+  },
+  {
     word: "adicional",
     translation: "additional",
     perevod: "дополнительный",
@@ -337,6 +353,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic06"],
     example: "Pueden los agentes inmovilizar un vehiculo que supere los límites de humo establecidos?",
+  },
+  {
+    word: "agrietan",
+    translation: "crack",
+    perevod: "трескаться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Se endurecen y se agrietan",
   },
   {
     word: "agua",
@@ -875,6 +899,14 @@ window.vocabularyData = [
     example: "es consciente de que asume mas riesgos durante la conducción",
   },
   {
+    word: "atascado",
+    translation: "stuck",
+    perevod: "застрявший",
+    category: "adjective",
+    topics: ["topic12"],
+    example: "Si queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices",
+  },
+  {
     word: "atasco",
     translation: "traffic jam",
     perevod: "пробка",
@@ -1137,6 +1169,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
+  },
+  {
+    word: "barro",
+    translation: "mud",
+    perevod: "грязь",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Si queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices",
   },
   {
     word: "batería",
@@ -1587,6 +1627,14 @@ window.vocabularyData = [
     example: "En caso de inmovilización de un vehículo por emergencia, ¿a qué distancia deben colocarse los dispositivos de preseñalización de peligro?",
   },
   {
+    word: "catadióptrico",
+    translation: "catadioptric",
+    perevod: "зерклально-линзовый",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Qué es un catadióptrico",
+  },
+  {
     word: "causa",
     translation: "causes",
     perevod: "причина",
@@ -1817,6 +1865,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic10"],
     example: "Dejar colocada la primera velocidad cuando el vehículo tiene caja de cambios.",
+  },
+  {
+    word: "colocando",
+    translation: "placing",
+    perevod: "разместив",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Preparar un terreno estable colocando el material adecuado cerca de las ruedas motrices para que estas tengan la adherencia suficiente",
   },
   {
     word: "colocar",
@@ -2217,6 +2273,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic09"],
     example: "tiene el mismo significado que una marca longitudinal continua",
+  },
+  {
+    word: "continuada",
+    translation: "continued",
+    perevod: "продолжительная",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Una exposición continuada del vehículo a temperaturas elevadas puede provocar un deterioro mayor de las gomas de las escobillas de los limpiaparabrisas",
   },
   {
     word: "continuas",
@@ -2633,6 +2697,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic07"],
     example: "Debes respetar las normas",
+  },
+  {
+    word: "deberán",
+    translation: "they must",
+    perevod: "они должны",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
   },
   {
     word: "debidamente",
@@ -3291,6 +3363,14 @@ window.vocabularyData = [
     example: "analgésico para el dolor de cabeza",
   },
   {
+    word: "donde",
+    translation: "where",
+    perevod: "где",
+    category: "other",
+    topics: [],
+    example: "Si queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices",
+  },
+  {
     word: "dormido",
     translation: "asleep",
     perevod: "спящий",
@@ -3419,6 +3499,14 @@ window.vocabularyData = [
     example: "Si la vía está acondicionada con una raqueta u otro elemento similar, ¿debe utilizar dicho elemento para realizar un giro",
   },
   {
+    word: "elevadas",
+    translation: "high",
+    perevod: "высокий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Una exposición continuada del vehículo a temperaturas elevadas puede provocar un deterioro mayor de las gomas de las escobillas de los limpiaparabrisas",
+  },
+  {
     word: "elevado",
     translation: "elevated/high",
     perevod: "повышен или высокий",
@@ -3521,6 +3609,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic12"],
     example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
+  },
+  {
+    word: "endurecen",
+    translation: "harden",
+    perevod: "затвердевать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Se endurecen y se agrietan",
   },
   {
     word: "endurecida",
@@ -4027,6 +4123,14 @@ window.vocabularyData = [
     example: "un dispositivo silenciador de explosiones.",
   },
   {
+    word: "exposición",
+    translation: "exposure",
+    perevod: "подвергаться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Una exposición continuada del vehículo a temperaturas elevadas puede provocar un deterioro mayor de las gomas de las escobillas de los limpiaparabrisas",
+  },
+  {
     word: "expresamente",
     translation: "expressly",
     perevod: "прямо",
@@ -4211,6 +4315,14 @@ window.vocabularyData = [
     example: "Facilitar la finalización de la maniobra de adelantamiento",
   },
   {
+    word: "firmeza",
+    translation: "firm",
+    perevod: "твердо",
+    category: "adverb",
+    topics: ["topic11"],
+    example: "reducir la velocidad, acomodarse a las circunstancias y sujetar el manillar, con firmeza pero sin rigidez, girándolo ligeramente hacia la izquierda",
+  },
+  {
     word: "flecha",
     translation: "arrow",
     perevod: "стрелка",
@@ -4313,6 +4425,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
+  },
+  {
+    word: "frenado",
+    translation: "braking",
+    perevod: "торможение",
+    category: "verb",
+    topics: ["topic10"],
+    example: "Emplear las luces de frenado de forma reiterada",
   },
   {
     word: "frenar",
@@ -4491,6 +4611,14 @@ window.vocabularyData = [
     example: "Las marcas viales guían la circulación.",
   },
   {
+    word: "girándolo",
+    translation: "turning it",
+    perevod: "поворачивая его",
+    category: "verb",
+    topics: ["topic11"],
+    example: "reducir la velocidad, acomodarse a las circunstancias y sujetar el manillar, con firmeza pero sin rigidez, girándolo ligeramente hacia la izquierda",
+  },
+  {
     word: "girar",
     translation: "to turn",
     perevod: "повернуть",
@@ -4529,6 +4657,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "Observando si la goma está endurecida, en cuyo caso aparecerán chirridos, vibraciones y un funcionamiento defectuoso",
+  },
+  {
+    word: "gomas",
+    translation: "rubber bands",
+    perevod: "резинки",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Una exposición continuada del vehículo a temperaturas elevadas puede provocar un deterioro mayor de las gomas de las escobillas de los limpiaparabrisas",
   },
   {
     word: "gotas",
@@ -5363,6 +5499,14 @@ window.vocabularyData = [
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
   },
   {
+    word: "izquierda",
+    translation: "left",
+    perevod: "левая",
+    category: "adjective",
+    topics: ["topic10"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
+  },
+  {
     word: "izquierdo",
     translation: "left",
     perevod: "левый",
@@ -5457,6 +5601,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic05"],
     example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
+  },
+  {
+    word: "lateral",
+    translation: "side",
+    perevod: "сторона",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
   },
   {
     word: "laterales",
@@ -5569,6 +5721,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "Pueden los agentes inmovilizar un vehiculo que supere los límites de humo establecidos?",
+  },
+  {
+    word: "limpiaparabrisas",
+    translation: "wiper",
+    perevod: "стеклоочиститель",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Una exposición continuada del vehículo a temperaturas elevadas puede provocar un deterioro mayor de las gomas de las escobillas de los limpiaparabrisas",
   },
   {
     word: "limpiar",
@@ -5715,6 +5875,14 @@ window.vocabularyData = [
     example: "peligro por la proximidad de un lugar frecuentado por niños, tales como escuelas ó zonas de juegos",
   },
   {
+    word: "luminosa",
+    translation: "bright",
+    perevod: "яркий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Un dispositivo que refleja la luz procedente de una fuente luminosa",
+  },
+  {
     word: "luminosas",
     translation: "lights",
     perevod: "фары",
@@ -5817,6 +5985,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: [],
     example: "Personas manifiestamente impedidas requieren especial atención.",
+  },
+  {
+    word: "manillar",
+    translation: "handlebar",
+    perevod: "руль",
+    category: "noun",
+    topics: ["topic02"],
+    example: "reducir la velocidad, acomodarse a las circunstancias y sujetar el manillar, con firmeza pero sin rigidez, girándolo ligeramente hacia la izquierda",
   },
   {
     word: "maniobra",
@@ -5947,6 +6123,14 @@ window.vocabularyData = [
     example: "Respeta la masa máxima autorizada.",
   },
   {
+    word: "material",
+    translation: "material",
+    perevod: "материальные",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Preparar un terreno estable colocando el material adecuado cerca de las ruedas motrices para que estas tengan la adherencia suficiente",
+  },
+  {
     word: "materiales",
     translation: "materials",
     perevod: "материалы",
@@ -6049,6 +6233,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Las personas provistas de un certificado médico adecuado, ¿pueden estar exentas de utilizar el casco?",
+  },
+  {
+    word: "medidas",
+    translation: "measures",
+    perevod: "меры",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
   },
   {
     word: "medioambiente",
@@ -6249,6 +6441,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "La motocicleta debe circular por el carril derecho",
+  },
+  {
+    word: "motocicletas",
+    translation: "motorcycles",
+    perevod: "мотоциклы",
+    category: "noun",
+    topics: ["topic01"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
   },
   {
     word: "motor",
@@ -6963,6 +7163,14 @@ window.vocabularyData = [
     example: "Si los frenos se mojan...A) pueden dejar de frenar, perdiendo temporalmente su eficacia.B) se estropean y deben cambiarse las zapatas o pastillas.C) se frena en menos espacio.",
   },
   {
+    word: "patinan",
+    translation: "they skate",
+    perevod: "проскальзывают",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices",
+  },
+  {
     word: "paulatino",
     translation: "gradual",
     perevod: "постепенно",
@@ -7387,6 +7595,14 @@ window.vocabularyData = [
     example: "Encender el intermitente, ¿da preferencia siempre para hacer maniobras?",
   },
   {
+    word: "preparar",
+    translation: "prepare",
+    perevod: "подготовить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Preparar un terreno estable colocando el material adecuado cerca de las ruedas motrices para que estas tengan la adherencia suficiente",
+  },
+  {
     word: "preseñalización",
     translation: "pre-signaling",
     perevod: "предварительный сигнал",
@@ -7537,6 +7753,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "Es menos probable que aparezca la fatiga",
+  },
+  {
+    word: "procedente",
+    translation: "coming from",
+    perevod: "исходя из",
+    category: "other",
+    topics: ["topic11"],
+    example: "Un dispositivo que refleja la luz procedente de una fuente luminosa",
   },
   {
     word: "procedimiento",
@@ -8099,6 +8323,14 @@ window.vocabularyData = [
     example: "Es obligatorio llevar un chaleco reflectante en caso de avería.",
   },
   {
+    word: "refleja",
+    translation: "reflects",
+    perevod: "отражает",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Un dispositivo que refleja la luz procedente de una fuente luminosa",
+  },
+  {
     word: "reflejos",
     translation: "reflexes",
     perevod: "рефлексы",
@@ -8193,6 +8425,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic10"],
     example: "regularidad durante la marcha",
+  },
+  {
+    word: "reiterada",
+    translation: "repeated",
+    perevod: "повторно",
+    category: "adverb",
+    topics: ["topic10"],
+    example: "Emplear las luces de frenado de forma reiterada",
   },
   {
     word: "relacionadas",
@@ -8449,6 +8689,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "es consciente de que asume mas riesgos durante la conducción",
+  },
+  {
+    word: "rigidez",
+    translation: "rigidity",
+    perevod: "жесткость",
+    category: "noun",
+    topics: ["topic11"],
+    example: "reducir la velocidad, acomodarse a las circunstancias y sujetar el manillar, con firmeza pero sin rigidez, girándolo ligeramente hacia la izquierda",
   },
   {
     word: "rodadura",
@@ -9017,6 +9265,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "A) De cualquier sonido.B) De sonido muy agudo.C) De sonido no estridente",
+  },
+  {
+    word: "sopla",
+    translation: "blow",
+    perevod: "дуть",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si sopla un fuerte viento lateral de la izquierda, entre otras medidas de seguridad, los conductores de motocicletas deberán",
   },
   {
     word: "sospechar",
