@@ -363,6 +363,14 @@ window.vocabularyData = [
     example: "Pueden los agentes inmovilizar un vehiculo que supere los límites de humo establecidos?",
   },
   {
+    word: "aglomeraciones de tráfico",
+    translation: "traffic jams",
+    perevod: "пробки на дорогах",
+    category: "noun",
+    topics: ["topic11"],
+    example: "excepto en los tramos sin visibilidad y cuando formen aglomeraciones de tráfico",
+  },
+  {
     word: "agrietan",
     translation: "crack",
     perevod: "трескаться",
@@ -4307,6 +4315,14 @@ window.vocabularyData = [
     example: "Facilitar la finalización de la maniobra de adelantamiento",
   },
   {
+    word: "factores",
+    translation: "factors",
+    perevod: "факторы",
+    category: "noun",
+    topics: ["topic11"],
+    example: "La probabilidad de sufrir un accidente de tráfico puede reducirse evitando los factores de riesgo",
+  },
+  {
     word: "falta",
     translation: "lack",
     perevod: "недостаток",
@@ -4489,6 +4505,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Conducir con neumáticos gastados es inseguro.",
+  },
+  {
+    word: "formen",
+    translation: "form",
+    perevod: "формировать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "excepto en los tramos sin visibilidad y cuando formen aglomeraciones de tráfico",
   },
   {
     word: "fotocopia",
@@ -5721,6 +5745,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
+  },
+  {
+    word: "la organización mundial de la salud",
+    translation: "the world health organization",
+    perevod: "всемирная организация здравоохранения",
+    category: "noun",
+    topics: [],
+    example: "La Organización Mundial de la Salud",
   },
   {
     word: "la puesta y la salida del sol",
@@ -7683,6 +7715,14 @@ window.vocabularyData = [
     example: "El pontón trasbordador transporta vehículos.",
   },
   {
+    word: "por encima",
+    translation: "above",
+    perevod: "выше",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Conducir con una tasa de alcoholemia por encima del límite legal",
+  },
+  {
     word: "porque",
     translation: "because",
     perevod: "потому что",
@@ -8593,6 +8633,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Reduce la velocidad en curvas",
+  },
+  {
+    word: "reducirse",
+    translation: "reduce",
+    perevod: "уменьшать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "La probabilidad de sufrir un accidente de tráfico puede reducirse evitando los factores de riesgo",
   },
   {
     word: "reflectante",
@@ -9851,6 +9899,14 @@ window.vocabularyData = [
     example: "horas de la madrugada y las primeras horas de la tarde",
   },
   {
+    word: "tasa de alcoholemia",
+    translation: "blood alcohol level",
+    perevod: "уровень алкоголя в крови",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Conducir con una tasa de alcoholemia por encima del límite legal",
+  },
+  {
     word: "taxímetro",
     translation: "taximeter",
     perevod: "таксометр",
@@ -10089,6 +10145,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic09"],
     example: "A) peligro por tramo de vía donde los vehículos pueden proyectar gravilla al pasar.",
+  },
+  {
+    word: "tramos",
+    translation: "sections",
+    perevod: "разделы",
+    category: "verb",
+    topics: ["topic11"],
+    example: "excepto en los tramos sin visibilidad y cuando formen aglomeraciones de tráfico",
   },
   {
     word: "transcurre",
