@@ -1091,6 +1091,14 @@ window.vocabularyData = [
     example: "La velocidad máxima en autovía es 120 km/h",
   },
   {
+    word: "auxilio",
+    translation: "help",
+    perevod: "помощь",
+    category: "noun",
+    topics: ["topic12"],
+    example: "No moverlos y pedir auxilio si la ayuda no está organizada",
+  },
+  {
     word: "avenidas",
     translation: "avenues",
     perevod: "проспекты",
@@ -1129,6 +1137,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic12"],
     example: "Avisa con las luces de emergencia",
+  },
+  {
+    word: "ayuda",
+    translation: "aid",
+    perevod: "помогать",
+    category: "verb",
+    topics: ["topic12"],
+    example: "No moverlos y pedir auxilio si la ayuda no está organizada",
   },
   {
     word: "baches",
@@ -6531,6 +6547,14 @@ window.vocabularyData = [
     example: "lo máximo de calzada sin mover la cabeza y, moviéndola ligeramente, un poco del costado del vehículo",
   },
   {
+    word: "moverlos",
+    translation: "move them",
+    perevod: "переместите их",
+    category: "verb",
+    topics: ["topic12"],
+    example: "No moverlos y pedir auxilio si la ayuda no está organizada",
+  },
+  {
     word: "moviéndola",
     translation: "moving it",
     perevod: "перемещая его",
@@ -6979,6 +7003,14 @@ window.vocabularyData = [
     example: "En condiciones ordinarias de tráfico.",
   },
   {
+    word: "organizada",
+    translation: "organized",
+    perevod: "организованный",
+    category: "adjective",
+    topics: ["topic12"],
+    example: "No moverlos y pedir auxilio si la ayuda no está organizada",
+  },
+  {
     word: "orientada",
     translation: "oriented",
     perevod: "ориентированный",
@@ -7281,6 +7313,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic01"],
     example: "",
+  },
+  {
+    word: "pedir",
+    translation: "ask",
+    perevod: "просить",
+    category: "verb",
+    topics: ["topic12"],
+    example: "No moverlos y pedir auxilio si la ayuda no está organizada",
   },
   {
     word: "peligro",
