@@ -307,6 +307,14 @@ window.vocabularyData = [
     example: "Advierte del peligro con las luces",
   },
   {
+    word: "advertirá",
+    translation: "will warn",
+    perevod: "предупредит",
+    category: "verb",
+    topics: ["topic10"],
+    example: "Cómo advertirá de su propósito de efectuar una parada en el carril derecho a los conductores de los vehículos que circulan por detrás del suyo",
+  },
+  {
     word: "advirtiéndolo",
     translation: "warning",
     perevod: "предупреждая",
@@ -1118,7 +1126,7 @@ window.vocabularyData = [
     word: "averiado",
     translation: "broken down",
     perevod: "сломанный",
-    category: "verb",
+    category: "adjective",
     topics: ["topic12"],
     example: "Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida",
   },
@@ -1145,6 +1153,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic12"],
     example: "No moverlos y pedir auxilio si la ayuda no está organizada",
+  },
+  {
+    word: "baca",
+    translation: "roof",
+    perevod: "крыша",
+    category: "noun",
+    topics: ["topic02"],
+    example: "En el maletero o en la baca, es igual",
   },
   {
     word: "baches",
@@ -1833,6 +1849,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "La circulación está cortada por obras.",
+  },
+  {
+    word: "circulan",
+    translation: "circulate",
+    perevod: "циркулировать",
+    category: "verb",
+    topics: ["topic10"],
+    example: "Cómo advertirá de su propósito de efectuar una parada en el carril derecho a los conductores de los vehículos que circulan por detrás del suyo",
   },
   {
     word: "circular",
@@ -3267,6 +3291,14 @@ window.vocabularyData = [
     example: "Al estacionar un vehículo con remolque en una pendiente ascendente, si no dispone de calzos",
   },
   {
+    word: "disponen",
+    translation: "have",
+    perevod: "иметь",
+    category: "verb",
+    topics: ["topic02"],
+    example: "La mayoría de los vehículos disponen de un filtro en el habitáculo",
+  },
+  {
     word: "disponga",
     translation: "dispose",
     perevod: "распоряжаться",
@@ -3473,6 +3505,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "los efectos del sueño",
+  },
+  {
+    word: "efectuar",
+    translation: "make",
+    perevod: "делать",
+    category: "verb",
+    topics: ["topic10"],
+    example: "Cómo advertirá de su propósito de efectuar una parada en el carril derecho a los conductores de los vehículos que circulan por detrás del suyo",
   },
   {
     word: "efectúe",
@@ -3945,6 +3985,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
+  },
+  {
+    word: "estirar",
+    translation: "stretch",
+    perevod: "потягиваться",
+    category: "verb",
+    topics: ["topic11"],
+    example: "dar un pequeño paseo para tomar aire y estirar las piernas",
   },
   {
     word: "estómago",
@@ -4795,6 +4843,14 @@ window.vocabularyData = [
     example: "Recuerda, de forma genérica, que debe guardarse la distancia de seguridad reglamentaria entre vehículos.",
   },
   {
+    word: "habitáculo",
+    translation: "cabin",
+    perevod: "кабинный",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "La mayoría de los vehículos disponen de un filtro en el habitáculo",
+  },
+  {
     word: "habitual",
     translation: "usual/habitual",
     perevod: "обычный или привычный",
@@ -5299,6 +5355,14 @@ window.vocabularyData = [
     example: "Inicia la marcha con precaución",
   },
   {
+    word: "inicio",
+    translation: "start",
+    perevod: "начало",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Sí, sobre todo al inicio de la primavera, ya que su capacidad de retención es limitada",
+  },
+  {
     word: "inmediaciones",
     translation: "vicinity",
     perevod: "окрестности",
@@ -5777,6 +5841,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic04"],
     example: "En esta calle no hay señal de limitación de velocidad. ¿A qué velocidad máxima se puede circular?",
+  },
+  {
+    word: "limitada",
+    translation: "limited",
+    perevod: "ограниченный",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "Sí, sobre todo al inicio de la primavera, ya que su capacidad de retención es limitada",
   },
   {
     word: "límite",
@@ -6273,6 +6345,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic10"],
     example: "El que tenga mayor anchura, longitud o masa máxima autorizada",
+  },
+  {
+    word: "mayoría",
+    translation: "majority",
+    perevod: "большинство",
+    category: "adjective",
+    topics: ["topic02"],
+    example: "La mayoría de los vehículos disponen de un filtro en el habitáculo",
   },
   {
     word: "mediana",
@@ -7203,6 +7283,14 @@ window.vocabularyData = [
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
   },
   {
+    word: "paseo",
+    translation: "walk",
+    perevod: "ходить",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "dar un pequeño paseo para tomar aire y estirar las piernas",
+  },
+  {
     word: "pasiva",
     translation: "passive",
     perevod: "пассивный",
@@ -7363,6 +7451,14 @@ window.vocabularyData = [
     example: "excepto si se toma en pequeñas cantidades",
   },
   {
+    word: "pequeño",
+    translation: "little",
+    perevod: "маленький",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "dar un pequeño paseo para tomar aire y estirar las piernas",
+  },
+  {
     word: "percibe",
     translation: "perceives",
     perevod: "воспринимает",
@@ -7513,6 +7609,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+  },
+  {
+    word: "piernas",
+    translation: "legs",
+    perevod: "ноги",
+    category: "noun",
+    topics: ["topic11"],
+    example: "dar un pequeño paseo para tomar aire y estirar las piernas",
   },
   {
     word: "placa de ensayo",
@@ -7779,6 +7883,14 @@ window.vocabularyData = [
     example: "Es necesario un examen previo para obtener el permiso.",
   },
   {
+    word: "primavera",
+    translation: "spring",
+    perevod: "весна",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Sí, sobre todo al inicio de la primavera, ya que su capacidad de retención es limitada",
+  },
+  {
     word: "primer",
     translation: "first",
     perevod: "первый",
@@ -8009,6 +8121,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic12"],
     example: "Intentar impedir la propagación del fuego",
+  },
+  {
+    word: "propósito",
+    translation: "purpose",
+    perevod: "цель",
+    category: "noun",
+    topics: ["topic10"],
+    example: "Cómo advertirá de su propósito de efectuar una parada en el carril derecho a los conductores de los vehículos que circulan por detrás del suyo",
   },
   {
     word: "prospensos",
@@ -9211,6 +9331,14 @@ window.vocabularyData = [
     example: "tiene el mismo significado que una marca longitudinal continua",
   },
   {
+    word: "siguientes",
+    translation: "following",
+    perevod: "следующий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "De los siguientes",
+  },
+  {
     word: "silbato",
     translation: "whistle",
     perevod: "свист",
@@ -9627,6 +9755,14 @@ window.vocabularyData = [
     example: "es conveniente sustituirlos cuando las temperaturas comiencen a ser más cálidas",
   },
   {
+    word: "suyo",
+    translation: "his",
+    perevod: "его",
+    category: "other",
+    topics: ["topic10"],
+    example: "Cómo advertirá de su propósito de efectuar una parada en el carril derecho a los conductores de los vehículos que circulan por detrás del suyo",
+  },
+  {
     word: "tales",
     translation: "such",
     perevod: "такой",
@@ -9865,6 +10001,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Cuando tomamos alcohol con otras drogas",
+  },
+  {
+    word: "tomar",
+    translation: "take",
+    perevod: "брать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "dar un pequeño paseo para tomar aire y estirar las piernas",
   },
   {
     word: "toques",
