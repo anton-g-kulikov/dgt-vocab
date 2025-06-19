@@ -1283,14 +1283,6 @@ window.vocabularyData = [
     example: "¿Cómo debe inmovilizar los vehículos accidentados?\tCon unos calzos o cualquier elemento que sirva como tal.\tCon el freno de mano y cortando el contacto.\tQuitando el contacto de la batería.",
   },
   {
-    word: "bien",
-    translation: "good",
-    perevod: "хороший",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Cuando las cintas no quedan bien estiradas",
-  },
-  {
     word: "blanco",
     translation: "white",
     perevod: "белый",
@@ -1921,14 +1913,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic02"],
     example: "El ciclomotor no puede circular por autopistas.",
-  },
-  {
-    word: "cintas",
-    translation: "tapes",
-    perevod: "ленты",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Cuando las cintas no quedan bien estiradas",
   },
   {
     word: "cinturón",
@@ -3155,6 +3139,14 @@ window.vocabularyData = [
     example: "Este vehículo está averiado y circula muy despacio con la luz de emergencia encendida",
   },
   {
+    word: "despedido",
+    translation: "dismissed",
+    perevod: "уволен",
+    category: "verb",
+    topics: [],
+    example: "Evitar que salga despedido del vehículo en caso de accidente",
+  },
+  {
     word: "desplazarse",
     translation: "shift",
     perevod: "смещаться",
@@ -4169,14 +4161,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "La distancia que recorre el vehículo desde que se percibe un estímulo hasta que se responde al mismo se llama",
-  },
-  {
-    word: "estiradas",
-    translation: "stretched",
-    perevod: "растянутый",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Cuando las cintas no quedan bien estiradas",
   },
   {
     word: "estómago",
@@ -6979,14 +6963,6 @@ window.vocabularyData = [
     example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
-    word: "neumáticos de clavos",
-    translation: "studded tires",
-    perevod: "шипованные шины",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "usando cadenas o neumáticos de clavos.",
-  },
-  {
     word: "neumáticos de invierno",
     translation: "winter tires",
     perevod: "зимние шины",
@@ -8579,14 +8555,6 @@ window.vocabularyData = [
     example: "Ha quedado detenido en una intersección regulada por semáforos y obstaculiza la circulación, ¿qué debe hacer",
   },
   {
-    word: "quedan",
-    translation: "remain",
-    perevod: "оставаться",
-    category: "verb",
-    topics: ["topic11"],
-    example: "Cuando las cintas no quedan bien estiradas",
-  },
-  {
     word: "quedar",
     translation: "meet",
     perevod: "встретиться",
@@ -9401,6 +9369,22 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic06"],
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
+  },
+  {
+    word: "salga",
+    translation: "get out",
+    perevod: "убирайся",
+    category: "adjective",
+    topics: [],
+    example: "Evitar que salga despedido del vehículo en caso de accidente",
+  },
+  {
+    word: "salga despedido del vehículo",
+    translation: "be thrown from the vehicle",
+    perevod: "быть выброшенным из транспортного средства",
+    category: "other",
+    topics: ["topic11"],
+    example: "Evitar que salga despedido del vehículo en caso de accidente",
   },
   {
     word: "salida",
@@ -10769,6 +10753,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic06"],
     example: "En caso de venta de un vehículo",
+  },
+  {
+    word: "ventajas",
+    translation: "advantages",
+    perevod: "преимущества",
+    category: "noun",
+    topics: ["topic11"],
+    example: "qué ventajas tiene",
   },
   {
     word: "ventanillas",
