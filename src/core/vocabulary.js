@@ -499,6 +499,14 @@ window.vocabularyData = [
     example: "Algunos síntomas que pueden anunciarle la fatiga",
   },
   {
+    word: "alrededor",
+    translation: "around",
+    perevod: "вокруг",
+    category: "noun",
+    topics: ["topic11"],
+    example: "en todo momento lo que está alrededor del vehículo",
+  },
+  {
     word: "alteraciones",
     translation: "alterations",
     perevod: "изменения",
@@ -553,6 +561,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "en ambos sentidos",
+  },
+  {
+    word: "amortiguación",
+    translation: "cushioning",
+    perevod: "амортизация",
+    category: "noun",
+    topics: ["topic11"],
+    example: "porque la suspensión o la amortiguación estén en malas condiciones.",
   },
   {
     word: "amortiguador",
@@ -713,6 +729,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Algunos síntomas que pueden anunciarle la fatiga",
+  },
+  {
+    word: "apagadas",
+    translation: "turned off",
+    perevod: "выключенными",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "con las señales apagadas",
   },
   {
     word: "apagado",
@@ -961,6 +985,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Ambulancia de asistencia sanitaria.",
+  },
+  {
+    word: "asistida",
+    translation: "assisted",
+    perevod: "помогал",
+    category: "verb",
+    topics: ["topic11"],
+    example: "A baja velocidad, la dirección asistida progresiva reduce al mínimo el esfuerzo necesario para mover el volante.",
   },
   {
     word: "asume",
@@ -1939,14 +1971,6 @@ window.vocabularyData = [
     example: "El ciclomotor no puede circular por autopistas.",
   },
   {
-    word: "cinta",
-    translation: "tape",
-    perevod: "лента",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Por dónde debe pasar la cinta torácica del cinturón de seguridad",
-  },
-  {
     word: "cinturón",
     translation: "seatbelt",
     perevod: "ремень безопасности",
@@ -2001,14 +2025,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic05"],
     example: "Conduce solo si tienes visión clara",
-  },
-  {
-    word: "clavícula",
-    translation: "clavicle",
-    perevod: "ключица",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Sobre la clavícula y por el centro del pecho",
   },
   {
     word: "claxon",
@@ -3659,14 +3675,6 @@ window.vocabularyData = [
     example: "Si queda atascado con su turismo en una zona de barro donde patinan las ruedas motrices",
   },
   {
-    word: "dónde",
-    translation: "where",
-    perevod: "где",
-    category: "noun",
-    topics: ["topic11"],
-    example: "Por dónde debe pasar la cinta torácica del cinturón de seguridad",
-  },
-  {
     word: "dormido",
     translation: "asleep",
     perevod: "спящий",
@@ -3705,6 +3713,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Cuando tomamos alcohol con otras drogas",
+  },
+  {
+    word: "duerma",
+    translation: "sleep",
+    perevod: "спать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "puede sentirse somnoliento aunque duerma las horas necesarias",
   },
   {
     word: "dura",
@@ -3833,6 +3849,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic04"],
     example: "Paso elevado para peatones",
+  },
+  {
+    word: "embarazada",
+    translation: "pregnant",
+    perevod: "беременная",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Una embarazada, ¿debe llevar puesto el cinturón de seguridad?",
   },
   {
     word: "embrague",
@@ -4073,6 +4097,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic09"],
     example: "peligro por la proximidad de un lugar frecuentado por niños, tales como escuelas ó zonas de juegos",
+  },
+  {
+    word: "esfuerzo",
+    translation: "effort",
+    perevod: "усилие",
+    category: "noun",
+    topics: ["topic11"],
+    example: "A baja velocidad, la dirección asistida progresiva reduce al mínimo el esfuerzo necesario para mover el volante.",
   },
   {
     word: "espacio",
@@ -5251,6 +5283,22 @@ window.vocabularyData = [
     example: "El autor del hecho en que consista la infracción",
   },
   {
+    word: "hemorragia",
+    translation: "hemorrhage",
+    perevod: "кровотечение",
+    category: "noun",
+    topics: ["topic12"],
+    example: "Un herido tiene una hemorragia en el brazo",
+  },
+  {
+    word: "herida",
+    translation: "wound",
+    perevod: "ранить",
+    category: "adjective",
+    topics: ["topic12"],
+    example: "Taponar la herida y levantar el brazo",
+  },
+  {
     word: "herido",
     translation: "wounded",
     perevod: "раненый",
@@ -6179,6 +6227,14 @@ window.vocabularyData = [
     example: "mortalidad y lesiones",
   },
   {
+    word: "levantar",
+    translation: "get up",
+    perevod: "вставать",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Taponar la herida y levantar el brazo",
+  },
+  {
     word: "leve",
     translation: "mild/light",
     perevod: "мягкий или легкий",
@@ -6929,6 +6985,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "fuertes picores, ansiedad y depresión, bostezos, acomodos en el asiento y molestias en la nuca",
+  },
+  {
+    word: "momento",
+    translation: "moment",
+    perevod: "момент",
+    category: "noun",
+    topics: ["topic11"],
+    example: "en todo momento lo que está alrededor del vehículo",
   },
   {
     word: "montar",
@@ -7779,14 +7843,6 @@ window.vocabularyData = [
     example: "porque los peatones tienen prioridad como indica la marca via",
   },
   {
-    word: "pecho",
-    translation: "chest",
-    perevod: "грудь",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Sobre la clavícula y por el centro del pecho",
-  },
-  {
     word: "pecuaria",
     translation: "livestock",
     perevod: "скот",
@@ -8491,6 +8547,14 @@ window.vocabularyData = [
     example: "Circular con unos neumáticos inflados adecuadamente y una suficiente profudidad en el dibujo de la banda de rodadura.",
   },
   {
+    word: "progresiva",
+    translation: "progressive",
+    perevod: "прогрессивно",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "A baja velocidad, la dirección asistida progresiva reduce al mínimo el esfuerzo necesario para mover el volante.",
+  },
+  {
     word: "prohíbe",
     translation: "prohibits",
     perevod: "запрещает",
@@ -8713,6 +8777,14 @@ window.vocabularyData = [
     category: "noun",
     topics: [],
     example: "Espera la señal en el puente móvil.",
+  },
+  {
+    word: "puesto",
+    translation: "position",
+    perevod: "позиция",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Una embarazada, ¿debe llevar puesto el cinturón de seguridad?",
   },
   {
     word: "punto",
@@ -8953,6 +9025,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "No rebases el límite de velocidad",
+  },
+  {
+    word: "rebasarla",
+    translation: "overtake it",
+    perevod: "обогнать его",
+    category: "verb",
+    topics: ["topic10"],
+    example: "puede rebasarla",
   },
   {
     word: "rebotan",
@@ -9835,6 +9915,14 @@ window.vocabularyData = [
     example: "en ambos sentidos",
   },
   {
+    word: "sentirse",
+    translation: "feel",
+    perevod: "чувствовать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "puede sentirse somnoliento aunque duerma las horas necesarias",
+  },
+  {
     word: "separador",
     translation: "divider",
     perevod: "делитель",
@@ -9929,6 +10017,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: [],
     example: "Control simultáneo de velocidad y documentación.",
+  },
+  {
+    word: "siniestralidad",
+    translation: "accident rate",
+    perevod: "уровень аварийности",
+    category: "noun",
+    topics: ["topic11"],
+    example: "OMS considera que la siniestralidad",
   },
   {
     word: "siniestro",
@@ -10089,6 +10185,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Cuándo aparece la somnolencia durante la conducción",
+  },
+  {
+    word: "somnoliento",
+    translation: "sleepy",
+    perevod: "сонный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "puede sentirse somnoliento aunque duerma las horas necesarias",
   },
   {
     word: "sonido",
@@ -10379,6 +10483,14 @@ window.vocabularyData = [
     example: "Sí, tanto en la vía como en sus inmediaciones.",
   },
   {
+    word: "taponar",
+    translation: "plug",
+    perevod: "затыкать",
+    category: "verb",
+    topics: ["topic12"],
+    example: "Taponar la herida y levantar el brazo",
+  },
+  {
     word: "tarda",
     translation: "takes time",
     perevod: "занимает время",
@@ -10609,14 +10721,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic09"],
     example: "El agente, con toques de silbato cortos y frecuentes, ordena.",
-  },
-  {
-    word: "torácica",
-    translation: "thoracic",
-    perevod: "грудной отдел",
-    category: "adjective",
-    topics: ["topic11"],
-    example: "Por dónde debe pasar la cinta torácica del cinturón de seguridad",
   },
   {
     word: "torpe",
