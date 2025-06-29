@@ -563,6 +563,14 @@ window.vocabularyData = [
     example: "en ambos sentidos",
   },
   {
+    word: "aminorar",
+    translation: "lessen",
+    perevod: "уменьшить",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Aminorar la velocidad y pasar sobre el bache manteniendo vertical la motocicleta",
+  },
+  {
     word: "amortiguación",
     translation: "cushioning",
     perevod: "амортизация",
@@ -625,14 +633,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Cuando se aproxime a niños o ancianos.",
-  },
-  {
-    word: "animal",
-    translation: "animal",
-    perevod: "животное",
-    category: "adjective",
-    topics: ["topic01"],
-    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
   },
   {
     word: "animales",
@@ -1267,6 +1267,14 @@ window.vocabularyData = [
     example: "No moverlos y pedir auxilio si la ayuda no está organizada",
   },
   {
+    word: "bache",
+    translation: "bump",
+    perevod: "ударяться",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Circula conduciendo una motocicleta y se encuentra con un bache en la calzada.",
+  },
+  {
     word: "baches",
     translation: "potholes",
     perevod: "выбоины",
@@ -1513,6 +1521,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "No frenar con el freno delantero porque la rueda puede bloquearse y producirse una caída",
+  },
+  {
+    word: "caídas",
+    translation: "falls",
+    perevod: "падает",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Las hojas caídas en la calzada",
   },
   {
     word: "caja",
@@ -3987,6 +4003,14 @@ window.vocabularyData = [
     example: "cuando se puede volver a la derecha sin peligro en caso de encontrar vehículos en sentido contrario",
   },
   {
+    word: "encuentra",
+    translation: "finds",
+    perevod: "находит",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Circula conduciendo una motocicleta y se encuentra con un bache en la calzada.",
+  },
+  {
     word: "encuentran",
     translation: "find",
     perevod: "находить",
@@ -4251,6 +4275,14 @@ window.vocabularyData = [
     example: "En una autopista, ¿está permitido circular a una velocidad anormalmente reducida con niebla espesa",
   },
   {
+    word: "esquivarlo",
+    translation: "dodge it",
+    perevod: "уклонись от этого",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si no puede esquivarlo o evitarlo, ¿cuál de los siguientes comportamientos sería el más idóneo?",
+  },
+  {
     word: "ésta",
     translation: "this",
     perevod: "этот",
@@ -4441,6 +4473,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Evitar los movimientos bruscos para reducir la posibilidad de deslizamiento",
+  },
+  {
+    word: "evitarlo",
+    translation: "avoid it",
+    perevod: "избегай этого",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si no puede esquivarlo o evitarlo, ¿cuál de los siguientes comportamientos sería el más idóneo?",
   },
   {
     word: "excepcional",
@@ -5387,6 +5427,14 @@ window.vocabularyData = [
     example: "en tanto que la velocidad debe adecuarse a las circunstancias de la vía, como por ejemplo, la lluvia, nieve o hielo",
   },
   {
+    word: "hojas",
+    translation: "leaves",
+    perevod: "листья",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Las hojas caídas en la calzada",
+  },
+  {
     word: "homologado",
     translation: "approved/certified",
     perevod: "утверждено или сертифицировано",
@@ -5457,6 +5505,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Identifica las señales de tráfico",
+  },
+  {
+    word: "idóneo",
+    translation: "suitable",
+    perevod: "подходящий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Si no puede esquivarlo o evitarlo, ¿cuál de los siguientes comportamientos sería el más idóneo?",
   },
   {
     word: "igual",
@@ -6113,14 +6169,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic10"],
     example: "El intermitente izquierdo encendido",
-  },
-  {
-    word: "jinete",
-    translation: "rider",
-    perevod: "всадник",
-    category: "noun",
-    topics: ["topic01"],
-    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
   },
   {
     word: "jóvenes",
@@ -7073,14 +7121,6 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Montar neumáticos con un código de velocidad distinto al que recomienda el fabricante",
-  },
-  {
-    word: "montura",
-    translation: "mount",
-    perevod: "устанавливать",
-    category: "verb",
-    topics: ["topic01"],
-    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
   },
   {
     word: "mortalidad",
@@ -10027,6 +10067,14 @@ window.vocabularyData = [
     example: "El que toma la curva a su derecha, será el primero en sustituir el alumbrado de carretera por el de cruce.",
   },
   {
+    word: "sería",
+    translation: "i would be",
+    perevod: "я бы",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Si no puede esquivarlo o evitarlo, ¿cuál de los siguientes comportamientos sería el más idóneo?",
+  },
+  {
     word: "servicio público",
     translation: "public service",
     perevod: "государственная служба",
@@ -10065,6 +10113,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic09"],
     example: "tiene el mismo significado que una marca longitudinal continua",
+  },
+  {
+    word: "siguientes",
+    translation: "following",
+    perevod: "следующий",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Si no puede esquivarlo o evitarlo, ¿cuál de los siguientes comportamientos sería el más idóneo?",
   },
   {
     word: "silbato",
@@ -10481,14 +10537,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "supone algún peligro si emplea un sistema de 'manos libres",
-  },
-  {
-    word: "surcos",
-    translation: "grooves",
-    perevod: "канавки",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Los surcos que hay en la banda de rodadura de los neumáticos del vehículo deben garantizar un buen drenaje del agua hacia",
   },
   {
     word: "suspender",
@@ -11201,6 +11249,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Verifica que la documentación esté en regla.",
+  },
+  {
+    word: "vertical",
+    translation: "vertical",
+    perevod: "вертикальный",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Aminorar la velocidad y pasar sobre el bache manteniendo vertical la motocicleta",
   },
   {
     word: "verticales",
