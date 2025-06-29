@@ -451,6 +451,14 @@ window.vocabularyData = [
     example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
   },
   {
+    word: "alcantarilla",
+    translation: "sewer",
+    perevod: "канализация",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Tirarlo en una alcantarilla o desagüe",
+  },
+  {
     word: "alcohol",
     translation: "alcohol",
     perevod: "алкоголь",
@@ -2475,6 +2483,14 @@ window.vocabularyData = [
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
   },
   {
+    word: "contenedor",
+    translation: "container",
+    perevod: "контейнер",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Entregarlo en un contenedor de recuperación de aceite.",
+  },
+  {
     word: "continua",
     translation: "continues",
     perevod: "продолжается",
@@ -3153,6 +3169,14 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "puede llevar desabrochado el casco",
+  },
+  {
+    word: "desagüe",
+    translation: "drain",
+    perevod: "осушать",
+    category: "verb",
+    topics: ["topic02"],
+    example: "Tirarlo en una alcantarilla o desagüe",
   },
   {
     word: "descanso",
@@ -4033,6 +4057,14 @@ window.vocabularyData = [
     category: "other",
     topics: ["topic10"],
     example: "entre la puesta y la salida del sol.",
+  },
+  {
+    word: "entregarlo",
+    translation: "hand it over",
+    perevod: "передай это",
+    category: "verb",
+    topics: ["topic02"],
+    example: "Entregarlo en un contenedor de recuperación de aceite.",
   },
   {
     word: "episodios",
@@ -9091,6 +9123,14 @@ window.vocabularyData = [
     example: "Sigue recto hasta el semáforo",
   },
   {
+    word: "recuperación",
+    translation: "recovery",
+    perevod: "восстановление",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Entregarlo en un contenedor de recuperación de aceite.",
+  },
+  {
     word: "recurrir",
     translation: "to appeal",
     perevod: "апеллировать",
@@ -10649,6 +10689,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "En qué tipo de accidentes es más frecuente que se produzca el latigazo cervical",
+  },
+  {
+    word: "tirarlo",
+    translation: "throw it away",
+    perevod: "выбрось это",
+    category: "verb",
+    topics: ["topic02"],
+    example: "Tirarlo en una alcantarilla o desagüe",
   },
   {
     word: "titular",
