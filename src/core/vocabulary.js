@@ -451,14 +451,6 @@ window.vocabularyData = [
     example: "En qué vías debe emplear las luces de carretera o de largo alcance?",
   },
   {
-    word: "alcantarilla",
-    translation: "sewer",
-    perevod: "канализация",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Tirarlo en una alcantarilla o desagüe",
-  },
-  {
     word: "alcohol",
     translation: "alcohol",
     perevod: "алкоголь",
@@ -739,6 +731,14 @@ window.vocabularyData = [
     example: "Algunos síntomas que pueden anunciarle la fatiga",
   },
   {
+    word: "anuncios",
+    translation: "ads",
+    perevod: "объявления",
+    category: "noun",
+    topics: ["topic11"],
+    example: "principalmente por aquellos anuncios que incitan claramente al riesgo",
+  },
+  {
     word: "apagadas",
     translation: "turned off",
     perevod: "выключенными",
@@ -889,6 +889,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic09"],
     example: "Una luz verde en forma de flecha apuntando hacia abajo en un semáforo de carril.",
+  },
+  {
+    word: "aquellos",
+    translation: "those",
+    perevod: "те",
+    category: "noun",
+    topics: ["topic01"],
+    example: "principalmente por aquellos anuncios que incitan claramente al riesgo",
   },
   {
     word: "arcén",
@@ -1867,6 +1875,14 @@ window.vocabularyData = [
     example: "Cede el paso a los peatones",
   },
   {
+    word: "ceñirse",
+    translation: "to stick to",
+    perevod: "прилипнуть",
+    category: "verb",
+    topics: ["topic10"],
+    example: "Cuándo debe ceñirse especialmente al borde derecho de la calzada",
+  },
+  {
     word: "centrar",
     translation: "to center",
     perevod: "центрировать (сфокусировать)",
@@ -2025,6 +2041,14 @@ window.vocabularyData = [
     category: "adverb",
     topics: ["topic06"],
     example: "Sí, cuando su conductor resulta civilmente responsable del accidente, excepto si el vehículo hubiera sido robado.",
+  },
+  {
+    word: "claramente",
+    translation: "clearly",
+    perevod: "четко",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "principalmente por aquellos anuncios que incitan claramente al riesgo",
   },
   {
     word: "claro",
@@ -2481,14 +2505,6 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic06"],
     example: "Para saber en que fecha se debe pasar la primera ITV, la antigüedad de un vehículo empieza a contar a partir de",
-  },
-  {
-    word: "contenedor",
-    translation: "container",
-    perevod: "контейнер",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Entregarlo en un contenedor de recuperación de aceite.",
   },
   {
     word: "continua",
@@ -3169,14 +3185,6 @@ window.vocabularyData = [
     category: "adjective",
     topics: ["topic11"],
     example: "puede llevar desabrochado el casco",
-  },
-  {
-    word: "desagüe",
-    translation: "drain",
-    perevod: "осушать",
-    category: "verb",
-    topics: ["topic02"],
-    example: "Tirarlo en una alcantarilla o desagüe",
   },
   {
     word: "descanso",
@@ -3979,6 +3987,14 @@ window.vocabularyData = [
     example: "Entre los costes por daños materiales causados por los accidentes de tráfico se encuentran los daños producidos",
   },
   {
+    word: "endurece",
+    translation: "hardens",
+    perevod: "затвердевает",
+    category: "verb",
+    topics: ["topic02"],
+    example: "Cuando la goma de un neumático se endurece por envejecimiento",
+  },
+  {
     word: "endurecen",
     translation: "harden",
     perevod: "затвердевать",
@@ -4059,12 +4075,12 @@ window.vocabularyData = [
     example: "entre la puesta y la salida del sol.",
   },
   {
-    word: "entregarlo",
-    translation: "hand it over",
-    perevod: "передай это",
-    category: "verb",
+    word: "envejecimiento",
+    translation: "aging",
+    perevod: "старение",
+    category: "noun",
     topics: ["topic02"],
-    example: "Entregarlo en un contenedor de recuperación de aceite.",
+    example: "Cuando la goma de un neumático se endurece por envejecimiento",
   },
   {
     word: "episodios",
@@ -5561,6 +5577,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic12"],
     example: "Para poder conocer lo que ha ocurrido en caso de accidente, el registrador de datos de incidencias (EDR) recopila información lo que ha ocurrido antes, durante y después del siniestro",
+  },
+  {
+    word: "incitan",
+    translation: "to incite",
+    perevod: "подстрекать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "principalmente por aquellos anuncios que incitan claramente al riesgo",
   },
   {
     word: "incómodo",
@@ -9123,14 +9147,6 @@ window.vocabularyData = [
     example: "Sigue recto hasta el semáforo",
   },
   {
-    word: "recuperación",
-    translation: "recovery",
-    perevod: "восстановление",
-    category: "noun",
-    topics: ["topic02"],
-    example: "Entregarlo en un contenedor de recuperación de aceite.",
-  },
-  {
     word: "recurrir",
     translation: "to appeal",
     perevod: "апеллировать",
@@ -10689,14 +10705,6 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "En qué tipo de accidentes es más frecuente que se produzca el latigazo cervical",
-  },
-  {
-    word: "tirarlo",
-    translation: "throw it away",
-    perevod: "выбрось это",
-    category: "verb",
-    topics: ["topic02"],
-    example: "Tirarlo en una alcantarilla o desagüe",
   },
   {
     word: "titular",
