@@ -627,6 +627,14 @@ window.vocabularyData = [
     example: "Cuando se aproxime a niños o ancianos.",
   },
   {
+    word: "animal",
+    translation: "animal",
+    perevod: "животное",
+    category: "adjective",
+    topics: ["topic01"],
+    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
+  },
+  {
     word: "animales",
     translation: "animals",
     perevod: "животные",
@@ -6107,6 +6115,14 @@ window.vocabularyData = [
     example: "El intermitente izquierdo encendido",
   },
   {
+    word: "jinete",
+    translation: "rider",
+    perevod: "всадник",
+    category: "noun",
+    topics: ["topic01"],
+    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
+  },
+  {
     word: "jóvenes",
     translation: "youths",
     perevod: "молодежь",
@@ -7057,6 +7073,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic11"],
     example: "Montar neumáticos con un código de velocidad distinto al que recomienda el fabricante",
+  },
+  {
+    word: "montura",
+    translation: "mount",
+    perevod: "устанавливать",
+    category: "verb",
+    topics: ["topic01"],
+    example: "Un jinete, ¿puede circular con su animal de montura por una autopista?",
   },
   {
     word: "mortalidad",
@@ -10457,6 +10481,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "supone algún peligro si emplea un sistema de 'manos libres",
+  },
+  {
+    word: "surcos",
+    translation: "grooves",
+    perevod: "канавки",
+    category: "noun",
+    topics: ["topic02"],
+    example: "Los surcos que hay en la banda de rodadura de los neumáticos del vehículo deben garantizar un buen drenaje del agua hacia",
   },
   {
     word: "suspender",
