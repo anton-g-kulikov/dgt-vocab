@@ -4899,6 +4899,14 @@ window.vocabularyData = [
     example: "la fotocopia esté debidamente cotejada.",
   },
   {
+    word: "franquearla",
+    translation: "cross it",
+    perevod: "пересечь его",
+    category: "verb",
+    topics: ["topic09"],
+    example: "Esta marca transversal continua, ¿está permitido franquearla sin detenerse antes",
+  },
+  {
     word: "frecuencia",
     translation: "frequency",
     perevod: "частота",
@@ -10953,6 +10961,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic01"],
     example: "El transporte especial necesita autorización.",
+  },
+  {
+    word: "transversal",
+    translation: "cross",
+    perevod: "крест",
+    category: "noun",
+    topics: ["topic09"],
+    example: "Esta marca transversal continua, ¿está permitido franquearla sin detenerse antes",
   },
   {
     word: "trasera",
