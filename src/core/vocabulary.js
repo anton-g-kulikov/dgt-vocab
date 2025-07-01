@@ -1699,6 +1699,14 @@ window.vocabularyData = [
     example: "Incrementa el campo visual",
   },
   {
+    word: "cansancio",
+    translation: "fatigue",
+    perevod: "усталость",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Es recomendable conducir de noche para evitar el cansancio?",
+  },
+  {
     word: "cantidades",
     translation: "quantities",
     perevod: "количества",
@@ -2777,6 +2785,14 @@ window.vocabularyData = [
     category: "noun",
     topics: ["topic11"],
     example: "Evitando las situaciones que puedan provocar una crisis",
+  },
+  {
+    word: "cristal",
+    translation: "glass",
+    perevod: "стекло",
+    category: "noun",
+    topics: ["topic11"],
+    example: "Está permitido colocar en el cristal trasero de su vehículo, unas pegatinas que impidan la visión?",
   },
   {
     word: "crónica",
@@ -4899,14 +4915,6 @@ window.vocabularyData = [
     example: "la fotocopia esté debidamente cotejada.",
   },
   {
-    word: "franquearla",
-    translation: "cross it",
-    perevod: "пересечь его",
-    category: "verb",
-    topics: ["topic09"],
-    example: "Esta marca transversal continua, ¿está permitido franquearla sin detenerse antes",
-  },
-  {
     word: "frecuencia",
     translation: "frequency",
     perevod: "частота",
@@ -5553,6 +5561,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic12"],
     example: "Intentar impedir la propagación del fuego",
+  },
+  {
+    word: "impidan",
+    translation: "prevent",
+    perevod: "предотвращать",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Está permitido colocar en el cristal trasero de su vehículo, unas pegatinas que impidan la visión?",
   },
   {
     word: "implica",
@@ -7987,6 +8003,14 @@ window.vocabularyData = [
     example: "No moverlos y pedir auxilio si la ayuda no está organizada",
   },
   {
+    word: "pegatinas",
+    translation: "stickers",
+    perevod: "наклейки",
+    category: "verb",
+    topics: ["topic11"],
+    example: "Está permitido colocar en el cristal trasero de su vehículo, unas pegatinas que impidan la visión?",
+  },
+  {
     word: "peligro",
     translation: "danger",
     perevod: "опасность",
@@ -9187,6 +9211,14 @@ window.vocabularyData = [
     example: "recoger los datos sintomatológicos y comunicarlos al juzgado",
   },
   {
+    word: "recomendable",
+    translation: "advisable",
+    perevod: "желательно",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Es recomendable conducir de noche para evitar el cansancio?",
+  },
+  {
     word: "recomienda",
     translation: "recommends",
     perevod: "рекомендует",
@@ -9489,6 +9521,14 @@ window.vocabularyData = [
     category: "verb",
     topics: ["topic08"],
     example: "Está reservada únicamente a los turismos.",
+  },
+  {
+    word: "resfriado",
+    translation: "a cold",
+    perevod: "простуда",
+    category: "noun",
+    topics: ["topic11"],
+    example: "¿Qué efectos puede producir un resfriado en la conducción?",
   },
   {
     word: "resfriados",
@@ -10963,14 +11003,6 @@ window.vocabularyData = [
     example: "El transporte especial necesita autorización.",
   },
   {
-    word: "transversal",
-    translation: "cross",
-    perevod: "крест",
-    category: "noun",
-    topics: ["topic09"],
-    example: "Esta marca transversal continua, ¿está permitido franquearla sin detenerse antes",
-  },
-  {
     word: "trasera",
     translation: "rear",
     perevod: "задний",
@@ -10985,6 +11017,14 @@ window.vocabularyData = [
     category: "verb",
     topics: [],
     example: "Cómo se debe actuar cuando las ruedas traseras derrapen",
+  },
+  {
+    word: "trasero",
+    translation: "rear",
+    perevod: "задний",
+    category: "adjective",
+    topics: ["topic11"],
+    example: "Está permitido colocar en el cristal trasero de su vehículo, unas pegatinas que impidan la visión?",
   },
   {
     word: "trasladarlo",
